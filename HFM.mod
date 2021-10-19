@@ -1,3 +1,3 @@
-name = "Historical Flavour Mod v1.27I"
-path = "mod/HFM"
-user_dir = "HFM"
+name = "Victoria 2: Mechanics Enhanced"
+path = "mod/V2ME"
+user_dir = "V2ME"
