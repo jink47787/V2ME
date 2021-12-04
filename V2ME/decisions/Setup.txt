@@ -2740,6 +2740,13 @@ political_decisions = {
 					}
 				}
 			}
+			random_country = {
+				limit = {
+					exists = yes
+					ai = yes
+				}
+				country_event = 477877789
+			}
 		}
 	}
 	
