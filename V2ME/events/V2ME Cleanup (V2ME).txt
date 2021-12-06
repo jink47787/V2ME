@@ -819,6 +819,79 @@ country_event = {
 			}
 		}
 		
+		#catholic pop growth
+		any_country = {
+			limit = {
+				NOT = {
+					year = 1850
+					has_country_modifier = catholic_growth
+				}
+				is_culture_group = american_cultures
+				OR = {
+					government = democracy
+					has_country_flag = Government_Democracy
+				}
+			}
+			any_pop = {
+                limit = {
+                    has_pop_religion = catholic
+                    is_culture_group = american_cultures
+                    location = { is_overseas = no }
+                    NOT = {
+                        has_pop_culture = texan
+                        type = craftsmen
+                        type = bureaucrats
+                        strata = rich
+                        strata = middle
+                    }
+
+                }
+                random_list = {
+                    15 = { reduce_pop = 1.02 }
+                    35 = { reduce_pop = 1.03 }
+                    45 = { reduce_pop = 1.04 }
+                }
+            }
+            any_pop = {
+                limit = {
+                    has_pop_religion = catholic
+                    is_culture_group = american_cultures
+                    location = { is_overseas = no }
+                    OR = {
+                        strata = rich
+                        strata = middle
+                    }
+
+                }
+                random_list = {
+                    20 = { reduce_pop = 1.02 }
+                    35 = { reduce_pop = 1.01 }
+                    40 = { reduce_pop = 1.03 }
+                }
+            }
+            any_pop = {
+                limit = {
+                    has_pop_religion = catholic
+                    OR = {
+                        has_pop_culture = cajun
+                        has_pop_culture = texan
+                    }
+                    NOT = { type = craftsmen }
+                    location = { is_overseas = no }
+                }
+                random_list = {
+                    40 = { reduce_pop = 1.02 }
+                    30 = { reduce_pop = 1.03 }
+                    25 = { reduce_pop = 1.04 }
+                }
+            }
+            random_list = {
+                33 = { add_country_modifier = { name = catholic_growth duration = 1825 } }
+                33 = { add_country_modifier = { name = catholic_growth duration = 2190 } }
+                33 = { add_country_modifier = { name = catholic_growth duration = 2555 } }
+            }
+		}
+		
 		CLN = { country_event = { id = 477877791 days = 365 } }
 	}
 }
