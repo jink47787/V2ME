@@ -1,0 +1,3544 @@
+
+##### Contents #####
+
+# V2ME Dismantlement V1.0.0 by Bob Bobington & Dr, Configured as a basis for implimentation in new mods. (Optional Colonial Plugin)
+
+# ID Groups:
+#	0610-0619	First Wave Bounce Events (Ai)
+#	0620-0629	Dismantlement Leader Decision Events 
+#	0630-0639	Second Wave Bounce Events (Ai)
+#	0640-0649	Primary Effect Bouncing Events
+#	0650-0679	Primary Victor Response Events
+#	0750-0759	Effects Events
+#	1500-1599	Additional Menu Events Colonial - Multiple Victors with Annexation
+#	1900-1999	Additional Menu Events Colonial - Multiple Victors without Annexation
+#	3000-3099	Additional Menu Events Colonial - Single Victor with Annexation
+#	3100-3199	Additional Menu Events Colonial - Single Victor without Annexation
+#
+
+#####		Colonial First Wave Bounce Events (Ai)	610-619		#####
+
+country_event = {
+    id = 777770610
+    title = "Our colony may be transfered?"
+    desc = "Our lands may be transfered though dismantlement."
+	picture = "dismantle 5"
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+#
+#		### Colonial Tags ###
+#
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = {
+					THIS = {
+						OR = {
+#							###	Colonial Merger Tags Go Here ###
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					###	Required for each Colonial non Merger Tag ###
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+#					owner = { THIS = { set_variable = { which = EXAMPLE_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770620
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor
+				NOT = {
+					THIS = {
+						OR = {
+#							###	Colonial Merger Tags Go Here Again (Repeated for single victor) ###
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					###	Required for each Colonial non Merger Tag Again ###
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+#					owner = { THIS = { set_variable = { which = EXAMPLE_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770621
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = {
+					THIS = {
+						OR = {
+#							###	Colonial Merger Tags Go Here Again (Repeated for low dismantlement capital) ###
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					###	Required for each Colonial non Merger Tag Again ###
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+#					owner = { THIS = { set_variable = { which = EXAMPLE_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770623
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor
+				NOT = {
+					THIS = {
+						OR = {
+#							###	Colonial Merger Tags Go Here Again (Repeated for single victor, low dismantlement capital) ###
+						}
+					}
+				}
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					###	Required for each Colonial non Merger Tag Again ###
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+#					owner = { THIS = { set_variable = { which = EXAMPLE_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777770623
+		}
+#
+#		Intergrations (Merger Tags)
+#
+#		#Example Colony
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				NOT = { has_global_flag = Total_One_Victor }
+#				THIS = { tag = EXAMPLE_TAG }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+					owner = { THIS = { set_variable = { which = Example_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771500
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+#				THIS = { tag = EXAMPLE_TAG }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+					owner = { THIS = { set_variable = { which = Example_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777771900
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				check_variable = { which = dismantlement_dollars value = 0.99 }
+				has_global_flag = Total_One_Victor
+#				THIS = { tag = EXAMPLE_TAG }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+					owner = { THIS = { set_variable = { which = Example_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773000
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { has_country_flag = too_many_deliveries } }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				NOT = { check_variable = { which = dismantlement_dollars value = 0.99 } }
+				has_global_flag = Total_One_Victor
+#				THIS = { tag = EXAMPLE_TAG }
+			}
+			FROM = {
+				set_country_flag = too_many_deliveries
+				random_owned = {
+#					limit = { owner = { THIS = { tag = EXAMPLE_TAG } } }
+					owner = { THIS = { set_variable = { which = Example_Colony value = 1 } } }
+				}
+			}
+			THIS = { set_variable = { which = Colony_Event_Sent value = 1 } }
+			country_event = 777773100
+		}
+    }
+}
+
+#####		Colonial Dismantlement Leader Decision Events	620-629		#####
+
+country_event = {
+    id = 777770620
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 8"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target badboy = 1
+        CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+			modifier = { factor = 1 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770621
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 12"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target badboy = 1
+        CLN = { country_event = 777771700 }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770622
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 8"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 1 badboy = 17 }
+			modifier = { factor = 1 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770623
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 12"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+#####		Colonial Second Wave Bounce Events (Ai)	630-639		#####
+
+country_event = {
+    id = 777770630
+    title = "Colony transfer!"
+    desc = "This event is used for the transfer of colonies!"
+	picture = "dismantle 19"
+    is_triggered_only = yes
+    option = {
+        name = "Transfer Shall Occur."
+		country_event = 777770640
+    }
+}
+
+#####		Colonial Primary Effect Bouncing Events	640-649		#####
+
+country_event = {
+    id = 777770640
+    title = "Our colony is being considered?"
+    desc = "Our colony is being considered by the Conference Chair!"
+	picture = "dismantle 12"
+    is_triggered_only = yes
+    option = {
+        name = "Very Well"
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770650
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770650
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770650
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770650
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770650
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770650
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770650
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770651
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770651
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770651
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770651
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770651
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770651
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Give_Away_Colony value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770651
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+			}
+			FROM = { country_event = 777770751 }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770652
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770652
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770652
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770652
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770652
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770652
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = As_Is_Colony value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770652
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770653
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770653
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770653
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770653
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770653
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770653
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Independent_Colony value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770653
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } } 
+				has_global_flag = Total_One_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Second_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Two_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Third_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Three_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Fourth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Four_Victor	
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Fifth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Five_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Sixth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Six_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Seventh_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Seven_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		random_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } check_variable = { which = Eighth_Victor_Complete value = 0.99 } } 
+				has_global_flag = Total_Eight_Victor
+			}
+			FROM = { country_event = 777770750 }
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Second_Victor value = 0.99 }
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+			}
+			country_event = 777770654
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Third_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+			}
+			country_event = 777770654
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Fourth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+			}
+			country_event = 777770654
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Fifth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+			}
+			country_event = 777770654
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Sixth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+			}
+			country_event = 777770654
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Seventh_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770654
+		}
+		any_country = {
+			limit = {
+				FROM = { check_variable = { which = Integrate_Colony value = 0.99 } }
+				check_variable = { which = Eighth_Victor value = 0.99 }
+				FROM = { check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				FROM = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				NOT = { has_global_flag = Total_One_Victor }
+				NOT = { has_global_flag = Total_Two_Victor }
+				NOT = { has_global_flag = Total_Three_Victor }
+				NOT = { has_global_flag = Total_Four_Victor }
+				NOT = { has_global_flag = Total_Five_Victor }
+				NOT = { has_global_flag = Total_Six_Victor }
+				NOT = { has_global_flag = Total_Seven_Victor }
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } }
+			}
+			country_event = 777770654
+		}
+    }
+}
+
+#####		Primary Victor Response Events	650-679		#####
+
+country_event = {
+    id = 777770650
+    title = "What is our stance on $FROMCOUNTRY$?"
+    desc = "The Dismantlement Chair would like to obtain the $FROMCOUNTRY$ Colony. How do we respond?"
+	picture = "dismantle 2"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "Go them, The $FROMCOUNTRY$ colony shall belong to them!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "But I wanted $FROMCOUNTRY$!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
+    }
+}
+
+country_event = {
+    id = 777770651
+    title = "Do we want the $FROMCOUNTRY$ colony?"
+    desc = "The Dismantlement Chair is not interested in the $FROMCOUNTRY$ Colony."
+	picture = "dismantle 8"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "Go on then, we will take it!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target badboy = 1
+        CLN = { country_event = 777771700 }
+		badboy = 0.1
+		FROM = {
+			set_variable = { which = Give_Away_Colony value = 0 }
+			set_variable = { which = Annex_Colony value = 1 }
+		}
+		set_variable = { which = Secondary_Claim value = 1 }
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		ai_chance = {
+            factor = 2
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "$FROMCOUNTRY$ bad"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
+    }
+}
+
+country_event = {
+    id = 777770652
+    title = "What is our stance on the $FROMCOUNTRY$ colony?"
+    desc = "The Dismantlement Chair would like the $FROMCOUNTRY$ colony to remain with the deafeated. How do we respond?"
+	picture = "dismantle 20"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "They have suffered enough"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "But I wanted $FROMCOUNTRY$, WE have suffered enough!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		ai_chance = {
+            factor = 2
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+}
+
+country_event = {
+    id = 777770653
+    title = "What is our stance on the $FROMCOUNTRY$ colony?"
+    desc = "The Dismantlement Chair would like to organize $FROMCOUNTRY$ for independence. How do we respond?"
+	picture = "dismantle 21"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "A new voice!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
+    }
+    option = {
+        name = "We could do without $FROMCOUNTRY$!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+}
+
+country_event = {
+    id = 777770654
+    title = "What is our stance on the $FROMCOUNTRY$ colony?"
+    desc = "The Dismantlement Chair would like to intergrate $FROMCOUNTRY$ into a larger colony. How do we respond?"
+	picture = "dismantle 22"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "A new voice!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		badboy = 0.1
+		create_alliance = FROM
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+        }
+    }
+    option = {
+        name = "This is not peak $FROMCOUNTRY$!"
+		random_country = {
+			limit = {
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		random_country = {
+			limit = {
+				tag = FROM
+			}
+			relation = {
+				who = THIS
+				value = -50
+			}
+		}
+		badboy = 0.1
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Eighth_Victor_Complete value = 0.99 } } check_variable = { which = Seventh_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Eighth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Seventh_Victor_Complete value = 0.99 } } check_variable = { which = Sixth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Seventh_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Sixth_Victor_Complete value = 0.99 } } check_variable = { which = Fifth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Sixth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fifth_Victor_Complete value = 0.99 } } check_variable = { which = Fourth_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fifth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Fourth_Victor_Complete value = 0.99 } } check_variable = { which = Third_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Fourth_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Third_Victor_Complete value = 0.99 } } check_variable = { which = Second_Victor_Complete value = 0.99 } }
+				tag = FROM
+			}
+			set_variable = { which = Third_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		any_country = {
+			limit = {
+				FROM = { NOT = { check_variable = { which = Second_Victor_Complete value = 0.99 } } }
+				tag = FROM
+			}
+			set_variable = { which = Second_Victor_Complete value = 1 }
+			country_event = 777770630
+		}
+		ai_chance = {
+            factor = 2
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+}
+
+country_event = {
+    id = 777770750
+    title = "Succesful transfer!"
+    desc = "Colony Transfer Event!"
+	picture = "dismantle 11"
+    is_triggered_only = yes
+    option = {
+        name = "Huh"
+#
+#		Example Colony 1 (Non Merger TAG)
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Example_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1690
+						province_id = 1693
+						province_id = 1691
+						province_id = 2563
+						province_id = 1692
+						province_id = 1685
+						province_id = 1681
+						province_id = 1682
+						province_id = 1680
+						province_id = 1686
+						province_id = 1688
+						province_id = 1689
+						province_id = 1687
+						province_id = 2590
+						province_id = 1683
+						province_id = 1684
+						province_id = 1697
+						province_id = 1694
+						province_id = 1699
+						province_id = 1698
+						province_id = 1695
+						province_id = 1696
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+#			EXAMPLE_TAG = { civilized = yes }
+		}
+#
+#		Example Colony 2 (Merger TAG)
+#
+		any_country = {
+			limit = {
+				OR = {
+					check_variable = { which = Major_Defeated value = 0.99 }
+					overlord = { check_variable = { which = Major_Defeated value = 0.99 } }
+				}
+				FROM = { check_variable = { which = Example_Colony value = 0.99 } }
+			}
+			any_owned = {
+				limit = {
+					OR = {
+						province_id = 1773
+						province_id = 1774
+					}
+				}
+				secede_province = THIS
+				add_core = UTI
+			}
+#			EXAMPLE_TAG = { civilized = yes }
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = EXAMPLE_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
+					check_variable = { which = EXAMPLE_UNION_Colony_Choice value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1773
+							province_id = 1774
+						}
+					}
+#					secede_province = EXAMPLE_UNION_TAG
+					remove_core = UTI
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					check_variable = { which = EXAMPLE_Colony value = 0.99 }
+					check_variable = { which = Integrate_Colony value = 0.99 }
+					check_variable = { which = EXAMPLE_UNION_2_Colony_Choice value = 0.99 }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = {
+						OR = {
+							province_id = 1773
+							province_id = 1774
+						}
+					}
+#					secede_province = EXAMPLE_UNION_2_TAG
+					remove_core = UTI
+				}
+			}
+		}
+#		
+#		Universal Effects		
+#
+		random_owned = {
+			limit = { owner = { check_variable = { which = Independent_Colony value = 0.99 } } }
+			owner = { UTI = { all_core = { remove_core = UTI } } }
+		}
+		random_owned = {
+			limit = { owner = { NOT = { any_owned_province = { NOT = { is_core = UTI } } } check_variable = { which = Annex_Colony value = 0.99 } } }
+			owner = { annex_to = UTI UTI = { all_core = { remove_core = UTI } } }
+		}
+		random_owned = {
+			limit = { owner = { any_owned_province = { NOT = { is_core = UTI } } check_variable = { which = Annex_Colony value = 0.99 } } }
+			owner = {
+				any_owned = { limit = { is_core = UTI is_core = THIS } remove_core = THIS add_core = CLN }
+				release = UTI
+				UTI = { annex_to = UTI any_owned = { limit = { is_core = CLN } add_core = THIS remove_core = CLN } all_core = { remove_core = UTI } }
+			}
+		}
+		random_country = {
+			limit = {
+				check_variable = { which = Secondary_Claim value = 0.99 }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+			}
+			inherit = UTI
+			set_global_flag = stop_right_there_criminal_scum
+		}
+		random_country = {
+			limit = {
+				NOT = { has_global_flag = stop_right_there_criminal_scum }
+				check_variable = { which = Dismantlement_Chair value = 0.99 }
+				FROM = { check_variable = { which = Annex_Colony value = 0.99 } }
+			}
+			inherit = UTI
+		}
+		clr_global_flag = stop_right_there_criminal_scum
+		UTI = { all_core = { remove_core = UTI } }
+		
+		THIS = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+
+country_event = {
+    id = 777770751
+    title = "We continue to not exists!"
+    desc = "Colony Transfer Event!"
+	picture = "dismantle 14"
+    is_triggered_only = yes
+    option = {
+        name = "Wild"
+		THIS = { set_variable = { which = Outcome_Required value = 0 } }
+    }
+}
+#
+#		Colonial Unions (Custrom Menus)
+#
+country_event = {
+    id = 777771500
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target badboy = 1
+        CLN = { country_event = 777771700 }
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_1_colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_1_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_2_colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_2_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+#		Colonial Unions Single Annex
+
+country_event = {
+    id = 777771900
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+
+    option = {
+        name = "We shall offer $FROMCOUNTRY$ to other victors."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Give_Away_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 2 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_1_Colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_1_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_2_Colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_2_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+#		Colonial Unions - 3000s for menus
+
+country_event = {
+    id = 777773000
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+	
+    option = {
+        name = "We shall take them for ourselves."
+		change_variable = {
+            which = dismantlement_dollars
+            value = -1
+        }
+        set_country_flag = dismantlement_dollars_target badboy = 1
+        CLN = { country_event = 777771700 }
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Annex_Colony value = 1 }
+			country_event = 777770630
+        }
+		ai_chance = {
+            factor = 4
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+			modifier = { factor = 3 OR = { government = hms_government government = constitutional_empire government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } }
+        }
+    }
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_1_Colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_1_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_2_Colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_2_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
+
+#	Colonial Unions 3100 Single Non_Annex
+
+country_event = {
+    id = 777773100
+    title = "The $FROMCOUNTRY_ADJ$ Colony!"
+    desc = "$FROMCOUNTRY$ is controlled by the defeated power, what should be done with it?"
+	picture = "dismantle 21"
+    is_triggered_only = yes
+	allow_multiple_instances = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = common_government_bonus }
+		}
+		any_country = {
+			limit = { 
+				OR = { AND = { FROM = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } THIS = { OR = { government = democracy government = parliamentary_republic government = prussian_constitutionalism government = hms_government government = constitutional_empire } } } AND = { FROM = { OR = { government = proletarian_dictatorship government = parliamentary_republic government = prussian_constitutionalism } } THIS = { OR = { government = proletarian_dictatorship } } } AND = { FROM = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } THIS = { OR = { government = presidential_dictatorship government = fascist_dictatorship } } } AND = { FROM = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } THIS = { OR = { government = absolute_monarchy government = absolute_empire government = semi_constitutional_empire } } } }
+			}
+			THIS = { set_country_flag = conflicting_government_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				badboy = 0.8
+			}
+			THIS = { set_country_flag = infamous_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				have_core_in = THIS
+			}
+			THIS = { set_country_flag = we_control_core_penalty }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				OR = {
+					has_recently_lost_war = yes
+					is_disarmed = yes
+					military_access = THIS
+				}
+			}
+			THIS = { set_country_flag = recent_state_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				FROM = { slavery = yes_slavery }
+				THIS = { slavery = yes_slavery }
+			}
+			THIS = { set_country_flag = holdout_slavery_bonus }
+		}
+		any_country = {
+			limit = { 
+				tag = FROM
+				truce_with = THIS
+			}
+			THIS = { set_country_flag = truce_with_this_penalty }
+		}
+		set_country_flag = annex_overwrite
+    }
+
+    option = {
+        name = "They shall remain with the defeated."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = As_Is_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 1
+			modifier = { factor = 2 has_country_flag = infamous_penalty }
+			modifier = { factor = 3 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.5 has_country_flag = truce_with_this_penalty }
+			modifier = { factor = 15 badboy = 23 }
+			modifier = { factor = 2 badboy = 17 }
+        }
+    }
+    option = {
+        name = "They shall exist as an independent state."
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Independent_Colony value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_1_Colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_1_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+    option = {
+        name = "Integrate $FROMCOUNTRY$ into EXAMPLE_UNION_2_Colony"
+        any_country = {
+			limit = {
+				tag = FROM
+			}
+			set_variable = { which = Integrate_Colony value = 1 }
+			set_variable = { which = EXAMPLE_UNION_2_Colony_Choice value = 1 }
+			country_event = 777770630
+        }
+        ai_chance = {
+            factor = 2
+			modifier = { factor = 15 OR = { government = democracy government = proletarian_dictatorship } }
+			modifier = { factor = 2 relation = { who = FROM value = 120 } }
+			modifier = { factor = 2 trade_policy = free_trade }
+			modifier = { factor = 2 has_country_flag = recent_state_bonus }
+			modifier = { factor = 0.5 has_country_flag = we_control_core_penalty }
+			modifier = { factor = 0.05 badboy = 23 }
+			modifier = { factor = 0.75 badboy = 17 }
+        }
+    }
+}
