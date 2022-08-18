@@ -1,0 +1,6 @@
+name = "V2ME: Random Access Test"
+path = "mod/XV2ME"
+user_dir = "XV2ME"
+replace_path = "history/provinces"
+replace_path = "events"
+replace_path = "decisions"
