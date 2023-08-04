@@ -1,0 +1,5 @@
+owner = GMB
+controller = GMB
+add_core = GMB
+trade_goods = cattle
+life_rating = 35

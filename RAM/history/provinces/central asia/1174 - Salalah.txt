@@ -1,0 +1,7 @@
+owner = SWK
+controller = SWK
+add_core = SWK
+add_core = OMA
+trade_goods = opium
+life_rating = 20
+terrain = coastal_desert

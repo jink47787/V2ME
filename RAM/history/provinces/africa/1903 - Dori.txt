@@ -1,0 +1,6 @@
+owner = FCA
+controller = FCA
+add_core = FCA
+trade_goods = cattle
+terrain = semidesert
+life_rating = 35

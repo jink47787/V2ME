@@ -1,5 +1,7 @@
-# Victoria 2: Mechanics Enhanced
+# Random Access Mod
 
-V2ME aims to completely reimagine the idea of Victoria 2. Our mod focuses on rewriting and optimizing the core mechanics of Victoria 2.
+A Victoria 2 Overhall, focused on dynamic mechanics and gameplay.
 
-Currently in alpha development.
+Currently indev. It is not considered playable.
+
+For now the mod borrows heavily from GFM. Map, culture and core mechanics are likely to continue to draw heavily from GFM. Events, decisions and performance changes will be the focus of the mod.

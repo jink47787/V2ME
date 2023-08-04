@@ -1,6 +1,0 @@
-name = "Victoria 2: Mechanics Enhanced"
-path = "mod/V2ME"
-user_dir = "V2ME"
-replace_path = "history/provinces"
-replace_path = "events"
-replace_path = "decisions"

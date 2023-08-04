@@ -1,0 +1,14 @@
+army = {
+    name = "Army of the Bamum"
+    location = 1957
+	regiment = {
+        name = "King's Cavalry"
+		type = cavalry
+        home = 1957
+	}
+	regiment = {
+        name = "1st Bamum Warriors"
+        type = irregular
+		home = 3801
+	}
+}

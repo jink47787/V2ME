@@ -1,0 +1,8 @@
+owner = GMJ
+controller = GMJ
+add_core = GMJ
+add_core = BEN
+add_core = SOK
+add_core = OYO
+trade_goods = cattle
+life_rating = 35

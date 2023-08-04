@@ -1,0 +1,9 @@
+army = {
+    name = "Army of Bakwena"
+    location = 2106
+	regiment = {
+		name = "Bakwena Guards"
+		type = irregular
+		home = 2106
+	}
+}

@@ -1,0 +1,5 @@
+owner = TMT
+controller = TMT
+add_core = TMT
+trade_goods = wool
+life_rating = 32
