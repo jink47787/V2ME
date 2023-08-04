@@ -3,8 +3,8 @@ political_decisions = {
     end_war_nec = {
         picture = marching_soldiers
         potential = {
-            ai = yes
 			NOT = { has_global_flag = daily_cleanup_on }
+            ai = yes
         }
 
         allow = {
