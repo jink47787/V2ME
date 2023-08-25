@@ -1,0 +1,21 @@
+political_decisions = {
+
+    end_war_nec = {
+        picture = marching_soldiers
+        potential = {
+			NOT = { has_global_flag = daily_cleanup_on }
+            ai = yes
+        }
+
+        allow = {
+        }
+
+        alert = no
+
+        effect = {
+			set_global_flag = daily_cleanup_on
+            CLN = { country_event = 477877787 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+}
