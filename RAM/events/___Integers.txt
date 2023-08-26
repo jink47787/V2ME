@@ -1,14 +1,14 @@
 # This event type can be copied out for any loc
 country_event = { # Event to fire starting Cleanup event for CLN
     id = 71901
-    title = "The Berlin Conference Meta Bouncer"
+    title = "Integer Meta Bouncer"
     #desc = ""
     picture = "commonwealth"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
 	immediate = {
-		UTI = { set_variable = { which = itterator value = 0 } }
+		UTI = { set_variable = { which = itterator value = 1 } }
 		#any_country = {
 		#	limit = {
 		#		check_variable = { which = variable_loc_slot value = 0 }
@@ -22,7 +22,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 				check_variable = { which = variable_loc_slot value = 0.99 }
 				NOT = { check_variable = { which = variable_loc_slot value = 1.99 } }
 			}
-			UTI = { set_variable = { which = itterator value = 1 } }
+			UTI = { set_variable = { which = itterator value = 2 } }
 			#FRA = { country_event = 71904 }
 		}
 		any_country = {
@@ -30,7 +30,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 				check_variable = { which = variable_loc_slot value = 1.99 }
 				NOT = { check_variable = { which = variable_loc_slot value = 2.99 } }
 			}
-			UTI = { set_variable = { which = itterator value = 2 } }
+			UTI = { set_variable = { which = itterator value = 3 } }
 			#FRA = { country_event = 71903 }
 		}
 		any_country = {
@@ -38,21 +38,21 @@ country_event = { # Event to fire starting Cleanup event for CLN
 				check_variable = { which = variable_loc_slot value = 2.99 }
 				NOT = { check_variable = { which = variable_loc_slot value = 3.99 } }
 			}
-			UTI = { set_variable = { which = itterator value = 3 } }
+			UTI = { set_variable = { which = itterator value = 4 } }
 		}
 		any_country = {
 			limit = {
 				check_variable = { which = variable_loc_slot value = 3.99 }
 				NOT = { check_variable = { which = variable_loc_slot value = 4.99 } }
 			}
-			UTI = { set_variable = { which = itterator value = 4 } }
+			UTI = { set_variable = { which = itterator value = 5 } }
 		}
 		any_country = {
 			limit = {
 				check_variable = { which = variable_loc_slot value = 4.99 }
 				NOT = { check_variable = { which = variable_loc_slot value = 5.99 } }
 			}
-			UTI = { set_variable = { which = itterator value = 5 } }
+			UTI = { set_variable = { which = itterator value = 6 } }
 		}
 
 		country_event = 71902
@@ -64,7 +64,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 }
 
 
-country_event = { # Dynamic Renaming Function for Country Localization
+country_event = { # Dynamic Renaming Function for Integer Localization
     id = 71902
     title = "The Berlin Conference Meta Effector"
     desc = "The Berlin Conference Meta Effector"
@@ -83,7 +83,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_20 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_19 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -94,7 +94,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_19 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_18 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -105,7 +105,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_18 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_17 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -116,7 +116,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_17 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_16 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -127,7 +127,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_16 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_15 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -138,7 +138,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_15 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_14 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -149,7 +149,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_14 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_13 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -160,7 +160,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_13 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_12 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -171,7 +171,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_12 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_11 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -182,7 +182,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_11 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_10 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -193,7 +193,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_10 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_9 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -204,7 +204,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_9 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_8 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -215,7 +215,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_8 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_7 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -226,7 +226,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_7 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_6 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -237,7 +237,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_6 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_5 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -248,7 +248,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_5 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_4 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -259,7 +259,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_4 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_3 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -270,7 +270,7 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_3 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_2 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
         any_country = {
             limit = {
@@ -281,12 +281,12 @@ country_event = { # Dynamic Renaming Function for Country Localization
             }
             set_country_flag = rename_loc_var
             set_variable = { which = variable_loc_slot value = 0 }
-            slot_2 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
+            slot_1 = { add_province_modifier = { name = var_rename_modifier duration = -1 } }
         }
 		random_country = {
 			limit = {
 				NOT = { check_variable = { which = variable_loc_value value = 0.99 } }
-				check_variable = { which = variable_loc_value value = 0 }
+				check_variable = { which = variable_loc_value value = -0.01 }
 				has_country_flag = rename_loc_var
 			}
 			any_sea_province = {
@@ -598,8 +598,6 @@ country_event = { # Dynamic Renaming Function for Country Localization
                 secede_province = QQQ
             }
         }
-		
-		
 		any_country = {
 			clr_country_flag = rename_loc_var
 		}
@@ -747,104 +745,3 @@ country_event = { # Event to fire starting Cleanup event for CLN
     }
 }
 
-country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71910
-    title = "Attempting to Write 1"
-    #desc = ""
-    picture = "commonwealth"
-	allow_multiple_instances = yes
-    is_triggered_only = yes
-	
-	immediate = {
-		SPA_610 = {}
-		berlin_conference_1 = {}
-	}
-	
-	option = {
-        name = ""
-    }
-}
-
-country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71911
-    title = "Attempting to Write 2"
-    #desc = ""
-    picture = "commonwealth"
-	allow_multiple_instances = yes
-    is_triggered_only = yes
-	
-	immediate = {
-		SPA_610 = {}
-		berlin_conference_1 = {}
-	}
-	
-	option = {
-        name = ""
-    }
-}
-
-country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71912
-	
-	trigger = {
-		ai = yes
-		NOT = { has_global_flag = cleanup_event_2 }
-	}
-	
-    title = "Attempting to Write 3"
-    #desc = ""
-    picture = "commonwealth"
-	allow_multiple_instances = no
-    #only_if_triggered = yes
-	
-	immediate = {
-		set_global_flag = cleanup_event_2 
-		NZL = { country_event = 71914 }
-	}
-	
-	option = {
-        name = ""
-    }
-}
-
-country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71913
-	
-	trigger = {
-		ai = yes
-		has_global_flag = cleanup_event_2
-	}
-	
-    title = "Attempting to Write 3"
-    #desc = ""
-    picture = "commonwealth"
-	allow_multiple_instances = no
-    #only_if_triggered = yes
-	
-	immediate = {
-		clr_global_flag = cleanup_event_2
-		NZL = { country_event = 71914 }
-	}
-	
-	option = {
-        name = ""
-    }
-}
-
-country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71914
-	
-    title = "Attempting to Write 3"
-    #desc = ""
-    picture = "commonwealth"
-	allow_multiple_instances = no
-    is_triggered_only = yes
-	
-	immediate = {
-		FRA = { prestige = 100 }
-	}
-	
-	option = {
-        name = ""
-    }
-}
