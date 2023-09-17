@@ -22,6 +22,30 @@ country_event = { # Checks countries before firing renaming key list event
 			}
 			UTI = { change_variable = { which = itterator value = 1 } }
 		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_3_region
+			}
+			UTI = { change_variable = { which = itterator value = 1 } }
+		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_4_region
+			}
+			UTI = { change_variable = { which = itterator value = 1 } }
+		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_5_region
+			}
+			UTI = { change_variable = { which = itterator value = 1 } }
+		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_6_region
+			}
+			UTI = { change_variable = { which = itterator value = 1 } }
+		}	
 		country_event = 71702
 	}
 	

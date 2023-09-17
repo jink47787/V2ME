@@ -20,7 +20,25 @@ country_event = { # Checks countries before firing renaming key list event
 			limit = {
 				has_province_modifier = slot_2_province
 			}
-			UTI = { change_variable = { which = itterator value = 1 } }
+			UTI = { change_variable = { which = itterator value = 2 } }
+		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_3_province
+			}
+			UTI = { change_variable = { which = itterator value = 3 } }
+		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_4_province
+			}
+			UTI = { change_variable = { which = itterator value = 4 } }
+		}	
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_5_province
+			}
+			UTI = { change_variable = { which = itterator value = 5 } }
 		}	
 		country_event = 71802
 	}
@@ -41,6 +59,42 @@ country_event = { # Itterate through key list (Generated in python)
 	
 	immediate = {
 		# Immediates are required as to skip the event queue.
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_5_province
+					UTI = { check_variable = { which = itterator value = 4.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 5.99 } } }
+				}
+			}
+			add_province_modifier = { name = provinces_loc_land duration = -1 }
+			slot_5 = { add_province_modifier = { name = provinces_loc_sea duration = -1 } }
+			remove_province_modifier = slot_5_province
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_4_province
+					UTI = { check_variable = { which = itterator value = 3.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 4.99 } } }
+				}
+			}
+			add_province_modifier = { name = provinces_loc_land duration = -1 }
+			slot_4 = { add_province_modifier = { name = provinces_loc_sea duration = -1 } }
+			remove_province_modifier = slot_4_province
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_3_province
+					UTI = { check_variable = { which = itterator value = 2.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 3.99 } } }
+				}
+			}
+			add_province_modifier = { name = provinces_loc_land duration = -1 }
+			slot_3 = { add_province_modifier = { name = provinces_loc_sea duration = -1 } }
+			remove_province_modifier = slot_3_province
+		}
 		any_land_province = {
 			limit = {
 				AND = {

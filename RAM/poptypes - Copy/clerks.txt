@@ -106,7 +106,18 @@ country_migration_target = {
         factor = 1.5
         OR = {
             AND = {
-
+                THIS = { is_culture_group = germanic }
+                OR = {
+                    is_culture_group = american_cultures
+                    AND = {
+                        primary_culture = dutch
+                        is_vassal = yes
+                    }
+					AND = {
+						is_culture_group = germanic
+						NOT = { continent = asia }
+					}
+                }
             }
             AND = {
                 THIS = { OR = { is_culture_group = polish_culture_group is_culture_group = east_slavic } }
@@ -148,26 +159,42 @@ country_migration_target = {
             }
         }
     }
-	
-	modifier = {
-		factor = 1.5
-		    THIS = { is_culture_group = germanic }
-			OR = {
-				is_culture_group = american_cultures
-				AND = {
-					primary_culture = dutch
-					is_vassal = yes
-				}
-				AND = {
-					is_culture_group = germanic
-					NOT = { continent = asia }
-				}
-			}
-	}
-	
 
     modifier = {
-        factor = 2.0
+        factor = 4.0
+        number_of_states = 2
+        has_country_flag = new_world_nation
+        OR = {
+            capital_scope = { is_colonial = no continent = north_america }
+			capital_scope = { is_colonial = no continent = south_america }
+			capital_scope = { is_colonial = no continent = australia_new_zealand }
+            capital_scope = { is_colonial = no continent = south_africa }
+            primary_culture = australian
+
+        }
+        OR = {
+            government = democracy
+            government = radical_republic
+            government = constitutional_empire
+            government = hms_government
+            government = colonial_company_4
+            government = colonial_company_3
+            government = colonial_company_2
+            government = colonial_company
+        }
+    }
+    modifier = {
+        factor = 3.7
+		NOT = { number_of_states = 2 }
+        has_country_flag = new_world_nation
+        OR = {
+            capital_scope = { is_colonial = no continent = north_america }
+			capital_scope = { is_colonial = no continent = south_america }
+			capital_scope = { is_colonial = no continent = australia_new_zealand }
+            capital_scope = { is_colonial = no continent = south_africa }
+            primary_culture = australian
+
+        }
         OR = {
             government = democracy
             government = radical_republic

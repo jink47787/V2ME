@@ -76,6 +76,22 @@ comintern = {
     icon = 27
 }
 
+set_capital = {
+    icon = 30
+}
+
+flag_modifier_1 = {
+    icon = 30
+}
+
+flag_modifier_2 = {
+    icon = 30
+}
+
+flag_modifier_3 = {
+    icon = 30
+}
+
 divider_for_org_a = {
     icon = 30
 }

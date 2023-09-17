@@ -181,3 +181,65 @@ kleptocrats = {
         is_colonial = no
     }
 }
+
+meta_crime = {
+    active = yes
+    icon = 12
+
+    trigger = {
+        owner = { has_country_flag = fake_crime }
+    }
+}
+
+meta_crime_1 = {
+    active = yes
+
+    icon = 12
+
+    trigger = {
+        owner = { has_country_flag = fake_crime }
+    }
+}
+
+
+meta_crime_2 = {
+    active = yes
+
+    icon = 12
+
+    trigger = {
+        owner = { has_country_flag = fake_crime }
+    }
+}
+
+
+meta_crime_3 = {
+    active = yes
+
+    icon = 12
+
+    trigger = {
+        owner = { has_country_flag = fake_crime }
+    }
+}
+
+
+meta_crime_4 = {
+    active = yes
+
+    icon = 12
+
+    trigger = {
+        owner = { has_country_flag = fake_crime }
+    }
+}
+
+meta_crime_5 = {
+    active = yes
+
+    icon = 12
+
+    trigger = {
+        owner = { has_country_flag = fake_crime }
+    }
+}

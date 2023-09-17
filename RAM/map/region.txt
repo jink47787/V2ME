@@ -1430,6 +1430,16 @@ slot_18 = { 2721 }
 slot_19 = { 2722 }
 slot_20 = { 2723 }
 
+# Fixed States
+
+change_capital_desc = {}
+change_capital_desc_2 = {}
+arbitration_and_disputes_state = {}
+arbitration_and_disputes_state_2 = {}
+arbitration_and_disputes_gp_or_entity = { 2724 }
+arbitration_and_disputes_state_3 = {}
+
+
 
 any_sea_province = {
 
