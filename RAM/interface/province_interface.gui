@@ -18,6 +18,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		
+		
 		guiButtonType = {
 			name = "close_button"
 			quadTextureSprite = "GFX_main_close_button"
@@ -47,6 +48,7 @@ guiTypes = {
 				position = { x = 14 y = 72 }
 				Orientation = "UPPER_LEFT"
 			}
+		
 
 			instantTextBoxType = { 
 				name = "state_name"
@@ -186,6 +188,7 @@ guiTypes = {
 				maxHeight = 16	
 				format = centre
 			}
+
 		}
 		
 		

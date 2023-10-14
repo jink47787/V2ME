@@ -1,0 +1,290 @@
+province_event = { # Hamilton British Empire Games
+    id = 71007
+    title = "EVTNAME71007"
+    desc = "EVTDESC71007"
+    picture = "commonwealth"
+
+    trigger = {
+		any_owned_province = { province_id = 55 } # Swap for hamilton
+		year = 1930
+		OR = {
+			has_country_flag = british_commonwealth_of_nations_flag
+			has_country_flag = british_commonwealth_of_nations_head_flag
+		}
+    }
+	
+	option = {
+        name = "EVTOPTA71007"
+		money = -97973
+		prestige = 20
+		55 = { add_province_modifier = { name = british_empire_games duration = 28 } }
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+			}
+			country_event = { id = 71008 days = 1 }
+		}
+		
+    }
+
+    option = {
+        name = "EVTOPTB71007"
+		prestige = -20
+		set_country_flag = rejected_empire_games
+		random_country = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = SAF
+					tag = AUS
+					tag = NZL
+					tag = NEW
+				}
+				exists = yes
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+			}
+			capital_scope = { province_event = { id = 71009 days = 1 } }
+		}
+    }
+}
+
+country_event = { # Commonwealth Games Entry?
+    id = 71008
+    title = "EVTNAME71008"
+    desc = "EVTDESC71008"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71008"
+		money = -15000
+		prestige = 10
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+
+    option = {
+        name = "EVTOPTB71008"
+		prestige = -5
+		FROM = { relation = { who = THIS value = -25 } }
+    }
+}
+
+province_event = { # Ahistoric Alternate Location
+    id = 71009
+    title = "EVTNAME71009"
+    desc = "EVTDESC71009"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71009"
+		money = -100000
+		prestige = 20
+		capital_scope = { add_province_modifier = { name = british_empire_games duration = 29 } }
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+			}
+			country_event = { id = 71010 days = 1 }
+		}
+    }
+
+    option = {
+        name = "EVTOPTB71009"
+		prestige = -15
+		set_country_flag = rejected_empire_games
+		random_country = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = SAF
+					tag = AUS
+					tag = NZL
+					tag = NEW
+				}
+				exists = yes
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+				NOT = { has_country_flag = rejected_empire_games }
+			}
+			capital_scope = { province_event = { id = 71009 days = 1 } }
+		}
+    }
+}
+
+country_event = { # Commonwealth Games Entry?
+    id = 71010
+    title = "EVTNAME71010"
+    desc = "EVTDESC71010"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71010"
+		FROM = { relation = { who = THIS value = 25 } }
+		money = -15000
+		prestige = 10
+    }
+
+    option = {
+        name = "EVTOPTB71010"
+		FROM = { relation = { who = THIS value = -25 } }
+		prestige = -5
+    }
+}
+
+country_event = { # Longdon British Empire Games
+    id = 71011
+    title = "EVTNAME71011"
+    desc = "EVTDESC71011"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71011"
+		money = -97973
+		prestige = 20
+		# london's id = { add_province_modifier = { name = british_empire_games duration = 29 } }
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+			}
+			country_event = { id = 71012 days = 1 }
+		}
+    }
+
+    option = {
+        name = "EVTOPTB71011"
+		prestige = -5
+		set_country_flag = rejected_empire_games
+		random_country = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = SAF
+					tag = AUS
+					tag = NZL
+					tag = NEW
+				}
+				exists = yes
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+				NOT = { has_country_flag = rejected_empire_games }
+			}
+			capital_scope = { province_event = { id = 71013 days = 1 } }
+		}
+    }
+}
+
+country_event = { # Commonwealth Games Entry?
+    id = 71012
+    title = "EVTNAME71012"
+    desc = "EVTDESC71012"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71012"
+		money = -15000
+		prestige = 10
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+
+    option = {
+        name = "EVTOPTB71012"
+		prestige = -5
+		FROM = { relation = { who = THIS value = -25 } }
+    }
+}
+
+country_event = { # Ahistoric Alternate Location
+    id = 71013
+    title = "EVTNAME71013"
+    desc = "EVTDESC71013"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71013"
+		money = -100000
+		prestige = 20
+		capital_scope = { add_province_modifier = { name = british_empire_games duration = 29 } }
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+			}
+			country_event = { id = 71014 days = 1 }
+		}
+    }
+
+    option = {
+        name = "EVTOPTB71013"
+		prestige = -20
+		set_country_flag = rejected_empire_games
+		random_country = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = SAF
+					tag = AUS
+					tag = NZL
+					tag = NEW
+				}
+				exists = yes
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+				NOT = { has_country_flag = rejected_empire_games }
+			}
+			capital_scope = { province_event = { id = 71013 days = 1 } }
+		}
+    }
+}
+
+country_event = { # Commonwealth Games Entry?
+    id = 71014
+    title = "EVTNAME71014"
+    desc = "EVTDESC71014"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71014"
+		money = -15000
+		prestige = 10
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+
+    option = {
+        name = "EVTOPTB71014"
+		prestige = -5
+		FROM = { relation = { who = THIS value = -25 } }
+    }
+}

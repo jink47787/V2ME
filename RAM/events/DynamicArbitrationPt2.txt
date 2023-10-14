@@ -19,7 +19,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			slot_1 = { state_scope = { change_region_name = "§bLeague Of Nations§!" } } # Slot 1
 			slot_1 = { secede_province = QQQ }
 			arbitration_and_disputes_gp_or_entity = { secede_province = THIS }
-			arbitration_and_disputes_gp_or_entity = { state_scope = { change_region_name = "§bGlobal Entity§!" } } # Slot 1
+			arbitration_and_disputes_gp_or_entity = { state_scope = { change_region_name = "§bInternational Power§!" } } # Slot 1
 			arbitration_and_disputes_gp_or_entity = { secede_province = QQQ }
 			FROM = { change_variable = { which = option_count value = 1 } }
 		}
