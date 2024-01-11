@@ -1,0 +1,38 @@
+political_decisions = {
+
+    change_capital_decision = {
+        picture = restore_washington_capital
+        potential = {
+			has_global_flag = dev_enable
+			#NOT = {
+			#	any_owned_province = {
+			#		has_province_modifier = capital_construction
+			#	}
+			#}
+			any_owned_province = {
+				is_core = THIS
+				is_capital = no
+			}
+        }
+
+        allow = {
+			#NOT = {
+			#	any_owned_province = {
+			#		has_province_modifier = capital_construction
+			#	}
+			#}
+			any_owned_province = {
+				is_core = THIS
+				is_capital = no
+			}
+			war = no
+			civilized = yes
+			NOT = { has_country_flag = National_Disruption }
+        }
+
+        effect = {
+			CLN = { country_event = 71911 }
+        }
+        ai_will_do = { factor = 0 }
+    }
+}

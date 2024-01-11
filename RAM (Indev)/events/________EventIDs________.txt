@@ -1,0 +1,172 @@
+# RAM
+
+#- RAM Cleanup
+#	477877787	Daily
+#	477877788	Meta
+#	477877790	Monthly
+#	477877791	Yearly
+#	477877792	Meta
+#	477877793	Meta
+#	477877794	Gambia		# Remove
+#	477877795	Timor		# Remove
+#	477877796	Nambia		# Remove
+
+#- Dynamic Loc
+#	2000	Reset Regions to ""
+#	71601	Country Rename Bounce Event
+#	71602	Country Rename Event
+#	71601	Region Rename Bounce Event
+#	71602	Region Rename Event
+#	71801	Province Rename Bounce Event
+#	71802	Province Rename Event
+#	71901	Variable Rename Bounce Event
+#	71902	Variable Rename Event
+#	3000	Reset Regions to "	"
+
+#- Rename Capital
+#	71910	Meta Trigger
+#	71911	Rename Event
+#	1512056 Select Capital Variations
+#	1512057
+#	1512058
+#	81000	Meta Effect
+
+#- Indev
+#	80000	Pop Count Event
+
+#- Commonwealth
+#	71001	Found Commonwealth (As Head)	(Triggered by Date or Tech)
+#	71002	Found Commonwealth (As Equal)	(Triggered by Being Dismantled)
+#	71003	Join Commonwealth
+#	71004	Confimation of Join
+#	71005	Confimation of Refusal
+#	71006	Take in the Monarchy 			(Unimplimented)
+#	71015	Ejected From Commonwealth
+#	71016	Application to Commonwealth
+#	71017	Confimation of Join
+#	71018	Confimation of Refusal
+#	71019	Meta
+#	71020	Meta
+#	71039	Meta
+#	71040	Meta
+#	71050	Meta Lag Event
+
+#	71007	Host Hamilton Commonwealth Games
+#	71008	Join Games?
+#	71009	Alternate Location Commonwealth games
+#	71010	Join Games?
+#	71011	Host London Commonwealth Games
+#	71012	Join Games?
+#	71013	Alternate Location Commonwealth games
+#	71014	Join Games?
+
+#- Arbitration
+#	71912	Meta Trigger Event
+#	71913	Select Dispute Bounce Event
+#	71914	Dispute Event Variations
+#	71915	
+#	71916
+#	71917
+#	71918
+#	71919
+#	71920
+#	71921
+#	71922
+
+#	71930	Select Arbitrator Bounce Event
+#	71931	Select Arbitrator Variations
+#	71932
+#	71933
+#	71934
+#	71935
+#	71936
+#	71937
+#	71938
+#	71939
+
+#- League of Nations
+#	71051	Meta Lag Event
+#	70999	Creation of the League of Nations
+#	71000	Join the League of Nations?
+#	71030	Someone has joined the League of Nations
+#	71031	Vote to kick to League of Nations
+#	71032	Meta Vote Count Event
+#	71033	If you win vote
+#	71034	If you lose vote
+#	71035	Accedence Vote
+#	71036	Meta Vote Count Event
+#	71037	If you survive 
+#	71038	If you lose
+
+#- Co Prosperity Sphere
+#	71052	Meta Lag Event
+#	71070	Creation of Co-Prosperity Sphere (Triggered by Date or Tech)
+#	71079	Join Co-Prosperity Sphere?
+#	71071
+#	71072	Joined Co-Prosperity Sphere			(On Formation)
+#	71073	Rejected from Co-Prosperity Sphere	(On Formation)
+#	71074	Ejected from Co-Prosperity Sphere
+#	71075	Joined Co-Prosperity Sphere			(From Decision)
+#	71076	Rejected from Co-Prosperity Sphere	(From Decision)
+#	71077	Ejected	(Notification to Others)
+#	71078	Someone Leaves Notification 						(Add some CBs to this later)
+#	71080	Joined On Creation
+#	71081	Rejected On Creation
+
+#- Anti Comintern
+#	71053	Meta Lag Event
+#	71100	Found Anti Comintern
+#	71101	Join Anti Comintern?
+#	71102	Getting Kicked from Anti Comintern
+#	71103	Vote on Kicking Someone from Anti Comintern
+#	71104	Meta Vote Count Event
+#	71105	Notification if you survive
+#	71106	Notification if you don't survive ):
+#	71107	Accedence Vote
+#	71108	Meta Vote Count Event
+#	71009	If you win
+#	71010	If you lose
+#	71011	Notification Someone Lost
+#	71012	Notification Somone Won
+#	71013	Notification Somone Wasn't Ejected
+#	71014	Notification Somone Was Ejected
+#	71015	Notification Somone Left 							(Add some CBs to this later)
+
+#- Fascintern
+#	72054	Meta Lag Event
+#	72100	Found Fascintern
+#	72101	Join Fascintern
+#	72102	Getting Kicked from Fascintern
+#	72103	Vote on Kicking Someone from Fascintern
+#	72104	Meta Vote Count Event
+#	72105	Notification if you survive
+#	72106	Notification if you don't survive ):
+#	72107	Accedence Vote
+#	72108	Meta Vote Count Event
+#	72009	If you win
+#	72010	If you lose
+#	72011	Notification Someone Lost
+#	72012	Notification Somone Won
+#	72013	Notification Somone Wasn't Ejected
+#	72014	Notification Somone Was Ejected
+#	72015	Notification Somone Left 							(Add some CBs to this later)
+
+#- Comintern
+#	71055	Meta Lag Event
+#	73100	Found Fascintern
+#	73101	Join Fascintern
+#	73102	Getting Kicked from Fascintern
+#	73103	Vote on Kicking Someone from Fascintern
+#	73104	Meta Vote Count Event
+#	73105	Notification if you survive
+#	73106	Notification if you don't survive ):
+#	73107	Accedence Vote
+#	73108	Meta Vote Count Event
+#	73009	If you win
+#	73010	If you lose
+#	73011	Notification Someone Lost
+#	73012	Notification Somone Won
+#	73013	Notification Somone Wasn't Ejected
+#	73014	Notification Somone Was Ejected
+#	73015	Notification Somone Left 							(Add some CBs to this later)
+

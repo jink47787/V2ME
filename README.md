@@ -1,5 +1,5 @@
-# Victoria 2: Mechanics Enhanced
+# Random Access Mod
 
-V2ME aims to completely reimagine the idea of Victoria 2. Our mod focuses on rewriting and optimizing the core mechanics of Victoria 2.
+RAM is designed as a sandbox style mod. It contains little country specific flavour, but makes use of new techniques such as Dynamic Loc to create detailed event chains. This means while we may not have flavour events for a specific historical border arbitration or colonial dispute, any country can expect a detailed event chain if the appropriate conditions are met.
 
-Currently in alpha development.
+Currently in Indev development.

@@ -1,0 +1,407 @@
+country_event = { # To be trigged by either date/tech
+    id = 71001
+	major = yes
+    title = "EVTNAME71001"
+    desc = "EVTDESC71001"
+    picture = "commonwealth"
+
+    trigger = {
+		OR = {
+			AND = {
+				tag = ENG
+				year = 1920
+			}
+			AND = {
+				OR = {
+					tag = CAN
+					tag = AST
+					tag = SAF
+					tag = NZL
+					tag = NEW
+				}
+				year = 1925
+			}
+		}
+    }
+
+    option = {
+        name = "EVTOPTA71001"
+		set_country_flag = british_commonwealth_of_nations_head_flag
+		prestige = 5
+		badboy = -3
+		any_country = {
+			limit = {
+				OR = {
+					AND = {
+						OR = {
+							primary_culture = british
+							primary_culture = scottish
+							primary_culture = welsh
+							primary_culture = irish
+						}
+						exists = yes
+					}
+					tag = NEW
+					tag = CAN
+					tag = IRE
+					tag = NZL
+					tag = AST
+					tag = SAF
+					tag = HND
+				}
+				NOT = { tag = CLN }
+				NOT = { tag = D01 }
+				NOT = { tag = D02 }
+				NOT = { tag = D03 }
+				NOT = { tag = D04 }
+				NOT = { tag = D05 }
+			}
+			prestige = 1
+			country_event = 71003
+		}
+		CLN = { country_event = { id = 71050 days = 5 } }
+    }
+    option = {
+        name = "EVTOPTB71001"
+		prestige = -5
+    }
+}
+
+country_event = { # To be trigged dismantlement of UK
+    id = 71002
+	major = yes
+    title = "EVTNAME71002"
+    desc = "EVTDESC71002"
+    picture = "commonwealth_postwar"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71002"
+		set_country_flag = british_commonwealth_of_nations_flag
+		set_global_flag = shame_commonwealth
+		any_country = {
+			limit = {
+				OR = {
+					AND = {
+						OR = {
+							primary_culture = british
+							primary_culture = scottish
+							primary_culture = welsh
+							primary_culture = irish
+							tag = GUY
+							tag = EIC
+							tag = RHO
+							tag = SRI
+						}
+						exists = yes
+					}
+					tag = NEW
+					tag = CAN
+					tag = IRE
+					tag = NZL
+					tag = AST
+					tag = SAF
+					tag = HND
+				}
+				NOT = { tag = CLN }
+				NOT = { tag = D01 }
+				NOT = { tag = D02 }
+				NOT = { tag = D03 }
+				NOT = { tag = D04 }
+				NOT = { tag = D05 }
+			}
+			prestige = 1
+			country_event = { id = 71003 days = 1 }
+		}
+		CLN = { country_event = { id = 71050 days = 5 } }
+    }
+    option = {
+        name = "EVTOPTB71002"
+		prestige = -10
+    }
+}
+
+country_event = { #
+    id = 71003
+    title = "EVTNAME71003"
+    desc = "EVTDESC71003"
+    picture = "commonwealth"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71003"
+		set_country_flag = british_commonwealth_of_nations_flag
+		prestige = 5
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+				relation = { who = THIS value = 50 }
+			}
+		}
+		FROM = { country_event = { id = 71004 days = 1 } }
+		ai_chance = {
+			factor = 80
+			modifier = {
+                factor = 10
+				relation = { who = FROM value = 0 }
+			}
+		}
+    }
+    option = {
+        name = "EVTOPTB71003"
+		prestige = -10
+		FROM = { country_event = { id = 71005 days = 1 } }
+		ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 10
+				government = proletarian_dictatorship
+            }
+			modifier = {
+                factor = 100
+				government = radical_republic
+            }
+			modifier = {
+                factor = 10
+				NOT = { relation = { who = FROM value = -100 } }
+			}
+        }
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71004
+    title = "EVTNAME71004"
+    desc = "EVTDESC71004"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71004"
+		prestige = 3
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71005
+    title = "EVTNAME71005"
+    desc = "EVTDESC71005"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71005"
+		prestige = -3
+		FROM = { relation = { who = THIS value = -100 } }
+    }
+}
+
+country_event = { # Take in the monarchy
+    id = 71006
+    title = "EVTNAME71006"
+    desc = "EVTDESC71006"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71006"
+		prestige = -5
+    }
+
+    option = {
+        name = "EVTOPTB71006"
+		prestige = 20
+    }
+}
+
+country_event = { # Ejected from the commonwealth
+    id = 71015
+	major = yes
+    title = "EVTNAME71015"
+    desc = "EVTDESC71015"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71015"
+		prestige = -10
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+			}
+			relation = { who = THIS value = -100 }
+		}
+    }
+}
+
+country_event = { # Should x join Commonwealth
+    id = 71016
+    title = "EVTNAME71016"
+    desc = "EVTDESC71016"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	option = {
+        name = "EVTOPTA71016"
+		FROM = { set_country_flag = british_commonwealth_of_nations_flag }
+		prestige = 5
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+					has_country_flag = british_commonwealth_of_nations_head_flag
+				}
+				relation = { who = FROM value = 50 }
+			}
+		}
+		FROM = { country_event = 71017 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+                factor = 10
+				relation = { who = FROM value = 0 }
+			}
+		}
+    }
+
+    option = {
+        name = "EVTOPTB71016"
+		relation = { who = FROM value = -25 }
+		FROM = { country_event = 71018 }
+		ai_chance = {
+			factor = 5
+		}
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71017
+    title = "EVTNAME71017"
+    desc = "EVTDESC71017"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71017"
+		prestige = 3
+		set_country_flag = british_commonwealth_of_nations_flag
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+				}
+				relation = { who = FROM value = 50 }
+				country_event = 71019
+			}
+		}
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71018
+    title = "EVTNAME71018"
+    desc = "EVTDESC71018"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71018"
+		prestige = -3
+		relation = { who = FROM value = -25 }
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = british_commonwealth_of_nations_flag
+				}
+				country_event = 71020
+			}
+		}
+		
+	}
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71019
+    title = "EVTNAME71019"
+    desc = "EVTDESC71019"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA1019"
+		prestige = 3
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71020
+    title = "EVTNAME71020"
+    desc = "EVTDESC71020"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71020"
+		prestige = -3
+		FROM = { relation = { who = THIS value = -100 } }
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71039
+    title = "EVTNAME71039"
+    desc = "EVTDESC71039"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71039"
+		prestige = 3
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+}
+
+country_event = { # To be triggered in cleanup
+    id = 71040
+    title = "EVTNAME71040"
+    desc = "EVTDESC71040"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71040"
+    }
+}
+
+country_event = { # 
+    id = 71050
+    title = "Cleanup Lag Event for Commonwealth"
+    desc = "This is so countries don't instantly accend"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71050"
+		set_global_flag = Commonwealth_Exists
+		
+    }
+}

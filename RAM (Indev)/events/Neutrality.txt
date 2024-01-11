@@ -1,0 +1,101 @@
+#Introdution Events
+
+country_event = { # Explanation Event
+    id = 4000
+    title = "Neutral Countires"
+    desc = "EVTDESC1000"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				NOT = { 
+					has_country_flag = slotted
+				}
+				has_country_flag = neutral_nation
+			}
+			set_country_flag = due_for_slotting
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 71500 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 71600 }
+			set_country_flag = slotted
+			clr_country_flag = due_for_slotting
+		}
+		random_country = {
+			limit = {
+				tag = FRA
+				CLN = { check_variable = { which =  slot_itterator_variable value = 0.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 2.99 } } }	 # Common check
+			}
+			country_event = 4001
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 2.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } } } }
+			country_event = 4002
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 4.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } } } }
+			country_event = 4003
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 6.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 8.99 } } } }
+			country_event = 4004
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 8.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 10.99 } } } }
+			country_event = 4005
+		}
+	}
+	
+	option = {
+        name = "Thanks"
+    }
+}
+
+country_event = { # Explanation Event
+    id = 4001
+    title = "Neutral Countires"
+	major = yes
+    #desc = "EVTDESC1000"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		neutrality_state_1 = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+	}
+	
+	option = {
+        name = "Thanks"
+    }
+}
+
+country_event = { # Explanation Event
+    id = 4002
+    title = "Neutral Countires"
+	major = yes
+    #desc = "EVTDESC1000"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		neutrality_state_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+	}
+	
+	option = {
+        name = "Thanks"
+    }
+}

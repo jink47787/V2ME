@@ -1,0 +1,127 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71960
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 71601
+				any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 71601
+		any_country = { 
+			limit = {
+				has_country_flag = arbitration_initiator	# Spelling 
+			}
+			country_event = { id = 71961 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71961
+    title = "Adjudication a Success"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_12 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_13 = {}
+	} 
+	
+	option = {
+        name = "Woohoo!"
+		prestige = 10
+		all_core = {
+			limit = {
+				owner = {
+					has_country_flag = scoped_for_dispute_choice
+				}
+			}
+			secede_province =  THIS
+		}
+    }
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71962
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 71601
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 71601
+		any_country = { 
+			limit = {
+				has_country_flag = gp_current_dispute	# Spelling 
+			}
+			country_event = { id = 71963 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71963
+    title = "Adjudication a Success"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_14 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_15 = {}
+	} 
+	
+	option = {
+        name = "Woohoo!"
+		prestige = 10
+    }
+
+}

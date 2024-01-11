@@ -1,0 +1,48 @@
+#Introdution Events
+
+country_event = { # Explanation Event
+    id = 1000
+    title = ""
+    desc = "EVTDESC1000"
+    picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+        name = "Give me a quick tour!"
+		country_event = 1001
+    }
+	option = {
+        name = "This isn't my first rodeo"
+    }
+}
+
+country_event = { # Colombia is Purple Event
+    id = 1001
+    title = ""
+    desc = "EVTDESC1001"
+    picture = "RAM_intro_colombia"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+        name = "Oh yeah... it is..."
+		country_event = 1002
+    }
+}
+
+country_event = { # Credits Event
+    id = 1002
+    title = ""
+    desc = "EVTDESC1002"
+    picture = "RAM_intro_credits"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+        name = "Cheers!"
+    }
+}

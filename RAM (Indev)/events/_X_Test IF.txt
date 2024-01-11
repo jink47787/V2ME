@@ -1,0 +1,65 @@
+country_event = { 
+    id = 100000
+	major = yes
+    title = "Empire Games"
+    #desc = "EVTDESC71002"
+    #picture = "commonwealth"
+    is_triggered_only = yes
+	
+	immediate = {
+		commonwealth_games_state_1 = {}
+		#random_country = {
+		#	limit = {
+		#		government = democracy
+		#		tag = USA
+		#	}
+		#	random_country = {
+		#		limit = {
+		#			tag = USA
+		#		}
+		#		government = proletarian_dictatorship
+		#	}
+		#}	
+	}
+
+    option = {
+        name = "@ENG  United Kingdom"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@SCO  Scotland"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@IRE  Ireland"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@WHA  Wales"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+    option = {
+        name = "@CAN  Canada"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@NEW  Newfounland"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@SAF  South Africa"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@AST  Australia"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@NZL  New Zealand"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+	option = {
+        name = "@EIC  British India"
+		#CLN = { country_event = { id = 90001 days = 1 } }
+    }
+}

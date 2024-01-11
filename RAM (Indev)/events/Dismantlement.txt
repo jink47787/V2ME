@@ -1,0 +1,46 @@
+country_event = { # To be trigged by dismantlement
+    id = 90000
+	major = yes
+    title = "The Conference of $CAPITAL$"
+    #desc = "EVTDESC71002"
+    picture = "collectivisation"
+    is_triggered_only = yes
+
+    option = {
+        name = ""
+		CLN = { country_event = { id = 90001 days = 1 } }
+    }
+}
+
+country_event = { # To be trigged dismantlement of UK
+    id = 90001
+	major = yes
+    title = "We Are To Be Dismantled"
+    #desc = "EVTDESC71002"
+    picture = "collectivisation"
+    is_triggered_only = yes
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				tag = FROM
+			}
+		country_event = 90002 
+		}
+    }
+}
+
+country_event = { # To be trigged dismantlement of UK
+    id = 90002
+	major = yes
+    title = "We Are To Be Dismantled"
+    #desc = "EVTDESC71002"
+    picture = "collectivisation"
+    is_triggered_only = yes
+
+    option = {
+        name = ""
+		CLN = { country_event = { id = 90003 days = 0 } }
+    }
+}

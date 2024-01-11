@@ -1,0 +1,300 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71989
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				ai = yes
+			}
+			set_country_flag = recently_lost_war_treat_port
+		}
+		CLN = { country_event = 71990 }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71990
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_variable = { which = country_loc_slot value = 1 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		CLN = { country_event = 71601 }
+		any_country = {
+			limit = {
+				has_country_flag = recently_lost_war_treat_port
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 71601
+		country_event = 71501
+		any_country = {
+			limit = {
+				has_country_flag = recently_lost_war_treat_port
+			}
+			random_owned = {
+				limit = {
+					port = yes
+				}
+				add_province_modifier = { name = slot_2_province value = -1 }
+				CLN = { country_event = 71801 }
+				add_province_modifier = { name = flag_modifier_1 value = -1 }
+				FROM = { set_variable = { which = option_count value = 1 } }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = recently_lost_war_treat_port
+			}
+			random_owned = {
+				limit = {
+					NOT = { has_province_modifier = flag_modifier_1 } 
+					port = yes
+				}
+				add_province_modifier = { name = slot_3_province value = -1 }
+				CLN = { country_event = 71801 }
+				add_province_modifier = { name = flag_modifier_2 value = -1 }
+				FROM = { set_variable = { which = option_count value = 2 } }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = recently_lost_war_treat_port
+			}
+			random_owned = {
+				limit = {
+					NOT = { has_province_modifier = flag_modifier_1 } 
+					NOT = { has_province_modifier = flag_modifier_2 } 
+					port = yes
+				}
+				add_province_modifier = { name = slot_4_province value = -1 }
+				CLN = { country_event = 71801 }
+				add_province_modifier = { name = flag_modifier_3 value = -1 }
+				FROM = { set_variable = { which = option_count value = 3 } }
+			}
+		}
+		any_country = {
+			clr_country_flag = recently_lost_war_treat_port
+		}
+		any_country = { 
+			limit = {
+				tag = FRA
+				FROM = {
+					check_variable = { which = option_count value = 0.99 }
+					NOT = { check_variable = { which = option_count value = 1.99 } }
+				}
+			}
+			country_event = { id = 71991 days = 1 }
+		}
+		any_country = { 
+			limit = {
+				tag = FRA
+				FROM = {
+					check_variable = { which = option_count value = 1.99 }
+					NOT = { check_variable = { which = option_count value = 2.99 } }
+				}
+			}
+			country_event = { id = 71992 days = 1 }
+		}
+		any_country = { 
+			limit = {
+				tag = FRA
+				FROM = {
+					check_variable = { which = option_count value = 2.99 }
+				}
+			}
+			country_event = { id = 71993 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71991
+    title = "Seas Sovereignty"
+    picture = "kreg"
+
+	is_triggered_only = yes
+
+    immediate = {
+		treaty_port_state_1 = {}
+		slot_1 = {}
+		treaty_port_state_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+	} 
+
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_1
+			}
+			#CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	option = {
+        name = "We are chill tbh"
+
+    }
+
+}
+
+country_event = {
+    id = 71992
+    title = "Seas Sovereignty"
+    picture = "kreg"
+
+	is_triggered_only = yes
+
+    immediate = {
+		treaty_port_state_1 = {}
+		slot_1 = {}
+		treaty_port_state_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+	} 
+
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_1
+			}
+			#CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	   option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_2
+			}
+			#CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	option = {
+        name = "We are chill tbh"
+
+    }
+
+}
+
+country_event = {
+    id = 71993
+    title = "Seas Sovereignty"
+    picture = "kreg"
+
+	is_triggered_only = yes
+
+    immediate = {
+		treaty_port_state_1 = {}
+		slot_1 = {}
+		treaty_port_state_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+	} 
+
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_1
+			}
+			#CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_2
+			}
+			#CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_3
+			}
+			#CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	option = {
+        name = "We are chill tbh"
+
+    }
+
+}

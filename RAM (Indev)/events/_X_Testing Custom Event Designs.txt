@@ -1,0 +1,75 @@
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 1
+    title = "Attempting to Write 0"
+    #desc = ""
+    picture = "collectivisation"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		SPA_610 = {}
+		berlin_conference_1 = {}
+	}
+	
+	option = {
+        name = ""
+	country_event = 71915
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 2
+    title = "Attempting to Write 0"
+    #desc = ""
+    picture = "collectivisation_red"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		SPA_610 = {}
+		berlin_conference_1 = {}
+	}
+	
+	option = {
+        name = ""
+	country_event = 71916
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 3
+    title = ""
+    #desc = ""
+    picture = "collectivisation_green"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		SPA_610 = {}
+		berlin_conference_1 = {}
+	}
+	
+	option = {
+        name = ""
+	country_event = 71917
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 4
+    title = "Attempting to Write 0"
+    #desc = ""
+    picture = "collectivisation_blue"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		SPA_610 = {}
+		berlin_conference_1 = {}
+	}
+	
+	option = {
+        name = ""
+	country_event = 71914
+    }
+}

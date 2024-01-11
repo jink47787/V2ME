@@ -1,0 +1,992 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71930
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		random_country = {
+			limit = { 
+				NOT = { has_global_flag = league_of_nations }
+			}
+			set_global_flag = league_of_nations
+			slot_1 = { secede_province = THIS }
+			slot_1 = { state_scope = { change_region_name = "§bLeague Of Nations§!" } } # Slot 1
+			slot_1 = { secede_province = QQQ }
+			slot_10 = { secede_province = THIS }
+			slot_10 = { state_scope = { change_region_name = "@UTI" } } # Slot 1
+			slot_10 = { secede_province = QQQ }
+			arbitration_and_disputes_gp_or_entity = { secede_province = THIS }
+			arbitration_and_disputes_gp_or_entity = { state_scope = { change_region_name = "ï¿½bInternational Powerï¿½!" } } # Slot 1
+			arbitration_and_disputes_gp_or_entity = { secede_province = QQQ }
+			set_global_flag = LON_for_dispute
+			FROM = { change_variable = { which = option_count value = 1 } }
+		}
+		random_country = {	
+			limit = { 
+				NOT = { has_country_flag = gp_for_dispute }
+				is_disarmed = no
+				#NOT = { national_provinces_occupied = 50 }
+				NOT  = { war_with = FROM }
+				is_greater_power = yes
+				NOT = { has_global_flag = league_of_nations }
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+			set_variable = { which = flag_loc_slot value = 10 }
+			set_country_flag = gp_for_dispute
+			set_country_flag = gp_for_dispute_1
+			FROM = { change_variable = { which = option_count value = 1 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				NOT = { has_country_flag = gp_for_dispute }
+				is_disarmed = no
+				#NOT = { national_provinces_occupied = 50 }
+				NOT  = { war_with = FROM }
+				is_greater_power = yes
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+			set_variable = { which = flag_loc_slot value = 11 }
+			set_country_flag = gp_for_dispute
+			set_country_flag = gp_for_dispute_2
+			FROM = { change_variable = { which = option_count value = 1 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				NOT = { has_country_flag = gp_for_dispute }
+				is_disarmed = no
+				#NOT = { national_provinces_occupied = 50 }
+				NOT  = { war_with = FROM }
+				is_greater_power = yes
+			}
+			set_variable = { which = country_loc_slot value = 3 }
+			set_variable = { which = flag_loc_slot value = 12 }
+			set_country_flag = gp_for_dispute
+			set_country_flag = gp_for_dispute_3
+			FROM = { change_variable = { which = option_count value = 1 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				NOT = { has_country_flag = gp_for_dispute }
+				is_disarmed = no
+				#NOT = { national_provinces_occupied = 50 }
+				NOT  = { war_with = FROM }
+				is_greater_power = yes
+			}
+			set_variable = { which = country_loc_slot value = 4 }
+			set_variable = { which = flag_loc_slot value = 13 }
+			set_country_flag = gp_for_dispute
+			set_country_flag = gp_for_dispute_4
+			FROM = { change_variable = { which = option_count value = 1 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		#any_land_province = { remove_crime = meta_crime }
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 0.99 }
+				NOT = { check_variable = { which = option_count value = 1.99 } }
+			}
+			country_event = 71931
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 1.99 }
+				NOT = { check_variable = { which = option_count value = 2.99 } }
+			}
+			country_event = 71932
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 2.99 }
+				NOT = { check_variable = { which = option_count value = 3.99 } }
+			}
+			country_event = 71933
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 3.99 }
+				NOT = { check_variable = { which = option_count value = 4.99 } }
+			}
+			country_event = 71934
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 4.99 }
+				NOT = { check_variable = { which = option_count value = 5.99 } }
+			}
+			country_event = 71935
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 5.99 }
+				NOT = { check_variable = { which = option_count value = 6.99 } }
+			}
+			country_event = 71936
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 6.99 }
+				NOT = { check_variable = { which = option_count value = 7.99 } }
+			}
+			country_event = 71937
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 7.99 }
+				NOT = { check_variable = { which = option_count value = 8.99 } }
+			}
+			country_event = 71938
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 8.99 }
+				NOT = { check_variable = { which = option_count value = 9.99 } }
+			}
+			country_event = 71939
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71931
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_1 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+	option = {
+		name = "We should wait for stronger backers"
+		prestige = -10
+	}
+
+}
+
+country_event = {
+    id = 71932
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_2 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_1 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_2 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+	option = {
+		name = "We should wait for stronger backers"
+		prestige = -10
+	}
+
+}
+
+country_event = {
+    id = 71933
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_12 = {}
+		slot_3 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_1 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_2 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_3 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+	option = {
+		name = "We should wait for stronger backers"
+		prestige = -10
+	}
+
+}
+
+country_event = {
+    id = 71934
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_12 = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_13 = {}
+		slot_4 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_1 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_2 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_3 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = gp_for_dispute_4 } set_country_flag = gp_current_dispute }
+		CLN = { country_event = 71940 }
+    }
+	
+	option = {
+		name = "We should wait for stronger backers"
+		prestige = -10
+	}
+
+}
+
+country_event = {
+    id = 71935
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_1
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+		
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_2
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_3
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_4
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_5
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+}
+
+country_event = {
+    id = 71936
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_1
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_2
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_3
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_4
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_5
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_6
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+}
+
+country_event = {
+    id = 71937
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_1
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+		
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_2
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_3
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_4
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_5
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_6
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_7
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+}
+
+country_event = {
+    id = 71938
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_8 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_1
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_2
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_3
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_4
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_5
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_6
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+		
+    }
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_7
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_8
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+}
+
+country_event = {
+    id = 71939
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_2 = {}
+		arbitration_and_disputes_gp_or_entity = {}
+		arbitration_and_disputes_state_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_1
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_2
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_3
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_4
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_5
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_6
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_7
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_8
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = gp_for_dispute_9
+			}
+			set_country_flag = gp_current_dispute
+			CLN = { country_event = 71940 }
+		}
+    }
+
+}

@@ -1,0 +1,864 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71912
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		all_core = { add_crime = meta_crime }
+		CLN = { country_event = 71913 }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71913
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+			set_variable = { which = flag_loc_slot value = 10 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_1
+			FROM = { set_variable = { which = option_count value = 1 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+			set_variable = { which = flag_loc_slot value = 11 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_2
+			FROM = { set_variable = { which = option_count value = 2 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 3 }
+			set_variable = { which = flag_loc_slot value = 12 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_3
+			FROM = { set_variable = { which = option_count value = 3 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 4 }
+			set_variable = { which = flag_loc_slot value = 13 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_4
+			FROM = { set_variable = { which = option_count value = 4 } }
+		}
+		country_event = 71601
+		country_event = 71501
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 5 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_5
+			FROM = { set_variable = { which = option_count value = 5 } }
+		}
+		country_event = 71601
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 6 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_6
+			FROM = { set_variable = { which = option_count value = 6 } }
+		}
+		country_event = 71601
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 7 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_7
+			FROM = { set_variable = { which = option_count value = 7 } }
+		}
+		country_event = 71601
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 8 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_8
+			FROM = { set_variable = { which = option_count value = 8 } }
+		}
+		country_event = 71601
+		random_country = {
+			limit = { 
+				neighbour = FROM
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { has_crime = meta_crime }
+			}
+			set_variable = { which = country_loc_slot value = 9 }
+			set_country_flag = scoped_for_dispute
+			set_country_flag = scoped_for_dispute_9
+			FROM = { set_variable = { which = option_count value = 9 } }
+		}
+		country_event = 71601
+		any_land_province = { remove_crime = meta_crime }
+		FROM = { set_country_flag = arbitration_initiator }
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 0.99 }
+				NOT = { check_variable = { which = option_count value = 1.99 } }
+			}
+			country_event = 71914
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 1.99 }
+				NOT = { check_variable = { which = option_count value = 2.99 } }
+			}
+			country_event = 71915
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 2.99 }
+				NOT = { check_variable = { which = option_count value = 3.99 } }
+			}
+			country_event = 71916
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 3.99 }
+				NOT = { check_variable = { which = option_count value = 4.99 } }
+			}
+			country_event = 71917
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 4.99 }
+				NOT = { check_variable = { which = option_count value = 5.99 } }
+			}
+			country_event = 71918
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 5.99 }
+				NOT = { check_variable = { which = option_count value = 6.99 } }
+			}
+			country_event = 71919
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 6.99 }
+				NOT = { check_variable = { which = option_count value = 7.99 } }
+			}
+			country_event = 71920
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 7.99 }
+				NOT = { check_variable = { which = option_count value = 8.99 } }
+			}
+			country_event = 71921
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 8.99 }
+				NOT = { check_variable = { which = option_count value = 9.99 } }
+			}
+			country_event = 71922
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71914
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71915
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_2 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71916
+    title = "Rightful $COUNTRY$"
+    picture = "commonwealth_three_long"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_12 = {}
+		slot_3 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71917
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_12 = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_13 = {}
+		slot_4 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71918
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71919
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71920
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_7 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71921
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_8 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_7 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}
+
+country_event = {
+    id = 71922
+    title = "Rightful $COUNTRY$"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_1 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_3 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_7 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = scoped_for_dispute_9 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 71930}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+	}
+
+}

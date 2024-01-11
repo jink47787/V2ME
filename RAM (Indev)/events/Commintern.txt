@@ -1,0 +1,415 @@
+country_event = { #
+    id = 71055
+    title = "Cleanup Lag Event for Comintern"
+    desc = "This is so countries don't instantly accend"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71050"
+		set_global_flag = Comintern_Exists
+		
+    }
+}
+
+
+# Comintern
+
+country_event = { 
+    id = 71300
+	#major = yes
+    title = " Long Live The Third Communist International!"
+    desc = "EVTDESC71300"
+    picture = "comint_alt"
+    is_triggered_only = yes
+
+    option = {
+        name = "Vive La International!"
+		any_country = { 
+			limit = {
+				NOT = {
+					truce_with = THIS
+					war_with = THIS
+				}
+				government = proletarian_dictatorship
+				civilized = yes
+				exists = yes
+			}
+			country_event = { id = 71301 days = 1 }
+		}
+		set_country_flag = comintern_flag
+		CLN = { country_event = { id = 71055 days = 5 } }
+    }
+    option = {
+        name = "Just Don't Be Poor!"
+    }
+}
+
+country_event = {
+    id = 71301
+    title = "EVTNAME71301"
+    desc = "EVTDESC71301"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71301"
+		set_country_flag = comintern_flag
+		ai_chance = {
+			factor = 20
+		}
+    }
+    option = {
+        name = "EVTOPTB71301"
+		relation = { who = FROM value = -25 }
+		ai_chance = {
+			factor = 80
+		}
+    }
+}
+
+#### Descention 
+
+country_event = { # Being Kicked from Anti Comintern
+    id = 71302
+    title = "EVTNAME71302"
+    desc = "EVTDESC71302"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71302"
+		set_country_flag = COM_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = comintern_flag
+				}
+			}
+			country_event = { id = 71303 days = 1 }
+		}
+		country_event = { id = 71303 days = 1 }
+		CLN = { country_event = { id = 71304 days = 3 } }
+    }
+}
+
+country_event = { # 
+    id = 71303
+    title = "EVTNAME71303"
+    desc = "EVTDESC71303"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71303"
+		set_country_flag = COM_Vote_For
+		relation = { who = FROM value = 100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				relation = { who = FROM value = 0 }
+			}
+		}
+    }
+	
+    option = {
+        name = "EVTOPTB71303"
+		set_country_flag = COM_Vote_Against
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+    }
+}
+
+country_event = { # 
+    id = 71304
+    title = "FASC Vote Check"
+    desc = "Ai Checks if the variable is Positive. The Dyanamic Loc version would check the ratio."
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "Cleanup Vote Check (Dumb Version)"
+		UTI = { set_variable = { which = COM_Vote value = -1 } }
+		any_country = {
+			limit = {
+				has_country_flag = COM_Vote_For
+			}
+			UTI = { change_variable = { which = COM_Vote value = 1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = COM_Vote_Against
+			}
+			UTI = { change_variable = { which = COM_Vote value = -1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = COM_Vote_eject
+				UTI = { check_variable = { which = COM_Vote value = 0 } }
+			}
+			country_event = 71305
+		}
+		any_country = {
+			limit = {
+				has_country_flag = COM_Vote_eject
+				NOT = { UTI = { check_variable = { which = COM_Vote value = 0 } } }
+			}
+			country_event = 71306
+		}
+		any_country = {
+			clr_country_flag = COM_Vote_For
+			clr_country_flag = COM_Vote_Against
+		}	
+    }
+}
+
+country_event = { # If you survive vote
+    id = 71305
+    title = "EVTNAME71305"
+    desc = "EVTDESC71305"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71305"
+		clr_country_flag = COM_Vote_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = comintern_flag
+				}
+			}
+			country_event = 71313
+		}
+    }
+}
+
+country_event = { # If you lose vote
+    id = 71306
+    title = "EVTNAME71306"
+    desc = "EVTDESC71306"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71306"
+		clr_country_flag = comintern_flag
+		remove_country_modifier = comintern
+		clr_country_flag = COM_Vote_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = comintern_flag
+				}
+			}
+			relation = { who = THIS value = -200 }
+			country_event = 71314
+		}
+		add_country_modifier = { name = comintern_cooldown duration = 180 } # do it once every 6 monts
+    }
+}
+
+#### Ascention 
+
+country_event = { # 
+    id = 71307
+    title = "EVTNAME71307"
+    desc = "EVTDESC71307"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71307"
+		set_country_flag = COM_Vote_Acc_For
+		relation = { who = FROM value = 100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				relation = { who = FROM value = 0 }
+			}
+		}
+    }
+	
+    option = {
+        name = "EVTOPTB71307"
+		set_country_flag = COM_Vote_Acc_Against
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+    }
+}
+
+country_event = { 
+    id = 71308
+    title = "COM  Accedence Vote Check"
+    desc = "Ai Checks if the variable is Positive. The Dyanamic Loc version would check the ratio."
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "Cleanup Vote Check (Dumb Version)"
+		UTI = { set_variable = { which = COM_Acc_Vote value = -1 } }
+		any_country = {
+			limit = {
+				has_country_flag = COM_Vote_Acc_For
+			}
+			UTI = { change_variable = { which = COM_Acc_Vote value = 1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = COM_Vote_Acc_Against
+			}
+			UTI = { change_variable = { which = COM_Acc_Vote value = -1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = COM_accept
+				UTI = { check_variable = { which = COM_Acc_Vote value = 0 } }
+			}
+			country_event = 71309
+		}
+		any_country = {
+			limit = {
+				has_country_flag = COM_accept
+				NOT = { UTI = { check_variable = { which = COM_Acc_Vote value = 0 } } }
+			}
+			country_event = 71310
+		}
+		any_country = {
+			clr_country_flag = COM_Vote_Acc_For
+			clr_country_flag = COM_Vote_Acc_Against
+		}	
+    }
+}
+
+country_event = { # If you survive vote
+    id = 71309
+    title = "EVTNAME71309"
+    desc = "EVTDESC71309"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71309"
+		clr_global_flag = COM_new_country_in_process
+		clr_country_flag = COM_accept
+		prestige = 10
+		set_country_flag = comintern_flag
+		add_country_modifier = { name = comintern duration = -1 }
+		capital_scope = { add_province_modifier = { name = capital_modifier_comintern duration = -1 } }
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = comintern_flag
+				}
+			}
+			relation = { who = THIS value = 50 }
+			country_event = 71311
+		}
+		add_country_modifier = { name = comintern_cooldown duration = 31 } # do it once every monts
+    }
+}
+
+country_event = { # If you lose vote
+    id = 71310
+    title = "EVTNAME71310"
+    desc = "EVTDESC71310"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71310"
+		clr_global_flag = COM_new_country_in_process
+		clr_country_flag = COM_accept
+		prestige = -10
+		add_country_modifier = { name = comintern_cooldown duration = 93 } # do it once every three monts
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = comintern_flag
+				}
+			}
+			country_event = 71312
+		}
+    }
+}
+
+country_event = { # Ascend
+    id = 71311
+    title = "EVTNAME71311"
+    desc = "EVTDESC71311"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71311"
+		prestige = 3
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+}
+
+country_event = { # Fail to Ascend
+    id = 71312
+    title = "EVTNAME71312"
+    desc = "EVTDESC71312"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71312"
+    }
+}
+
+country_event = { # Remains
+    id = 71313
+    title = "EVTNAME71313"
+    desc = "EVTDESC71313"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71313"
+    }
+}
+
+country_event = { # Ejected
+    id = 71314
+    title = "EVTNAME71314"
+    desc = "EVTDESC71314"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71314"
+    }
+}
+
+country_event = { # Leaves
+    id = 71315
+    title = "EVTNAME71315"
+    desc = "EVTDESC71315"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71315"
+    }
+}

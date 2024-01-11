@@ -1,0 +1,145 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71950
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 71601
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 71601
+		any_country = { 
+			limit = {
+				has_country_flag = scoped_for_dispute_choice	# Spelling 
+			}
+			country_event = { id = 71951 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71951
+    title = "International Derision"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_7 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_8 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_9 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_10 = {}
+		slot_2 = {}
+	} 
+
+    option = {
+        name = "We have no choice."
+		prestige = -5
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			CLN = { country_event = 71960 }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			CLN = { country_event = 71962 }
+		}
+    }
+	
+	option = {
+        name = "The lands are rightfully ours"
+		prestige = 5
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			CLN = { country_event = 71970 days = 1}
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = gp_current_dispute	# Spelling 
+			}
+			country_event = { id = 71971 days = 1 }
+		}
+    }
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71952
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 71601
+		any_country = { 
+			limit = {
+				has_country_flag = arbitration_initiator	# Spelling 
+			}
+			country_event = { id = 71953 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71953
+    title = "Adjudication Apathy"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_11 = {}
+	} 
+	
+	option = {
+        name = "Damn, that is unfortunate."
+		prestige = -5
+    }
+
+}

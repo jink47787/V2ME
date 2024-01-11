@@ -1,0 +1,48 @@
+political_decisions = {
+
+    arbitrations_decision = {
+        picture = dreams_of_empire
+        potential = {
+			has_global_flag = dev_enable
+			any_core = {
+				NOT = {
+					owned_by = THIS
+					owner = { is_vassal = yes }
+				}
+				owner = {
+					is_greater_power = no	
+					civilized = yes
+				}
+			}
+			is_greater_power = no	
+			civilized = yes
+			
+        }
+
+        allow = {
+			any_core = {
+				NOT = {
+					owned_by = THIS
+					owner = { is_our_vassal = THIS }
+				}
+				owner = {
+					is_greater_power = no	
+					civilized = yes
+					NOT = {
+						is_vassal = yes
+					}
+				}
+			}
+			war = no
+			is_greater_power = no	
+			civilized = yes
+			NOT = { has_country_flag = National_Disruption }
+        }
+
+        effect = {
+			all_core = { add_crime = meta_crime }
+			CLN = { country_event = 71913 }
+        }
+        ai_will_do = { factor = 0 }
+    }
+}

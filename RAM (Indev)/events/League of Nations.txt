@@ -1,0 +1,418 @@
+country_event = { # To be trigged by the first dismantlement
+    id = 70999
+	#major = yes
+    title = "EVTNAME70999"
+    desc = "EVTDESC70999"
+    picture = "lon"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA70999"
+		any_country = { 
+			limit = {
+				NOT = {
+					truce_with = THIS
+					war_with = THIS
+				}
+				civilized = yes
+				exists = yes
+			}
+			country_event = { id = 71000 days = 1 }
+		}
+		set_country_flag = league_of_nations_founder_flag
+		CLN = { country_event = { id = 71051 days = 5 } }
+    }
+    option = {
+        name = "EVTOPTB70999"
+    }
+}
+
+country_event = { # To be trigged by the first dismantlement
+    id = 71000
+    title = "EVTNAME71000"
+    desc = "EVTDESC71000"
+    picture = "lon"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71000"
+		set_country_flag = league_of_nations_founder_flag
+		ai_chance = {
+			factor = 80
+		}
+    }
+    option = {
+        name = "EVTOPTB71000"
+		relation = { who = FROM value = -25 }
+		ai_chance = {
+			factor = 20
+		}
+    }
+}
+
+country_event = { # League of Nations Cont.
+    id = 71030
+    title = "EVTNAME71030"
+    desc = "EVTDESC71030"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71030"
+		set_country_flag = LON_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = leauge_of_nations_flag
+					has_country_flag = league_of_nations_founder_flag
+				}
+			}
+			country_event = { id = 71031 days = 1 }
+		}
+		country_event = { id = 71031 days = 1 }
+		CLN = { country_event = { id = 71032 days = 3 } }
+    }
+}
+
+country_event = { # League of Nations Cont.
+    id = 71031
+    title = "EVTNAME71031"
+    desc = "EVTDESC71031"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71031"
+		set_country_flag = LON_Vote_For
+		relation = { who = FROM value = 100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				relation = { who = FROM value = 0 }
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = proletarian_dictatorship }
+				government = proletarian_dictatorship
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = radical_republic }
+				government = radical_republic
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = fascist_dictatorship }
+				government = fascist_dictatorship
+			}
+		}
+    }
+	
+    option = {
+        name = "EVTOPTB71031"
+		set_country_flag = LON_Vote_Against
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = proletarian_dictatorship }
+				OR = {
+					government = fascist_dictatorship
+					government = radical_republic
+				}
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = fascist_dictatorship }
+				OR = {
+					government = radical_republic
+					government = proletarian_dictatorship
+				}
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = radical_republic }
+				OR = {
+					government = proletarian_dictatorship
+					government = fascist_dictatorship
+				}
+			}
+		}
+    }
+}
+
+country_event = { # League of Nations Cont.
+    id = 71032
+    title = "LON Vote Check"
+    desc = "Ai Checks if the variable is Positive. The Dyanamic Loc version would check the ratio."
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "Cleanup Vote Check (Dumb Version)"
+		UTI = { set_variable = { which = LON_Vote value = -1 } }
+		any_country = {
+			limit = {
+				has_country_flag = LON_Vote_For
+			}
+			UTI = { change_variable = { which = LON_Vote value = 1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_Vote_Against
+			}
+			UTI = { change_variable = { which = LON_Vote value = -1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_eject
+				UTI = { check_variable = { which = LON_Vote value = 0 } }
+			}
+			country_event = 71033
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_eject
+				NOT = { UTI = { check_variable = { which = LON_Vote value = 0 } } }
+			}
+			country_event = 71034
+		}
+		any_country = {
+			clr_country_flag = LON_Vote_For
+			clr_country_flag = LON_Vote_Against
+		}	
+    }
+}
+
+country_event = { # If you survive vote
+    id = 71033
+    title = "EVTNAME71033"
+    desc = "EVTDESC71033"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71033"
+		clr_country_flag = LON_eject
+    }
+}
+
+country_event = { # If you lose vote
+    id = 71034
+    title = "EVTNAME71034"
+    desc = "EVTDESC71034"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71034"
+		clr_country_flag = leauge_of_nations_flag
+		clr_country_flag = league_of_nations_founder_flag
+		remove_country_modifier = league_of_nations
+		remove_country_modifier = league_of_nations_founding_memeber
+		clr_country_flag = LON_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = leauge_of_nations_flag
+					has_country_flag = league_of_nations_founder_flag
+				}
+			}
+			relation = { who = THIS value = -200 }
+		}
+		add_country_modifier = { name = lon_cooldown duration = 180 } # do it once every 6 monts
+    }
+}
+
+#### Ascention 
+
+country_event = { # League of Nations Cont.
+    id = 71035
+    title = "EVTNAME71035"
+    desc = "EVTDESC71035"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71035"
+		set_country_flag = LON_Vote_Acc_For
+		relation = { who = FROM value = 100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				relation = { who = FROM value = 0 }
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = proletarian_dictatorship }
+				government = proletarian_dictatorship
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = radical_republic }
+				government = radical_republic
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = fascist_dictatorship }
+				government = fascist_dictatorship
+			}
+		}
+    }
+	
+    option = {
+        name = "EVTOPTB71035"
+		set_country_flag = LON_Vote_Acc_Against
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = proletarian_dictatorship }
+				OR = {
+					government = fascist_dictatorship
+					government = radical_republic
+				}
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = fascist_dictatorship }
+				OR = {
+					government = radical_republic
+					government = proletarian_dictatorship
+				}
+			}
+			modifier = {
+                factor = 100
+				FROM = { government = radical_republic }
+				OR = {
+					government = proletarian_dictatorship
+					government = fascist_dictatorship
+				}
+			}
+		}
+    }
+}
+
+country_event = { # League of Nations Cont.
+    id = 71036
+    title = "LON  Accedence Vote Check"
+    desc = "Ai Checks if the variable is Positive. The Dyanamic Loc version would check the ratio."
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "Cleanup Vote Check (Dumb Version)"
+		UTI = { set_variable = { which = Acc_LON_Vote value = -1 } }
+		any_country = {
+			limit = {
+				has_country_flag = LON_Vote_Acc_For
+			}
+			UTI = { change_variable = { which = LON_Acc_Vote value = 1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_Vote_Acc_Against
+			}
+			UTI = { change_variable = { which = LON_Acc_Vote value = -1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_accept
+				UTI = { check_variable = { which = LON_Acc_Vote value = 0 } }
+			}
+			country_event = 71037
+		}
+		any_country = {
+			limit = {
+				has_country_flag = LON_accept
+				NOT = { UTI = { check_variable = { which = LON_Acc_Vote value = 0 } } }
+			}
+			country_event = 71038
+		}
+		any_country = {
+			clr_country_flag = LON_Vote_Acc_For
+			clr_country_flag = LON_Vote_Acc_Against
+		}	
+    }
+}
+
+country_event = { # If you survive vote
+    id = 71037
+    title = "EVTNAME71037"
+    desc = "EVTDESC71037"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71037"
+		clr_global_flag = LON_new_country_in_process
+		clr_country_flag = LON_accept
+		prestige = 10
+		set_country_flag = league_of_nations_flag
+		add_country_modifier = { name = league_of_nations duration = -1 }
+		capital_scope = { add_province_modifier = { name = capital_modifier_league_of_nations duration = -1 } }
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = leauge_of_nations_flag
+					has_country_flag = league_of_nations_founder_flag
+				}
+			}
+			relation = { who = THIS value = 50 }
+			country_event = 71039
+		}
+		add_country_modifier = { name = lon_cooldown duration = 31 } # do it once every monts
+    }
+}
+
+country_event = { # If you lose vote
+    id = 71038
+    title = "EVTNAME71038"
+    desc = "EVTDESC71038"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71038"
+		clr_global_flag = LON_new_country_in_process
+		clr_country_flag = LON_accept
+		prestige = -10
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = leauge_of_nations_flag
+					has_country_flag = league_of_nations_founder_flag
+				}
+			}
+			relation = { who = THIS value = 50 }
+			country_event = 71040
+		}
+		add_country_modifier = { name = lon_cooldown duration = 93 } # do it once every three monts
+    }
+}
+
+country_event = { #
+    id = 71051
+    title = "Cleanup Lag Event for LON"
+    desc = "This is so countries don't instantly accend"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71050"
+		set_global_flag = LON_Exists
+		
+    }
+}

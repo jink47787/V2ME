@@ -1,0 +1,415 @@
+country_event = { #
+    id = 71054
+    title = "Cleanup Lag Event for Facintern"
+    desc = "This is so countries don't instantly accend"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71050"
+		set_global_flag = Fascintern_Exists
+		
+    }
+}
+
+
+# Facintern
+
+country_event = { 
+    id = 71200
+	major = yes
+    title = "EVTNAME71200"
+    desc = "EVTDESC71200"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71200"
+		any_country = { 
+			limit = {
+				NOT = {
+					truce_with = THIS
+					war_with = THIS
+				}
+				government = fascist_dictatorship
+				civilized = yes
+				exists = yes
+			}
+			country_event = { id = 71201 days = 1 }
+		}
+		set_country_flag = fascintern_flag
+		CLN = { country_event = { id = 71054 days = 5 } }
+    }
+    option = {
+        name = "EVTOPTB71200"
+    }
+}
+
+country_event = {
+    id = 71201
+    title = "EVTNAME71201"
+    desc = "EVTDESC71201"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71201"
+		set_country_flag = fascintern_flag
+		ai_chance = {
+			factor = 20
+		}
+    }
+    option = {
+        name = "EVTOPTB71201"
+		relation = { who = FROM value = -25 }
+		ai_chance = {
+			factor = 80
+		}
+    }
+}
+
+#### Descention 
+
+country_event = { # Being Kicked from Anti Comintern
+    id = 71202
+    title = "EVTNAME71202"
+    desc = "EVTDESC71202"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71202"
+		set_country_flag = FASC_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = fascintern_flag
+				}
+			}
+			country_event = { id = 71203 days = 1 }
+		}
+		country_event = { id = 71203 days = 1 }
+		CLN = { country_event = { id = 71204 days = 3 } }
+    }
+}
+
+country_event = { # 
+    id = 71203
+    title = "EVTNAME71203"
+    desc = "EVTDESC71203"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71203"
+		set_country_flag = FASC_Vote_For
+		relation = { who = FROM value = 100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				relation = { who = FROM value = 0 }
+			}
+		}
+    }
+	
+    option = {
+        name = "EVTOPTB71203"
+		set_country_flag = FASC_Vote_Against
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+    }
+}
+
+country_event = { # 
+    id = 71204
+    title = "FASC Vote Check"
+    desc = "Ai Checks if the variable is Positive. The Dyanamic Loc version would check the ratio."
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "Cleanup Vote Check (Dumb Version)"
+		UTI = { set_variable = { which = FASC_Vote value = -1 } }
+		any_country = {
+			limit = {
+				has_country_flag = FASC_Vote_For
+			}
+			UTI = { change_variable = { which = FASC_Vote value = 1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = FASC_Vote_Against
+			}
+			UTI = { change_variable = { which = FASC_Vote value = -1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = FASC_Vote_eject
+				UTI = { check_variable = { which = FASC_Vote value = 0 } }
+			}
+			country_event = 71205
+		}
+		any_country = {
+			limit = {
+				has_country_flag = FASC_Vote_eject
+				NOT = { UTI = { check_variable = { which = FASC_Vote value = 0 } } }
+			}
+			country_event = 71206
+		}
+		any_country = {
+			clr_country_flag = FASC_Vote_For
+			clr_country_flag = FASC_Vote_Against
+		}	
+    }
+}
+
+country_event = { # If you survive vote
+    id = 71205
+    title = "EVTNAME71205"
+    desc = "EVTDESC71205"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71205"
+		clr_country_flag = FASC_Vote_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = fascintern_flag
+				}
+			}
+			country_event = 71213
+		}
+    }
+}
+
+country_event = { # If you lose vote
+    id = 71206
+    title = "EVTNAME71206"
+    desc = "EVTDESC71206"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71206"
+		clr_country_flag = fascintern_flag
+		remove_country_modifier = fascintern
+		clr_country_flag = FASC_Vote_eject
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = fascintern_flag
+				}
+			}
+			relation = { who = THIS value = -200 }
+			country_event = 71214
+		}
+		add_country_modifier = { name = fascintern_cooldown duration = 180 } # do it once every 6 monts
+    }
+}
+
+#### Ascention 
+
+country_event = { # 
+    id = 71207
+    title = "EVTNAME71207"
+    desc = "EVTDESC71207"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71207"
+		set_country_flag = FASC_Vote_Acc_For
+		relation = { who = FROM value = 100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				relation = { who = FROM value = 0 }
+			}
+		}
+    }
+	
+    option = {
+        name = "EVTOPTB71207"
+		set_country_flag = FASC_Vote_Acc_Against
+		relation = { who = FROM value = -100 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+                factor = 100
+				NOT = { relation = { who = FROM value = 0 } }
+			}
+		}
+    }
+}
+
+country_event = { 
+    id = 71208
+    title = "FASC  Accedence Vote Check"
+    desc = "Ai Checks if the variable is Positive. The Dyanamic Loc version would check the ratio."
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "Cleanup Vote Check (Dumb Version)"
+		UTI = { set_variable = { which = FASC_Acc_Vote value = -1 } }
+		any_country = {
+			limit = {
+				has_country_flag = FASC_Vote_Acc_For
+			}
+			UTI = { change_variable = { which = FASC_Acc_Vote value = 1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = FASC_Vote_Acc_Against
+			}
+			UTI = { change_variable = { which = FASC_Acc_Vote value = -1 } }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = FASC_accept
+				UTI = { check_variable = { which = FASC_Acc_Vote value = 0 } }
+			}
+			country_event = 71209
+		}
+		any_country = {
+			limit = {
+				has_country_flag = FASC_accept
+				NOT = { UTI = { check_variable = { which = FASC_Acc_Vote value = 0 } } }
+			}
+			country_event = 71210
+		}
+		any_country = {
+			clr_country_flag = FASC_Vote_Acc_For
+			clr_country_flag = FASC_Vote_Acc_Against
+		}	
+    }
+}
+
+country_event = { # If you survive vote
+    id = 71209
+    title = "EVTNAME71209"
+    desc = "EVTDESC71209"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71209"
+		clr_global_flag = FASC_new_country_in_process
+		clr_country_flag = FASC_accept
+		prestige = 10
+		set_country_flag = fascintern_flag
+		add_country_modifier = { name = fascintern duration = -1 }
+		capital_scope = { add_province_modifier = { name = capital_modifier_fascintern duration = -1 } }
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = fascintern_flag
+				}
+			}
+			relation = { who = THIS value = 50 }
+			country_event = 71211
+		}
+		add_country_modifier = { name = fascintern_cooldown duration = 31 } # do it once every monts
+    }
+}
+
+country_event = { # If you lose vote
+    id = 71210
+    title = "EVTNAME71210"
+    desc = "EVTDESC71210"
+    picture = "treaty"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71210"
+		clr_global_flag = FASC_new_country_in_process
+		clr_country_flag = FASC_accept
+		prestige = -10
+		add_country_modifier = { name = fascintern_cooldown duration = 93 } # do it once every three monts
+		any_country = {
+			limit = {			
+				OR = {
+					has_country_flag = fascintern_flag
+				}
+			}
+			country_event = 71212
+		}
+    }
+}
+
+country_event = { # Ascend
+    id = 71211
+    title = "EVTNAME71211"
+    desc = "EVTDESC71211"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71211"
+		prestige = 3
+		FROM = { relation = { who = THIS value = 25 } }
+    }
+}
+
+country_event = { # Fail to Ascend
+    id = 71212
+    title = "EVTNAME71212"
+    desc = "EVTDESC71212"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71212"
+    }
+}
+
+country_event = { # Remains
+    id = 71213
+    title = "EVTNAME71213"
+    desc = "EVTDESC71213"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71213"
+    }
+}
+
+country_event = { # Ejected
+    id = 71214
+    title = "EVTNAME71214"
+    desc = "EVTDESC71214"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71214"
+    }
+}
+
+country_event = { # Leaves
+    id = 71215
+    title = "EVTNAME71215"
+    desc = "EVTDESC71215"
+    picture = "treaty"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA71215"
+    }
+}

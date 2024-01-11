@@ -1,0 +1,342 @@
+#Collectivisation - start
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71910
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		SPA_610 = {}
+		berlin_conference_1 = {}
+		CLN = { country_event = 71911 }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71911
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+        name = ""
+		country_event = 71600
+		any_country = {
+			limit = {
+				tag = FROM
+			}
+			random_owned = {
+				limit = {
+					is_capital = yes
+				}
+				add_province_modifier = { name = slot_1_province value = -1 }
+				CLN = { country_event = 71801 }
+			}
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+			}
+			random_owned = {
+				limit = {
+					is_state_capital = yes
+					is_capital = no
+					is_colonial = no
+				}
+				add_province_modifier = { name = slot_3_province value = -1 }
+				CLN = { country_event = 71801 }
+				#add_crime = meta_crime
+				add_province_modifier = { name = flag_modifier_1 value = -1 }
+				FROM = { set_variable = { which = option_count value = 1 } }
+			}
+		}
+		
+		any_country = {
+			limit = {
+				tag = FROM
+			}
+			random_owned = {
+				limit = {
+					 is_state_capital = yes
+					 NOT = { has_province_modifier = flag_modifier_1 }
+					 is_capital = no
+					 is_colonial = no
+				}
+				add_province_modifier = { name = slot_4_province value = -1 }
+				CLN = { country_event = 71801 }
+				#add_crime = meta_crime
+				add_province_modifier = { name = flag_modifier_2 value = -1 }
+				FROM = { set_variable = { which = option_count value = 2 } }
+			}
+		}
+		
+		any_country = {
+			limit = {
+				tag = FROM
+			}
+			random_owned = {
+				limit = {
+					 is_state_capital = yes
+					 NOT = { has_province_modifier = flag_modifier_1 }
+					 NOT = { has_province_modifier = flag_modifier_2 }
+					 is_capital = no
+					 is_colonial = no
+				}
+				add_province_modifier = { name = slot_5_province value = -1 }
+				CLN = { country_event = 71801 }
+				#add_crime = meta_crime
+				add_province_modifier = { name = flag_modifier_3 value = -1 }
+				FROM = { set_variable = { which = option_count value = 3 }}
+			}
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				tag = RUS
+				owns = 1008
+				NOT = { 1008 = { is_capital = yes } }
+			}
+			any_owned = { 
+				remove_province_modifier = flag_modifier_1
+			}
+			random_owned = { 
+				limit = {
+					province_id = 1008
+				}
+				add_province_modifier = { name = slot_3_province value = -1 }
+				CLN = { country_event = 71801 }
+				#add_crime = meta_crime
+				add_province_modifier = { name = flag_modifier_1 value = -1 }
+			}
+		}
+		FROM = { set_variable = { which = country_loc_slot value = 2 } }
+		CLN = { country_event = 71601 }
+		#any_land_province = { remove_crime = meta_crime }
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 0.99 }
+				NOT = { check_variable = { which = option_count value = 1.99 } }
+			}
+			country_event = 1512056
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 1.99 }
+				NOT = { check_variable = { which = option_count value = 2.99 } }
+			}
+			country_event = 1512057
+		}
+		any_country = {
+			limit = {
+				tag = FROM
+				check_variable = { which = option_count value = 2.99 }
+			}
+			country_event = 1512058
+		}
+		#FROM = { country_event = 1512058 }
+    }
+}
+
+country_event = {
+    id = 1512056
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+	} 
+
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_1
+			}
+			add_province_modifier = { name = set_capital value = -1 }
+			CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+	option = {
+        name = "It is fine where it is"
+
+    }
+
+}
+
+country_event = {
+    id = 1512057
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+	} 
+
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_1
+			}
+			add_province_modifier = { name = set_capital value = -1 }
+			CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_2
+			}
+			add_province_modifier = { name = set_capital value = -1 }
+			CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+
+    }
+	option = {
+        name = "It is fine where it is"
+
+    }
+
+}
+
+country_event = {
+    id = 1512058
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+	} 
+
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_1
+			}
+			add_province_modifier = { name = set_capital value = -1 }
+			CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+    }
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_2
+			}
+			add_province_modifier = { name = set_capital value = -1 }
+			CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+
+    }
+    option = {
+        name = ""
+		any_owned = {
+			limit = {
+				has_province_modifier = flag_modifier_3
+			}
+			add_province_modifier = { name = set_capital value = -1 }
+			CLN = { country_event = 81000 }
+		}
+		any_land_province = { remove_province_modifier = flag_modifier_1 }
+		any_land_province = { remove_province_modifier = flag_modifier_2 }
+		any_land_province = { remove_province_modifier = flag_modifier_3 }
+
+    }
+	option = {
+        name = "It is fine where it is"
+
+    }
+
+}
+
