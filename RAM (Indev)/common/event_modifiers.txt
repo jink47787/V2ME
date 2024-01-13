@@ -407,6 +407,10 @@ dispute_modifier = {
 	icon = 30
 }
 
+capital_city_modifier = {
+	icon = 31
+}
+
 capital_mobilisation = {
 	supply_limit = 1000
 	icon = 17

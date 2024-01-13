@@ -723,15 +723,11 @@ emigration_chance = {
         country = {
             has_country_flag = new_world_nation
             OR = {
-                government = democracy
-                government = radical_republic
-                government = constitutional_empire
-                government = hms_government
-                government = colonial_company
-                government = colonial_company_2
-                government = colonial_company_3
-                government = colonial_company_4
-				government = presidential_dictatorship
+				has_country_flag = democracy
+				has_country_flag = radical_republic
+				has_country_flag = technocracy
+				has_country_flag = colonial_company
+				has_country_flag = presidential_dictatorship
             }
         }
     }
@@ -1144,7 +1140,7 @@ conversion_chance = {
         country = {
             civilized = no
             NOT = {
-                government = theocracy
+                has_country_flag = theocracy
                 has_country_flag = missionary_activity
             }
         }
@@ -1252,7 +1248,7 @@ conversion_chance = {
 
     modifier = {
         factor = 0.1
-        country = { government = theocracy }
+        country = { has_country_flag = theocracy }
     }
 
     modifier = {

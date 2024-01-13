@@ -12,11 +12,55 @@ proletarian_dictatorship = {
     flagType = communist
 }
 
+proletarian_dictatorship_2 = {
+    #which ideology of parties.
+    communist = yes
+    socialist = yes
+
+    election = yes
+    duration = 60
+    appoint_ruling_party = yes
+    flagType = communist
+}
+
 presidential_dictatorship = {
     #which ideology of parties.
     reactionary = yes
     fascist = yes
     conservative = yes
+
+    election = no
+    appoint_ruling_party = yes
+    flagType = republic
+}
+
+presidential_dictatorship_2 = {
+    #which ideology of parties.
+    reactionary = yes
+    fascist = yes
+    conservative = yes
+
+    election = no
+    appoint_ruling_party = yes
+    flagType = republic
+}
+
+anarchist_state = {
+    #which ideology of parties.
+    liberal = yes
+    socialist = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+    election = yes
+    appoint_ruling_party = yes
+    flagType = republic
+}
+
+technocracy = {
+    #which ideology of parties.
+    liberal = yes
 
     election = no
     appoint_ruling_party = yes
@@ -95,7 +139,27 @@ fascist_dictatorship = {
     flagType = fascist
 }
 
+fascist_dictatorship_2 = {
+    #which ideology of parties.
+    fascist = yes
+
+    election = no
+    appoint_ruling_party = yes
+    flagType = fascist
+}
+
 absolute_monarchy = {
+    liberal = yes
+    conservative = yes
+    reactionary = yes
+
+
+    election = no
+    appoint_ruling_party = yes
+    flagType = monarchy
+}
+
+absolute_monarchy_2 = {
     liberal = yes
     conservative = yes
     reactionary = yes
@@ -136,6 +200,22 @@ hms_government = {
 }
 
 democracy = {
+    liberal = yes
+    socialist = yes
+    conservative = yes
+    reactionary = yes
+    communist = yes
+    radical = yes
+    fascist = yes
+
+
+    election = yes
+    duration = 48
+    appoint_ruling_party = no
+    flagType = republic
+}
+
+democracy_2 = {
     liberal = yes
     socialist = yes
     conservative = yes

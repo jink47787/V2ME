@@ -400,7 +400,7 @@ socialist_realism = {
         base = 2
         modifier = {
             factor = 2
-            government = proletarian_dictatorship
+            has_country_flag = proletarian_dictatorship
         }
         modifier = {
             factor = 2
@@ -872,11 +872,11 @@ constitutionalism = {
         base = 3
         modifier = {
             factor = 2
-            government = hms_government
+            has_country_flag = constitutional_monarchy
         }
         modifier = {
             factor = 1
-            government = constitutional_empire
+            has_country_flag = constitutional_empire
         }
         modifier = {
             factor = 1
@@ -929,7 +929,7 @@ egalitarianism = {
         }
         modifier = {
             factor = 2
-			government = democracy
+			has_country_flag = republic
         }
         modifier = {
             factor = 1
@@ -978,11 +978,7 @@ authoritarianism = {
             OR = {
                 ruling_party_ideology = reactionary
                 AND = {
-                    government = absolute_monarchy
-                    ruling_party_ideology = conservative
-                }
-				AND = {
-                    government = absolute_empire
+                    has_country_flag = autocracy
                     ruling_party_ideology = conservative
                 }
             }
@@ -998,32 +994,25 @@ hierarchical_order = {
     limit = {
         has_country_flag = existing_country
         state_n_government = 1
-        OR = {
-            government = hms_government
-            government = prussian_constitutionalism
-            government = absolute_monarchy
-			government = absolute_empire
-			government = semi_constitutional_empire
-			government = constitutional_empire
-        }
+        has_country_flag = monarchy
     }
     chance = {
         base = 1
         modifier = {
             factor = 3
-            government = absolute_monarchy
+            has_country_flag = absolute_monarchy
         }
 		modifier = {
             factor = 3
-            government = absolute_empire
+            has_country_flag = absolute_empire
         }
         modifier = {
             factor = 2
-            government = prussian_constitutionalism
+            has_country_flag = constitutional_monarchy
         }
         modifier = {
             factor = 2
-            government = semi_constitutional_empire
+            has_country_flag = semi_constitutional_empire
         }
     }
     core_pop_militancy_modifier = -0.01
@@ -1050,19 +1039,19 @@ traditionalism = {
         }
         modifier = {
             factor = 2
-            government = absolute_monarchy
+            has_country_flag = absolute_monarchy
         }
         modifier = {
             factor = 2
-            government = absolute_empire
+            has_country_flag = absolute_empire
         }
         modifier = {
             factor = 1
-            government = prussian_constitutionalism
+            has_country_flag = constitutional_monarchy
         }
 		modifier = {
             factor = 1
-            government = semi_constitutional_empire
+            has_country_flag = semi_constitutional_empire
         }
     }
     core_pop_consciousness_modifier = -0.01
@@ -1805,15 +1794,15 @@ mass_advertising = {
         }
         modifier = {
             factor = 2
-			government = democracy
+			has_country_flag = republic
         }
         modifier = {
             factor = 1
-            government = hms_government
+            has_country_flag = constitutional_monarchy
         }
         modifier = {
             factor = 1
-            government = constitutional_empire
+            has_country_flag = constitutional_empire
         }
     }
     effect = {

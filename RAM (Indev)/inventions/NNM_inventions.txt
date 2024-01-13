@@ -158,7 +158,7 @@ carlism = {
         }
         modifier = {
             factor = 2
-            NOT = { government = absolute_monarchy government = absolute_empire }
+            NOT = { has_country_flag = absolute_monarchy has_country_flag = absolute_empire }
         }
     }
     effect = {

@@ -721,23 +721,6 @@ categories = {
         immigrant_attract = -0.99
     }
 
-	kairouan = {
-        movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-    }
-
 	culiacan = {
         movement_cost = 1.0
         color = { 241 221 184 }
@@ -1762,21 +1745,6 @@ categories = {
         combat_width = -0.20
     }
 
-    ascension = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 0.0
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
-    }
-
 	asuncion = {
         movement_cost = 1.0
         color = { 241 221 184 }
@@ -1801,21 +1769,6 @@ categories = {
         supply_limit = 6
         min_build_railroad = 2
         combat_width = -0.33
-    }
-
-	azores = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 0.0
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
     }
 
 	bahrain = {
@@ -1903,21 +1856,6 @@ categories = {
         mine_rgo_eff = 0.0
         supply_limit = 10
 	}
-
-	constantine = {
-        movement_cost = 1.5
-        defence = 3
-        color = { 68 20 6 }
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.0
-        mine_rgo_size = 0.1
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        min_build_railroad = 3
-
-        combat_width = -0.6
-        immigrant_attract = -0.4
-    }
 
 	bukhara = {
         movement_cost = 1.2
@@ -2617,21 +2555,6 @@ categories = {
         combat_width = -0.33
     }
 
-	madeira = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 3
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
-    }
-
 	mendoza = {
         movement_cost = 1.2
         defence = 1
@@ -2693,36 +2616,12 @@ categories = {
         immigrant_attract = -0.2
     }
 
-	mombasa = {
-        movement_cost = 1.0
-        color = { 220 201 199 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.15
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 4
-        min_build_railroad = 1
-        immigrant_attract = -0.2
-    }
-
 	monterrey = {
         movement_cost = 1.1
         color = { 208 155 0 }
         supply_limit = 6
         combat_width = -0.5
         attrition = 0.5
-    }
-
-	monzo = {
-        movement_cost = 1.0
-        color = { 220 201 199 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.15
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 4
-        min_build_railroad = 1
-        immigrant_attract = -0.2
     }
 
 	mosul = {
@@ -2891,16 +2790,6 @@ categories = {
         min_build_railroad = 2
         combat_width = -0.33
         immigrant_attract = -0.25
-    }
-
-	pretoria = {
-        movement_cost = 1.0
-        color = { 137 104 165 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.25
-        supply_limit = 10
     }
 
 	qom = {
@@ -3188,25 +3077,6 @@ categories = {
         immigrant_attract = -0.25
     }
 
-	tananarive = {
-        movement_cost = 1.5
-        defence = 3
-        color = { 117 108 121 }
-
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.2
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 2
-
-        combat_width = -0.70
-
-        min_build_railroad = 3
-        #attrition = 0.25
-        immigrant_attract = -0.2
-    }
-
 	toluca = {
         movement_cost = 1.2
         defence = 1
@@ -3218,21 +3088,6 @@ categories = {
         supply_limit = 6
         min_build_railroad = 2
         combat_width = -0.33
-    }
-
-	tenerife = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 3
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
     }
 
 	thimpu = {
@@ -3740,18 +3595,6 @@ categories = {
         immigrant_attract = -0.25
     }
 
-	mzizima = {
-        movement_cost = 1.0
-        color = { 220 201 199 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.15
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 4
-        min_build_railroad = 1
-        immigrant_attract = -0.2
-    }
-
 	bishkek = {
         movement_cost = 1.5
         defence = 3.0
@@ -3766,21 +3609,6 @@ categories = {
         immigrant_attract = -0.99
         supply_limit = 2
         combat_width = -0.6
-    }
-
-	luanda = {
-        movement_cost = 1.2
-        defence = 1.0
-        attrition = 0.8
-        color = { 88 122 37 }
-        #farm_rgo_size = -0.1
-        farm_rgo_eff = 0.0
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-        supply_limit = 3
-        min_build_railroad = 3
-        immigrant_attract = -0.25
-        combat_width = -0.2
     }
 
 	pristina = {
@@ -3894,24 +3722,6 @@ categories = {
 
     }
 
-    lagos = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
-    }
-
     cernauti = {
         movement_cost = 1.0
         color = { 241 221 184 }
@@ -3940,25 +3750,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-    }
-
-	ankober = {
-        movement_cost = 1.5
-        defence = 3
-        color = { 117 108 121 }
-
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.2
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 2
-
-        combat_width = -0.70
-
-        min_build_railroad = 3
-        #attrition = 0.25
-        immigrant_attract = -0.2
     }
 
 	avignon = {
@@ -4064,18 +3855,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-    }
-
-    inkomati = {
-        movement_cost = 1.0
-        color = { 220 201 199 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.15
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 4
-        min_build_railroad = 1
-        immigrant_attract = -0.2
     }
 
 	montpellier = {
@@ -4473,17 +4252,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-    }
-
-    banjul = {
-        movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-
     }
 
     ayan = {
@@ -5856,17 +5624,6 @@ categories = {
         supply_limit = 10
     }
 
-    melilla = {
-        movement_cost = 1.0
-        defence = 2
-        color = { 22 44 66 }
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 0.25
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.25
-        supply_limit = 10
-    }
-
     tangier = {
         movement_cost = 1.0
         color = { 22 44 66 }
@@ -7227,25 +6984,6 @@ categories = {
         immigrant_attract = -0.95
     }
 
-    gonder = {
-        movement_cost = 1.5
-        defence = 3
-        color = { 117 108 121 }
-
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.2
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 2
-
-        combat_width = -0.70
-
-        min_build_railroad = 3
-        #attrition = 0.25
-        immigrant_attract = -0.2
-    }
-
     capecoast = {
         movement_cost = 1.0
         color = { 22 44 66 }
@@ -7265,16 +7003,6 @@ categories = {
         mine_rgo_eff = 0.0
         supply_limit = 10
         immigrant_attract = -0.4
-    }
-
-    monrovia = {
-        movement_cost = 1.0
-        color = { 22 44 66 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
     }
 
     stlouis = {
@@ -8357,16 +8085,6 @@ categories = {
         min_build_railroad = 2
 	}
 
-	benghazi = {
-		movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-	}
-
 	benidorm = {
 		movement_cost = 1.0
         color = { 211 201 184 }
@@ -9211,21 +8929,6 @@ categories = {
     }
 
 	sassari = {
-        movement_cost = 1.2
-        defence = 1
-        color = { 135 70 0 }
-
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.33
-    }
-
-	oran = {
         movement_cost = 1.2
         defence = 1
         color = { 135 70 0 }
@@ -10958,16 +10661,6 @@ categories = {
         supply_limit = 10
 	}
 
-	luxor = {
-		movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-	}
-
 	malaga = {
 		movement_cost = 1.5
         defence = 3
@@ -11176,21 +10869,6 @@ categories = {
         supply_limit = 10
 	}
 
-	shetland = {
-		movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 0.0
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
-	}
-
 	stirling = {
 		movement_cost = 1.2
         defence = 1
@@ -11335,37 +11013,6 @@ categories = {
         min_build_railroad = 2
 	}
 
-	aksum = {
-        movement_cost = 1.2
-        defence = 1
-        color = { 70 135 0 }
-
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 3
-        min_build_railroad = 2
-        combat_width = -0.33
-        immigrant_attract = -0.15
-	}
-
-	arusha = {
-		movement_cost = 1.5
-        defence = 3
-        color = { 68 20 6 }
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.0
-        mine_rgo_size = 0.1
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        min_build_railroad = 3
-
-        combat_width = -0.6
-        immigrant_attract = -0.4
-	}
-
 	baton_rouge = {
 		movement_cost = 1.2
         defence = 1
@@ -11446,16 +11093,6 @@ categories = {
         min_build_fort = 1
         combat_width = -0.20
         immigrant_attract = -0.99
-	}
-
-	fashoda = {
-		movement_cost = 1.0
-        color = { 137 104 165 }
-        farm_rgo_size = 0.2
-        farm_rgo_eff = 0.00
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
 	}
 
 	foggia = {
@@ -11764,19 +11401,6 @@ categories = {
 
         min_build_railroad = 3
 	}
-	barbara = {
-		movement_cost = 1.2
-        color = { 208 156 0 }
-        #farm_rgo_size = -0.4
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.1
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.4
-        immigrant_attract = -0.1
-        attrition = 1
-	}
 	beauvais = {
 		movement_cost = 1.0
         color = { 137 104 165 }
@@ -11920,22 +11544,6 @@ categories = {
         supply_limit = 4
         immigrant_attract = -0.1
 	}
-	massawa = {
-		movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-	}
 	merv = {
 		movement_cost = 1.2
         color = { 208 155 0 }
@@ -11984,20 +11592,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-	}
-	saint_helena = {
-		movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 0.0
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
 	}
 	saintvincent = {
 		movement_cost = 1.0
@@ -12051,20 +11645,6 @@ categories = {
         combat_width = -0.6
 
         min_build_railroad = 3
-	}
-
-	zayla = {
-		movement_cost = 1.2
-        color = { 208 156 0 }
-        #farm_rgo_size = -0.4
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.1
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.4
-        immigrant_attract = -0.1
-        attrition = 1
 	}
 
 	abudhabi = {
@@ -12123,37 +11703,6 @@ categories = {
         supply_limit = 10
 	}
 
-	assab = {
-        movement_cost = 1.2
-        color = { 208 156 0 }
-        #farm_rgo_size = -0.4
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.1
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.4
-        immigrant_attract = -0.1
-        attrition = 1
-	}
-
-	aswan = {
-		movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-	}
-
 	baalbeck = {
 		movement_cost = 1.5
         defence = 3
@@ -12194,21 +11743,6 @@ categories = {
         supply_limit = 10
 	}
 
-	dumyat = {
-		movement_cost = 1.4
-        attrition = 1
-        defence = 1
-        color = { 76 112 105 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.25
-        #mine_rgo_eff = -0.3
-        supply_limit = 3
-        min_build_railroad = 2
-        combat_width = -0.25
-        immigrant_attract = -0.25
-	}
-
 	eindhoven = {
         movement_cost = 1.0
         color = { 137 104 165 }
@@ -12247,24 +11781,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-	}
-
-	iles_kerguelen = {
-		movement_cost = 1.3
-        defence = 1
-        attrition = 1
-
-        color = { 110 150 110 }
-        #farm_rgo_size = -0.7
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.0
-        #mine_rgo_eff = -0.2
-
-        min_build_naval_base = 4
-        min_build_railroad = 4
-        min_build_fort = 1
-        combat_width = -0.20
-        immigrant_attract = -0.99
 	}
 
 	jalalabad = {
@@ -13022,24 +12538,6 @@ categories = {
         min_build_railroad = 2
     }
 
-    harper = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
-    }
-
     jolo = {
         movement_cost = 1.2
         defence = 1.0
@@ -13233,16 +12731,6 @@ categories = {
         min_build_railroad = 2
     }
 
-    nordhorn = {
-        movement_cost = 1.0
-        color = { 137 104 165 }
-        farm_rgo_size = 0.2
-        farm_rgo_eff = 0.00
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-    }
-
     novaya_ladoga = {
         movement_cost = 1.2
         defence = 1
@@ -13408,21 +12896,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-    }
-
-    thaba_bosiu = {
-        movement_cost = 1.5
-        defence = 3
-        color = { 68 20 6 }
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.0
-        mine_rgo_size = 0.1
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        min_build_railroad = 3
-
-        combat_width = -0.6
-        immigrant_attract = -0.4
     }
 
     thionville = {
@@ -13642,23 +13115,6 @@ categories = {
         immigrant_attract = -0.25
     }
 
-    abeche = {
-        movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-    }
-
     ahvaz = {
         movement_cost = 1.0
         color = { 241 221 184 }
@@ -13814,25 +13270,6 @@ categories = {
         min_build_fort = 1
         combat_width = -0.25
         immigrant_attract = -0.25
-    }
-
-    faya = {
-        movement_cost = 1.9
-        color = { 218 195 0 }
-
-        defence = 1.0
-        #farm_rgo_size = -0.7
-        #farm_rgo_eff = -0.4
-        #mine_rgo_size = -0.7
-        #mine_rgo_eff = -0.4
-        min_build_railroad = 6
-        min_build_fort = 1
-        min_build_naval_base = 1
-        immigrant_attract = -0.89
-
-        combat_width = -0.40
-
-        attrition = 2.5
     }
 
     fribourg = {
@@ -13995,42 +13432,6 @@ categories = {
         min_build_fort = 1
         attrition = 2
 		immigrant_attract = -0.99
-    }
-
-    loango = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
-    }
-
-    lome = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
     }
 
     lons = {
@@ -14337,24 +13738,6 @@ categories = {
         supply_limit = 10
 	}
 
-	fernando_po = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
-	}
-
 	galway = {
         movement_cost = 1.0
         color = { 137 104 165 }
@@ -14531,21 +13914,6 @@ categories = {
         immigrant_attract = -0.25
 	}
 
-	tristan_cunha = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 10 }
-
-        #farm_rgo_size = -0.5
-        farm_rgo_eff = 0.0
-        #mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        immigrant_attract = -0.5
-        min_build_railroad = 2
-	}
-
 	walsch_bergen = {
         movement_cost = 1.2
         defence = 1
@@ -14585,21 +13953,6 @@ categories = {
         combat_width = -0.25
         immigrant_attract = -0.25
 	}
-
-    alsuwayra = {
-        movement_cost = 1.2
-        defence = 1
-        color = { 135 70 0 }
-
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.33
-    }
 
     animas = {
         movement_cost = 1.2
@@ -14673,21 +14026,6 @@ categories = {
         min_build_railroad = 4
         min_build_fort = 1
         combat_width = -0.20
-    }
-
-    casablanca = {
-        movement_cost = 1.2
-        defence = 1
-        color = { 135 70 0 }
-
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.33
     }
 
     cherkassy = {
@@ -14917,25 +14255,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-    }
-
-    meknes = {
-        movement_cost = 1.5
-        defence = 3
-        color = { 117 108 121 }
-
-        #farm_rgo_size = -0.2
-        #farm_rgo_eff = -0.2
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 2
-
-        combat_width = -0.70
-
-        min_build_railroad = 3
-        #attrition = 0.25
-        immigrant_attract = -0.2
     }
 
     melitopol = {
@@ -15240,18 +14559,6 @@ categories = {
         min_build_railroad = 2
     }
 
-    tetouan = {
-        movement_cost = 1.0
-        color = { 211 201 184 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        min_build_railroad = 2
-        supply_limit = 4
-        immigrant_attract = -0.1
-    }
-
     thassos = {
         movement_cost = 1.0
         attrition = 1
@@ -15366,20 +14673,6 @@ categories = {
         supply_limit = 10
 	}
 	
-	agadir = {
-        movement_cost = 1.2
-        color = { 208 156 0 }
-        #farm_rgo_size = -0.4
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.1
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.4
-        immigrant_attract = -0.1
-        attrition = 1
-	}
-	
 	allenstein = {
         movement_cost = 1.0
         color = { 137 104 165 }
@@ -15416,21 +14709,6 @@ categories = {
         min_build_railroad = 3
 	}
 	
-	asfi = {
-        movement_cost = 1.2
-        defence = 1
-        color = { 135 70 0 }
-
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.33
-	}
-	
 	bautzen = {
         movement_cost = 1.2
         defence = 1
@@ -15455,54 +14733,6 @@ categories = {
         supply_limit = 6
         combat_width = -0.20
         min_build_railroad = 2
-	}
-	
-	binzart = {
-		movement_cost = 1.3
-		defence = 2
-        color = { 135 70 0 }
-        #farm_rgo_size = -0.1
-        mine_rgo_size = 0.1
-		supply_limit = 4
-		combat_width = -0.4
-        min_build_railroad = 2
-	}
-	
-	bone = {
-		movement_cost = 1.3
-		defence = 2
-        color = { 135 70 0 }
-        #farm_rgo_size = -0.1
-        mine_rgo_size = 0.1
-		supply_limit = 4
-		combat_width = -0.4
-        min_build_railroad = 2
-	}
-	
-	bouira = {
-		movement_cost = 1.3
-		defence = 2
-        color = { 135 70 0 }
-        #farm_rgo_size = -0.1
-        mine_rgo_size = 0.1
-		supply_limit = 4
-		combat_width = -0.4
-        min_build_railroad = 2
-	}
-	
-	bourbon = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 11 }
-
-        farm_rgo_size = 0
-        farm_rgo_eff = 3
-        mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        assimilation_rate = -0.5
-        immigrant_attract = -0.25
 	}
 	
 	buckeburg = {
@@ -15682,24 +14912,6 @@ categories = {
         min_build_railroad = 2
 	}
 	
-	douala = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
-	}
-	
 	drossen = {
         movement_cost = 1.0
         color = { 137 104 165 }
@@ -15715,16 +14927,6 @@ categories = {
         color = { 137 104 165 }
         farm_rgo_size = 0.2
         farm_rgo_eff = 0.00
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-	}
-	
-	fayyum = {
-        movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
@@ -15764,20 +14966,6 @@ categories = {
         supply_limit = 6
         combat_width = -0.20
         min_build_railroad = 2
-	}
-	
-	gabes = {
-        movement_cost = 1.2
-        color = { 208 156 0 }
-        #farm_rgo_size = -0.4
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.1
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.4
-        immigrant_attract = -0.1
-        attrition = 1
 	}
 	
 	giessen = {
@@ -15896,24 +15084,6 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         supply_limit = 10
-	}
-	
-	limbe = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
 	}
 	
 	livorno = {
@@ -16155,23 +15325,6 @@ categories = {
         min_build_railroad = 2
 	}
 	
-	sekondi = {
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
-	}
 	
 	setif = {
         movement_cost = 1.5
@@ -16186,21 +15339,6 @@ categories = {
 
         combat_width = -0.6
         immigrant_attract = -0.4
-	}
-	
-	seychelles = {
-        movement_cost = 1.0
-        attrition = 1
-        color = { 210 155 11 }
-
-        farm_rgo_size = 0
-        farm_rgo_eff = 3
-        mine_rgo_size = -0.5
-        mine_rgo_eff = 0.0
-        supply_limit = 2
-        combat_width = -0.3
-        assimilation_rate = -0.5
-        immigrant_attract = -0.25
 	}
 	
 	siegburg = {
@@ -16269,18 +15407,6 @@ categories = {
         combat_width = -0.33
 	}
 	
-	tanta = {
-        movement_cost = 1.05
-        #attrition = 0.25
-        color = { 0 255 0 }
-        farm_rgo_size = 0.25
-        farm_rgo_eff = 0.025
-        mine_rgo_size = -0.25
-        #mine_rgo_eff = -0.025
-        min_build_railroad = 1
-        supply_limit = 10
-	}
-	
 	tonga = {
         movement_cost = 1.0
         attrition = 2
@@ -16319,21 +15445,6 @@ categories = {
         min_build_railroad = 2
 	}
 	
-	tuggurt = {
-        movement_cost = 1.5
-        color = { 218 195 0 }
-
-        #farm_rgo_size = -0.8
-        #farm_rgo_eff = -0.5
-        mine_rgo_size = -0.8
-        #mine_rgo_eff = -0.5
-        min_build_railroad = 6
-        min_build_fort = 1
-        min_build_naval_base = 1
-        immigrant_attract = -0.99
-        attrition = 2
-	}
-	
 	waldeck = {
         movement_cost = 1.0
         color = { 241 221 184 }
@@ -16343,19 +15454,6 @@ categories = {
         mine_rgo_eff = 0.0
         supply_limit = 10
 	}
-	walvis_bay = {
-        movement_cost = 1.2
-        color = { 208 156 0 }
-        #farm_rgo_size = -0.4
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.1
-        supply_limit = 6
-        min_build_railroad = 2
-        combat_width = -0.4
-        immigrant_attract = -0.1
-        attrition = 1
-    }
 	
 	waldenburg = {
 		movement_cost = 1.3
@@ -16366,18 +15464,6 @@ categories = {
 		supply_limit = 4
 		combat_width = -0.4
         min_build_railroad = 2
-	}
-	
-	zaqaziq = {
-        movement_cost = 1.05
-        #attrition = 0.25
-        color = { 0 255 0 }
-        farm_rgo_size = 0.25
-        farm_rgo_eff = 0.025
-        mine_rgo_size = -0.25
-        #mine_rgo_eff = -0.025
-        min_build_railroad = 1
-        supply_limit = 10
 	}
 	
 	gelendzhik = {
@@ -16448,22 +15534,6 @@ categories = {
         combat_width = -0.3
         assimilation_rate = -0.5
         immigrant_attract = -0.25
-    }
-	gafsa = {
-        movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
     }
 	novaya_zemlya = {
         movement_cost = 2.0
@@ -16585,54 +15655,6 @@ categories = {
         immigrant_attract = -0.8
         attrition = 1
     }
-	gao = { #Semidesert
-        movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-    }
-	segu = { #Semidesert
-        movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-    }
-	bamako = { #Semidesert
-        movement_cost = 1.2
-        color = { 208 155 0 }
-        #farm_rgo_size = -0.3
-        #farm_rgo_eff = -0.3
-        #mine_rgo_size = -0.1
-        #mine_rgo_eff = -0.1
-
-        supply_limit = 2
-
-        combat_width = -0.5
-
-        min_build_railroad = 3
-        immigrant_attract = -0.8
-        attrition = 1
-    }
 	phoenix = { #Semidesert, New World
         movement_cost = 1.2
         color = { 208 155 0 }
@@ -16680,24 +15702,6 @@ categories = {
         min_build_railroad = 3
         immigrant_attract = -0.8
         attrition = 1
-    }
-	kayes = { #Plains
-        movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-    }
-	timbo = { #Plains
-        movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
     }
 	agadez = { #Desert Massif
         movement_cost = 1.9
@@ -16998,24 +16002,6 @@ categories = {
         supply_limit = 10
     }
 	valdosta = { #Plains, New World
-        movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-    }
-	bougouni = { #Plains
-        movement_cost = 1.0
-        color = { 241 221 184 }
-        farm_rgo_size = 0.0
-        farm_rgo_eff = 0.0
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        supply_limit = 10
-    }
-	kong = { #Plains
         movement_cost = 1.0
         color = { 241 221 184 }
         farm_rgo_size = 0.0
@@ -17670,39 +16656,6 @@ categories = {
         supply_limit = 4
         immigrant_attract = -0.1
     }
-	gabu = { #Steppe
-        movement_cost = 1.0
-        color = { 211 201 184 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        min_build_railroad = 2
-        supply_limit = 4
-        immigrant_attract = -0.1
-    }
-	sikasso = { #Steppe
-        movement_cost = 1.0
-        color = { 211 201 184 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        min_build_railroad = 2
-        supply_limit = 4
-        immigrant_attract = -0.1
-    }
-	wagadugu = { #Steppe
-        movement_cost = 1.0
-        color = { 211 201 184 }
-        farm_rgo_size = 0.0
-        #farm_rgo_eff = -0.1
-        mine_rgo_size = 0.0
-        mine_rgo_eff = 0.0
-        min_build_railroad = 2
-        supply_limit = 4
-        immigrant_attract = -0.1
-    }
 	sokode = { #Steppe
         movement_cost = 1.0
         color = { 211 201 184 }
@@ -17713,23 +16666,6 @@ categories = {
         min_build_railroad = 2
         supply_limit = 4
         immigrant_attract = -0.1
-    }
-	bondouku = { #Jungle
-        movement_cost = 1.3
-        attrition = 1.5
-        defence = 2
-
-        color = { 32 151 0 }
-        #farm_rgo_size = -0.25
-        #farm_rgo_eff = -0.3
-        mine_rgo_size = 0.0
-        #mine_rgo_eff = -0.2
-
-        supply_limit = 1
-        min_build_railroad = 3
-        min_build_fort = 1
-        combat_width = -0.25
-        immigrant_attract = -0.25
     }
 	calabar = { #Jungle
         movement_cost = 1.3

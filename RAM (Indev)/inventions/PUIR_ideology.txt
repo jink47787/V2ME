@@ -109,10 +109,10 @@ the_police_state = {
     limit = {
         ideological_thought = 1
         OR = {
-            government = proletarian_dictatorship
-            government = fascist_dictatorship
-            government = presidential_dictatorship
-			government = radical_republic
+            has_country_flag = proletarian_dictatorship
+            has_country_flag = fascist_dictatorship
+            has_country_flag = presidential_dictatorship
+			has_country_flag = radical_republic
         }
     }
     chance = {
@@ -140,9 +140,9 @@ the_one_party_state = {
     limit = {
         ideological_thought = 1
         OR = {
-            government = proletarian_dictatorship
-            government = fascist_dictatorship
-            government = presidential_dictatorship
+            has_country_flag = proletarian_dictatorship
+            has_country_flag = fascist_dictatorship
+            has_country_flag = presidential_dictatorship
         }
     }
     chance = {
@@ -162,9 +162,9 @@ the_one_party_state = {
                 factor = -75
                 NOT = {
                      OR = {
-                        government = proletarian_dictatorship
-                        government = fascist_dictatorship
-                        government = presidential_dictatorship
+                        has_country_flag = proletarian_dictatorship
+                        has_country_flag = fascist_dictatorship
+                        has_country_flag = presidential_dictatorship
                     }
                 }
             }
@@ -179,8 +179,8 @@ totalitarianism = {
     limit = {
         ideological_thought = 1
         OR = {
-            government = proletarian_dictatorship
-            government = fascist_dictatorship
+            has_country_flag = proletarian_dictatorship
+            has_country_flag = fascist_dictatorship
         }
     }
     chance = {
@@ -197,8 +197,8 @@ totalitarianism = {
                 factor = -75
                 NOT = {
                      OR = {
-                        government = proletarian_dictatorship
-                        government = fascist_dictatorship
+                        has_country_flag = proletarian_dictatorship
+                        has_country_flag = fascist_dictatorship
                     }
                 }
             }
@@ -212,7 +212,7 @@ totalitarianism = {
 the_leadership_principle = {
     limit = {
         ideological_thought = 1
-        government = fascist_dictatorship
+        has_country_flag = fascist_dictatorship
     }
     chance = {
         base = 15
@@ -231,7 +231,7 @@ the_leadership_principle = {
             modifier = {
                 factor = -75
                 NOT = {
-                    government = fascist_dictatorship
+                    has_country_flag = fascist_dictatorship
                 }
             }
     }
@@ -246,7 +246,7 @@ the_leadership_principle = {
 ultranationalism_n_the_volk = {
     limit = {
         ideological_thought = 1
-        government = fascist_dictatorship
+        has_country_flag = fascist_dictatorship
     }
     chance = {
         base = 15
@@ -265,7 +265,7 @@ ultranationalism_n_the_volk = {
             modifier = {
                 factor = -75
                 NOT = {
-                    government = fascist_dictatorship
+                    has_country_flag = fascist_dictatorship
                 }
             }
     }
@@ -278,7 +278,7 @@ ultranationalism_n_the_volk = {
 collectivisation = {
     limit = {
         ideological_thought = 1
-        government = proletarian_dictatorship
+        has_country_flag = proletarian_dictatorship
     }
     chance = {
         base = 15
@@ -297,7 +297,7 @@ collectivisation = {
             modifier = {
                 factor = -75
                 NOT = {
-                    government = proletarian_dictatorship
+                    has_country_flag = proletarian_dictatorship
                 }
             }
     }
@@ -310,7 +310,7 @@ collectivisation = {
 the_classless_society = {
     limit = {
         ideological_thought = 1
-        government = proletarian_dictatorship
+        has_country_flag = proletarian_dictatorship
     }
     chance = {
         base = 15
@@ -329,7 +329,7 @@ the_classless_society = {
             modifier = {
                 factor = -75
                 NOT = {
-                    government = proletarian_dictatorship
+                    has_country_flag = proletarian_dictatorship
                 }
             }
     }

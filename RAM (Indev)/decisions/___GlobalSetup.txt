@@ -1,0 +1,19 @@
+political_decisions = {
+
+    global_setup = {
+        picture = restore_washington_capital
+        potential = {
+			tag = CLN
+			NOT = { has_global_flag = setup_fired }
+        }
+
+        allow = {
+        }
+
+        effect = {
+			set_global_flag = setup_fired
+			CLN = { country_event = 1 }
+        }
+        ai_will_do = { factor = 0 }
+    }
+}

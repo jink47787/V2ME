@@ -3,6 +3,5 @@ controller = SPA
 add_core = SPA
 add_core = CNR
 trade_goods = dye
-terrain = tenerife
 life_rating = 35
 naval_base = 1

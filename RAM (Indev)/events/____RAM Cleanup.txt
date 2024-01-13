@@ -37,6 +37,7 @@ country_event = {
 
 	option = {
 		name = "Checking..."
+		country_event = 12000
 		random_owned = {
 			limit = {
 				owner = {

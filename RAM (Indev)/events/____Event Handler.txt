@@ -1,21 +1,21 @@
-country_event = { # To be trigged by dismantlement
-    id = 90000
-	major = no
-    title = "This exists purely to bounce stuff"
-    #desc = "EVTDESC71002"
-    picture = "collectivisation"
-    is_triggered_only = yes
-
-    option = {
-        name = ""
-		random_country = {
-			limit = {
-				tag = THIS
-				check_variable = { which = example_event value = 1 }
-				NOT = { check_variable = { which = example_event value = 1 } }
-			}
-			country_event = [whatever]
-		}
-		check_variable = { which = example_event value = -1 }
-    }
-}
+#country_event = { # To be trigged by dismantlement
+#    id = 90000
+#	major = no
+#    title = "This exists purely to bounce stuff"
+#    #desc = "EVTDESC71002"
+#    picture = "collectivisation"
+#    is_triggered_only = yes
+#
+#    option = {
+#        name = ""
+#		random_country = {
+#			limit = {
+#				tag = THIS
+#				check_variable = { which = example_event value = 1 }
+#				NOT = { check_variable = { which = example_event value = 1 } }
+#			}
+#			country_event = [whatever]
+#		}
+#		check_variable = { which = example_event value = -1 }
+#    }
+#}

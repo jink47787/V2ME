@@ -1,0 +1,270 @@
+#Introdution Events
+
+country_event = { # Explanation Event
+    id = 12000
+    title = ""
+    #desc = "EVTDESC1000"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			#Government Groups
+			clr_country_flag = proletarian_dictatorship
+			clr_country_flag = presidential_dictatorship
+			clr_country_flag = anarchist_state
+			clr_country_flag = technocracy
+			clr_country_flag = colonial_company_1
+			clr_country_flag = colonial_company_2
+			clr_country_flag = colonial_company_3
+			clr_country_flag = colonial_company_4
+			clr_country_flag = radical_republic
+			clr_country_flag = fascist_dictatorship
+			clr_country_flag = absolute_monarchy
+			clr_country_flag = constitutional_monarchy
+			clr_country_flag = republic
+			clr_country_flag = theocracy
+			clr_country_flag = prov_gov_conservative
+			clr_country_flag = prov_gov_liberal
+			clr_country_flag = absolute_empire
+			clr_country_flag = semi_constitutional_empire
+			clr_country_flag = constitutional_empire
+			
+			#Meta Groups
+			clr_country_flag = democracy
+			clr_country_flag = autocracy
+			clr_country_flag = monarchy
+			clr_country_flag = empire
+			clr_country_flag = colonial_company
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship_2
+				}
+			}
+			set_country_flag = proletarian_dictatorship
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = presidential_dictatorship
+					government = presidential_dictatorship_2
+				}
+			}
+			set_country_flag = presidential_dictatorship
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = anarchist_state
+				}
+			}
+			set_country_flag = anarchist_state
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = technocracy
+				}
+			}
+			set_country_flag = technocracy
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = colonial_company_1
+				}
+			}
+			set_country_flag = colonial_company_1
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = colonial_company_2
+				}
+			}
+			set_country_flag = colonial_company_2
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = colonial_company_3
+				}
+			}
+			set_country_flag = colonial_company_3
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = colonial_company_4
+				}
+			}
+			set_country_flag = colonial_company_4
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = radical_republic
+				}
+			}
+			set_country_flag = radical_republic
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = fascist_dictatorship
+					government = fascist_dictatorship_2
+				}
+			}
+			set_country_flag = fascist_dictatorship
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = absolute_monarchy
+					government = absolute_monarchy_2
+				}
+			}
+			set_country_flag = absolute_monarchy
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			set_country_flag = constitutional_monarchy
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = democracy
+					government = democracy_2
+				}
+			}
+			set_country_flag = republic
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = theocracy
+				}
+			}
+			set_country_flag = theocracy
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = prov_gov_conservative
+				}
+			}
+			set_country_flag = prov_gov_conservative
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = prov_gov_liberal
+					government = prov_gov_liberal_two
+				}
+			}
+			set_country_flag = prov_gov_liberal
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = absolute_empire
+				}
+			}
+			set_country_flag = absolute_empire
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = semi_constitutional_empire
+				}
+			}
+			set_country_flag = semi_constitutional_empire
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = constitutional_empire
+				}
+			}
+			set_country_flag = constitutional_empire
+		}
+	
+		# Meta Groups
+		any_country = {
+			limit = {
+				OR = {
+					government = democracy
+					government = democracy_2
+					government = prussian_constitutionalism
+					government = hms_government
+					government = constitutional_empire
+				}
+			}
+			set_country_flag = democracy	# Mainstream, maybe radical, anarchist or technocracy should be here?
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = absolute_empire
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship_2
+					government = presidential_dictatorship
+					government = presidential_dictatorship_2
+					government = fascist_dictatorship
+					government = fascist_dictatorship_2
+					government = absolute_monarchy
+					government = absolute_monarchy_2
+				}
+			}
+			set_country_flag = autocracy
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
+					government = absolute_monarchy
+					government = absolute_monarchy_2
+					government = prussian_constitutionalism
+					government = hms_government
+				}
+			}
+			set_country_flag = monarchy
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = absolute_empire
+					government = semi_constitutional_empire
+					government = constitutional_empire
+				}
+			}
+			set_country_flag = empire
+		}
+		any_country = {
+			limit = {
+				OR = {
+					government = colonial_company_1
+					government = colonial_company_2
+					government = colonial_company_3
+					government = colonial_company_4
+				}
+			}
+			set_country_flag = colonial_company
+		}
+	}
+	
+	option = {
+        name = "Government Logic"
+    }
+}

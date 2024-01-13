@@ -177,14 +177,8 @@ country_migration_target = {
 
         }
         OR = {
-            government = democracy
-            government = radical_republic
-            government = constitutional_empire
-            government = hms_government
-            government = colonial_company_4
-            government = colonial_company_3
-            government = colonial_company_2
-            government = colonial_company
+            has_country_flag = democracy
+            has_country_flag = colonial_company
         }
     }
     modifier = {
@@ -200,19 +194,14 @@ country_migration_target = {
 
         }
         OR = {
-            government = democracy
-            government = radical_republic
-            government = constitutional_empire
-            government = hms_government
-            government = colonial_company_4
-            government = colonial_company_3
-            government = colonial_company_2
-            government = colonial_company
+            has_country_flag = democracy
+            has_country_flag = radical_republic
+            has_country_flag = colonial_company
         }
     }
 	modifier = {
         factor = 0.8
-        government = presidential_dictatorship
+        has_country_flag = presidential_dictatorship
     }
 }
 
@@ -1172,7 +1161,7 @@ ideologies = {
 
         modifier = {
             factor = 1.5
-            country = { government = fascist_dictatorship }
+            country = { has_country_flag = fascist_dictatorship }
             OR = { is_accepted_culture = yes is_primary_culture = yes }
             OR = {
                 nationalvalue = nv_autocracy
@@ -1311,9 +1300,9 @@ ideologies = {
 
         modifier = {
             factor = 1.2
-            NOT = { country = { government = fascist_dictatorship } }
-            NOT = { country = { government = proletarian_dictatorship } }
-            NOT = { country = { government = radical_republic } }
+            NOT = { country = { has_country_flag = fascist_dictatorship } }
+            NOT = { country = { has_country_flag = proletarian_dictatorship } }
+            NOT = { country = { has_country_flag = radical_republic } }
             OR = { is_accepted_culture = yes is_primary_culture = yes }
             OR = {
                 nationalvalue = nv_autocracy
@@ -1326,7 +1315,7 @@ ideologies = {
 
         modifier = {
             factor = 1.5
-            country = { government = presidential_dictatorship }
+            country = { has_country_flag = presidential_dictatorship }
             OR = { is_accepted_culture = yes is_primary_culture = yes }
             OR = {
                 nationalvalue = nv_autocracy
@@ -1533,9 +1522,9 @@ ideologies = {
 
         modifier = {
             factor = 1.3
-            NOT = { country = { government = fascist_dictatorship } }
-            NOT = { country = { government = proletarian_dictatorship } }
-            NOT = { country = { government = radical_republic } }
+            NOT = { country = { has_country_flag = fascist_dictatorship } }
+            NOT = { country = { has_country_flag = proletarian_dictatorship } }
+            NOT = { country = { has_country_flag = radical_republic } }
             OR = { is_accepted_culture = yes is_primary_culture = yes }
             OR = {
                 nationalvalue = nv_autocracy
@@ -1737,7 +1726,7 @@ ideologies = {
 
         modifier = {
             factor = 1.5
-            country = { government = proletarian_dictatorship }
+            country = { has_country_flag = proletarian_dictatorship }
             OR = { is_accepted_culture = yes is_primary_culture = yes }
             OR = {
                 nationalvalue = nv_autocracy
@@ -1938,7 +1927,7 @@ ideologies = {
 
         modifier = {
             factor = 1.2
-            NOT = { country = { government = radical_republic } }
+            NOT = { country = { has_country_flag = radical_republic } }
             OR = {
                 is_accepted_culture = yes
                 is_primary_culture = yes
@@ -1951,7 +1940,7 @@ ideologies = {
 
         modifier = {
             factor = 1.5
-            country = { government = radical_republic }
+            country = { has_country_flag = radical_republic }
             OR = {
                 is_accepted_culture = yes
                 is_primary_culture = yes
@@ -6374,7 +6363,7 @@ rehabilitation = {
                 country = { civilized = no }
                 luxury_needs = 1.0
                 NOT = { consciousness = 7 }
-				country = { government = democracy }
+				country = { has_country_flag = republic }
                 vote_franschise = none_voting
                 public_meetings = no_meeting
                 NOT = { press_rights = free_press }
@@ -6387,7 +6376,7 @@ rehabilitation = {
 
         modifier = {
             factor = 2.0
-			country = { government = democracy }
+			country = { has_country_flag = republic }
         }
 
         modifier = {
@@ -6446,7 +6435,7 @@ rehabilitation = {
                 NOT = { consciousness = 7 }
                 NOT = { life_needs = 0.7 }
                 AND = {
-					country = { government = democracy }
+					country = { has_country_flag = republic }
                     consciousness = 3
                 }
                 AND = {
@@ -6463,12 +6452,12 @@ rehabilitation = {
 
         modifier = {
             factor = 0.5
-            country = { government = hms_government }
+            country = { has_country_flag = constitutional_monarchy }
         }
 
         modifier = {
             factor = 2.0
-			country = { government = democracy }
+			country = { has_country_flag = republic }
         }
 
         modifier = {
@@ -6516,7 +6505,7 @@ rehabilitation = {
                 NOT = { consciousness = 7 }
                 NOT = { life_needs = 0.9 }
                 AND = {
-					country = { government = democracy }
+					country = { has_country_flag = republic }
                     consciousness = 4
                 }
                 AND = {
@@ -6533,12 +6522,12 @@ rehabilitation = {
 
         modifier = {
             factor = 0.5
-            country = { government = hms_government }
+            country = { has_country_flag = constitutional_monarchy }
         }
 
         modifier = {
             factor = 2.0
-			country = { government = democracy }
+			country = { has_country_flag = republic }
             NOT = { country = { primary_culture = yankee } }
             NOT = { country = { primary_culture = dixie } }
         }

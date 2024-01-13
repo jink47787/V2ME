@@ -102,12 +102,12 @@ immigration_focus = {
         icon = 9
         limit = {
             owner = { ai = no }
-            owner = { NOT = { OR = { government = democracy government = hms_government government = constitutional_empire } } }
+            owner = { NOT = { has_country_flag = democracy } }
             owner = {
                 OR = {
                     citizenship_policy = residency
-                    government = proletarian_dictatorship
-                    government = fascist_dictatorship
+                    has_country_flag = proletarian_dictatorship
+                    has_country_flag = fascist_dictatorship
                 }
             }
             owner = { civilized = yes }
@@ -146,7 +146,7 @@ promotion_focus = {
         outliner_show_as_percent = yes
 
         limit = {
-            owner = { NOT = { government = proletarian_dictatorship } ai = no }
+            owner = { NOT = { has_country_flag = proletarian_dictatorship } ai = no }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
         }
     }
@@ -184,7 +184,7 @@ promotion_focus = {
         icon = 14
         outliner_show_as_percent = yes
         limit = {
-            owner = { NOT = { government = proletarian_dictatorship } civilized = yes }
+            owner = { NOT = { has_country_flag = proletarian_dictatorship } civilized = yes }
             NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
             NOT = { has_province_modifier = irish_oppression }
             NOT = { state_scope = { capitalists = 0.007 } }

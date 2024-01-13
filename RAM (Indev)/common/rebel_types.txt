@@ -21,16 +21,20 @@ reactionary_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = presidential_dictatorship
+		proletarian_dictatorship_2 = presidential_dictatorship
         presidential_dictatorship = absolute_monarchy
         radical_republic = presidential_dictatorship
         fascist_dictatorship = presidential_dictatorship
+		fascist_dictatorship_2 = presidential_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
         absolute_empire = absolute_empire
         semi_constitutional_empire = absolute_empire
         constitutional_empire = absolute_empire
         democracy = presidential_dictatorship
+		democracy_2 = presidential_dictatorship
         theocracy = theocracy
         colonial_company = absolute_monarchy
         colonial_company_2 = absolute_monarchy
@@ -39,6 +43,8 @@ reactionary_rebels = {
 		prov_gov_conservative = presidential_dictatorship
 		prov_gov_liberal = presidential_dictatorship
 		prov_gov_liberal_two = presidential_dictatorship
+		anarchist_state = presidential_dictatorship
+		technocracy = presidential_dictatorship
     }
 
 
@@ -197,14 +203,14 @@ reactionary_rebels = {
             factor = 0
             country = {
                 OR = {
-                    government = absolute_monarchy
-                    government = absolute_empire
+                    has_country_flag = absolute_monarchy
+                    has_country_flag = absolute_empire
                 }
             }
         }
         modifier = {
             factor = 0.2
-            country = { government = presidential_dictatorship }
+            country = { has_country_flag = presidential_dictatorship }
         }
         modifier = {
             factor = 1.015
@@ -216,13 +222,9 @@ reactionary_rebels = {
                 tag = SPA
                 NOT = { has_global_flag = carlists_pacified }
                 OR = {
-                    government = hms_government
-                    government = prussian_constitutionalism
-                    government = absolute_monarchy
-                    government = absolute_empire
-                    government = semi_constitutional_empire
-                    government = constitutional_empire
-                    government = democracy
+                    has_country_flag = democracy
+					has_country_flag = empire
+					has_country_flag = monarchy
                 }
             }
             OR = {
@@ -334,12 +336,14 @@ fascist_rebels = {
         radical_republic = fascist_dictatorship
         fascist_dictatorship = fascist_dictatorship
         absolute_monarchy = fascist_dictatorship
+		absolute_monarchy_2 = fascist_dictatorship
         prussian_constitutionalism = fascist_dictatorship
         hms_government = fascist_dictatorship
         absolute_empire = fascist_dictatorship
         semi_constitutional_empire = fascist_dictatorship
         constitutional_empire = fascist_dictatorship
         democracy = fascist_dictatorship
+		democracy_2 = fascist_dictatorship
         theocracy = fascist_dictatorship
         colonial_company = fascist_dictatorship
         colonial_company_2 = fascist_dictatorship
@@ -348,6 +352,8 @@ fascist_rebels = {
 		prov_gov_conservative = fascist_dictatorship
 		prov_gov_liberal = fascist_dictatorship
 		prov_gov_liberal_two = fascist_dictatorship
+		anarchist_state = fascist_dictatorship
+		technocracy = fascist_dictatorship
     }
 
 
@@ -396,7 +402,7 @@ fascist_rebels = {
         modifier = {
             factor = 0.95
             any_neighbor_country = {
-                government = fascist_dictatorship
+                has_country_flag = fascist_dictatorship
             }
         }
     }
@@ -459,7 +465,7 @@ fascist_rebels = {
         }
         modifier = {
             factor = 0
-            country = { government = fascist_dictatorship }
+            country = { has_country_flag = fascist_dictatorship }
         }
         modifier = {
             factor = 1.015
@@ -518,7 +524,7 @@ fascist_rebels = {
             factor = 1.03
             country = {
                 any_neighbor_country = {
-                    government = fascist_dictatorship
+                    has_country_flag = fascist_dictatorship
                 }
             }
         }
@@ -622,16 +628,20 @@ communist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = proletarian_dictatorship
         radical_republic = proletarian_dictatorship
         fascist_dictatorship = proletarian_dictatorship
+		fascist_dictatorship_2 = proletarian_dictatorship
         absolute_monarchy = proletarian_dictatorship
+		absolute_monarchy_2 = proletarian_dictatorship
         prussian_constitutionalism = proletarian_dictatorship
         hms_government = proletarian_dictatorship
         absolute_empire = proletarian_dictatorship
         semi_constitutional_empire = proletarian_dictatorship
         constitutional_empire = proletarian_dictatorship
         democracy = proletarian_dictatorship
+		democracy_2 = proletarian_dictatorship
         theocracy = proletarian_dictatorship
         colonial_company = proletarian_dictatorship
         colonial_company_2 = proletarian_dictatorship
@@ -640,6 +650,8 @@ communist_rebels = {
 		prov_gov_conservative = proletarian_dictatorship
 		prov_gov_liberal = proletarian_dictatorship
 		prov_gov_liberal_two = proletarian_dictatorship
+		anarchist_state = proletarian_dictatorship
+		technocracy = proletarian_dictatorship
     }
 
 
@@ -682,12 +694,12 @@ communist_rebels = {
         }
         modifier = {
             factor = 0.95
-            any_neighbor_country = { government = proletarian_dictatorship }
+            any_neighbor_country = { has_country_flag = proletarian_dictatorship }
         }
 
         modifier = {
             factor = 0
-            country = { government = proletarian_dictatorship }
+            country = { has_country_flag = proletarian_dictatorship }
         }
     }
 
@@ -713,7 +725,7 @@ communist_rebels = {
         }
         modifier = {
             factor = 0
-            country = { government = proletarian_dictatorship }
+            country = { has_country_flag = proletarian_dictatorship }
         }
         modifier = {
             factor = 1.015
@@ -802,7 +814,7 @@ communist_rebels = {
             factor = 1.03
             country = {
                 any_neighbor_country = {
-                    government = proletarian_dictatorship
+                    has_country_flag = proletarian_dictatorship
                 }
             }
         }
@@ -847,7 +859,7 @@ communist_rebels = {
 
         modifier = {
             factor = 0
-            country = { government = proletarian_dictatorship }
+            country = { has_country_flag = proletarian_dictatorship }
         }
     }
 
@@ -927,13 +939,17 @@ radical_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = radical_republic
+		proletarian_dictatorship_2 = radical_republic
         presidential_dictatorship = radical_republic
         radical_republic = radical_republic
         fascist_dictatorship = radical_republic
+		fascist_dictatorship_2 = radical_republic
         absolute_monarchy = radical_republic
+		absolute_monarchy_2 = radical_republic
         prussian_constitutionalism = radical_republic
         hms_government = radical_republic
         democracy = radical_republic
+		democracy_2 = radical_republic
         theocracy = radical_republic
 		absolute_empire = radical_republic
 		semi_constitutional_empire = radical_republic
@@ -945,6 +961,8 @@ radical_rebels = {
 		colonial_company_2 = radical_republic
 		colonial_company_3 = radical_republic
 		colonial_company_4 = radical_republic
+		anarchist_state = radical_republic
+		technocracy = radical_republic
     }
 
 
@@ -989,7 +1007,7 @@ radical_rebels = {
         modifier = {
             factor = 0.95
             any_neighbor_country = {
-                government = radical_republic
+                has_country_flag = radical_republic
             }
         }
     }
@@ -1022,16 +1040,14 @@ radical_rebels = {
         }
         modifier = {
             factor = 0
-            country = { government = radical_republic }
+            country = { has_country_flag = radical_republic }
         }
         modifier = {
             factor = 0
             country = {
                 OR = {
-                    government = democracy
-                    government = hms_government
-                    government = radical_republic
-					government = constitutional_empire
+                    has_country_flag = democracy
+                    has_country_flag = radical_republic
                 }
                 ruling_party_ideology = radical
             }
@@ -1040,10 +1056,8 @@ radical_rebels = {
             factor = 0.5
             country = {
                 OR = {
-                    government = democracy
-                    government = hms_government
-                    government = radical_republic
-					government = constitutional_empire
+                    has_country_flag = democracy
+                    has_country_flag = radical_republic
                 }
                 ruling_party_ideology = liberal
             }
@@ -1074,10 +1088,8 @@ radical_rebels = {
             factor = 0.1
             country = {
                 OR = {
-                    government = democracy
-                    government = radical_republic
-                    government = hms_government
-					government = constitutional_empire
+                    has_country_flag = democracy
+                    has_country_flag = radical_republic
                 }
                 OR = {
                     vote_franschise = universal_weighted_voting
@@ -1246,16 +1258,20 @@ nationalist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         absolute_empire = absolute_empire
         semi_constitutional_empire = semi_constitutional_empire
         constitutional_empire = constitutional_empire
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -1264,6 +1280,8 @@ nationalist_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
 
@@ -1443,10 +1461,10 @@ nationalist_rebels = {
             country = {
                 tag = SPA
                 OR = {
-                    government = prussian_constitutionalism
-                    government = hms_government
-                    government = semi_constitutional_empire
-                    government = constitutional_empire
+                    has_country_flag = prussian_constitutionalism
+                    has_country_flag = hms_government
+                    has_country_flag = semi_constitutional_empire
+                    has_country_flag = constitutional_empire
                 }
             }
         }
@@ -1587,13 +1605,17 @@ pan_nationalist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -1605,6 +1627,8 @@ pan_nationalist_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = absolute_monarchy
+		technocracy = technocracy
     }
 
     defection = pan_nationalist             # (back from HPM's none to pan_nationalist) If the country seeks independence, defection specifies what type of provinces it wants.
@@ -2067,13 +2091,17 @@ carlist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = absolute_monarchy
+		proletarian_dictatorship_2 = absolute_monarchy
         presidential_dictatorship = absolute_monarchy
         radical_republic = absolute_monarchy
         fascist_dictatorship = absolute_monarchy
+		fascist_dictatorship_2 = absolute_monarchy
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
         democracy = absolute_monarchy
+		democracy_2 = absolute_monarchy
         theocracy = theocracy
         colonial_company = absolute_monarchy
         colonial_company_2 = absolute_monarchy
@@ -2085,6 +2113,8 @@ carlist_rebels = {
 		prov_gov_conservative = absolute_monarchy
 		prov_gov_liberal = absolute_monarchy
 		prov_gov_liberal_two = absolute_monarchy
+		anarchist_state = absolute_monarchy
+		technocracy = absolute_monarchy
     }
 
 
@@ -2345,13 +2375,17 @@ christino_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = hms_government
+		proletarian_dictatorship_2 = hms_government
         presidential_dictatorship = hms_government
         radical_republic = hms_government
         fascist_dictatorship = hms_government
+		fascist_dictatorship_2 = hms_government
         absolute_monarchy = hms_government
+		absolute_monarchy_2 = hms_government
         prussian_constitutionalism = hms_government
         hms_government = hms_government
         democracy = hms_government
+		democracy_2 = hms_government
         theocracy = theocracy
         colonial_company = hms_government
         colonial_company_2 = hms_government
@@ -2363,6 +2397,8 @@ christino_rebels = {
 		prov_gov_conservative = hms_government
 		prov_gov_liberal = hms_government
 		prov_gov_liberal_two = hms_government
+		anarchist_state = hms_government
+		technocracy = hms_government
     }
 
 
@@ -2430,14 +2466,7 @@ christino_rebels = {
             factor = 0
             country = {
                 NOT = {
-                    OR = {
-                        government = hms_government
-                        government = prussian_constitutionalism
-                        government = absolute_monarchy
-                        government = absolute_empire
-                        government = semi_constitutional_empire
-                        government = constitutional_empire
-                    }
+                    has_country_flag = monarchy
                 }
             }
         }
@@ -2597,13 +2626,16 @@ boxer_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = absolute_empire
+		proletarian_dictatorship_2 = absolute_empire
         presidential_dictatorship = absolute_empire
         radical_republic = absolute_empire
         fascist_dictatorship = absolute_empire
         absolute_monarchy = absolute_empire
+		absolute_monarchy_2 = absolute_empire
         prussian_constitutionalism = absolute_empire
         hms_government = absolute_empire
         democracy = absolute_empire
+		democracy_2 = absolute_empire
         theocracy = theocracy
         colonial_company = absolute_empire
         colonial_company_2 = absolute_empire
@@ -2615,6 +2647,8 @@ boxer_rebels = {
 		prov_gov_conservative = absolute_empire
 		prov_gov_liberal = absolute_empire
 		prov_gov_liberal_two = absolute_empire
+		anarchist_state = absolute_empire
+		technocracy = absolute_empire
     }
 
     defection = none
@@ -2711,12 +2745,7 @@ boxer_rebels = {
             factor = 0
             country = {
                 NOT = {
-                    government = absolute_monarchy
-                    government = prussian_constitutionalism
-                    government = hms_government
-                    government = absolute_empire
-                    government = semi_constitutional_empire
-                    government = constitutional_empire
+                    has_country_flag = monarchy
                 }
             }
         }
@@ -2876,13 +2905,17 @@ red_shirts = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         democracy = democracy
+		democracy_2 = democracy
         theocracy = democracy
         colonial_company = hms_government
         colonial_company_2 = hms_government
@@ -2894,6 +2927,8 @@ red_shirts = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
     defection = none            # (Was pan_nationalist) If the country seeks independence, defection specifies what type of provinces it wants.
@@ -3141,13 +3176,17 @@ indian_sepoys = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -3159,6 +3198,8 @@ indian_sepoys = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
     defection = pan_nationalist        # If the country seeks independence, defection specifies what type of provinces it wants.
@@ -3418,13 +3459,17 @@ indian_nationalists = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -3436,6 +3481,8 @@ indian_nationalists = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
     defection = none        # If the country seeks independence, defection specifies what type of provinces it wants.
@@ -3648,16 +3695,20 @@ liberal_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = democracy
+		proletarian_dictatorship_2 = democracy
         presidential_dictatorship = democracy
         radical_republic = democracy
         fascist_dictatorship = democracy
+		fascist_dictatorship_2 = democracy
         absolute_monarchy = hms_government
+		absolute_monarchy_2 = hms_government
         prussian_constitutionalism = hms_government
         hms_government = democracy
         absolute_empire = constitutional_empire
         semi_constitutional_empire = constitutional_empire
         constitutional_empire = democracy
         democracy = democracy
+		democracy_2 = democracy
         theocracy = democracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -3666,6 +3717,8 @@ liberal_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = democracy
+		technocracy = democracy
     }
 
 
@@ -3765,8 +3818,8 @@ liberal_rebels = {
             country = {
                 primary_culture = british
                 OR = {
-                    government = hms_government
-                    government = constitutional_empire
+                    has_country_flag = hms_government
+                    has_country_flag = constitutional_empire
                 }
             }
         }
@@ -3808,7 +3861,7 @@ liberal_rebels = {
             country = {
                 OR = {
                     AND = {
-						government = democracy
+						has_country_flag = republic
                         OR = {
                             upper_house_composition = state_equal_weight
                             upper_house_composition = population_equal_weight
@@ -3816,8 +3869,8 @@ liberal_rebels = {
                     }
                     AND = {
 						OR = {
-							government = hms_government
-							government = constitutional_empire
+							has_country_flag = hms_government
+							has_country_flag = constitutional_empire
 						}
                         NOT = { upper_house_composition = party_appointed }
                     }
@@ -3839,7 +3892,7 @@ liberal_rebels = {
             country = {
                 OR = {
                     AND = {
-						government = democracy
+						has_country_flag = republic
                         OR = {
                             upper_house_composition = state_equal_weight
                             upper_house_composition = population_equal_weight
@@ -3847,8 +3900,8 @@ liberal_rebels = {
                     }
                     AND = {
 						OR = {
-							government = hms_government
-							government = constitutional_empire
+							has_country_flag = hms_government
+							has_country_flag = constitutional_empire
 						}
                         NOT = { upper_house_composition = party_appointed }
                     }
@@ -3930,14 +3983,7 @@ liberal_rebels = {
             factor = 0.1
             country = {
                 tag = SPC
-                OR = {
-                    government = hms_government
-                    government = prussian_constitutionalism
-                    government = absolute_monarchy
-                    government = absolute_empire
-                    government = semi_constitutional_empire
-                    government = constitutional_empire
-                }
+                has_country_flag = monarchy
             }
             pop_majority_ideology = liberal
         }
@@ -4061,9 +4107,9 @@ liberal_rebels = {
             limit = {
                 owner = {
                     OR = {
-                        government = democracy
-                        government = hms_government
-                        government = constitutional_empire
+                        has_country_flag = republic
+                        has_country_flag = hms_government
+                        has_country_flag = constitutional_empire
                     }
                     NOT = {
                         voting_system = proportional_representation
@@ -4078,9 +4124,9 @@ liberal_rebels = {
             limit = {
                 owner = {
                     OR = {
-                        government = democracy
-                        government = hms_government
-                        government = constitutional_empire
+                        has_country_flag = democracy
+                        has_country_flag = hms_government
+                        has_country_flag = constitutional_empire
                     }
                     NOT = {
                         upper_house_composition = population_equal_weight
@@ -4145,16 +4191,20 @@ unciv_reactionary_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = absolute_monarchy
+		proletarian_dictatorship_2 = absolute_monarchy
         presidential_dictatorship = presidential_dictatorship
         radical_republic = absolute_monarchy
         fascist_dictatorship = absolute_monarchy
+		fascist_dictatorship_2 = absolute_monarchy
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = absolute_monarchy
         hms_government = absolute_monarchy
         absolute_empire = absolute_empire
         semi_constitutional_empire = absolute_empire
         constitutional_empire = absolute_empire
         democracy = absolute_monarchy
+		democracy_2 = absolute_monarchy
         theocracy = theocracy
         colonial_company = absolute_monarchy
         colonial_company_2 = absolute_monarchy
@@ -4163,6 +4213,8 @@ unciv_reactionary_rebels = {
 		prov_gov_conservative = absolute_monarchy
 		prov_gov_liberal = absolute_monarchy
 		prov_gov_liberal_two = absolute_monarchy
+		anarchist_state = absolute_monarchy
+		technocracy = absolute_monarchy
     }
 
     defection = none                    # Will defect to the "best" alternative.
@@ -4444,16 +4496,20 @@ separatist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         absolute_empire = absolute_empire
         semi_constitutional_empire = semi_constitutional_empire
         constitutional_empire = constitutional_empire
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -4462,6 +4518,8 @@ separatist_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
 
@@ -4710,16 +4768,20 @@ socialist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = democracy
+		proletarian_dictatorship_2 = democracy
         presidential_dictatorship = democracy
         radical_republic = democracy
         fascist_dictatorship = democracy
+		fascist_dictatorship_2 = democracy
         absolute_monarchy = democracy
+		absolute_monarchy_2 = democracy
         prussian_constitutionalism = democracy
         hms_government = democracy
         absolute_empire = democracy
         semi_constitutional_empire = democracy
         constitutional_empire = democracy
         democracy = democracy
+		democracy_2 = democracy
         theocracy = democracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -4728,6 +4790,8 @@ socialist_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = democracy
+		technocracy = democracy
     }
 
 
@@ -4826,9 +4890,7 @@ socialist_rebels = {
             factor = 0
             country = {
                 OR = {
-                    government = democracy
-                    government = hms_government
-                    government = constitutional_empire
+                    has_country_flag = democracy
                 }
                 OR = {
                     vote_franschise = universal_weighted_voting
@@ -4873,7 +4935,7 @@ socialist_rebels = {
             country = {
                 OR = {
                     AND = {
-						government = democracy
+						has_country_flag = republic
                         OR = {
                             upper_house_composition = state_equal_weight
                             upper_house_composition = population_equal_weight
@@ -4881,8 +4943,8 @@ socialist_rebels = {
                     }
                     AND = {
 						OR = {
-							government = hms_government
-							government = constitutional_empire
+							has_country_flag = hms_government
+							has_country_flag = constitutional_empire
 						}
                         NOT = { upper_house_composition = party_appointed }
                     }
@@ -5201,16 +5263,20 @@ independence_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         absolute_empire = absolute_empire
         semi_constitutional_empire = semi_constitutional_empire
         constitutional_empire = constitutional_empire
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -5219,6 +5285,8 @@ independence_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = democracy
+		technocracy = technocracy
     }
 
 
@@ -5386,16 +5454,20 @@ turkish_nationalist_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = democracy
+		proletarian_dictatorship_2 = democracy
         presidential_dictatorship = democracy
         radical_republic = democracy
         fascist_dictatorship = democracy
+		fascist_dictatorship_2 = democracy
         absolute_monarchy = democracy
+		absolute_monarchy_2 = democracy
         prussian_constitutionalism = democracy
         hms_government = democracy
         absolute_empire = democracy
         semi_constitutional_empire = democracy
         constitutional_empire = democracy
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -5404,6 +5476,8 @@ turkish_nationalist_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = democracy
+		technocracy = democracy
     }
 
 
@@ -5466,14 +5540,7 @@ turkish_nationalist_rebels = {
             factor = 0
             country = {
                 NOT = {
-                    OR = {
-                        government = absolute_monarchy
-                        government = prussian_constitutionalism
-                        government = hms_government
-                        government = absolute_empire
-                        government = semi_constitutional_empire
-                        government = constitutional_empire
-                    }
+                    has_country_flag = monarchy
                 }
             }
         }
@@ -5638,16 +5705,20 @@ native_rebels = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = democracy
+		proletarian_dictatorship_2 = democracy
         presidential_dictatorship = democracy
         radical_republic = democracy
         fascist_dictatorship = democracy
+		fascist_dictatorship_2 = democracy
         absolute_monarchy = democracy
+		absolute_monarchy_2 = democracy
         prussian_constitutionalism = democracy
         hms_government = democracy
         absolute_empire = democracy
         semi_constitutional_empire = democracy
         constitutional_empire = democracy
         democracy = democracy
+		democracy_2 = democracy
         theocracy = democracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -5656,6 +5727,8 @@ native_rebels = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = democracy
+		technocracy = democracy
     }
 
     defection = none                    # Will defect to the "best" alternative.
@@ -5829,16 +5902,20 @@ sioux_nation = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         absolute_empire = absolute_empire
         semi_constitutional_empire = semi_constitutional_empire
         constitutional_empire = constitutional_empire
         democracy = democracy
+		democracy_2 = democracy
         theocracy = theocracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -5847,6 +5924,8 @@ sioux_nation = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = democracy
+		technocracy = democracy
     }
 
     defection = none                    # Will defect to the "best" alternative.
@@ -5960,16 +6039,20 @@ apache = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         absolute_empire = absolute_empire
         semi_constitutional_empire = semi_constitutional_empire
         constitutional_empire = constitutional_empire
         democracy = democracy
+		democracy_2 = democracy
         theocracy = democracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -5978,6 +6061,8 @@ apache = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
     defection = none                    # Will defect to the "best" alternative.
@@ -6096,16 +6181,20 @@ slave_revolt = {
     # <this is the government in the country> = <this is what the rebels want>
     government = {
         proletarian_dictatorship = proletarian_dictatorship
+		proletarian_dictatorship_2 = proletarian_dictatorship
         presidential_dictatorship = presidential_dictatorship
         radical_republic = radical_republic
         fascist_dictatorship = fascist_dictatorship
+		fascist_dictatorship_2 = fascist_dictatorship
         absolute_monarchy = absolute_monarchy
+		absolute_monarchy_2 = absolute_monarchy
         prussian_constitutionalism = prussian_constitutionalism
         hms_government = hms_government
         absolute_empire = absolute_empire
         semi_constitutional_empire = semi_constitutional_empire
         constitutional_empire = constitutional_empire
         democracy = democracy
+		democracy_2 = democracy
         theocracy = democracy
         colonial_company = democracy
         colonial_company_2 = democracy
@@ -6114,6 +6203,8 @@ slave_revolt = {
 		prov_gov_conservative = democracy
 		prov_gov_liberal = democracy
 		prov_gov_liberal_two = democracy
+		anarchist_state = anarchist_state
+		technocracy = technocracy
     }
 
     defection = none                    # Will defect to the "best" alternative.

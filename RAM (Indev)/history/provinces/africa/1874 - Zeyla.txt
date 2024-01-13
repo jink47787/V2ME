@@ -4,5 +4,4 @@ add_core = MAJ
 add_core = GEL
 add_core = WRL
 trade_goods = grain
-terrain = zayla
 life_rating = 35

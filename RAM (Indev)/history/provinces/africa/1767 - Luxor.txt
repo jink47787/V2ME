@@ -4,4 +4,3 @@ add_core = EGY
 
 trade_goods = sugar
 life_rating = 35
-terrain = luxor

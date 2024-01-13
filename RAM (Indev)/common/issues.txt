@@ -261,7 +261,7 @@ political_reforms = {
                     year = 1850
                     ai = no
                 }
-                NOT = { has_country_flag = theocratic_government }
+                NOT = { has_country_flag = theocracy }
             }
             cb_generation_speed_modifier = 0.1
         }
@@ -309,7 +309,7 @@ political_reforms = {
             rules = { state_vote = yes }
             allow = {
                 NOT = { vote_franschise = none_voting }
-                NOT = { has_country_flag = theocratic_government }
+                NOT = { has_country_flag = theocracy }
             }
             global_immigrant_attract = 0.02
         }
@@ -325,7 +325,7 @@ political_reforms = {
             rules = { largest_share = yes }
             allow = {
                 NOT = { vote_franschise = none_voting }
-                NOT = { has_country_flag = theocratic_government }
+                NOT = { has_country_flag = theocracy }
             }
         }
         jefferson_method = {
@@ -396,7 +396,7 @@ political_reforms = {
         harassment = {
             ruling_party_support = 0.15
             global_immigrant_attract = 0.02
-            allow = { NOT = { has_country_flag = theocratic_government } }
+            allow = { NOT = { has_country_flag = theocracy } }
         }
         gerrymandering = {
             ruling_party_support = 0.10
@@ -463,7 +463,7 @@ political_reforms = {
             non_accepted_pop_consciousness_modifier = 0.01
             allow = {
                 citizenship_policy = residency
-                NOT = { has_country_flag = theocratic_government }
+                NOT = { has_country_flag = theocracy }
             }
         }
         culture_voting_only = {
@@ -590,7 +590,7 @@ political_reforms = {
                 colonial_nation = yes
                 OR = {
                     has_global_flag = berlin_conference
-                    has_country_flag = theocratic_government
+                    has_country_flag = theocracy
                 }
                 NOT = { has_country_flag = islamic_law }
             }
