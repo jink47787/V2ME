@@ -1,5 +1,8 @@
 # RAM
 
+# HIGHLY OUT OF DATE USE EXCEL DOC
+
+
 #- RAM Cleanup
 #	477877787	Daily
 #	477877788	Meta
@@ -13,14 +16,14 @@
 
 #- Dynamic Loc
 #	2000	Reset Regions to ""
-#	71601	Country Rename Bounce Event
-#	71602	Country Rename Event
-#	71601	Region Rename Bounce Event
-#	71602	Region Rename Event
-#	71801	Province Rename Bounce Event
-#	71802	Province Rename Event
-#	71901	Variable Rename Bounce Event
-#	71902	Variable Rename Event
+#	401	Country Rename Bounce Event
+#	402	Country Rename Event
+#	401	Region Rename Bounce Event
+#	402	Region Rename Event
+#	201	Province Rename Bounce Event
+#	202	Province Rename Event
+#	101	Variable Rename Bounce Event
+#	102	Variable Rename Event
 #	3000	Reset Regions to "	"
 
 #- Rename Capital
@@ -29,7 +32,7 @@
 #	1512056 Select Capital Variations
 #	1512057
 #	1512058
-#	81000	Meta Effect
+#	40	Meta Effect
 
 #- Indev
 #	80000	Pop Count Event

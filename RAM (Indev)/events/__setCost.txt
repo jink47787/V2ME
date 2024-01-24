@@ -1,0 +1,73 @@
+#Change Capital Function - start
+
+country_event = { # Useful for true dynamic money transfer
+    id = 5001
+    title = "Cost Variable"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 1000000 }
+			}
+			change_variable = { which = cost_variable value = -1000000 }
+			treasury = -1000000
+		}
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 100000 }
+			}
+			change_variable = { which = cost_variable value = -100000 }
+			treasury = -100000
+		}
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 10000 }
+			}
+			change_variable = { which = cost_variable value = -10000 }
+			treasury = -10000
+		}
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 1000 }
+			}
+			change_variable = { which = cost_variable value = -1000 }
+			treasury = -1000
+		}
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 100 }
+			}
+			change_variable = { which = cost_variable value = -100 }
+			treasury = -100
+		}
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 10 }
+			}
+			change_variable = { which = cost_variable value = -10 }
+			treasury = -10
+		}
+		any_country = {
+			limit = { 
+				check_variable = { which = cost_variable value = 1 }
+			}
+			change_variable = { which = cost_variable value = -1 }
+			treasury = -1
+		}
+		any_country = {
+			limit = {
+				check_variable = { which =  cost_variable value = 1 }
+			}
+			CLN = { country_event = 5001 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+

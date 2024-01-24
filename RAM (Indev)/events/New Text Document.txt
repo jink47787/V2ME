@@ -1,0 +1,67 @@
+#Recursive Scoping
+
+country_event = { # Debnug Event
+	id = 11000
+    title = "Recusion"
+    desc = "Test"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+        name = "Lets check the tooltips"
+		CLN = { country_event = 11001 }
+		country_event = 11002
+    }
+}
+
+country_event = { # Debnug Event
+	id = 11001
+    title = "Recusion"
+    desc = "Test"
+    picture = "commonwealth"
+	allow_multiple_instances = no
+    is_triggered_only = yes
+	
+	option = {
+        name = "Increase Prestige by Infinite"
+		FRA = { set_variable = { which = country_loc_slot value = 1 }}
+		country_event = 401
+		country_event = 11001
+    }
+		option = {
+        name = "Increase Prestige by Infinite"
+		any_land_province = { 
+			limit = {
+				has_province_modifier = x
+				terrain = x
+			}
+			example_terrain_state = {}
+		}
+		SWE = { set_variable = { which = country_loc_slot value = 1 }}
+		country_event = 401
+		country_event = 11001
+		
+    }
+}
+
+country_event = { # Debnug Event
+	id = 11002
+    title = "Recusion"
+    desc = "Test"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+        name = "Lets check the tooltips"
+		any_land_province = { 
+			limit = {
+			}
+			slot_1 = {}
+		}
+		country_event = 11002
+    }
+}

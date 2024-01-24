@@ -1,5 +1,5 @@
 country_event = {
-	id = 71700
+	id = 300
 	title = "Dynamic Loc Region Handler Event"
 	picture = "crisis"
 	allow_multiple_instances = no
@@ -13,9 +13,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 1.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_1 value = -1 }
 			add_province_modifier = { name = slot_1_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -24,9 +26,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 2.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_2 value = -1 }
 			add_province_modifier = { name = slot_2_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -35,9 +39,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 3.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_3 value = -1 }
 			add_province_modifier = { name = slot_3_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -46,9 +52,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_4 value = -1 }
 			add_province_modifier = { name = slot_4_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -57,9 +65,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 5.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_5 value = -1 }
 			add_province_modifier = { name = slot_5_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -68,9 +78,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_6 value = -1 }
 			add_province_modifier = { name = slot_6_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -79,9 +91,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 7.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_7 value = -1 }
 			add_province_modifier = { name = slot_7_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -90,9 +104,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 8.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_8 value = -1 }
 			add_province_modifier = { name = slot_8_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -101,9 +117,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 9.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_9 value = -1 }
 			add_province_modifier = { name = slot_9_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -112,9 +130,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 10.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_10 value = -1 }
 			add_province_modifier = { name = slot_10_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -123,9 +143,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 11.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_11 value = -1 }
 			add_province_modifier = { name = slot_11_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -134,9 +156,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 12.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_12 value = -1 }
 			add_province_modifier = { name = slot_12_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -145,9 +169,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 13.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_13 value = -1 }
 			add_province_modifier = { name = slot_13_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -156,9 +182,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 14.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_14 value = -1 }
 			add_province_modifier = { name = slot_14_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -167,9 +195,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 15.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_15 value = -1 }
 			add_province_modifier = { name = slot_15_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -178,9 +208,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 16.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_16 value = -1 }
 			add_province_modifier = { name = slot_16_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -189,9 +221,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 17.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_17 value = -1 }
 			add_province_modifier = { name = slot_17_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -200,9 +234,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 18.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_18 value = -1 }
 			add_province_modifier = { name = slot_18_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -211,9 +247,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 19.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_19 value = -1 }
 			add_province_modifier = { name = slot_19_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 		any_land_province = {
 			limit = {
@@ -222,9 +260,11 @@ country_event = {
 					NOT = { check_variable = { which =  slot_itterator_variable value = 20.99 } }
 				}
 				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
 			}
+			add_province_modifier = { name = option_modifier_20 value = -1 }
 			add_province_modifier = { name = slot_20_region value = -1 }
-			CLN = { country_event = 71701 }
+			CLN = { country_event = 301 }
 		}
 	}
 	
@@ -234,7 +274,7 @@ country_event = {
 }
 
 country_event = {
-	id = 71701
+	id = 301
 	title = "Dynamic Loc Region Bounce Event"
 	picture = "crisis"
 	allow_multiple_instances = no
@@ -362,7 +402,7 @@ country_event = {
 			}
 			UTI = { change_variable = { which = itterator value = 21 } }
 		}
-		country_event = 71702
+		country_event = 302
 	}
 	
 	option = {
@@ -371,7 +411,7 @@ country_event = {
 }
 
 country_event = {
-	id = 71702
+	id = 302
 	title = "Dynamic Loc Region Effect Event"
 	picture = "crisis"
 	allow_multiple_instances = no
@@ -7604,7 +7644,7 @@ country_event = {
 				check_variable = { which = itterator value = 0 }
 			}
 			change_variable = { which = itterator value = -1 }
-			CLN = { country_event = 71702 }
+			CLN = { country_event = 302 }
 		}
 	}
 	

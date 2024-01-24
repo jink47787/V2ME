@@ -42,8 +42,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_country_flag = gp_for_dispute_1
 			FROM = { change_variable = { which = option_count value = 1 } }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		random_country = {
 			limit = { 
 				NOT = { has_country_flag = gp_for_dispute }
@@ -58,8 +58,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_country_flag = gp_for_dispute_2
 			FROM = { change_variable = { which = option_count value = 1 } }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		random_country = {
 			limit = { 
 				NOT = { has_country_flag = gp_for_dispute }
@@ -74,8 +74,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_country_flag = gp_for_dispute_3
 			FROM = { change_variable = { which = option_count value = 1 } }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		random_country = {
 			limit = { 
 				NOT = { has_country_flag = gp_for_dispute }
@@ -90,8 +90,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_country_flag = gp_for_dispute_4
 			FROM = { change_variable = { which = option_count value = 1 } }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		#any_land_province = { remove_crime = meta_crime }
 		any_country = {
 			limit = {

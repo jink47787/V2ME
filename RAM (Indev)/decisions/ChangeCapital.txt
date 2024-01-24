@@ -3,26 +3,32 @@ political_decisions = {
     change_capital_decision = {
         picture = restore_washington_capital
         potential = {
-			#NOT = {
-			#	any_owned_province = {
-			#		has_province_modifier = capital_construction
-			#	}
-			#}
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = capital_construction
+				}
+			}
 			any_owned_province = {
 				is_core = THIS
 				is_capital = no
+				is_colonial = no
+				controlled_by_rebels = no
+				NOT = { OR = { terrain = jungle_mountains terrain = mountain terrain = himalayan_mountains terrain = coral_island terrain = new_world_mountain } } 
 			}
         }
 
         allow = {
-			#NOT = {
-			#	any_owned_province = {
-			#		has_province_modifier = capital_construction
-			#	}
-			#}
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = capital_construction
+				}
+			}
 			any_owned_province = {
 				is_core = THIS
 				is_capital = no
+				is_colonial = no
+				controlled_by_rebels = no
+				NOT = { OR = { terrain = jungle_mountains terrain = mountain terrain = himalayan_mountains terrain = coral_island terrain = new_world_mountain } } 
 			}
 			war = no
 			civilized = yes
@@ -30,8 +36,54 @@ political_decisions = {
         }
 
         effect = {
-			CLN = { country_event = 71911 }
+			set_country_flag = renaming_capital
+			CLN = { country_event = 20001 }
         }
-        ai_will_do = { factor = 0 }
+        ai_will_do = { 
+		factor = 0.001
+			modifier = {
+				factor = 0.05
+				is_greater_power = yes
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = presidential_dictatorship
+			}
+			modifier = {
+				factor = 1.5
+				has_recently_lost_war = yes
+			}
+			modifier = {
+				factor = 2
+				capital_scope = { 
+					average_consciousness = 7
+				}
+			}
+			modifier = {
+				factor = 2
+				capital_scope = { 
+					average_militancy = 7
+				}
+			}
+			modifier = {
+				factor = 2
+				all_core = {
+					is_capital = no
+				}
+			}
+			modifier = {
+				factor = 4
+				AND = {
+					any_land_province = {
+						is_accepted_culture = yes
+					}
+					capital_scope = { is_accepted_culture = no }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_global_flag = chaos
+			}
+		}
     }
 }

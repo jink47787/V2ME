@@ -12,7 +12,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 		FROM = { set_variable = { which = option_count value = 0 } }
 		FROM = { set_variable = { which = country_loc_slot value = 1 } }
 		FROM = { set_country_flag = arbitration_1 } 
-		CLN = { country_event = 71601 }
+		CLN = { country_event = 401 }
 		any_country = {
 			limit = {
 				has_country_flag = arbitration_initiator
@@ -20,8 +20,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_variable = { which = country_loc_slot value = 1 }
 			set_variable = { which = flag_loc_slot value = 3 }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		any_country = {
 			limit = {
 				has_country_flag = scoped_for_dispute_choice
@@ -29,8 +29,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_variable = { which = country_loc_slot value = 2 }
 			set_variable = { which = flag_loc_slot value = 4 }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		any_country = { 
 			limit = {
 				has_country_flag = gp_current_dispute	# Spelling 

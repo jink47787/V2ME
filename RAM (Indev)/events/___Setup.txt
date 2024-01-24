@@ -9,10 +9,10 @@ country_event = { # Setup
 	immediate = {
 		any_country = {
 			limit = {
-				exists = yes
+				ai = no
 			}
-			capital_scope = { add_province_modifier = { name = capital_city_modifier duration = -1 } }
-		}
+			country_event = 10000
+		}	
 	}
 	
 	option = {

@@ -1,0 +1,527 @@
+#Collectivisation - start
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20000
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		CLN = { country_event = 20001 }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20001
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				has_country_flag = renaming_capital
+			}
+			random_owned = {
+				limit = {
+					is_capital = yes
+				}
+				add_province_modifier = { name = slot_1_province value = -1 }
+				CLN = { country_event = 201 }
+			}
+			set_country_flag = integer_handler_scope
+		}
+		CLN = { change_variable = { which = slot_itterator_variable value = 2 } }
+		any_land_province = {
+			limit = {
+				is_capital = no
+				is_colonial = no
+				controlled_by_rebels = no
+				NOT = { OR = { terrain = jungle_mountains terrain = mountain terrain = himalayan_mountains terrain = coral_island terrain = new_world_mountain } } 
+				owner = { has_country_flag = renaming_capital }
+				NOT = {
+					has_province_modifier = slotted
+				}
+			}
+			add_province_modifier = { name = due_for_slotting value = -1 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 200 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			THIS = { any_country = { limit = { has_country_flag = renaming_capital } set_variable = { which = variable_loc_value value = 300 } } }
+			THIS = { any_land_province = { 	# Minor 
+				limit = { 
+					has_province_modifier = due_for_slotting OR = { terrain = hills terrain = forest terrain = marsh } 
+				} 
+				any_country = { limit = { has_country_flag = renaming_capital } change_variable = { which = variable_loc_value value = 200 } } }
+			}
+			THIS = { any_land_province = { 	# Harsh
+				limit = { 
+					has_province_modifier = due_for_slotting OR = { terrain = arctic terrain = jungle terrain = jungle_hills terrain = dry_mountains terrain = desert terrain = small_island terrain = new_world_arctic terrain = new_world_jungle terrain = new_world_small_island } 
+				} 
+				any_country = { limit = { has_country_flag = renaming_capital } change_variable = { which = variable_loc_value value = 500 } } }
+			}
+			CLN = { country_event = 100 }
+			add_province_modifier = { name = slotted value = -1 }
+			remove_province_modifier = due_for_slotting
+		}
+		any_country = { clr_country_flag = integer_handler_scope }
+		any_land_province = { remove_province_modifier = slotted }
+		any_country = {
+			limit = {
+				has_country_flag = renaming_capital
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		CLN = { country_event = 401 }
+		random_country = {
+			limit = {
+				has_country_flag = renaming_capital
+				CLN = { check_variable = { which =  slot_itterator_variable value = 2.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } } }	 # Common check
+			}
+			country_event = 20004
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = {  has_country_flag = renaming_capital CLN = { check_variable = { which =  slot_itterator_variable value = 4.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } } } }
+			country_event = 20005
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = {  has_country_flag = renaming_capital CLN = { check_variable = { which =  slot_itterator_variable value = 6.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 8.99 } } } }
+			country_event = 20006
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = {  has_country_flag = renaming_capital CLN = { check_variable = { which =  slot_itterator_variable value = 8.99 } } }
+			country_event = 20007
+		}
+		set_variable = { which = slot_itterator_variable value = 0 }
+		any_country = { clr_country_flag = renaming_capital }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20002
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		FROM = { country_event = 20003 }
+	} 
+
+	option = {
+        name = "Capital Complete"
+    }
+
+}
+
+country_event = {
+    id = 20003
+    title = "The New Capital!"
+    picture = "capital_complete"
+
+	is_triggered_only = yes
+
+    immediate = {
+		change_capital_state_6 = {}
+		slot_1 = {}
+		change_capital_state_7 = {}
+		slot_2 = {}
+	} 
+
+	option = {
+        name = "Brilliant!"
+		any_owned = {
+			limit = {
+				has_province_modifier = capital_construction
+			}
+			add_province_modifier = { name = set_capital duration = -1 }
+			CLN = { country_event = 5000 }
+			remove_province_modifier = capital_construction
+		}
+    }
+
+}
+
+country_event = {
+    id = 20004
+    title = "The New Capital!"
+    picture = "capital_start"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_3 = {}
+		change_capital_state_3 = {}
+		slot_4 = {}
+		change_capital_state_4 = {}
+	} 
+
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		any_owned = {
+			limit = {
+				has_province_modifier = option_modifier_3
+			}
+			add_province_modifier = { name = capital_construction duration = 900 }
+			add_province_modifier = { name = secret_capital_construction duration = 899 }
+		}
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+	option = {
+        name = "It is fine where it is"
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+
+}
+
+country_event = {
+    id = 20005
+    title = "The New Capital!"
+    picture = "capital_start_three_long"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_3 = {}
+		change_capital_state_3 = {}
+		slot_4 = {}
+		change_capital_state_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_5 = {}
+		change_capital_state_3 = {}
+		slot_6 = {}
+		change_capital_state_4 = {}
+	} 
+
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			THIS = {
+				any_owned = {
+					limit = {
+						has_province_modifier = option_modifier_3
+					}
+					add_province_modifier = { name = capital_construction duration = 900 }
+					add_province_modifier = { name = secret_capital_construction duration = 899 }
+					CLN = { country_event = 5000 }
+				}
+				CLN = { country_event = 203 }
+			}
+			clr_global_flag = A
+		}
+    }
+    option = {	# Duplicates of the above, Inline for Compactness
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		any_owned = { limit = { has_province_modifier = option_modifier_5 } add_province_modifier = { name = capital_construction duration = 900 } add_province_modifier = { name = secret_capital_construction duration = 899 } CLN = { country_event = 5000 } }
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+	option = {
+        name = "It is fine where it is"
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+
+}
+
+country_event = {
+    id = 20006
+    title = "The New Capital!"
+    picture = "capital_start_four_long"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_3 = {}
+		change_capital_state_3 = {}
+		slot_4 = {}
+		change_capital_state_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_5 = {}
+		change_capital_state_3 = {}
+		slot_6 = {}
+		change_capital_state_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_7 = {}
+		change_capital_state_3 = {}
+		slot_8 = {}
+		change_capital_state_4 = {}
+	} 
+
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		any_owned = {
+			limit = {
+				has_province_modifier = option_modifier_3
+			}
+			add_province_modifier = { name = capital_construction duration = 900 }
+			add_province_modifier = { name = secret_capital_construction duration = 899 }
+			CLN = { country_event = 5000 }
+		}
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+    option = {	# Duplicates of the above, Inline for Compactness
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		any_owned = { limit = { has_province_modifier = option_modifier_5 } add_province_modifier = { name = capital_construction duration = 900 } add_province_modifier = { name = secret_capital_construction duration = 899 } CLN = { country_event = 5000 } }
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		any_owned = { limit = { has_province_modifier = option_modifier_7 } add_province_modifier = { name = capital_construction duration = 900 } add_province_modifier = { name = secret_capital_construction duration = 899 } CLN = { country_event = 5000 } }
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+	option = {
+        name = "It is fine where it is"
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+    }
+
+}
+
+country_event = {
+    id = 20007
+    title = "The New Capital!"
+    picture = "capital_start_five_long"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		change_capital_desc = {}
+		slot_2 = {}
+		change_capital_desc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_3 = {}
+		change_capital_state_3 = {}
+		slot_4 = {}
+		change_capital_state_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_5 = {}
+		change_capital_state_3 = {}
+		slot_6 = {}
+		change_capital_state_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_7 = {}
+		change_capital_state_3 = {}
+		slot_8 = {}
+		change_capital_state_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		slot_9 = {}
+		change_capital_state_3 = {}
+		slot_10 = {}
+		change_capital_state_4 = {}
+	} 
+
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		set_variable = { which = cost_variable value = 300000 } 
+		random_owned = { limit = { has_province_modifier = option_modifier_3 OR = { terrain = hills terrain = forest terrain = marsh } } THIS = { change_variable = { which = cost_variable value = 200000 } } }
+		random_owned = { limit = { has_province_modifier = option_modifier_3 OR = { terrain = arctic terrain = jungle terrain = jungle_hills terrain = dry_mountains terrain = desert terrain = small_island terrain = new_world_arctic terrain = new_world_jungle terrain = new_world_small_island } } THIS = { change_variable = { which = cost_variable value = 500000 } } }
+		CLN = { country_event = 5001 }
+		any_owned = {
+			limit = {
+				has_province_modifier = option_modifier_3
+			}
+			add_province_modifier = { name = capital_construction duration = 900 }
+			THIS = { set_variable = { which = days_till_cap value = 899 } } # SEE EVENT HANDLER ON VARIABLE
+			CLN = { country_event = 5000 }
+		}
+		CLN = { country_event = 203 }
+		CLN = { country_event = 5001 }
+		} clr_global_flag = A } # 
+		ai_chance = { 
+			factor = 1
+            modifier = { factor = 2 any_owned_province = { has_province_modifier = option_modifier_3 controlled_by = THIS } }
+			modifier = { factor = 3 any_owned_province = { has_province_modifier = option_modifier_3 is_accepted_culture = yes } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_3 life_rating = 20 } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_3 literacy = 75 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_3 average_consciousness = 3 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_3 average_militancy = 3 } }
+		}
+    }
+    option = {	# Duplicates of the above, Inline for Compactness
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		set_variable = { which = cost_variable value = 300000 } 
+		random_owned = { limit = { has_province_modifier = option_modifier_5 OR = { terrain = hills terrain = forest terrain = marsh } } THIS = { change_variable = { which = cost_variable value = 200000 } } }
+		random_owned = { limit = { has_province_modifier = option_modifier_5 OR = { terrain = arctic terrain = jungle terrain = jungle_hills terrain = dry_mountains terrain = desert terrain = small_island terrain = new_world_arctic terrain = new_world_jungle terrain = new_world_small_island } } THIS = { change_variable = { which = cost_variable value = 500000 } } }
+		any_owned = { limit = { has_province_modifier = option_modifier_5 } add_province_modifier = { name = capital_construction duration = 900 } THIS = { set_variable = { which = days_till_cap value = 899 } } CLN = { country_event = 5000 } } # SEE EVENT HANDLER ON VARIABLE
+		CLN = { country_event = 203 }
+		CLN = { country_event = 5001 }
+		} clr_global_flag = A } # 
+		ai_chance = { 
+			factor = 1
+            modifier = { factor = 2 any_owned_province = { has_province_modifier = option_modifier_5 controlled_by = THIS } }
+			modifier = { factor = 3 any_owned_province = { has_province_modifier = option_modifier_5 is_accepted_culture = yes } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_5 life_rating = 20 } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_5 literacy = 75 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_5 average_consciousness = 3 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_5 average_militancy = 3 } }
+		}
+    }
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		set_variable = { which = cost_variable value = 300000 } 
+		random_owned = { limit = { has_province_modifier = option_modifier_7 OR = { terrain = hills terrain = forest terrain = marsh } } THIS = { change_variable = { which = cost_variable value = 200000 } } }
+		random_owned = { limit = { has_province_modifier = option_modifier_7 OR = { terrain = arctic terrain = jungle terrain = jungle_hills terrain = dry_mountains terrain = desert terrain = small_island terrain = new_world_arctic terrain = new_world_jungle terrain = new_world_small_island } } THIS = { change_variable = { which = cost_variable value = 500000 } } }
+		any_owned = { limit = { has_province_modifier = option_modifier_7 } add_province_modifier = { name = capital_construction duration = 900 } THIS = { set_variable = { which = days_till_cap value = 899 } } CLN = { country_event = 5000 } } # SEE EVENT HANDLER ON VARIABLE
+		CLN = { country_event = 203 }
+		CLN = { country_event = 5001 }
+		} clr_global_flag = A } # 
+		ai_chance = { 
+			factor = 1
+            modifier = { factor = 2 any_owned_province = { has_province_modifier = option_modifier_7 controlled_by = THIS } }
+			modifier = { factor = 3 any_owned_province = { has_province_modifier = option_modifier_7 is_accepted_culture = yes } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_7 life_rating = 20 } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_7 literacy = 75 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_7 average_consciousness = 3 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_7 average_militancy = 3 } }
+		}
+    }
+    option = {
+        name = ""
+		change_capital_state_5 = {}
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		set_variable = { which = cost_variable value = 300000 } 
+		random_owned = { limit = { has_province_modifier = option_modifier_9 OR = { terrain = hills terrain = forest terrain = marsh } } THIS = { change_variable = { which = cost_variable value = 200000 } } }
+		random_owned = { limit = { has_province_modifier = option_modifier_9 OR = { terrain = arctic terrain = jungle terrain = jungle_hills terrain = dry_mountains terrain = desert terrain = small_island terrain = new_world_arctic terrain = new_world_jungle terrain = new_world_small_island } } THIS = { change_variable = { which = cost_variable value = 500000 } } }
+		any_owned = { limit = { has_province_modifier = option_modifier_9 } add_province_modifier = { name = capital_construction duration = 900 } THIS = { set_variable = { which = days_till_cap value = 899 } } CLN = { country_event = 5000 } } # SEE EVENT HANDLER ON VARIABLE
+		CLN = { country_event = 203 }
+		CLN = { country_event = 5001 }
+		} clr_global_flag = A } # 
+		ai_chance = { 
+			factor = 1
+            modifier = { factor = 2 any_owned_province = { has_province_modifier = option_modifier_9 controlled_by = THIS } }
+			modifier = { factor = 3 any_owned_province = { has_province_modifier = option_modifier_9 is_accepted_culture = yes } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_9 life_rating = 20 } }
+			modifier = { factor = 4 any_owned_province = { has_province_modifier = option_modifier_9 literacy = 75 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_9 average_consciousness = 3 } }
+			modifier = { factor = 0.5 any_owned_province = { has_province_modifier = option_modifier_9 average_militancy = 3 } }
+		}
+    }
+	option = {
+        name = "It is fine where it is"
+		set_global_flag = A random_country = { limit = { has_global_flag = A } THIS = {	# Hidding Tooltip
+		CLN = { country_event = 203 }
+		} clr_global_flag = A } # 
+		ai_chance = { 
+			factor = 1
+            modifier = { factor = 50 in_default = yes }
+            modifier = { factor = 50 NOT = { money = 700000 } }
+            modifier = { factor = 0.5 NOT = { prestige = 10 } }
+			modifier = { factor = 0 has_global_flag = chaos }
+		}
+    }
+
+}
+

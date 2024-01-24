@@ -1,21 +1,35 @@
-#country_event = { # To be trigged by dismantlement
-#    id = 90000
-#	major = no
-#    title = "This exists purely to bounce stuff"
-#    #desc = "EVTDESC71002"
-#    picture = "collectivisation"
-#    is_triggered_only = yes
 #
-#    option = {
-#        name = ""
-#		random_country = {
-#			limit = {
-#				tag = THIS
-#				check_variable = { which = example_event value = 1 }
-#				NOT = { check_variable = { which = example_event value = 1 } }
-#			}
-#			country_event = [whatever]
-#		}
-#		check_variable = { which = example_event value = -1 }
-#    }
-#}
+#	Due to the removal of CLN from the map, events cannot be bounced. Therefore checks must be put here. Its not ideal from a performance standpoint and I'm considering replacement options. Is faster than regular triggers though.
+#
+
+country_event = { # 
+    id = 20
+	major = no
+    title = "This exists purely to bounce stuff"
+    #desc = "EVTDESC71002"
+    picture = "collectivisation"
+    is_triggered_only = yes
+
+    option = {
+        name = ""
+		any_country = { change_variable = { which = days_till_cap value = -1 } }
+		any_land_province = {
+			limit = { 
+				has_province_modifier = capital_construction
+				owner = { 
+					check_variable = { which =  days_till_cap value = 0.99 }
+					NOT = { check_variable = { which =  days_till_cap value = 1.99 } } 
+				}
+			}
+			add_province_modifier = { name = slot_1_province value = -1 }
+			CLN = { country_event = 201 } 
+			owner = {
+				capital_scope = { 
+					add_province_modifier = { name = slot_2_province value = -1 }
+					CLN = { country_event = 201 } 
+				}
+			}
+			owner = { country_event = 20003 }
+		}
+    }
+}

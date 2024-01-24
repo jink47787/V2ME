@@ -1,7 +1,7 @@
 #Introdution Events
 
 country_event = { # Explanation Event
-    id = 12000
+    id = 40
     title = ""
     #desc = "EVTDESC1000"
     #picture = "RAM_intro"

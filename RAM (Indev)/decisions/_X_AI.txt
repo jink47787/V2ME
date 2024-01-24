@@ -1,0 +1,27 @@
+#political_decisions = {
+#
+#    testing_ai = {
+#        picture = dreams_of_empire
+#        potential = {
+#        }
+#
+#        allow = {
+#        }
+#
+#        effect = {
+#			random_owned = {
+#				random_neighbor_province = { secede_province = THIS }
+#			}
+#        }
+#        ai_will_do = { 
+#			factor = 0.5
+#			modifier = {
+#                factor = 4
+#                OR = {
+#					capital_scope = { continent = north_america }
+#					capital_scope = { continent = south_america }
+#				}
+#            }
+#		}
+#    }
+#}

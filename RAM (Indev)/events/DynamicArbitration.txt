@@ -35,9 +35,9 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			}
 			set_country_flag = due_for_slotting
 			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
-			CLN = { country_event = 71500 }
+			CLN = { country_event = 500 }
 			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
-			CLN = { country_event = 71600 }
+			CLN = { country_event = 400 }
 			set_country_flag = slotted
 			clr_country_flag = due_for_slotting
 		}

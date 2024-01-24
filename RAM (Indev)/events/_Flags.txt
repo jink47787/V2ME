@@ -1,5 +1,5 @@
 country_event = {
-	id = 71500
+	id = 500
 	title = "Dynamic Loc Flag Handler Event"
 	picture = "crisis"
 	allow_multiple_instances = no
@@ -226,7 +226,7 @@ country_event = {
 			set_country_flag = flag_option_20
 			set_variable = { which = flag_loc_slot value = 20 }
 		}
-		country_event = 71501
+		country_event = 501
 	}
 	
 	option = {
@@ -235,7 +235,7 @@ country_event = {
 }
 
 country_event = {
-	id = 71501
+	id = 501
 	title = "Dynamic Loc Flag Bounce Event"
 	picture = "crisis"
 	allow_multiple_instances = no
@@ -383,7 +383,7 @@ country_event = {
 			}
 			UTI = { set_variable = { which = itterator value = 21 } }
 		}
-		country_event = 71502
+		country_event = 502
 	}
 	
 	option = {
@@ -392,7 +392,7 @@ country_event = {
 }
 
 country_event = {
-	id = 71502
+	id = 502
 	title = "Dynamic Loc Flag Effect Event"
 	picture = "crisis"
 	allow_multiple_instances = no
@@ -9563,7 +9563,7 @@ country_event = {
 				check_variable = { which = itterator value = 0 }
 			}
 			change_variable = { which = itterator value = -1 }
-			CLN = { country_event = 71502 }
+			CLN = { country_event = 502 }
 		}
 	}
 	

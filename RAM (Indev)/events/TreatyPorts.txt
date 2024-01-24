@@ -35,15 +35,15 @@ country_event = { # Event to fire starting Cleanup event for CLN
 		FROM = { set_variable = { which = option_count value = 0 } }
 		FROM = { set_variable = { which = country_loc_slot value = 1 } }
 		FROM = { set_country_flag = arbitration_1 } 
-		CLN = { country_event = 71601 }
+		CLN = { country_event = 401 }
 		any_country = {
 			limit = {
 				has_country_flag = recently_lost_war_treat_port
 			}
 			set_variable = { which = country_loc_slot value = 1 }
 		}
-		country_event = 71601
-		country_event = 71501
+		country_event = 401
+		country_event = 501
 		any_country = {
 			limit = {
 				has_country_flag = recently_lost_war_treat_port
@@ -53,7 +53,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 					port = yes
 				}
 				add_province_modifier = { name = slot_2_province value = -1 }
-				CLN = { country_event = 71801 }
+				CLN = { country_event = 201 }
 				add_province_modifier = { name = flag_modifier_1 value = -1 }
 				FROM = { set_variable = { which = option_count value = 1 } }
 			}
@@ -68,7 +68,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 					port = yes
 				}
 				add_province_modifier = { name = slot_3_province value = -1 }
-				CLN = { country_event = 71801 }
+				CLN = { country_event = 201 }
 				add_province_modifier = { name = flag_modifier_2 value = -1 }
 				FROM = { set_variable = { which = option_count value = 2 } }
 			}
@@ -84,7 +84,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 					port = yes
 				}
 				add_province_modifier = { name = slot_4_province value = -1 }
-				CLN = { country_event = 71801 }
+				CLN = { country_event = 201 }
 				add_province_modifier = { name = flag_modifier_3 value = -1 }
 				FROM = { set_variable = { which = option_count value = 3 } }
 			}
@@ -157,7 +157,7 @@ country_event = {
 			limit = {
 				has_province_modifier = flag_modifier_1
 			}
-			#CLN = { country_event = 81000 }
+			#CLN = { country_event = 40 }
 		}
 		any_land_province = { remove_province_modifier = flag_modifier_1 }
 		any_land_province = { remove_province_modifier = flag_modifier_2 }
@@ -202,7 +202,7 @@ country_event = {
 			limit = {
 				has_province_modifier = flag_modifier_1
 			}
-			#CLN = { country_event = 81000 }
+			#CLN = { country_event = 40 }
 		}
 		any_land_province = { remove_province_modifier = flag_modifier_1 }
 		any_land_province = { remove_province_modifier = flag_modifier_2 }
@@ -214,7 +214,7 @@ country_event = {
 			limit = {
 				has_province_modifier = flag_modifier_2
 			}
-			#CLN = { country_event = 81000 }
+			#CLN = { country_event = 40 }
 		}
 		any_land_province = { remove_province_modifier = flag_modifier_1 }
 		any_land_province = { remove_province_modifier = flag_modifier_2 }
@@ -262,7 +262,7 @@ country_event = {
 			limit = {
 				has_province_modifier = flag_modifier_1
 			}
-			#CLN = { country_event = 81000 }
+			#CLN = { country_event = 40 }
 		}
 		any_land_province = { remove_province_modifier = flag_modifier_1 }
 		any_land_province = { remove_province_modifier = flag_modifier_2 }
@@ -274,7 +274,7 @@ country_event = {
 			limit = {
 				has_province_modifier = flag_modifier_2
 			}
-			#CLN = { country_event = 81000 }
+			#CLN = { country_event = 40 }
 		}
 		any_land_province = { remove_province_modifier = flag_modifier_1 }
 		any_land_province = { remove_province_modifier = flag_modifier_2 }
@@ -286,7 +286,7 @@ country_event = {
 			limit = {
 				has_province_modifier = flag_modifier_3
 			}
-			#CLN = { country_event = 81000 }
+			#CLN = { country_event = 40 }
 		}
 		any_land_province = { remove_province_modifier = flag_modifier_1 }
 		any_land_province = { remove_province_modifier = flag_modifier_2 }

@@ -1,0 +1,585 @@
+#Recursive Scoping
+
+country_event = { # Debnug Event
+    id = 500
+    title = "Recusion"
+    desc = "Test"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	
+	option = {
+        name = "Increase Prestige by Infinite"
+		CLN = { country_event = 501 }
+    }
+	
+	option = {
+        name = "Scope Countries with Handler"
+		CLN = { set_variable = { which = slot_itterator_variable value = 0 } }
+		CLN = { country_event = 503 }
+    }
+}
+
+country_event = { # Dedicated Scope & Effect Event
+    id = 501
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = no
+    is_triggered_only = yes
+	
+	immediate = {
+		random_country = { 
+			limit = {
+				NOT = {
+					tag = CLN
+					tag = FRA
+				}
+			}
+			annex_to = FRA
+			set_global_flag = countries_exist
+		}
+		random_country = {
+			limit = {
+				NOT = { 
+					tag = FRA
+					tag = CLN
+				}
+				exists = yes
+			}
+			clr_global_flag = countries_exist
+			CLN = { country_event = 501 }
+		}
+		random_country = {
+			limit = {
+				has_global_flag = countries_exist
+			}
+			FRA = {	prestige = 500 }
+			clr_global_flag = countries_exist
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+
+country_event = { # Dedicated Scope & Effect Event
+    id = 503
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = no
+    is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = itterating_commonwealth_done
+		any_country = {	#	Dynamic List - Countries/Flags
+			limit = {
+				OR = {
+					is_culture_group = british
+					is_culture_group = celtic
+				}
+				NOT = { tag = UTI }
+				NOT = { 
+					has_country_flag = slotted
+				}
+			}
+			set_country_flag = due_for_slotting
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 500 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 400 }
+			set_country_flag = slotted
+			clr_country_flag = due_for_slotting
+		}
+		#any_country = { clr_country_flag = slotted }
+		#any_land_province = {
+		#	limit = {
+		#		OR = {
+		#			province_id = 1
+		#			province_id = 500
+		#			province_id = 1000
+		#		}
+		#		NOT = {
+		#			has_province_modifier = slotted
+		#		}
+		#	}
+		#	add_province_modifier = { name = due_for_slotting value = -1 }
+		#	CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+		#	CLN = { country_event = 300 }
+		#	add_province_modifier = { name = slotted value = -1 }
+		#	remove_province_modifier = due_for_slotting
+		#}
+		#any_land_province = { remove_province_modifier = slotted }
+		random_country = {
+			limit = {
+				has_global_flag = itterating_commonwealth_done
+				tag = FRA
+				CLN = { check_variable = { which =  slot_itterator_variable value = 0.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 2.99 } } }	 # Common check
+			}
+			country_event = 504
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { has_global_flag = itterating_commonwealth_done tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 2.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } } } }
+			country_event = 505
+		}
+		random_country = {
+			limit = { has_global_flag = itterating_commonwealth_done tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 4.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } } } }
+			country_event = 506
+		}
+		random_country = {
+			limit = { has_global_flag = itterating_commonwealth_done tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 6.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 8.99 } } } }
+			country_event = 507
+		}
+		random_country = {	
+			limit = { has_global_flag = itterating_commonwealth_done tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 8.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 10.99 } } } }
+			country_event = 508
+		}
+		random_country = {	
+			limit = { has_global_flag = itterating_commonwealth_done tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 10.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 12.99 } } } }
+			country_event = 509
+		}
+		random_country = {	
+			limit = { has_global_flag = itterating_commonwealth_done tag = FRA CLN = { check_variable = { which =  slot_itterator_variable value = 12.99 } } } 
+			country_event = 511
+		}
+		clr_global_flag = itterating_commonwealth_done
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Debnug Event
+    id = 504
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # Debnug Event
+    id = 505
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # Debnug Event
+    id = 506
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_2 = {}
+		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		slot_5 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # Debnug Event
+    id = 507
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # Debnug Event
+    id = 508
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # Debnug Event
+    id = 509
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_12 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # Debnug Event
+    id = 511
+	major = yes
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_12 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_13 = {}
+		slot_14 = {}
+	}
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = country_option_7 } set_country_flag = scoped_for_commonwealth_choice }
+		CLN = {	country_event = 510 }
+    }
+}
+
+country_event = { # manual cleanup This will have to be intergrated in teh future
+    id = 510
+    title = "Dynamic List?"
+    #desc = "Test"
+    #picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			clr_country_flag = country_option_1
+			clr_country_flag = country_option_2
+			clr_country_flag = country_option_3
+			clr_country_flag = country_option_4
+			clr_country_flag = country_option_5
+			clr_country_flag = country_option_6
+			clr_country_flag = country_option_7
+			clr_country_flag = country_option_8
+			clr_country_flag = country_option_9
+			clr_country_flag = country_option_10
+			clr_country_flag = country_option_11
+			clr_country_flag = country_option_12
+			clr_country_flag = country_option_13
+			clr_country_flag = country_option_14
+			clr_country_flag = country_option_15
+			clr_country_flag = country_option_16
+			clr_country_flag = country_option_17
+			clr_country_flag = country_option_18
+			clr_country_flag = country_option_19
+			clr_country_flag = country_option_20
+		}
+	}
+	
+	option = {
+        name = "Did it work?"
+    }
+}

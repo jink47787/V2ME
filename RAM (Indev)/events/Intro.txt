@@ -1,7 +1,7 @@
 #Introdution Events
 
 country_event = { # Explanation Event
-    id = 1000
+    id = 10000
     title = ""
     desc = "EVTDESC1000"
     picture = "RAM_intro"
@@ -11,7 +11,7 @@ country_event = { # Explanation Event
 	
 	option = {
         name = "Give me a quick tour!"
-		country_event = 1001
+		country_event = 10001
     }
 	option = {
         name = "This isn't my first rodeo"
@@ -19,7 +19,7 @@ country_event = { # Explanation Event
 }
 
 country_event = { # Colombia is Purple Event
-    id = 1001
+    id = 10001
     title = ""
     desc = "EVTDESC1001"
     picture = "RAM_intro_colombia"
@@ -29,12 +29,12 @@ country_event = { # Colombia is Purple Event
 	
 	option = {
         name = "Oh yeah... it is..."
-		country_event = 1002
+		country_event = 10002
     }
 }
 
 country_event = { # Credits Event
-    id = 1002
+    id = 10002
     title = ""
     desc = "EVTDESC1002"
     picture = "RAM_intro_credits"

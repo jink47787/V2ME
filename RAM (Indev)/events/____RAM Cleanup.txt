@@ -29,7 +29,7 @@
 
 
 country_event = {
-	id = 477877787
+	id = 2
 	title = "AI: Daily Cleanup Check"
 	desc = "AI: Daily Cleanup Check"
 
@@ -37,7 +37,15 @@ country_event = {
 
 	option = {
 		name = "Checking..."
-		country_event = 12000
+		country_event = 20
+		country_event = 40 # Government Flag Cleanup
+		any_land_province = { remove_province_modifier = capital_city_modifier }
+		any_country = {
+			limit = {
+				exists = yes
+			}
+			capital_scope = { add_province_modifier = { name = capital_city_modifier duration = -1 } }
+		}
 		random_owned = {
 			limit = {
 				owner = {
@@ -9101,7 +9109,7 @@ country_event = {
 			}
 			CLN = {	set_variable = { which = days_till_monthly_cleanup value = 31 } }
 			CLN = {	change_variable = { which = months_till_yearly_cleanup value = -1 } }
-			CLN = { country_event = 477877790 }
+			CLN = { country_event = 3 }
 		}
 		random_country = {
 			limit = { 
@@ -9110,16 +9118,16 @@ country_event = {
 				}
 			}
 			CLN = {	set_variable = { which = months_till_yearly_cleanup value = 12 } }
-			CLN = { country_event = 477877791 }
+			CLN = { country_event = 4 }
 		}
 		
 		clr_global_flag = daily_cleanup_on
-		CLN = { country_event = { id = 477877787 days = 1 } }
+		CLN = { country_event = { id = 2 days = 1 } }
 	}
 }
 
 country_event = {
-	id = 477877790
+	id = 3
 	title = "AI: Monthly Cleanup Check"
 	desc = "AI: Monthly Cleanup Check"
 
@@ -21080,7 +21088,7 @@ country_event = {
 				exists = yes
 				overlord = { exists = no }
 			}
-			country_event = 477877788
+			country_event = 5
 		}
 
 		#cleanup overlords with nonexistent vassals - disabled by default
@@ -21090,7 +21098,7 @@ country_event = {
 		#		exists = no
 		#		overlord = { exists = yes }
 		#	}
-		#	country_event = 477877788
+		#	country_event = 5
 		#}
 
 		#updating flags for techs/inventions
@@ -21161,12 +21169,12 @@ country_event = {
 			}
 			annex_to = FROM
 		}
-		CLN = { country_event = { id = 477877790 days = 30 } }
+		CLN = { country_event = { id = 3 days = 30 } }
 	}
 }
 
 country_event = {
-	id = 477877791
+	id = 4
 	title = "AI: Yearly Cleanup Check"
 	desc = "AI: Yearly Cleanup Check"
 
@@ -21508,12 +21516,12 @@ country_event = {
                 33 = { add_country_modifier = { name = catholic_growth duration = 2555 } }
             }
 		}
-		CLN = { country_event = { id = 477877791 days = 365 } }
+		CLN = { country_event = { id = 4 days = 365 } }
 	}
 }
 
 country_event = {
-	id = 477877788
+	id = 5
 	title = "Freedom"
 	desc = "We have acquired independence!"
 

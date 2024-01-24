@@ -1,5 +1,5 @@
 country_event = { # Reset Loc
-    id = 2000
+    id = 4000
     title = "Clear Dynamic Loc"
     desc = "Resets Dynamic Loc"
     picture = "commonwealth"
@@ -7,36 +7,28 @@ country_event = { # Reset Loc
     is_triggered_only = yes
 	
 	immediate = {
-		slot_1 = { secede_province = THIS }
-		slot_1 = { state_scope = { change_region_name = "" } }
-		slot_1 = { secede_province = QQQ }
-		2704 = { secede_province = THIS }
-		2704 = { state_scope = { change_region_name = "" } }
-		2704 = { secede_province = QQQ }
-		2705 = { secede_province = THIS }
-		2705 = { state_scope = { change_region_name = "" } }
-		2705 = { secede_province = QQQ }
-		2706 = { secede_province = THIS }
-		2706 = { state_scope = { change_region_name = "" } }
-		2706 = { secede_province = QQQ }
-		2707 = { secede_province = THIS }
-		2707 = { state_scope = { change_region_name = "" } }
-		2707 = { secede_province = QQQ }
-		2708 = { secede_province = THIS }
-		2708 = { state_scope = { change_region_name = "" } }
-		2708 = { secede_province = QQQ }
-		2709 = { secede_province = THIS }
-		2709 = { state_scope = { change_region_name = "" } }
-		2709 = { secede_province = QQQ }
-		2710 = { secede_province = THIS }
-		2710 = { state_scope = { change_region_name = "" } }
-		2710 = { secede_province = QQQ }
-		2711 = { secede_province = THIS }
-		2711 = { state_scope = { change_region_name = "" } }
-		2711 = { secede_province = QQQ }
-		2712 = { secede_province = THIS }
-		2712 = { state_scope = { change_region_name = "" } }
-		2712 = { secede_province = QQQ }
+		slots = { secede_province = THIS }
+		slots = { state_scope = { change_region_name = "" } }
+		slots = { secede_province = QQQ }
+	}
+	
+	option = {
+        name = "Change the Name"
+    }
+}
+
+country_event = { # Reset Loc Long
+    id = 4001
+    title = "Clear Dynamic Loc with Insert"
+    desc = "Resets Dynamic Loc but with the average space of a Country Name"
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		slots = { secede_province = THIS }
+		slots = { state_scope = { change_region_name = "§b            §!" } }
+		slots = { secede_province = QQQ }
 	}
 	
 	option = {
@@ -45,7 +37,7 @@ country_event = { # Reset Loc
 }
 
 country_event = { # Reset Loc
-    id = 3000
+    id = 203
     title = "Clear Dynamic Loc with Insert"
     desc = "Resets Dynamic Loc but with the average space of a Country Name"
     picture = "commonwealth"
@@ -53,36 +45,28 @@ country_event = { # Reset Loc
     is_triggered_only = yes
 	
 	immediate = {
-		2703 = { secede_province = THIS }
-		2703 = { state_scope = { change_region_name = "§b            §!" } }
-		2703 = { secede_province = QQQ }
-		2704 = { secede_province = THIS }
-		2704 = { state_scope = { change_region_name = "§b            §!" } }
-		2704 = { secede_province = QQQ }
-		2705 = { secede_province = THIS }
-		2705 = { state_scope = { change_region_name = "§b            §!" } }
-		2705 = { secede_province = QQQ }
-		2706 = { secede_province = THIS }
-		2706 = { state_scope = { change_region_name = "§b            §!" } }
-		2706 = { secede_province = QQQ }
-		2707 = { secede_province = THIS }
-		2707 = { state_scope = { change_region_name = "§b            §!" } }
-		2707 = { secede_province = QQQ }
-		2708 = { secede_province = THIS }
-		2708 = { state_scope = { change_region_name = "§b            §!" } }
-		2708 = { secede_province = QQQ }
-		2709 = { secede_province = THIS }
-		2709 = { state_scope = { change_region_name = "§b            §!" } }
-		2709 = { secede_province = QQQ }
-		2710 = { secede_province = THIS }
-		2710 = { state_scope = { change_region_name = "§b            §!" } }
-		2710 = { secede_province = QQQ }
-		2711 = { secede_province = THIS }
-		2711 = { state_scope = { change_region_name = "§b            §!" } }
-		2711 = { secede_province = QQQ }
-		2712 = { secede_province = THIS }
-		2712 = { state_scope = { change_region_name = "§b            §!" } }
-		2712 = { secede_province = QQQ }
+		any_land_province = {
+			remove_province_modifier = option_modifier_1
+			remove_province_modifier = option_modifier_2
+			remove_province_modifier = option_modifier_3
+			remove_province_modifier = option_modifier_4
+			remove_province_modifier = option_modifier_5
+			remove_province_modifier = option_modifier_6
+			remove_province_modifier = option_modifier_7
+			remove_province_modifier = option_modifier_8
+			remove_province_modifier = option_modifier_9
+			remove_province_modifier = option_modifier_10
+			remove_province_modifier = option_modifier_11
+			remove_province_modifier = option_modifier_12
+			remove_province_modifier = option_modifier_13
+			remove_province_modifier = option_modifier_14
+			remove_province_modifier = option_modifier_15
+			remove_province_modifier = option_modifier_16
+			remove_province_modifier = option_modifier_17
+			remove_province_modifier = option_modifier_18
+			remove_province_modifier = option_modifier_19
+			remove_province_modifier = option_modifier_20
+		}
 	}
 	
 	option = {

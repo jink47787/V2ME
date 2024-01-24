@@ -1,7 +1,7 @@
-#Collectivisation - start
+#Change Capital Function - start
 
 country_event = { # Event to fire starting Cleanup event for CLN
-    id = 81000
+    id = 5000
     title = "Attempting to Write 2"
     #desc = ""
     picture = "commonwealth"
@@ -3923,7 +3923,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 		 any_land_province = { limit = {has_province_modifier = set_capital province_id = 3912} FROM = {capital = 3912} }
 		 any_land_province = { limit = {has_province_modifier = set_capital province_id = 3913} FROM = {capital = 3913} }
 		 any_land_province = { limit = {has_province_modifier = set_capital province_id = 3914} FROM = {capital = 3914} }
-		 any_land_province = { remove_modifier = set_capital }
+		 any_land_province = { remove_province_modifier = set_capital }
 	}
 	
 	option = {

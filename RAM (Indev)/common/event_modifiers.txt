@@ -88,15 +88,163 @@ slotted = {
     icon = 30
 }
 
-flag_modifier_1 = {
+option_modifier_1 = {
     icon = 30
 }
 
-flag_modifier_2 = {
+option_modifier_2 = {
     icon = 30
 }
 
-flag_modifier_3 = {
+option_modifier_3 = {
+    icon = 30
+}
+
+option_modifier_4 = {
+    icon = 30
+}
+
+option_modifier_5 = {
+    icon = 30
+}
+
+option_modifier_6 = {
+    icon = 30
+}
+
+option_modifier_7 = {
+    icon = 30
+}
+
+option_modifier_8 = {
+    icon = 30
+}
+
+option_modifier_9 = {
+    icon = 30
+}
+
+option_modifier_10 = {
+    icon = 30
+}
+
+option_modifier_11 = {
+    icon = 30
+}
+
+option_modifier_12 = {
+    icon = 30
+}
+
+option_modifier_13 = {
+    icon = 30
+}
+
+option_modifier_14 = {
+    icon = 30
+}
+
+option_modifier_15 = {
+    icon = 30
+}
+
+option_modifier_16 = {
+    icon = 30
+}
+
+option_modifier_17 = {
+    icon = 30
+}
+
+option_modifier_18 = {
+    icon = 30
+}
+
+option_modifier_19 = {
+    icon = 30
+}
+
+option_modifier_20 = {
+    icon = 30
+}
+
+option_modifier_21 = {
+    icon = 30
+}
+
+option_modifier_22 = {
+    icon = 30
+}
+
+option_modifier_23 = {
+    icon = 30
+}
+
+option_modifier_24 = {
+    icon = 30
+}
+
+option_modifier_25 = {
+    icon = 30
+}
+
+option_modifier_26 = {
+    icon = 30
+}
+
+option_modifier_27 = {
+    icon = 30
+}
+
+option_modifier_28 = {
+    icon = 30
+}
+
+option_modifier_29 = {
+    icon = 30
+}
+
+option_modifier_30 = {
+    icon = 30
+}
+
+option_modifier_31 = {
+    icon = 30
+}
+
+option_modifier_32 = {
+    icon = 30
+}
+
+option_modifier_33 = {
+    icon = 30
+}
+
+option_modifier_34 = {
+    icon = 30
+}
+
+option_modifier_35 = {
+    icon = 30
+}
+
+option_modifier_36 = {
+    icon = 30
+}
+
+option_modifier_37 = {
+    icon = 30
+}
+
+option_modifier_38 = {
+    icon = 30
+}
+
+option_modifier_39 = {
+    icon = 30
+}
+
+option_modifier_40 = {
     icon = 30
 }
 
@@ -408,7 +556,25 @@ dispute_modifier = {
 }
 
 capital_city_modifier = {
+	icon = 32
+	assimilation_rate = 0.2
+	immigrant_attract = 0.5
+	local_ruling_party_support = 1
+	pop_consciousness_modifier = -1
+	pop_militancy_modifier = -1
+}
+
+capital_construction = {
 	icon = 31
+	immigrant_attract = 3
+	local_ruling_party_support = 1
+	pop_consciousness_modifier = -1
+	pop_militancy_modifier = -1
+	goods_demand = 0.2
+}
+
+secret_capital_construction = {
+	icon = 30
 }
 
 capital_mobilisation = {

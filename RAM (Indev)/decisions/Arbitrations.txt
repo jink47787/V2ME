@@ -42,6 +42,16 @@ political_decisions = {
 			all_core = { add_crime = meta_crime }
 			CLN = { country_event = 71913 }
         }
-        ai_will_do = { factor = 0 }
+        ai_will_do = { 
+			factor = 0
+			#modifier = {
+            #    factor = 1
+            #    any_core = {
+			#		owner = {
+			#			tag = ECU
+			#		}
+			#	}
+            #}
+		}
     }
 }

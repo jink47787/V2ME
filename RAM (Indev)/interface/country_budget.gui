@@ -1487,7 +1487,7 @@ guiTypes = {
 			maxWidth = 95
 			maxHeight = 20
 			format = right
-		}		
+		}
 	}
 	
 	###############

@@ -17,14 +17,14 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			}
 			set_variable = { which = country_loc_slot value = 1 }
 		}
-		country_event = 71601
+		country_event = 401
 				any_country = {
 			limit = {
 				has_country_flag = scoped_for_dispute_choice
 			}
 			set_variable = { which = country_loc_slot value = 2 }
 		}
-		country_event = 71601
+		country_event = 401
 		any_country = { 
 			limit = {
 				has_country_flag = arbitration_initiator	# Spelling 
@@ -84,14 +84,14 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			}
 			set_variable = { which = country_loc_slot value = 1 }
 		}
-		country_event = 71601
+		country_event = 401
 		any_country = {
 			limit = {
 				has_country_flag = arbitration_initiator
 			}
 			set_variable = { which = country_loc_slot value = 2 }
 		}
-		country_event = 71601
+		country_event = 401
 		any_country = { 
 			limit = {
 				has_country_flag = gp_current_dispute	# Spelling 
