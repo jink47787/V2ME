@@ -226,6 +226,226 @@ country_event = {
 			set_country_flag = flag_option_20
 			set_variable = { which = flag_loc_slot value = 20 }
 		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 20.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 21.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_21
+			set_variable = { which = flag_loc_slot value = 21 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 21.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 22.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_22
+			set_variable = { which = flag_loc_slot value = 22 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 22.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 23.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_23
+			set_variable = { which = flag_loc_slot value = 23 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 23.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 24.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_24
+			set_variable = { which = flag_loc_slot value = 24 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 24.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 25.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_25
+			set_variable = { which = flag_loc_slot value = 25 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 25.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 26.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_26
+			set_variable = { which = flag_loc_slot value = 26 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 26.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 27.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_27
+			set_variable = { which = flag_loc_slot value = 27 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 27.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 28.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_28
+			set_variable = { which = flag_loc_slot value = 28 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 28.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 29.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_29
+			set_variable = { which = flag_loc_slot value = 29 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 29.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 30.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_30
+			set_variable = { which = flag_loc_slot value = 30 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 30.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 31.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_31
+			set_variable = { which = flag_loc_slot value = 31 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 31.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 32.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_32
+			set_variable = { which = flag_loc_slot value = 32 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 32.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 33.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_33
+			set_variable = { which = flag_loc_slot value = 33 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 33.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 34.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_34
+			set_variable = { which = flag_loc_slot value = 34 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 34.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 35.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_35
+			set_variable = { which = flag_loc_slot value = 35 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 35.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 36.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_36
+			set_variable = { which = flag_loc_slot value = 36 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 36.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 37.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_37
+			set_variable = { which = flag_loc_slot value = 37 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 37.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 38.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_38
+			set_variable = { which = flag_loc_slot value = 38 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 38.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 39.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_39
+			set_variable = { which = flag_loc_slot value = 39 }
+		}
+		any_country = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 39.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 40.99 } }
+				}
+				has_country_flag = due_for_slotting
+			}
+			set_country_flag = flag_option_40
+			set_variable = { which = flag_loc_slot value = 40 }
+		}
 		country_event = 501
 	}
 	
@@ -383,6 +603,146 @@ country_event = {
 			}
 			UTI = { set_variable = { which = itterator value = 21 } }
 		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 20.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 21.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 22 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 21.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 22.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 23 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 22.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 23.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 24 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 23.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 24.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 25 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 24.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 25.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 26 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 25.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 26.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 27 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 26.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 27.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 28 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 27.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 28.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 29 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 28.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 29.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 30 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 29.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 30.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 31 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 30.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 31.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 32 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 31.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 32.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 33 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 32.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 33.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 34 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 33.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 34.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 35 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 34.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 35.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 36 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 35.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 36.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 37 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 36.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 37.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 38 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 37.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 38.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 39 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 38.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 39.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 40 } }
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = flag_loc_slot value = 39.99 }
+				NOT = { check_variable = { which = flag_loc_slot value = 40.99 } }
+			}
+			UTI = { set_variable = { which = itterator value = 41 } }
+		}
 		country_event = 502
 	}
 	
@@ -399,6 +759,226 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 40.99 } }
+				check_variable = { which = flag_loc_slot value = 39.99 }
+				UTI = { check_variable = { which = itterator value = 39.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 40.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_40 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 39.99 } }
+				check_variable = { which = flag_loc_slot value = 38.99 }
+				UTI = { check_variable = { which = itterator value = 38.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 39.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_39 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 38.99 } }
+				check_variable = { which = flag_loc_slot value = 37.99 }
+				UTI = { check_variable = { which = itterator value = 37.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 38.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_38 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 37.99 } }
+				check_variable = { which = flag_loc_slot value = 36.99 }
+				UTI = { check_variable = { which = itterator value = 36.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 37.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_37 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 36.99 } }
+				check_variable = { which = flag_loc_slot value = 35.99 }
+				UTI = { check_variable = { which = itterator value = 35.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 36.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_36 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 35.99 } }
+				check_variable = { which = flag_loc_slot value = 34.99 }
+				UTI = { check_variable = { which = itterator value = 34.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 35.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_35 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 34.99 } }
+				check_variable = { which = flag_loc_slot value = 33.99 }
+				UTI = { check_variable = { which = itterator value = 33.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 34.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_34 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 33.99 } }
+				check_variable = { which = flag_loc_slot value = 32.99 }
+				UTI = { check_variable = { which = itterator value = 32.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 33.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_33 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 32.99 } }
+				check_variable = { which = flag_loc_slot value = 31.99 }
+				UTI = { check_variable = { which = itterator value = 31.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 32.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_32 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 31.99 } }
+				check_variable = { which = flag_loc_slot value = 30.99 }
+				UTI = { check_variable = { which = itterator value = 30.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 31.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_31 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 30.99 } }
+				check_variable = { which = flag_loc_slot value = 29.99 }
+				UTI = { check_variable = { which = itterator value = 29.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 30.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_30 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 29.99 } }
+				check_variable = { which = flag_loc_slot value = 28.99 }
+				UTI = { check_variable = { which = itterator value = 28.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 29.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_29 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 28.99 } }
+				check_variable = { which = flag_loc_slot value = 27.99 }
+				UTI = { check_variable = { which = itterator value = 27.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 28.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_28 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 27.99 } }
+				check_variable = { which = flag_loc_slot value = 26.99 }
+				UTI = { check_variable = { which = itterator value = 26.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 27.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_27 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 26.99 } }
+				check_variable = { which = flag_loc_slot value = 25.99 }
+				UTI = { check_variable = { which = itterator value = 25.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 26.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_26 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 25.99 } }
+				check_variable = { which = flag_loc_slot value = 24.99 }
+				UTI = { check_variable = { which = itterator value = 24.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 25.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_25 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 24.99 } }
+				check_variable = { which = flag_loc_slot value = 23.99 }
+				UTI = { check_variable = { which = itterator value = 23.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 24.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_24 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 23.99 } }
+				check_variable = { which = flag_loc_slot value = 22.99 }
+				UTI = { check_variable = { which = itterator value = 22.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 23.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_23 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 22.99 } }
+				check_variable = { which = flag_loc_slot value = 21.99 }
+				UTI = { check_variable = { which = itterator value = 21.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 22.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_22 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = flag_loc_slot value = 21.99 } }
+				check_variable = { which = flag_loc_slot value = 20.99 }
+				UTI = { check_variable = { which = itterator value = 20.99 } }
+				NOT = { UTI = { check_variable = { which = itterator value = 21.99 } } }
+			}
+			set_country_flag = rename_loc_flag
+			set_variable = { which = flag_loc_slot value = 0 }
+			slot_21 = { add_province_modifier = { name = flag_rename_modifier duration = -1 } }
+		}
 		any_country = {
 			limit = {
 				NOT = { check_variable = { which = flag_loc_slot value = 20.99 } }
@@ -1727,6 +2307,20 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				tag = MAG
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@MAG" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			limit = {
 				tag = THU
 				has_country_flag = rename_loc_flag
 			}
@@ -1918,6 +2512,20 @@ country_event = {
 				}
 				secede_province = THIS
 				state_scope = { change_region_name = "@HUR" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			limit = {
+				tag = IOM
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@IOM" }
 				secede_province = QQQ
 			}
 		}
@@ -2133,6 +2741,20 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				tag = ARK
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@ARK" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			limit = {
 				tag = ACE
 				has_country_flag = rename_loc_flag
 			}
@@ -2212,6 +2834,20 @@ country_event = {
 				}
 				secede_province = THIS
 				state_scope = { change_region_name = "@SAA" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			limit = {
+				tag = BOE
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BOE" }
 				secede_province = QQQ
 			}
 		}
@@ -6109,6 +6745,20 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				tag = AOT
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@AOT" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			limit = {
 				tag = FIJ
 				has_country_flag = rename_loc_flag
 			}
@@ -8848,6 +9498,20 @@ country_event = {
 				}
 				secede_province = THIS
 				state_scope = { change_region_name = "@XIN" }
+				secede_province = QQQ
+			}
+		}
+		any_country = {
+			limit = {
+				tag = BJC
+				has_country_flag = rename_loc_flag
+			}
+			any_sea_province = {
+				limit = {
+					has_province_modifier = flag_rename_modifier
+				}
+				secede_province = THIS
+				state_scope = { change_region_name = "@BJC" }
 				secede_province = QQQ
 			}
 		}

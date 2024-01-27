@@ -249,64 +249,64 @@ option_modifier_40 = {
 }
 
 divider_for_org_a = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_b = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_c = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_d = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_e = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_f = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_g = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_h = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_i = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_j = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_k = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_l = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_m = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_n = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_o = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_p = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_q = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_r = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_s = {
-    icon = 30
+    icon = 28
 }
 divider_for_org_t = {
-    icon = 30
+    icon = 28
 }
 
 loc_rename_modifier = {
@@ -433,6 +433,67 @@ slot_20_region = {
 	icon = 30
 }
 
+slot_21_region = {
+	icon = 30
+}
+slot_22_region = {
+	icon = 30
+}
+slot_23_region = {
+	icon = 30
+}
+slot_24_region = {
+	icon = 30
+}
+slot_25_region = {
+	icon = 30
+}
+slot_26_region = {
+	icon = 30
+}
+slot_27_region = {
+	icon = 30
+}
+slot_28_region = {
+	icon = 30
+}
+slot_29_region = {
+	icon = 30
+}
+slot_30_region = {
+	icon = 30
+}
+slot_31_region = {
+	icon = 30
+}
+slot_32_region = {
+	icon = 30
+}
+slot_33_region = {
+	icon = 30
+}
+slot_34_region = {
+	icon = 30
+}
+slot_35_region = {
+	icon = 30
+}
+slot_36_region = {
+	icon = 30
+}
+slot_37_region = {
+	icon = 30
+}
+slot_38_region = {
+	icon = 30
+}
+slot_39_region = {
+	icon = 30
+}
+slot_40_region = {
+	icon = 30
+}
+
 slot_1_province = {
 	icon = 30
 }
@@ -510,6 +571,66 @@ slot_19_province = {
 }
 
 slot_20_province = {
+	icon = 30
+}
+slot_21_province = {
+	icon = 30
+}
+slot_22_province = {
+	icon = 30
+}
+slot_23_province = {
+	icon = 30
+}
+slot_24_province = {
+	icon = 30
+}
+slot_25_province = {
+	icon = 30
+}
+slot_26_province = {
+	icon = 30
+}
+slot_27_province = {
+	icon = 30
+}
+slot_28_province = {
+	icon = 30
+}
+slot_29_province = {
+	icon = 30
+}
+slot_30_province = {
+	icon = 30
+}
+slot_31_province = {
+	icon = 30
+}
+slot_32_province = {
+	icon = 30
+}
+slot_33_province = {
+	icon = 30
+}
+slot_34_province = {
+	icon = 30
+}
+slot_35_province = {
+	icon = 30
+}
+slot_36_province = {
+	icon = 30
+}
+slot_37_province = {
+	icon = 30
+}
+slot_38_province = {
+	icon = 30
+}
+slot_39_province = {
+	icon = 30
+}
+slot_40_province = {
 	icon = 30
 }
 

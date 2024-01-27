@@ -266,6 +266,266 @@ country_event = {
 			add_province_modifier = { name = slot_20_region value = -1 }
 			CLN = { country_event = 301 }
 		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 20.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 21.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_21 value = -1 }
+			add_province_modifier = { name = slot_21_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 21.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 22.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_22 value = -1 }
+			add_province_modifier = { name = slot_22_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 22.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 23.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_23 value = -1 }
+			add_province_modifier = { name = slot_23_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 23.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 24.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_24 value = -1 }
+			add_province_modifier = { name = slot_24_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 24.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 25.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_25 value = -1 }
+			add_province_modifier = { name = slot_25_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 25.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 26.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_26 value = -1 }
+			add_province_modifier = { name = slot_26_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 26.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 27.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_27 value = -1 }
+			add_province_modifier = { name = slot_27_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 27.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 28.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_28 value = -1 }
+			add_province_modifier = { name = slot_28_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 28.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 29.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_29 value = -1 }
+			add_province_modifier = { name = slot_29_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 29.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 30.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_30 value = -1 }
+			add_province_modifier = { name = slot_30_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 30.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 31.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_31 value = -1 }
+			add_province_modifier = { name = slot_31_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 31.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 32.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_32 value = -1 }
+			add_province_modifier = { name = slot_32_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 32.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 33.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_33 value = -1 }
+			add_province_modifier = { name = slot_33_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 33.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 34.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_34 value = -1 }
+			add_province_modifier = { name = slot_34_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 34.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 35.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_35 value = -1 }
+			add_province_modifier = { name = slot_35_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 35.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 36.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_36 value = -1 }
+			add_province_modifier = { name = slot_36_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 36.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 37.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_37 value = -1 }
+			add_province_modifier = { name = slot_37_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 37.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 38.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_38 value = -1 }
+			add_province_modifier = { name = slot_38_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 38.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 39.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_39 value = -1 }
+			add_province_modifier = { name = slot_39_region value = -1 }
+			CLN = { country_event = 301 }
+		}
+		any_land_province = {
+			limit = {
+				CLN = {
+					check_variable = { which =  slot_itterator_variable value = 39.99 }
+					NOT = { check_variable = { which =  slot_itterator_variable value = 40.99 } }
+				}
+				has_province_modifier = due_for_slotting
+				NOT = { has_province_modifier = slotted }
+			}
+			add_province_modifier = { name = option_modifier_40 value = -1 }
+			add_province_modifier = { name = slot_40_region value = -1 }
+			CLN = { country_event = 301 }
+		}
 	}
 	
 	option = {
@@ -402,6 +662,126 @@ country_event = {
 			}
 			UTI = { change_variable = { which = itterator value = 21 } }
 		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_21_region
+			}
+			UTI = { change_variable = { which = itterator value = 22 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_22_region
+			}
+			UTI = { change_variable = { which = itterator value = 23 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_23_region
+			}
+			UTI = { change_variable = { which = itterator value = 24 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_24_region
+			}
+			UTI = { change_variable = { which = itterator value = 25 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_25_region
+			}
+			UTI = { change_variable = { which = itterator value = 26 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_26_region
+			}
+			UTI = { change_variable = { which = itterator value = 27 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_27_region
+			}
+			UTI = { change_variable = { which = itterator value = 28 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_28_region
+			}
+			UTI = { change_variable = { which = itterator value = 29 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_29_region
+			}
+			UTI = { change_variable = { which = itterator value = 30 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_30_region
+			}
+			UTI = { change_variable = { which = itterator value = 31 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_31_region
+			}
+			UTI = { change_variable = { which = itterator value = 32 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_32_region
+			}
+			UTI = { change_variable = { which = itterator value = 33 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_33_region
+			}
+			UTI = { change_variable = { which = itterator value = 34 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_34_region
+			}
+			UTI = { change_variable = { which = itterator value = 35 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_35_region
+			}
+			UTI = { change_variable = { which = itterator value = 36 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_36_region
+			}
+			UTI = { change_variable = { which = itterator value = 37 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_37_region
+			}
+			UTI = { change_variable = { which = itterator value = 38 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_38_region
+			}
+			UTI = { change_variable = { which = itterator value = 39 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_39_region
+			}
+			UTI = { change_variable = { which = itterator value = 40 } }
+		}
+		any_land_province = {
+			limit = {
+				has_province_modifier = slot_40_region
+			}
+			UTI = { change_variable = { which = itterator value = 41 } }
+		}
 		country_event = 302
 	}
 	
@@ -418,6 +798,246 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_40_region
+					UTI = { check_variable = { which = itterator value = 39.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 40.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_40 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_40_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_39_region
+					UTI = { check_variable = { which = itterator value = 38.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 39.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_39 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_39_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_38_region
+					UTI = { check_variable = { which = itterator value = 37.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 38.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_38 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_38_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_37_region
+					UTI = { check_variable = { which = itterator value = 36.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 37.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_37 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_37_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_36_region
+					UTI = { check_variable = { which = itterator value = 35.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 36.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_36 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_36_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_35_region
+					UTI = { check_variable = { which = itterator value = 34.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 35.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_35 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_35_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_34_region
+					UTI = { check_variable = { which = itterator value = 33.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 34.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_34 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_34_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_33_region
+					UTI = { check_variable = { which = itterator value = 32.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 33.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_33 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_33_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_32_region
+					UTI = { check_variable = { which = itterator value = 31.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 32.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_32 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_32_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_31_region
+					UTI = { check_variable = { which = itterator value = 30.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 31.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_31 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_31_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_30_region
+					UTI = { check_variable = { which = itterator value = 29.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 30.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_30 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_30_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_29_region
+					UTI = { check_variable = { which = itterator value = 28.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 29.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_29 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_29_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_28_region
+					UTI = { check_variable = { which = itterator value = 27.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 28.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_28 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_28_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_27_region
+					UTI = { check_variable = { which = itterator value = 26.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 27.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_27 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_27_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_26_region
+					UTI = { check_variable = { which = itterator value = 25.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 26.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_26 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_26_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_25_region
+					UTI = { check_variable = { which = itterator value = 24.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 25.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_25 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_25_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_24_region
+					UTI = { check_variable = { which = itterator value = 23.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 24.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_24 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_24_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_23_region
+					UTI = { check_variable = { which = itterator value = 22.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 23.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_23 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_23_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_22_region
+					UTI = { check_variable = { which = itterator value = 21.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 22.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_22 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_22_region
+		}
+		any_land_province = {
+			limit = {
+				AND = {
+					has_province_modifier = slot_21_region
+					UTI = { check_variable = { which = itterator value = 20.99 } }
+					NOT = { UTI = { check_variable = { which = itterator value = 21.99 } } }
+				}
+			}
+			add_province_modifier = { name = regions_loc_land duration = -1 }
+			slot_21 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
+			remove_province_modifier = slot_21_region
+		}
 		any_land_province = {
 			limit = {
 				AND = {

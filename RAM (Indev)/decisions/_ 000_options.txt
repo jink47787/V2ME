@@ -1,0 +1,37 @@
+political_decisions = {
+
+    z_chaos_mode = {
+        picture = chaos
+        potential = {
+			NOT = { has_global_flag = chaos }
+        }
+
+        allow = {
+        }
+
+        effect = {
+			set_global_flag = chaos
+        }
+        ai_will_do = { 
+			factor = 0
+		}
+    }
+	
+    z_performance_mode = {
+        picture = performance
+        potential = {
+			NOT = { has_global_flag = performance }
+        }
+
+        allow = {
+        }
+
+        effect = {
+			set_global_flag = performace
+        }
+        ai_will_do = { 
+			factor = 0
+		}
+    }
+	
+}

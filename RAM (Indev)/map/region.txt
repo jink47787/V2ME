@@ -1393,7 +1393,27 @@ slot_17 = { 2720 }
 slot_18 = { 2721 }
 slot_19 = { 2722 }
 slot_20 = { 2723 }
-slots = { 2703 2704 2705 2706 2707 2708 2709 2710 2711 2712 2714 2715 2716 2717 2718 2719 2720 2721 2722 2723 }
+slot_21 = { 2724 }
+slot_22 = { 2725 }
+slot_23 = { 2726 }
+slot_24 = { 2727 }
+slot_25 = { 2728 }
+slot_26 = { 2729 }
+slot_27 = { 2730 }
+slot_28 = { 2731 }
+slot_29 = { 2732 }
+slot_30 = { 2733 }
+slot_31 = { 2734 }
+slot_32 = { 2735 }
+slot_33 = { 2736 }
+slot_34 = { 2737 }
+slot_35 = { 2738 }
+slot_36 = { 2739 }
+slot_37 = { 2740 }
+slot_38 = { 2741 }
+slot_39 = { 2742 }
+slot_40 = { 2743 }
+slots = { 2703 2704 2705 2706 2707 2708 2709 2710 2711 2712 2714 2715 2716 2717 2718 2719 2720 2721 2722 2723 2724 2725 2726 2727 2728 2729 2730 2731 2732 2733 2734 2735 2736 2737 2738 2739 2740 2741 242 2743 }
 
 # Fixed States
 
@@ -1406,7 +1426,7 @@ change_capital_state_6 = {}
 change_capital_state_7 = {}
 arbitration_and_disputes_state = {}
 arbitration_and_disputes_state_2 = {}
-arbitration_and_disputes_gp_or_entity = { 2724 }
+arbitration_and_disputes_gp_or_entity = { }
 arbitration_and_disputes_state_3 = {}
 arbitration_and_disputes_state_4 = {}
 arbitration_and_disputes_state_5 = {}

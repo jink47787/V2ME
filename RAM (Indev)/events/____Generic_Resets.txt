@@ -66,6 +66,26 @@ country_event = { # Reset Loc
 			remove_province_modifier = option_modifier_18
 			remove_province_modifier = option_modifier_19
 			remove_province_modifier = option_modifier_20
+			remove_province_modifier = option_modifier_21
+			remove_province_modifier = option_modifier_22
+			remove_province_modifier = option_modifier_23
+			remove_province_modifier = option_modifier_24
+			remove_province_modifier = option_modifier_25
+			remove_province_modifier = option_modifier_26
+			remove_province_modifier = option_modifier_27
+			remove_province_modifier = option_modifier_28
+			remove_province_modifier = option_modifier_29
+			remove_province_modifier = option_modifier_30
+			remove_province_modifier = option_modifier_31
+			remove_province_modifier = option_modifier_32
+			remove_province_modifier = option_modifier_33
+			remove_province_modifier = option_modifier_34
+			remove_province_modifier = option_modifier_35
+			remove_province_modifier = option_modifier_36
+			remove_province_modifier = option_modifier_37
+			remove_province_modifier = option_modifier_38
+			remove_province_modifier = option_modifier_39
+			remove_province_modifier = option_modifier_40
 		}
 	}
 	

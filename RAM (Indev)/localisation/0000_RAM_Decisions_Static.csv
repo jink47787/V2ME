@@ -2,6 +2,8 @@ Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;P
 arbitrations_decision_title;Request an International Arbitration;;;;;;;;;;;;;
 arbitrations_decision_desc;We have claims that lie within our neighboring states. We could use the influence of a Great Power or International Organisation to apply pressure in favour of our claim.;;;;;;;;;;;;;
 change_capital_decision_title;Change our Capital;;;;;;;;;;;;;
-change_capital_decision_desc;Our current capital does not suit our nation. We could consider alternative cities. This would cause a local boom to the economy of our new Capital.;;;;;;;;;;;;;
+change_capital_decision_desc;Our current capital does not suit our nation. We could consider alternative cities. This would cause a local boom to the economy of our new Capital. §rNote:§! This decision may take a few seconds to load for larger nations.;;;;;;;;;;;;;
 z_chaos_mode_title;Chaos Mode;;;;;;;;;;;;;
-z_chaos_mode_desc;This option will de-restrict sensible logic for mechanics & events. AI will be more capable/likely to do random things. Enabling this decision will likely cause issues with balance & immersion and is not recommended. Some restrictions will still apply. Peformance may be impacted. This decision CAN NOT be undone.;;;;;;;;;;;;;
+z_chaos_mode_desc;This option will de-restrict sensible logic for mechanics & events. AI will be more capable/likely to do random things. Enabling this decision will likely cause issues with balance & immersion and is not recommended. Some restrictions will still apply. Peformance may be impacted. \n\nThis decision can §RNOT§! be undone.;;;;;;;;;;;;;
+z_performance_mode_title;Performance Mode;;;;;;;;;;;;;
+z_performance_mode_desc;This option will reduce the complexity in conditions. AI will be more dumber & more conservative. The decision is mainly targeting RAM spikes, however will give a tiny increase game speed. Some saftey caps will be applied with will reduce your ingame event options/content. This option is §RNOT§! recommended unless you encounter RAM issues or are running an absolute potato. \n\nThis decision §RCAN NOT§! be undone.;;;;;;;;;;;;;

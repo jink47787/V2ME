@@ -4,6 +4,7 @@ political_decisions = {
         picture = restore_washington_capital
         potential = {
 			ai = no
+			has_global_flag = disabled_for_now
         }
 
         allow = {
