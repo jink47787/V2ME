@@ -1,0 +1,15 @@
+Decision
+
+all_core = {
+	add_province_modifier = { name = dispute_modifier duration = -1 }
+}
+set_country_flag = arbitration_initiator
+set_country_flag = viewer
+set_global_flag = arbitration_underway
+
+
+Event 1 
+
+set_country_flag = scoped_for_dispute_choice
+
+Event 2

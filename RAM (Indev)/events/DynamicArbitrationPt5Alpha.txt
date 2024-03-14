@@ -1,0 +1,203 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20120 
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 401
+				any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 401
+		any_country = { 
+			limit = {
+				has_country_flag = arbitration_initiator	# Spelling 
+			}
+			country_event = { id = 20121 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20121
+    title = "Adjudication a Success"
+    picture = "arbitration_5"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_12 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_13 = {}
+	} 
+	
+	option = {
+        name = "As it should be."
+		prestige = 10
+		all_core = {
+			limit = {
+				owner = {
+					has_country_flag = scoped_for_dispute_choice
+				}
+			}
+			secede_province =  THIS
+		}
+    }
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71962 # 20130
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 401
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 401
+		any_country = { 
+			limit = {
+				has_country_flag = scoped_for_dispute_choice	# Spelling 
+			}
+			country_event = { id = 71963 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71963
+    title = "Free Real Estate" # But for arbitree
+    picture = "arbitration_5"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state_14 = {}
+		slot_1 = {}
+		arbitration_and_disputes_state_15 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_16 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_15 = {}
+	} 
+	
+	option = {
+        name = "Woohoo!"
+		prestige = 10
+		all_core = {
+			limit = {
+				owner = {
+					has_country_flag = scoped_for_dispute_choice
+				}
+			}
+			secede_province =  THIS
+		}
+    }
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 71962
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 401
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 401
+		any_country = { 
+			limit = {
+				has_country_flag = gp_current_dispute	# Spelling 
+			}
+			country_event = { id = 71963 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 71963
+    title = "Adjudication a Success" # But for GP
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_16 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_17 = {}
+	} 
+	
+	option = {
+        name = "Woohoo!"
+		prestige = 10
+    }
+
+}
+
+# Need an event for Rejecting Claim
+
+# Need an event for Accepting Claim
+
+# Perhaps this could be 4 but can probably be done with 2

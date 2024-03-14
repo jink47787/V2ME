@@ -1,17 +1,15 @@
 #Core Disputes
 
 country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71940
+    id = 20090
     title = "Attempting to Write 2"
     #desc = ""
     picture = "commonwealth"
-	allow_multiple_instances = yes
+	allow_multiple_instances = no
     is_triggered_only = yes
 	
 	immediate = {
-		FROM = { set_variable = { which = option_count value = 0 } }
 		FROM = { set_variable = { which = country_loc_slot value = 1 } }
-		FROM = { set_country_flag = arbitration_1 } 
 		CLN = { country_event = 401 }
 		any_country = {
 			limit = {
@@ -20,8 +18,8 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_variable = { which = country_loc_slot value = 1 }
 			set_variable = { which = flag_loc_slot value = 3 }
 		}
-		country_event = 401
 		country_event = 501
+		country_event = 401
 		any_country = {
 			limit = {
 				has_country_flag = scoped_for_dispute_choice
@@ -29,14 +27,53 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_variable = { which = country_loc_slot value = 2 }
 			set_variable = { which = flag_loc_slot value = 4 }
 		}
-		country_event = 401
 		country_event = 501
-		any_country = { 
+		country_event = 401
+		CLN = { change_variable = { which = slot_itterator_variable value = 4 } }
+		any_country = {
 			limit = {
-				has_country_flag = gp_current_dispute	# Spelling 
+				exists = no
+				capital_scope = {
+					has_province_modifier = dispute_modifier
+					owner = { has_country_flag = scoped_for_dispute_choice }
+				}
+				#any_core = {
+				#	is_capital = yes
+				#}
 			}
-			country_event = { id = 71941 days = 1 }
+			set_country_flag = y_u_no_slot
+			set_country_flag = due_for_slotting
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 500 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 400 }
+			set_country_flag = slotted
+			clr_country_flag = due_for_slotting
 		}
+		CLN = { country_event = 20098 }
+		random_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+				CLN = { check_variable = { which =  slot_itterator_variable value = 0.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } } }	 # Common check
+			}
+			country_event = { id = 20091 days = 1 }
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { has_country_flag = gp_current_dispute CLN = { check_variable = { which =  slot_itterator_variable value = 4.99 } } } #NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } } } }
+			country_event = { id = 20092 days = 1 }
+		}
+		#random_country = {	
+		#	limit = { has_country_flag = gp_current_dispute CLN = { check_variable = { which =  slot_itterator_variable value = 6.99 } } }
+		#	country_event = { id = 20093 days = 1 }
+		#}
+		
+		#any_country = { 
+		#	limit = {
+		#		has_country_flag = gp_current_dispute	# Spelling 
+		#	}
+		#	country_event = { id = 20091 days = 1 }
+		#}
+		any_country = { clr_country_flag = viewer }
 	}
 	
 	option = {
@@ -45,9 +82,9 @@ country_event = { # Event to fire starting Cleanup event for CLN
 }
 
 country_event = {
-    id = 71941
+    id = 20091
     title = "Request for Adjudication"
-    picture = "collectivisation"
+    picture = "arbitration_3_three_long"
 
 	is_triggered_only = yes
 
@@ -59,6 +96,9 @@ country_event = {
 		linebreak_state = {}
 		linebreak_state = {}
 		arbitration_and_disputes_state_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
@@ -80,7 +120,7 @@ country_event = {
 			limit = {
 				has_country_flag = scoped_for_dispute_choice
 			}
-			CLN = { country_event = 71950 }
+			CLN = { country_event = 20100 }
 		}
 
     }
@@ -91,7 +131,7 @@ country_event = {
 			limit = {
 				has_country_flag = arbitration_initiator
 			}
-			CLN = { country_event = 71952 }
+			CLN = { country_event = 20102 }
 		}
     }
 	
@@ -103,8 +143,251 @@ country_event = {
 			limit = {
 				has_country_flag = arbitration_initiator
 			}
-			CLN = { country_event = 71952 }
+			CLN = { country_event = 20104 }
 		}
+    }
+
+}
+
+country_event = {
+    id = 20092
+    title = "Request for Adjudication"
+    picture = "arbitration_3_three_long"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_4 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_6b = {}
+		slot_5 = {}
+		arbitration_and_disputes_state_6c = {}
+		slot_6 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			CLN = { country_event = 20100 }
+		}
+
+    }
+	
+	option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			CLN = { country_event = 20102 }
+		}
+    }
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_3_option_6 } set_country_flag = autonomous_region }
+		# Event for countries being Autonomised
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			CLN = { country_event = 20106 }
+		}
+    }
+	
+	option = {
+        name = "Be deliberately vague"
+		prestige = -5
+		infamy = -1
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			CLN = { country_event = 20104 }
+		}
+    }
+
+}
+
+country_event = {
+    id = 20093
+    title = "Request for Adjudication"
+    picture = "arbitration_3_three_long"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_4 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_5 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_4 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_6b = {}
+		slot_5 = {}
+		arbitration_and_disputes_state_6c = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_6b = {}
+		slot_7 = {}
+		arbitration_and_disputes_state_6c = {}
+		slot_8 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			CLN = { country_event = 20100 }
+		}
+
+    }
+	
+	option = {
+        name = ""
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			CLN = { country_event = 20102 }
+		}
+    }
+	
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_3_option_6 } set_country_flag = autonomous_region }
+		# Event for countries being Autonomised
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			CLN = { country_event = 20106 }
+		}
+    }
+	option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_3_option_8 } set_country_flag = autonomous_region }
+		# Event for countries being Autonomised
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			CLN = { country_event = 20106 }
+		}
+    }
+	
+	option = {
+        name = "Be deliberately vague"
+		prestige = -5
+		infamy = -1
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			CLN = { country_event = 20104 }
+		}
+    }
+
+}
+
+country_event = {	# Coutry Flag Wrapper
+    id = 20098
+    title = "Arbitration 3 Option Wrapper"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = arbitration_3_option_2 clr_country_flag = country_option_2 }
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = arbitration_3_option_4 clr_country_flag = country_option_4 }
+		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = arbitration_3_option_6 clr_country_flag = country_option_6 }
+		any_country = { limit = { has_country_flag = country_option_8 } set_country_flag = arbitration_3_option_8 clr_country_flag = country_option_8 }
+		any_country = { limit = { has_country_flag = country_option_10 } set_country_flag = arbitration_3_option_10 clr_country_flag = country_option_10 }
+		any_country = { limit = { has_country_flag = country_option_12 } set_country_flag = arbitration_3_option_12 clr_country_flag = country_option_12 }
+		any_country = { limit = { has_country_flag = country_option_14 } set_country_flag = arbitration_3_option_14 clr_country_flag = country_option_14 }
+		any_country = { limit = { has_country_flag = country_option_16 } set_country_flag = arbitration_3_option_16 clr_country_flag = country_option_16 }
+		any_country = { limit = { has_country_flag = country_option_18 } set_country_flag = arbitration_3_option_18 clr_country_flag = country_option_18 }
+		any_country = { limit = { has_country_flag = country_option_20 } set_country_flag = arbitration_3_option_20 clr_country_flag = country_option_20 }
+	} 
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {	# Country Flag Wrapper cLEANUP
+    id = 20099
+    title = "Arbitration 3 Option Wrapper Cleanup"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = {
+			clr_country_flag = arbitration_3_option_2
+			clr_country_flag = arbitration_3_option_4
+			clr_country_flag = arbitration_3_option_6
+			clr_country_flag = arbitration_3_option_8
+			clr_country_flag = arbitration_3_option_10
+			clr_country_flag = arbitration_3_option_12
+			clr_country_flag = arbitration_3_option_14
+			clr_country_flag = arbitration_3_option_16
+			clr_country_flag = arbitration_3_option_18
+			clr_country_flag = arbitration_3_option_20
+		}
+	} 
+
+	option = {
+        name = "Reset Modifiers"
     }
 
 }

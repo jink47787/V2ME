@@ -1,0 +1,818 @@
+#Core Disputes
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20050
+    title = "Attempting to Write 2"
+    #desc = ""
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+        name = ""
+		all_core = { add_province_modifier = { name = dispute_modifier value = -1 } }
+		CLN = { country_event = 71913 }
+    }
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20051
+    title = "Setup Event for Arbitrations 1"
+    #desc = ""
+    picture = "arbitration_1"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				NOT = { has_country_flag = scoped_for_dispute }
+				any_owned_province = { 
+					has_province_modifier = dispute_modifier 
+					OR = {
+						any_neighbor_province = { 
+							owner = { has_country_flag = arbitration_initiator }
+						}
+						is_coastal = yes
+					}
+				}
+			}
+			set_country_flag = due_for_slotting
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 500 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 400 }
+			set_country_flag = slotted
+			clr_country_flag = due_for_slotting
+		}
+		CLN = { country_event = 20052 }
+		
+		# Pre Calculating AI Modifier Matrix
+		any_country = {
+			limit = {
+				has_country_flag = x
+			}
+			set_variable = { which = slot_1_favourability value = 1 }
+			THIS = { any_country = { limit = { has_country_flag = x alliance_with = THIS } THIS = { change_variable = { which = slot_1_favourability value = -1 } } } }
+			THIS = { any_country = { limit = { has_country_flag = x brigades_compare = 2 } THIS = { change_variable = { which = slot_1_favourability value = -1 } } } }
+			THIS = { any_country = { limit = { has_country_flag = x NOT = { brigades_compare = 2 } } THIS = { change_variable = { which = slot_1_favourability value = 1 } } } }
+			THIS = { any_country = { limit = { has_country_flag = x is_disarmed = yes } THIS = { change_variable = { which = slot_1_favourability value = 1 } } } }
+			THIS = { any_country = { limit = { has_country_flag = x national_provinces_occupied = 50 } THIS = { change_variable = { which = slot_1_favourability value = 1 } } } }
+		}
+		
+		random_country = {
+			limit = {
+				tag = FROM
+				CLN = { check_variable = { which =  slot_itterator_variable value = 0.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 2.99 } } }	 # Common check
+			}
+			country_event = { id = 20054 days = 1 }	# DAYS 1 for AI Debug
+		}
+		random_country = {	# At this point the above is duplicated. Formatted for compactness.
+			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 2.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } } } }
+			country_event = { id = 20055 days = 1 }
+		}
+		random_country = {
+			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 4.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } } } }
+			country_event = { id = 20056 days = 1 }
+		}
+		random_country = {
+			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 6.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 8.99 } } } }
+			country_event = { id = 20057 days = 1 }
+		}
+		random_country = {	
+			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 8.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 10.99 } } } }
+			country_event = { id = 20058 days = 1 }
+		}
+		random_country = {	
+			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 10.99 } } }
+			country_event = { id = 20059 days = 1 }
+		}
+		#any_country = {
+		#	limit = {
+		#		has_country_flag = arbitration_initiator
+		#	}
+		#	clr_country_flag = viewer
+		#}
+		set_variable = { which = slot_itterator_variable value = 0 }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {	# Recursive Event for AI Calcs
+    id = 20060
+    title = "Arbitration AI Matrix"
+    picture = "collectivisation"
+	allow_multiple_instances = no
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = {
+			limit = {
+				NOT = { check_variable = { which = favourability value = 0.99 } }
+				check_variable = { which = favourability value = 1.99 }
+			}
+			set_country_flag = Arbitration_1_best_choice
+		}
+		any_country = {
+			limit = {
+				check_variable = { which = favourability value = 1 }
+				NOT = {
+					THIS = {
+						any_country = {
+							limit = {
+								has_country_flag = Arbitration_1_best_choice
+							}
+						}
+					}
+				}
+			}
+			change_variable = { which = favourability value = -1 }
+		}
+		any_country = {
+			limit = {
+				tag = THIS
+				NOT = {
+					THIS = {
+						any_country = {
+							limit = {
+								has_country_flag = Arbitration_1_best_choice
+							}
+						}
+					}
+				}
+			}
+			country_event = 20060
+		}
+		
+	}
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {	# Coutry Flag Wrapper
+    id = 20052
+    title = "Arbitration Option Wrapper"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = arbitration_option_2 clr_country_flag = country_option_2 }
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = arbitration_option_4 clr_country_flag = country_option_4 }
+		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = arbitration_option_6 clr_country_flag = country_option_6 }
+		any_country = { limit = { has_country_flag = country_option_8 } set_country_flag = arbitration_option_8 clr_country_flag = country_option_8 }
+		any_country = { limit = { has_country_flag = country_option_10 } set_country_flag = arbitration_option_10 clr_country_flag = country_option_10 }
+		any_country = { limit = { has_country_flag = country_option_12 } set_country_flag = arbitration_option_12 clr_country_flag = country_option_12 }
+		any_country = { limit = { has_country_flag = country_option_14 } set_country_flag = arbitration_option_14 clr_country_flag = country_option_14 }
+		any_country = { limit = { has_country_flag = country_option_16 } set_country_flag = arbitration_option_16 clr_country_flag = country_option_16 }
+		any_country = { limit = { has_country_flag = country_option_18 } set_country_flag = arbitration_option_18 clr_country_flag = country_option_18 }
+		any_country = { limit = { has_country_flag = country_option_20 } set_country_flag = arbitration_option_20 clr_country_flag = country_option_20 }
+	} 
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {	# Country Flag Wrapper cLEANUP
+    id = 20053
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = {
+			clr_country_flag = arbitration_option_2
+			clr_country_flag = arbitration_option_4
+			clr_country_flag = arbitration_option_6
+			clr_country_flag = arbitration_option_8
+			clr_country_flag = arbitration_option_10
+			clr_country_flag = arbitration_option_12
+			clr_country_flag = arbitration_option_14
+			clr_country_flag = arbitration_option_16
+			clr_country_flag = arbitration_option_18
+			clr_country_flag = arbitration_option_20
+		}
+	} 
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {
+    id = 20054
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration"
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}
+
+country_event = {
+    id = 20055
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration_three_long" # Three Long
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_4 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_4 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}
+
+country_event = {
+    id = 20056
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration_four_long" # Three Four
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_4 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_4 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_6 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_6 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_6 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_6 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_6 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}
+
+country_event = {
+    id = 20057
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration_five_long" # Five Long
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 alliance_with = THIS } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_4 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_4 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_4 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_6 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_6 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_6 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_6 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_6 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_2 alliance_with = THIS } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_8 brigades_compare = 2 } } }
+			#modifier = { factor = 0.5 any_land_province = { owner = { has_country_flag = arbitration_option_8 brigades_compare = 2 } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_8 NOT = { brigades_compare = 2 } } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_8 is_disarmed = yes } } }
+			#modifier = { factor = 2 any_land_province = { owner = { has_country_flag = arbitration_option_8 national_provinces_occupied = 50 } } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}
+
+country_event = {
+    id = 20058
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration_six_long"	# Six Long
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_2 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_2 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_4 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_4 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_4 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_4 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_4 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_4 national_provinces_occupied = 50 } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_6 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_6 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_6 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_6 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_6 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_6 national_provinces_occupied = 50 } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_8 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_8 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_8 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_8 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_8 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_8 national_provinces_occupied = 50 } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_10 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_10 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_10 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_10 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_10 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_10 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_10 national_provinces_occupied = 50 } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}
+
+country_event = {
+    id = 20059
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration_seven_long"	# Seven Long
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_12 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_2 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_2 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_2 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_4 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_4 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_4 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_4 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_4 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_4 national_provinces_occupied = 50 } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_6 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_6 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_6 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_6 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_6 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_6 national_provinces_occupied = 50 } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_8 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_8 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_8 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_8 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_8 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_8 national_provinces_occupied = 50 } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_10 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_10 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_10 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_10 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_10 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_10 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_10 national_provinces_occupied = 50 } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_12 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+            modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_12 alliance_with = THIS } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_12 brigades_compare = 2 } }
+			modifier = { factor = 0.5 any_country = { has_country_flag = arbitration_option_12 brigades_compare = 2 } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_12 NOT = { brigades_compare = 2 } } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_12 is_disarmed = yes } }
+			modifier = { factor = 2 any_country = { has_country_flag = arbitration_option_12 national_provinces_occupied = 50 } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}

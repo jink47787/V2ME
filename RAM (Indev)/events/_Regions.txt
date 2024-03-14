@@ -782,7 +782,21 @@ country_event = {
 			}
 			UTI = { change_variable = { which = itterator value = 41 } }
 		}
-		country_event = 302
+		any_country = {	# Performance Improvement, no need to loc if AI is the only one who sees it
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = viewer
+						ai = no
+					}
+					AND = { 
+						has_global_flag = debug
+						ai = no
+					}
+				}
+			}
+			CLN = { country_event = 302 }
+		}
 	}
 	
 	option = {

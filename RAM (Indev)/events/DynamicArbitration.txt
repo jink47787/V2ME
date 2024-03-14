@@ -1,37 +1,43 @@
 #Core Disputes
 
 country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71912
+    id = 20050
     title = "Attempting to Write 2"
     #desc = ""
-    picture = "commonwealth"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
 	immediate = {
-		all_core = { add_crime = meta_crime }
-		CLN = { country_event = 71913 }
 	}
 	
 	option = {
         name = ""
+		all_core = { add_province_modifier = { name = dispute_modifier value = -1 } }
+		CLN = { country_event = 71913 }
     }
 }
 
 country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71913
-    title = "Attempting to Write 2"
+    id = 20051
+    title = "Setup Event for Arbitrations 1"
     #desc = ""
-    picture = "commonwealth"
+    picture = "arbitration_1"
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
 	immediate = {
 		any_country = {
 			limit = {
-				neighbour = FROM
 				NOT = { has_country_flag = scoped_for_dispute }
-				any_owned_province = { has_crime = meta_crime }
+				any_owned_province = { 
+					has_province_modifier = dispute_modifier 
+					OR = {
+						any_neighbor_province = { 
+							owner = { has_country_flag = arbitration_initiator }
+						}
+						is_coastal = yes
+					}
+				}
 			}
 			set_country_flag = due_for_slotting
 			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
@@ -41,42 +47,49 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			set_country_flag = slotted
 			clr_country_flag = due_for_slotting
 		}
-		FROM = { set_country_flag = arbitration_initiator }
+		CLN = { country_event = 20052 }
 		random_country = {
 			limit = {
-				has_global_flag = itterating_commonwealth_done
+				tag = FROM
+				ai = yes
+			}
+			country_event = 20060
+		}
+		
+		random_country = {
+			limit = {
 				tag = FROM
 				CLN = { check_variable = { which =  slot_itterator_variable value = 0.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 2.99 } } }	 # Common check
 			}
-			country_event = 71914
+			country_event = { id = 20054 days = 1 }	# DAYS 1 for AI Debug
 		}
 		random_country = {	# At this point the above is duplicated. Formatted for compactness.
 			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 2.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 4.99 } } } }
-			country_event = 71915
+			country_event = { id = 20055 days = 1 }
 		}
 		random_country = {
 			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 4.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 6.99 } } } }
-			country_event = 71916
+			country_event = { id = 20056 days = 1 }
 		}
 		random_country = {
 			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 6.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 8.99 } } } }
-			country_event = 71917
+			country_event = { id = 20057 days = 1 }
 		}
 		random_country = {	
 			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 8.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 10.99 } } } }
-			country_event = 71918
+			country_event = { id = 20058 days = 1 }
 		}
 		random_country = {	
-			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 10.99 } NOT = { check_variable = { which =  slot_itterator_variable value = 12.99 } } } }
-			country_event = 71919
+			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 10.99 } } }
+			country_event = { id = 20059 days = 1 }
 		}
-		random_country = {	
-			limit = { tag = FROM CLN = { check_variable = { which =  slot_itterator_variable value = 12.99 } } } 
-			country_event = 71921
-		}
-		#any_country = {
-		#	clr_country_flag = slotted
+		#any_country = {	# Its going straight back to arbitration_initiator anyway
+		#	limit = {
+		#		has_country_flag = arbitration_initiator
+		#	}
+		#	clr_country_flag = viewer
 		#}
+		set_variable = { which = slot_itterator_variable value = 0 }
 	}
 	
 	option = {
@@ -84,10 +97,145 @@ country_event = { # Event to fire starting Cleanup event for CLN
     }
 }
 
-country_event = {
-    id = 71914
-    title = "Rightful $COUNTRY$"
+country_event = {	# Coutry Flag Wrapper
+    id = 20052
+    title = "Arbitration Option Wrapper"
     picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = arbitration_option_2 clr_country_flag = country_option_2 }
+		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = arbitration_option_4 clr_country_flag = country_option_4 }
+		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = arbitration_option_6 clr_country_flag = country_option_6 }
+		any_country = { limit = { has_country_flag = country_option_8 } set_country_flag = arbitration_option_8 clr_country_flag = country_option_8 }
+		any_country = { limit = { has_country_flag = country_option_10 } set_country_flag = arbitration_option_10 clr_country_flag = country_option_10 }
+		any_country = { limit = { has_country_flag = country_option_12 } set_country_flag = arbitration_option_12 clr_country_flag = country_option_12 }
+		any_country = { limit = { has_country_flag = country_option_14 } set_country_flag = arbitration_option_14 clr_country_flag = country_option_14 }
+		any_country = { limit = { has_country_flag = country_option_16 } set_country_flag = arbitration_option_16 clr_country_flag = country_option_16 }
+		any_country = { limit = { has_country_flag = country_option_18 } set_country_flag = arbitration_option_18 clr_country_flag = country_option_18 }
+		any_country = { limit = { has_country_flag = country_option_20 } set_country_flag = arbitration_option_20 clr_country_flag = country_option_20 }
+	} 
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {	# Country Flag Wrapper cLEANUP
+    id = 20053
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = {
+			clr_country_flag = arbitration_option_2
+			clr_country_flag = arbitration_option_4
+			clr_country_flag = arbitration_option_6
+			clr_country_flag = arbitration_option_8
+			clr_country_flag = arbitration_option_10
+			clr_country_flag = arbitration_option_12
+			clr_country_flag = arbitration_option_14
+			clr_country_flag = arbitration_option_16
+			clr_country_flag = arbitration_option_18
+			clr_country_flag = arbitration_option_20
+		}
+	} 
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {	# Pre Calculate AI Modifiers
+    id = 20060
+    title = "Calculate AI Modifiers!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		THIS = { change_variable = { which = arbitration_option_2_preference value = 1 } }
+		THIS = { change_variable = { which = arbitration_option_4_preference value = 1 } }
+		THIS = { change_variable = { which = arbitration_option_6_preference value = 1 } }
+		THIS = { change_variable = { which = arbitration_option_8_preference value = 1 } }
+		THIS = { change_variable = { which = arbitration_option_10_preference value = 1 } }
+		THIS = { change_variable = { which = arbitration_option_12_preference value = 1 } }
+		# Less likely to arbitrate against AI
+		any_country = { limit = { has_country_flag = arbitration_option_2 alliance_with = THIS } THIS = { change_variable = { which = arbitration_option_2_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_4 alliance_with = THIS } THIS = { change_variable = { which = arbitration_option_4_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_6 alliance_with = THIS } THIS = { change_variable = { which = arbitration_option_6_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_8 alliance_with = THIS } THIS = { change_variable = { which = arbitration_option_8_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_10 alliance_with = THIS } THIS = { change_variable = { which = arbitration_option_10_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_12 alliance_with = THIS } THIS = { change_variable = { which = arbitration_option_12_preference value = -1 } } }
+		# Less likely to arbitrate against a strong nation
+		any_country = { limit = { has_country_flag = arbitration_option_2 brigades_compare = 2 } THIS = { change_variable = { which = arbitration_option_2_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_4 brigades_compare = 2 } THIS = { change_variable = { which = arbitration_option_4_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_6 brigades_compare = 2 } THIS = { change_variable = { which = arbitration_option_6_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_8 brigades_compare = 2 } THIS = { change_variable = { which = arbitration_option_8_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_10 brigades_compare = 2 } THIS = { change_variable = { which = arbitration_option_10_preference value = -1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_12 brigades_compare = 2 } THIS = { change_variable = { which = arbitration_option_12_preference value = -1 } } }
+		# More likely to arbitrate against a dismarmed nation
+		any_country = { limit = { has_country_flag = arbitration_option_2 is_disarmed = yes } THIS = { change_variable = { which = arbitration_option_2_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_4 is_disarmed = yes } THIS = { change_variable = { which = arbitration_option_4_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_6 is_disarmed = yes } THIS = { change_variable = { which = arbitration_option_6_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_8 is_disarmed = yes } THIS = { change_variable = { which = arbitration_option_8_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_10 is_disarmed = yes } THIS = { change_variable = { which = arbitration_option_10_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_12 is_disarmed = yes } THIS = { change_variable = { which = arbitration_option_12_preference value = 1 } } }
+		# More likely to arbitrate against a dismarmed nation
+		any_country = { limit = { has_country_flag = arbitration_option_2 national_provinces_occupied = 50 } THIS = { change_variable = { which = arbitration_option_2_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_4 national_provinces_occupied = 50 } THIS = { change_variable = { which = arbitration_option_4_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_6 national_provinces_occupied = 50 } THIS = { change_variable = { which = arbitration_option_6_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_8 national_provinces_occupied = 50 } THIS = { change_variable = { which = arbitration_option_8_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_10 national_provinces_occupied = 50 } THIS = { change_variable = { which = arbitration_option_10_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_12 national_provinces_occupied = 50 } THIS = { change_variable = { which = arbitration_option_12_preference value = 1 } } }
+		# More likely to arbitrate against a sphereless nation
+		any_country = { limit = { has_country_flag = arbitration_option_2 part_of_sphere = no } THIS = { change_variable = { which = arbitration_option_2_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_4 part_of_sphere = no } THIS = { change_variable = { which = arbitration_option_4_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_6 part_of_sphere = no } THIS = { change_variable = { which = arbitration_option_6_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_8 part_of_sphere = no } THIS = { change_variable = { which = arbitration_option_8_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_10 part_of_sphere = no } THIS = { change_variable = { which = arbitration_option_10_preference value = 1 } } }
+		any_country = { limit = { has_country_flag = arbitration_option_12 part_of_sphere = no } THIS = { change_variable = { which = arbitration_option_12_preference value = 1 } } }
+	} 
+
+	option = {
+        name = ""
+    }
+
+}
+
+country_event = {	# Country Flag Wrapper cLEANUP
+    id = 20061
+    title = "The New Capital!"
+    picture = "collectivisation"
+
+	is_triggered_only = yes
+
+    immediate = {
+		any_country = {
+			set_variable = { which = arbitration_option_2_preference value = 0 }
+			set_variable = { which = arbitration_option_4_preference value = 0 }
+			set_variable = { which = arbitration_option_6_preference value = 0 }
+			set_variable = { which = arbitration_option_8_preference value = 0 }
+			set_variable = { which = arbitration_option_10_preference value = 0 }
+			set_variable = { which = arbitration_option_12_preference value = 0 }
+		}
+	} 
+
+	option = {
+        name = "Reset Modifiers"
+    }
+
+}
+
+country_event = {
+    id = 20054
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration"
 
 	is_triggered_only = yes
 
@@ -111,21 +259,34 @@ country_event = {
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_2_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_2_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_2_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_2_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_2_preference value = -1.99 } } }
+		}
     }
 	
 	option = {
 		name = "We have changed our minds"
 		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
 	}
 
 }
 
 country_event = {
-    id = 71915
+    id = 20055
     title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
+    picture = "arbitration_three_long" # Three Long
 
 	is_triggered_only = yes
 
@@ -153,27 +314,50 @@ country_event = {
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_2_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_2_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_2_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_2_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_2_preference value = -1.99 } } }
+		}
     }
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_4_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_4_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_4_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_4_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_4_preference value = -1.99 } } }
+		}
     }
 	
 	option = {
 		name = "We have changed our minds"
 		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
 	}
 
 }
 
 country_event = {
-    id = 71916
+    id = 20056
     title = "Rightful $COUNTRY$"
-    picture = "commonwealth_three_long"
+    picture = "arbitration_four_long" # Three Four
 
 	is_triggered_only = yes
 
@@ -205,33 +389,66 @@ country_event = {
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_2_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_2_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_2_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_2_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_2_preference value = -1.99 } } }
+		}
     }
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_4_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_4_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_4_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_4_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_4_preference value = -1.99 } } }
+		}
     }
 	
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_6_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_6_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_6_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_6_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_6_preference value = -1.99 } } }
+		}
     }
 	
 	option = {
 		name = "We have changed our minds"
 		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
 	}
 
 }
 
 country_event = {
-    id = 71917
+    id = 20057
     title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
+    picture = "arbitration_five_long" # Five Long
 
 	is_triggered_only = yes
 
@@ -267,39 +484,82 @@ country_event = {
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_2_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_2_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_2_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_2_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_2_preference value = -1.99 } } }
+		}
     }
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_4_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_4_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_4_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_4_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_4_preference value = -1.99 } } }
+		}
     }
 	
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_6_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_6_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_6_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_6_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_6_preference value = -1.99 } } }
+		}
     }
 	
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_8 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_8_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_8_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_8_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_8_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_8_preference value = -1.99 } } }
+		}
     }
 	
 	option = {
 		name = "We have changed our minds"
 		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
 	}
 
 }
 
 country_event = {
-    id = 71918
+    id = 20058
     title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
+    picture = "arbitration_six_long"	# Six Long
 
 	is_triggered_only = yes
 
@@ -314,422 +574,266 @@ country_event = {
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
-		slot_1 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_2 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_3 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_4 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_5 = {}
-	} 
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-	option = {
-		name = "We have changed our minds"
-		prestige = -5
-	}
-
-}
-
-country_event = {
-    id = 71919
-    title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
-
-	is_triggered_only = yes
-
-    immediate = {
-		arbitration_and_disputes_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		slot_1 = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		slot_2 = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		slot_3 = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		slot_4 = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		slot_5 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_6 = {}
-	} 
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-	option = {
-		name = "We have changed our minds"
-		prestige = -5
-	}
-
-}
-
-country_event = {
-    id = 71920
-    title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
-
-	is_triggered_only = yes
-
-    immediate = {
-		arbitration_and_disputes_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_1 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_2 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_3 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_4 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_5 = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		slot_6 = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		slot_7 = {}
-	} 
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_7 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-	option = {
-		name = "We have changed our minds"
-		prestige = -5
-	}
-
-}
-
-country_event = {
-    id = 71921
-    title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
-
-	is_triggered_only = yes
-
-    immediate = {
-		arbitration_and_disputes_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_1 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_2 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_3 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_4 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_5 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_6 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_7 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_8 = {}
-	} 
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_7 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_8 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-	option = {
-		name = "We have changed our minds"
-		prestige = -5
-	}
-
-}
-
-country_event = {
-    id = 71922
-    title = "Rightful $COUNTRY$"
-    picture = "collectivisation"
-
-	is_triggered_only = yes
-
-    immediate = {
-		arbitration_and_disputes_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_1 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_2 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_3 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_4 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_5 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_6 = {}
-		linebreak_state = {}
-		linebreak_state = {}
-		slot_7 = {}
-		linebreak_state = {}
-		linebreak_state = {}
 		slot_8 = {}
 		linebreak_state = {}
 		linebreak_state = {}
 		slot_9 = {}
+		slot_10 = {}
 	} 
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_1 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_2_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_2_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_2_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_2_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_2_preference value = -1.99 } } }
+		}
     }
 
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_2 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_4_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_4_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_4_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_4_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_4_preference value = -1.99 } } }
+		}
     }
 	
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_3 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_5 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_6_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_6_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_6_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_6_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_6_preference value = -1.99 } } }
+		}
     }
 	
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_4 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_5 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_6 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_7 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_8_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_8_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_8_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_8_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_8_preference value = -1.99 } } }
+		}
     }
 	
     option = {
         name = ""
-		any_country = { limit = { has_country_flag = country_option_8 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
-    }
-	
-    option = {
-        name = ""
-		any_country = { limit = { has_country_flag = country_option_9 } set_country_flag = scoped_for_dispute_choice }
-		CLN = { country_event = 71930}
+		any_country = { limit = { has_country_flag = arbitration_option_10 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_10_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_10_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_10_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_10_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_10_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_10_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_10_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_10_preference value = -1.99 } } }
+		}
     }
 	
 	option = {
 		name = "We have changed our minds"
 		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+}
+
+country_event = {
+    id = 20059
+    title = "Rightful $COUNTRY$"
+    picture = "arbitration_seven_long"	# Seven Long
+
+	is_triggered_only = yes
+
+    immediate = {
+		arbitration_and_disputes_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_1 = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_3 = {}
+		slot_4 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_5 = {}
+		slot_6 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_7 = {}
+		slot_8 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_11 = {}
+		slot_12 = {}
+	} 
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_2 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_2_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_2_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_2_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_2_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_2_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_2_preference value = -1.99 } } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_4 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_4_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_4_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_4_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_4_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_4_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_4_preference value = -1.99 } } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_6 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_6_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_6_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_6_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_6_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_6_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_6_preference value = -1.99 } } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_8 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_8_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_8_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_8_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_8_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_8_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_8_preference value = -1.99 } } }
+		}
+    }
+
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_10 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_10_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_10_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_10_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_10_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_10_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_10_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_10_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_10_preference value = -1.99 } } }
+		}
+    }
+	
+    option = {
+        name = ""
+		any_country = { limit = { has_country_flag = arbitration_option_12 } set_country_flag = scoped_for_dispute_choice }
+		CLN = { country_event = 20053 }
+		CLN = { country_event = 20061 }	# Cleanup AI mods
+		CLN = { country_event = 20070 }
+		ai_chance = { 
+			factor = 0.5
+			modifier = { factor = 2 check_variable = { which = arbitration_option_12_preference value = 1.99 } }
+			modifier = { factor = 1 check_variable = { which = arbitration_option_12_preference value = 0.99 } NOT = { check_variable = { which = arbitration_option_12_preference value = 1.99 } } }
+			modifier = { factor = 0.5 check_variable = { which = arbitration_option_12_preference value = -0.99 } NOT = { check_variable = { which = arbitration_option_12_preference value = 0.99 } } }
+			modifier = { factor = 0.25 check_variable = { which = arbitration_option_12_preference value = -1.99 } NOT = { check_variable = { which = arbitration_option_12_preference value = -0.99 } } }
+			modifier = { factor = 0.01 NOT = { check_variable = { which = arbitration_option_12_preference value = -1.99 } } }
+		}
+    }
+	
+	option = {
+		name = "We have changed our minds"
+		prestige = -5
+		ai_chance = { 
+			factor = 0.5
+		}
 	}
 
 }

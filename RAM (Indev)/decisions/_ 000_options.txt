@@ -27,7 +27,24 @@ political_decisions = {
         }
 
         effect = {
-			set_global_flag = performace
+			set_global_flag = performance
+        }
+        ai_will_do = { 
+			factor = 0
+		}
+    }
+	
+	z_dev_mode = {
+        picture = dev
+        potential = {
+			NOT = { has_global_flag = debug }
+        }
+
+        allow = {
+        }
+
+        effect = {
+			set_global_flag = debug
         }
         ai_will_do = { 
 			factor = 0

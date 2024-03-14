@@ -1364,6 +1364,34 @@ USA_2543 = { 2543 2544 } #Samoa Islands
 
 FRA_801 = { 801 2551 2552 2553 } #Tahiti
 
+# Mega Regions
+
+Northern_America = {}
+Contiguous_America = {}
+Central_America = {}
+Caribbean = {}
+Nothern_South_America = { 830 2239 2240 2241 2242 2243 2245 2246 1979 3556 3653 } # Gran Colombia & the Gunieas
+Brazil = { 2450 2306 2455 2451 2452 2456 2453 2457 2458 2460 2462 2463 2467 2464 3618 2466 2465 2461 2459 2410 2408 2412 2415 2413 2411 2600 2403 2402 2404 2405 2407 3567 2401 2532 3359 3568 3651 3652 2429 2424 2425 2427 2426 2430 2419 2416 2417 2418 2420 2550 3380 2421 2422 2423 3584 2432 2428 2431 2435 2434 2433 3482 3446 2443 2444 3445 2446 2445 2441 2442 3443 3444 2436 2439 2440 2437 2438 2447 2448 2449 2461 2459 2457 2458 2460 2462 2549 3381 2321 3382 3326 3435 }
+Andean_America = { 2288 2289 2263 2284 2283 2290 2291 2292 2294 2287 2302 2301 2303 3557 2295 2293 2296 2298 2304 2578 2299 2297 278 2286 2300 2313 2314 2312 2305 2307 2308 2309 3554 2317 2316 2318 2310 2320 2319 2311 2339 2343 2341 2342 2340 2338 2337 3569 3570 } # Peru, Bolivia & Paraguay
+Southern_America = { 2132 2129 2130 2133 2131 693 3666 2332 2333 2334 2335 2336 3559 579 2329 2327 2330 2331 2328 2324 2322 2323 2326 2325 2348 2350 2351 2349 2360 2359 2357 2358 2554 2356 2368 2371 2369 2370 2315 1714 2375 2373 2376 2374 2385 2386 2383 2389 2387 2388 2364 2365 2362 2377 2372 2366 2367 2384 2390 2393 2395 2382 2353 2352 2355 2354 2379 2381 2380 2363 2361 2378 2344 2345 2346 2347 3641 3644 2391 2392 2394 2396 2397 3555 3558 2398 2399 2400 } # Argentina, Chile & Uruguay
+Western_Europe = {}
+Southern_Europe = {}
+Eastern_Europe = {}
+Eurasia = {}
+North_Africa = {}
+West_Africa = {}
+East_Africa = {}
+Central_Africa = {}
+Southern_Africa = {}
+Middle_East = {}
+Central_Asia = {}
+India = {}
+East_Asia = {}
+Japan = {}
+South_East_Asia = {}
+Oceania = { 2468 2469 2470 2471 2472 2473 2474 2475 2508 2476 2477 2478 2479 2480 2481 2482 3414 2483 2484 2485 2486 2487 2488 2489 2490 2604 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 2504 2601 2602 2605 2505 2506 2507 2603 2509 2510 2511 2512 2571 2516 2513 2514 2515 3494 } # Aus & NZ
+Pacifica = { 2244 2406 610 2579 2518 2522 658 2524 2526 2623 2454 2527 2541 2542 2520 2523 2517 2521 2528 2529 2531 1531 2530 2537 2534 2536 2539 1097 2535 2540 2545 2546 2547 2543 2544 801 2551 2552 2553 } # Pacific
+
 # RAM Meta States
 
 linebreak_state = {}
@@ -1431,15 +1459,31 @@ arbitration_and_disputes_state_3 = {}
 arbitration_and_disputes_state_4 = {}
 arbitration_and_disputes_state_5 = {}
 arbitration_and_disputes_state_6 = {}
+arbitration_and_disputes_state_6b = {}
+arbitration_and_disputes_state_6c = {}
 arbitration_and_disputes_state_7 = {}
 arbitration_and_disputes_state_8 = {}
 arbitration_and_disputes_state_9 = {}
+arbitration_and_disputes_state_9b = {}
+arbitration_and_disputes_state_9c = {}
 arbitration_and_disputes_state_10 = {}
 arbitration_and_disputes_state_11 = {}
+arbitration_and_disputes_state_11b = {}
+arbitration_and_disputes_state_11c = {}
+arbitration_and_disputes_state_11d = {}
+arbitration_and_disputes_state_11e = {}
 arbitration_and_disputes_state_12 = {}
 arbitration_and_disputes_state_13 = {}
 arbitration_and_disputes_state_14 = {}
 arbitration_and_disputes_state_15 = {}
+arbitration_and_disputes_state_16 = {}
+arbitration_and_disputes_state_17 = {}
+arbitration_and_disputes_state_18 = {}
+arbitration_and_disputes_state_19 = {}
+arbitration_and_disputes_state_20 = {}
+arbitration_and_disputes_state_21 = {}
+arbitration_and_disputes_state_22 = {}
+arbitration_and_disputes_state_23 = {}
 treaty_port_state_1 = {}
 treaty_port_state_2 = {}
 neutrality_state_1 = {}

@@ -1,27 +1,16 @@
-lon_cooldown = {
-    icon = 8
-}
+##################################################################################################
+# RAM International Organisations
+##################################################################################################
 
-commonwealth_cooldown = {
-    icon = 8
-}
+# Cooldown Country Mod.s before you can reapply
+lon_cooldown = { icon = 8 }
+commonwealth_cooldown = { icon = 8 }
+prosperity_sphere_cooldown = { icon = 8 }
+anti_comintern_cooldown = { icon = 8 }
+fascintern_cooldown = { icon = 8 }
+comintern_cooldown = { icon = 8 }
 
-prosperity_sphere_cooldown = {
-    icon = 8
-}
-
-anti_comintern_cooldown = {
-    icon = 8
-}
-
-fascintern_cooldown = {
-    icon = 8
-}
-
-comintern_cooldown = {
-    icon = 8
-}
-
+# Membership Levels
 league_of_nations_founding_memeber = {
 	diplomatic_points_modifier = 0.1
 	global_pop_consciousness_modifier = -0.1
@@ -76,564 +65,7 @@ comintern = {
     icon = 27
 }
 
-set_capital = {
-    icon = 30
-}
-
-due_for_slotting = {
-    icon = 30
-}
-
-slotted = {
-    icon = 30
-}
-
-option_modifier_1 = {
-    icon = 30
-}
-
-option_modifier_2 = {
-    icon = 30
-}
-
-option_modifier_3 = {
-    icon = 30
-}
-
-option_modifier_4 = {
-    icon = 30
-}
-
-option_modifier_5 = {
-    icon = 30
-}
-
-option_modifier_6 = {
-    icon = 30
-}
-
-option_modifier_7 = {
-    icon = 30
-}
-
-option_modifier_8 = {
-    icon = 30
-}
-
-option_modifier_9 = {
-    icon = 30
-}
-
-option_modifier_10 = {
-    icon = 30
-}
-
-option_modifier_11 = {
-    icon = 30
-}
-
-option_modifier_12 = {
-    icon = 30
-}
-
-option_modifier_13 = {
-    icon = 30
-}
-
-option_modifier_14 = {
-    icon = 30
-}
-
-option_modifier_15 = {
-    icon = 30
-}
-
-option_modifier_16 = {
-    icon = 30
-}
-
-option_modifier_17 = {
-    icon = 30
-}
-
-option_modifier_18 = {
-    icon = 30
-}
-
-option_modifier_19 = {
-    icon = 30
-}
-
-option_modifier_20 = {
-    icon = 30
-}
-
-option_modifier_21 = {
-    icon = 30
-}
-
-option_modifier_22 = {
-    icon = 30
-}
-
-option_modifier_23 = {
-    icon = 30
-}
-
-option_modifier_24 = {
-    icon = 30
-}
-
-option_modifier_25 = {
-    icon = 30
-}
-
-option_modifier_26 = {
-    icon = 30
-}
-
-option_modifier_27 = {
-    icon = 30
-}
-
-option_modifier_28 = {
-    icon = 30
-}
-
-option_modifier_29 = {
-    icon = 30
-}
-
-option_modifier_30 = {
-    icon = 30
-}
-
-option_modifier_31 = {
-    icon = 30
-}
-
-option_modifier_32 = {
-    icon = 30
-}
-
-option_modifier_33 = {
-    icon = 30
-}
-
-option_modifier_34 = {
-    icon = 30
-}
-
-option_modifier_35 = {
-    icon = 30
-}
-
-option_modifier_36 = {
-    icon = 30
-}
-
-option_modifier_37 = {
-    icon = 30
-}
-
-option_modifier_38 = {
-    icon = 30
-}
-
-option_modifier_39 = {
-    icon = 30
-}
-
-option_modifier_40 = {
-    icon = 30
-}
-
-divider_for_org_a = {
-    icon = 28
-}
-divider_for_org_b = {
-    icon = 28
-}
-divider_for_org_c = {
-    icon = 28
-}
-divider_for_org_d = {
-    icon = 28
-}
-divider_for_org_e = {
-    icon = 28
-}
-divider_for_org_f = {
-    icon = 28
-}
-divider_for_org_g = {
-    icon = 28
-}
-divider_for_org_h = {
-    icon = 28
-}
-divider_for_org_i = {
-    icon = 28
-}
-divider_for_org_j = {
-    icon = 28
-}
-divider_for_org_k = {
-    icon = 28
-}
-divider_for_org_l = {
-    icon = 28
-}
-divider_for_org_m = {
-    icon = 28
-}
-divider_for_org_n = {
-    icon = 28
-}
-divider_for_org_o = {
-    icon = 28
-}
-divider_for_org_p = {
-    icon = 28
-}
-divider_for_org_q = {
-    icon = 28
-}
-divider_for_org_r = {
-    icon = 28
-}
-divider_for_org_s = {
-    icon = 28
-}
-divider_for_org_t = {
-    icon = 28
-}
-
-loc_rename_modifier = {
-	icon = 30
-}
-
-var_rename_modifier = {
-	icon = 30
-}
-
-country_rename_modifier = {
-	icon = 30
-}
-
-province_rename_modifier = {
-	icon = 30
-}
-
-region_rename_modifier = {
-	icon = 30
-}
-
-flag_rename_modifier = {
-	icon = 30
-}
-
-integer_rename_modifier = {
-	icon = 30
-}
-
-regions_loc_land = {
-	icon = 30
-}
-
-regions_loc_sea = {
-	icon = 30
-}
-
-provinces_loc_land = {
-	icon = 30
-}
-
-provinces_loc_sea = {
-	icon = 30
-}
-
-slot_1_region = {
-	icon = 30
-}
-
-slot_2_region = {
-	icon = 30
-}
-
-slot_3_region = {
-	icon = 30
-}
-
-slot_4_region = {
-	icon = 30
-}
-
-slot_5_region = {
-	icon = 30
-}
-
-slot_6_region = {
-	icon = 30
-}
-
-slot_7_region = {
-	icon = 30
-}
-
-slot_8_region = {
-	icon = 30
-}
-
-slot_9_region = {
-	icon = 30
-}
-
-slot_10_region = {
-	icon = 30
-}
-
-slot_11_region = {
-	icon = 30
-}
-
-slot_12_region = {
-	icon = 30
-}
-
-slot_13_region = {
-	icon = 30
-}
-
-slot_14_region = {
-	icon = 30
-}
-
-slot_15_region = {
-	icon = 30
-}
-
-slot_16_region = {
-	icon = 30
-}
-
-slot_17_region = {
-	icon = 30
-}
-
-slot_18_region = {
-	icon = 30
-}
-
-slot_19_region = {
-	icon = 30
-}
-
-slot_20_region = {
-	icon = 30
-}
-
-slot_21_region = {
-	icon = 30
-}
-slot_22_region = {
-	icon = 30
-}
-slot_23_region = {
-	icon = 30
-}
-slot_24_region = {
-	icon = 30
-}
-slot_25_region = {
-	icon = 30
-}
-slot_26_region = {
-	icon = 30
-}
-slot_27_region = {
-	icon = 30
-}
-slot_28_region = {
-	icon = 30
-}
-slot_29_region = {
-	icon = 30
-}
-slot_30_region = {
-	icon = 30
-}
-slot_31_region = {
-	icon = 30
-}
-slot_32_region = {
-	icon = 30
-}
-slot_33_region = {
-	icon = 30
-}
-slot_34_region = {
-	icon = 30
-}
-slot_35_region = {
-	icon = 30
-}
-slot_36_region = {
-	icon = 30
-}
-slot_37_region = {
-	icon = 30
-}
-slot_38_region = {
-	icon = 30
-}
-slot_39_region = {
-	icon = 30
-}
-slot_40_region = {
-	icon = 30
-}
-
-slot_1_province = {
-	icon = 30
-}
-
-slot_2_province = {
-	icon = 30
-}
-
-slot_3_province = {
-	icon = 30
-}
-
-slot_4_province = {
-	icon = 30
-}
-
-slot_5_province = {
-	icon = 30
-}
-
-slot_6_province = {
-	icon = 30
-}
-
-slot_7_province = {
-	icon = 30
-}
-
-slot_8_province = {
-	icon = 30
-}
-
-slot_9_province = {
-	icon = 30
-}
-
-slot_10_province = {
-	icon = 30
-}
-
-slot_11_province = {
-	icon = 30
-}
-
-slot_12_province = {
-	icon = 30
-}
-
-slot_13_province = {
-	icon = 30
-}
-
-slot_14_province = {
-	icon = 30
-}
-
-slot_15_province = {
-	icon = 30
-}
-
-slot_16_province = {
-	icon = 30
-}
-
-slot_17_province = {
-	icon = 30
-}
-
-slot_18_province = {
-	icon = 30
-}
-
-slot_19_province = {
-	icon = 30
-}
-
-slot_20_province = {
-	icon = 30
-}
-slot_21_province = {
-	icon = 30
-}
-slot_22_province = {
-	icon = 30
-}
-slot_23_province = {
-	icon = 30
-}
-slot_24_province = {
-	icon = 30
-}
-slot_25_province = {
-	icon = 30
-}
-slot_26_province = {
-	icon = 30
-}
-slot_27_province = {
-	icon = 30
-}
-slot_28_province = {
-	icon = 30
-}
-slot_29_province = {
-	icon = 30
-}
-slot_30_province = {
-	icon = 30
-}
-slot_31_province = {
-	icon = 30
-}
-slot_32_province = {
-	icon = 30
-}
-slot_33_province = {
-	icon = 30
-}
-slot_34_province = {
-	icon = 30
-}
-slot_35_province = {
-	icon = 30
-}
-slot_36_province = {
-	icon = 30
-}
-slot_37_province = {
-	icon = 30
-}
-slot_38_province = {
-	icon = 30
-}
-slot_39_province = {
-	icon = 30
-}
-slot_40_province = {
-	icon = 30
-}
-
+# Capital Modifiers
 capital_modifier_league_of_nations = {
 	icon = 22
 }
@@ -666,12 +98,191 @@ capital_modifier_comintern = {
 	icon = 29
 }
 
+# Flavor Modifiers
 british_empire_games = {
 	immigrant_attract = 5
 	life_rating = 1
 	icon = 23
 }
 
+##################################################################################################
+# RAM Meta Modifiers
+##################################################################################################
+
+# Unused?
+set_capital = {
+    icon = 30
+}
+
+# Used when looping a scope in dynamic loc
+due_for_slotting = { icon = 30 }
+slotted = { icon = 30 }
+
+# Background redundant option mod flags for Dynamic Loc. Avoid where possible as unreliable. A LOT more of these will be at the bottom of the file.
+option_modifier_1 = { icon = 30 }
+option_modifier_2 = { icon = 30 }
+option_modifier_3 = { icon = 30 }
+option_modifier_4 = { icon = 30 }
+option_modifier_5 = { icon = 30 }
+option_modifier_6 = { icon = 30 }
+option_modifier_7 = { icon = 30 }
+option_modifier_8 = { icon = 30 }
+option_modifier_9 = { icon = 30 }
+option_modifier_10 = { icon = 30 }
+option_modifier_11 = { icon = 30 }
+option_modifier_12 = { icon = 30 }
+option_modifier_13 = { icon = 30 }
+option_modifier_14 = { icon = 30 }
+option_modifier_15 = { icon = 30 }
+option_modifier_16 = { icon = 30 }
+option_modifier_17 = { icon = 30 }
+option_modifier_18 = { icon = 30 }
+option_modifier_19 = { icon = 30 }
+option_modifier_20 = { icon = 30 }
+option_modifier_21 = { icon = 30 }
+option_modifier_22 = { icon = 30 }
+option_modifier_23 = { icon = 30 }
+option_modifier_24 = { icon = 30 }
+option_modifier_25 = { icon = 30 }
+option_modifier_26 = { icon = 30 }
+option_modifier_27 = { icon = 30 }
+option_modifier_28 = { icon = 30 }
+option_modifier_29 = { icon = 30 }
+option_modifier_30 = { icon = 30 }
+option_modifier_31 = { icon = 30 }
+option_modifier_32 = { icon = 30 }
+option_modifier_33 = { icon = 30 }
+option_modifier_34 = { icon = 30 }
+option_modifier_35 = { icon = 30 }
+option_modifier_36 = { icon = 30 }
+option_modifier_37 = { icon = 30 }
+option_modifier_38 = { icon = 30 }
+option_modifier_39 = { icon = 30 }
+option_modifier_40 = { icon = 30 }
+
+
+# Hidden divider modifiers for Organisations tooltip
+divider_for_org_a = { icon = 28 }
+divider_for_org_b = { icon = 28 }
+divider_for_org_c = { icon = 28 }
+divider_for_org_d = { icon = 28 }
+divider_for_org_e = { icon = 28 }
+divider_for_org_f = { icon = 28 }
+divider_for_org_g = { icon = 28 }
+divider_for_org_h = { icon = 28 }
+divider_for_org_i = { icon = 28 }
+divider_for_org_j = { icon = 28 }
+divider_for_org_k = { icon = 28 }
+divider_for_org_l = { icon = 28 }
+divider_for_org_m = { icon = 28 }
+divider_for_org_n = { icon = 28 }
+divider_for_org_o = { icon = 28 }
+divider_for_org_p = { icon = 28 }
+divider_for_org_q = { icon = 28 }
+divider_for_org_r = { icon = 28 }
+divider_for_org_s = { icon = 28 }
+divider_for_org_t = { icon = 28 }
+
+# Meta Modifiers used within Dynamic Loc. Never interact with these.
+loc_rename_modifier = { icon = 30 }
+var_rename_modifier = { icon = 30 }
+country_rename_modifier = { icon = 30 }
+country_ADJ_rename_modifier = { icon = 30 }
+province_rename_modifier = { icon = 30 }
+region_rename_modifier = { icon = 30}
+flag_rename_modifier = { icon = 30 }
+integer_rename_modifier = { icon = 30 }
+
+regions_loc_land = { icon = 30 }
+regions_loc_sea = { icon = 30 }
+provinces_loc_land = { icon = 30 }
+provinces_loc_sea = { icon = 30 }
+
+# Meta modifiers to trigger loc
+slot_1_region = { icon = 30 }
+slot_2_region = { icon = 30 }
+slot_3_region = { icon = 30 }
+slot_4_region = { icon = 30 }
+slot_5_region = { icon = 30 }
+slot_6_region = { icon = 30 }
+slot_7_region = { icon = 30 }
+slot_8_region = { icon = 30 }
+slot_9_region = { icon = 30 }
+slot_10_region = { icon = 30 }
+slot_11_region = { icon = 30 }
+slot_12_region = { icon = 30 }
+slot_13_region = { icon = 30 }
+slot_14_region = { icon = 30 }
+slot_15_region = { icon = 30 }
+slot_16_region = { icon = 30 }
+slot_17_region = { icon = 30 }
+slot_18_region = { icon = 30 }
+slot_19_region = { icon = 30 }
+slot_20_region = { icon = 30 }
+slot_21_region = { icon = 30 }
+slot_22_region = { icon = 30 }
+slot_23_region = { icon = 30 }
+slot_24_region = { icon = 30 }
+slot_25_region = { icon = 30 }
+slot_26_region = { icon = 30 }
+slot_27_region = { icon = 30 }
+slot_28_region = { icon = 30 }
+slot_29_region = { icon = 30 }
+slot_30_region = { icon = 30 }
+slot_31_region = { icon = 30 }
+slot_32_region = { icon = 30 }
+slot_33_region = { icon = 30 }
+slot_34_region = { icon = 30 }
+slot_35_region = { icon = 30 }
+slot_36_region = { icon = 30 }
+slot_37_region = { icon = 30 }
+slot_38_region = { icon = 30 }
+slot_39_region = { icon = 30 }
+slot_40_region = { icon = 30 }
+
+slot_1_province = { icon = 30 }
+slot_2_province = { icon = 30 }
+slot_3_province = { icon = 30 }
+slot_4_province = { icon = 30 }
+slot_5_province = { icon = 30 }
+slot_6_province = { icon = 30 }
+slot_7_province = { icon = 30 }
+slot_8_province = { icon = 30 }
+slot_9_province = { icon = 30 }
+slot_10_province = { icon = 30 }
+slot_11_province = { icon = 30 }
+slot_12_province = { icon = 30 }
+slot_13_province = { icon = 30 }
+slot_14_province = { icon = 30 }
+slot_15_province = { icon = 30 }
+slot_16_province = { icon = 30 }
+slot_17_province = { icon = 30 }
+slot_18_province = { icon = 30 }
+slot_19_province = { icon = 30 }
+slot_20_province = { icon = 30 }
+slot_21_province = { icon = 30 }
+slot_22_province = { icon = 30 }
+slot_23_province = { icon = 30 }
+slot_24_province = { icon = 30 }
+slot_25_province = { icon = 30 }
+slot_26_province = { icon = 30 }
+slot_27_province = { icon = 30 }
+slot_28_province = { icon = 30 }
+slot_29_province = { icon = 30 }
+slot_30_province = { icon = 30 }
+slot_31_province = { icon = 30 }
+slot_32_province = { icon = 30 }
+slot_33_province = { icon = 30 }
+slot_34_province = { icon = 30 }
+slot_35_province = { icon = 30 }
+slot_36_province = { icon = 30 }
+slot_37_province = { icon = 30 }
+slot_38_province = { icon = 30 }
+slot_39_province = { icon = 30 }
+slot_40_province = { icon = 30 }
+
+
+# Ram Flavour Modifiers
 dispute_modifier = {
 	icon = 30
 }
@@ -698,6 +309,7 @@ secret_capital_construction = {
 	icon = 30
 }
 
+# GFM Modifiers
 capital_mobilisation = {
 	supply_limit = 1000
 	icon = 17
@@ -5889,3 +5501,24 @@ generic_resistance_to_regime = {
 	cb_generation_speed_modifier = -0.3
 	icon = 4
 }
+
+### More RAM event modifiers
+
+capital_option_modifier_3 = { icon = 30 }
+capital_option_modifier_5 = { icon = 30 }
+capital_option_modifier_7 = { icon = 30 }
+capital_option_modifier_9 = { icon = 30 }
+capital_option_modifier_11 = { icon = 30 }
+capital_option_modifier_13 = { icon = 30 }
+capital_option_modifier_15 = { icon = 30 }
+capital_option_modifier_17 = { icon = 30 }
+capital_option_modifier_19 = { icon = 30 }
+capital_option_modifier_21 = { icon = 30 }
+capital_option_modifier_23 = { icon = 30 }
+capital_option_modifier_25 = { icon = 30 }
+capital_option_modifier_27 = { icon = 30 }
+capital_option_modifier_29 = { icon = 30 }
+capital_option_modifier_31 = { icon = 30 }
+capital_option_modifier_33 = { icon = 30 }
+capital_option_modifier_35 = { icon = 30 }
+capital_option_modifier_37 = { icon = 30 }

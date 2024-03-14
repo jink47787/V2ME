@@ -9,7 +9,10 @@ political_decisions = {
 					owner = { is_vassal = yes }
 				}
 				owner = {
-					is_greater_power = no	
+					OR = {
+						is_greater_power = no
+						has_global_flag = debug
+					}
 					civilized = yes
 				}
 			}
@@ -24,34 +27,107 @@ political_decisions = {
 					owned_by = THIS
 					owner = { is_our_vassal = THIS }
 				}
-				owner = {
-					is_greater_power = no	
-					civilized = yes
-					NOT = {
-						is_vassal = yes
+				OR = {
+					AND = {
+						is_coastal = yes
+						THIS = { num_of_ports = 1 }
+					}
+					owner = {
+						OR = {
+							is_greater_power = no
+							has_global_flag = debug
+						}
+						civilized = yes
+						neighbour = THIS
+						NOT = {
+							is_vassal = yes
+						}
 					}
 				}
 			}
 			war = no
+			NOT = { has_global_flag = arbitration_underway }
 			is_greater_power = no	
 			civilized = yes
 			NOT = { has_country_flag = National_Disruption }
         }
 
         effect = {
-			all_core = { add_crime = meta_crime }
-			CLN = { country_event = 71913 }
+			all_core = {
+				add_province_modifier = { name = dispute_modifier duration = -1 }
+			}
+			set_country_flag = arbitration_initiator
+			set_country_flag = viewer
+			set_global_flag = arbitration_underway
+			CLN = { country_event = 20051 }
         }
-        ai_will_do = { 
-			factor = 0
-			#modifier = {
-            #    factor = 1
-            #    any_core = {
-			#		owner = {
-			#			tag = ECU
-			#		}
-			#	}
-            #}
+		ai_will_do = { 
+		factor = 0.01
+			modifier = {
+				factor = 200
+				tag = NAS
+			}
+			modifier = {
+				factor = 1.5
+				any_core = {
+					owner = {
+						NOT = { alliance_with = THIS }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_greater_power = {
+					OR = {
+						relation = { who = THIS value = 300 }
+						alliance_with = THIS
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				any_core = {
+					owner = {
+						has_recently_lost_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				any_core = {
+					owner = {
+						num_of_revolts = 3
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				any_core = {
+					owner = {
+						in_default = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				any_core = {
+					owner = {
+						war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				any_core = {
+					owner = {
+						is_disarmed = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_global_flag = chaos
+			}
 		}
     }
 }

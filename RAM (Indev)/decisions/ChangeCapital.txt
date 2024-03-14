@@ -37,6 +37,7 @@ political_decisions = {
 
         effect = {
 			set_country_flag = renaming_capital
+			set_country_flag = viewer
 			CLN = { country_event = 20001 }
         }
         ai_will_do = { 

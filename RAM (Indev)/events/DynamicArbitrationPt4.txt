@@ -1,8 +1,8 @@
 #Core Disputes
 
 country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71950
-    title = "Attempting to Write 2"
+    id = 20100
+    title = "Setup for in Favour of Arbitrator for Arbitratee"
     #desc = ""
     picture = "commonwealth"
 	allow_multiple_instances = yes
@@ -29,7 +29,7 @@ country_event = { # Event to fire starting Cleanup event for CLN
 			limit = {
 				has_country_flag = scoped_for_dispute_choice	# Spelling 
 			}
-			country_event = { id = 71951 days = 1 }
+			country_event = { id = 20101 days = 1 }
 		}
 	}
 	
@@ -39,9 +39,9 @@ country_event = { # Event to fire starting Cleanup event for CLN
 }
 
 country_event = {
-    id = 71951
+    id = 20101
     title = "International Derision"
-    picture = "collectivisation"
+    picture = "arbitration_4"
 
 	is_triggered_only = yes
 
@@ -57,15 +57,292 @@ country_event = {
 		arbitration_and_disputes_state_10 = {}
 		slot_2 = {}
 	} 
+	
+	option = {
+        name = "The lands are rightfully ours"
+		prestige = 5
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			CLN = { country_event = 20116 days = 1 }
+		}
+		any_country = { 
+			limit = {
+				has_country_flag = gp_current_dispute	# Spelling 
+			}
+			country_event = { id = 20117 days = 1 }
+		}
+    }
 
     option = {
-        name = "We have no choice."
+        name = "We have no choice but to concede."
+		prestige = -5
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			THIS = { random_country = { limit = { ai = yes } country_event = { id = 20118 days = 1 } set_country_flag = used } }	# Contigencies
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20118 days = 1 } set_country_flag = used } }
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20118 days = 1 } } }
+			any_country = { clr_country_flag = used }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			THIS = { random_country = { limit = { ai = yes } country_event = { id = 20120 days = 1 } set_country_flag = used } }
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20120 days = 1 } set_country_flag = used } }
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20120 days = 1 } } }
+			any_country = { clr_country_flag = used }
+		}
+    }
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20102
+    title = "Setup for in Favour of Arbitratee for Arbitrator"
+    #desc = ""
+    picture = "arbitration_4"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 401
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 401
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			set_variable = { which = country_ADJ_loc_slot value = 3 }
+		}
+		country_event = 601
+		any_country = { 
+			limit = {
+				has_country_flag = arbitration_initiator	# Spelling 
+			}
+			country_event = { id = 20103 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20103
+    title = "Adjudication Betrayal"
+    picture = "arbitration_4_2"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}	# GP
+		arbitration_and_disputes_state_11b = {}	# Alphanumericals as further content is alreay created.
+		slot_2 = {} # Arbitratee
+		arbitration_and_disputes_state_11c = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_10 = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_11d = {}
+		slot_3 = {} # Arbitratee_ADJ
+		arbitration_and_disputes_state_11e = {}
+	} 
+	
+	option = {
+        name = "" # Clearly GP has fallen for ADJ Propaganda
+		prestige = 5
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			CLN = { country_event = { id = 20110 days = 1 } }
+			country_event = { id = 20111 days = 1 }
+		}
+    }
+	
+	option = {
+        name = "We have dug our own hole, we must concede."
+		prestige = -5
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			THIS = { random_country = { limit = { ai = yes } country_event = { id = 20112 days = 1 } set_country_flag = used } }	# Contigencies
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20112 days = 1 } set_country_flag = used } }
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20112 days = 1 } } }
+			any_country = { clr_country_flag = used }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = scoped_for_dispute_choice
+			}
+			THIS = { random_country = { limit = { ai = yes } country_event = { id = 20114 days = 1 } set_country_flag = used } }
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20114 days = 1 } set_country_flag = used } }
+			THIS = { random_country = { limit = { ai = yes NOT = { has_country_flag = used } } country_event = { id = 20114 days = 1 } } }
+			any_country = { clr_country_flag = used }
+		}
+    }
+	# Need an acceptance Option
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20104
+    title = "Setup for No Strong Opinion for Arbitrator"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 401
+		any_country = { 
+			limit = {
+				has_country_flag = arbitration_initiator	# Spelling 
+			}
+			country_event = { id = 20105 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20105
+    title = "Adjudication Apathy"
+    picture = "arbitration_4_3"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_11 = {}
+	} 
+	
+	option = {
+        name = "Damn, that is unfortunate."
+		prestige = -5
+		any_country = {
+			clr_country_flag = gp_current_dispute
+			clr_country_flag = arbitration_initiator
+			clr_country_flag = scoped_for_dispute_choice
+		}
+    }
+
+}
+
+country_event = { # Event to fire starting Cleanup event for CLN
+    id = 20106
+    title = "Setup for in Favour of Autonomous for Arbitratee"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		FROM = { set_variable = { which = option_count value = 0 } }
+		FROM = { set_country_flag = arbitration_1 } 
+		any_country = {
+			limit = {
+				has_country_flag = arbitration_initiator
+			}
+			set_variable = { which = country_loc_slot value = 1 }
+		}
+		country_event = 401
+		any_country = {
+			limit = {
+				has_country_flag = gp_current_dispute
+			}
+			set_variable = { which = country_loc_slot value = 2 }
+		}
+		country_event = 401
+		any_country = {
+			limit = {
+				has_country_flag = autonomous_region
+			}
+			set_variable = { which = country_loc_slot value = 3 }
+		}
+		country_event = 401
+		any_country = { 
+			limit = {
+				has_country_flag = scoped_for_dispute_choice	# Spelling 
+			}
+			country_event = { id = 20107 days = 1 }
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20107
+    title = "The Autonomous Zone"	# Autonomous Zone
+    picture = "arbitration_4_4"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		arbitration_and_disputes_state_7 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_8 = {}
+		slot_2 = {}
+		arbitration_and_disputes_state_9b = {}
+		slot_3 = {}
+		arbitration_and_disputes_state_9c = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		arbitration_and_disputes_state_10 = {}
+		slot_2 = {}
+	} 
+
+    option = {
+        name = ""
 		prestige = -5
 		any_country = {
 			limit = {
 				has_country_flag = arbitration_initiator
 			}
-			CLN = { country_event = 71960 }
+			CLN = { country_event = 20120 }
 		}
 		any_country = {
 			limit = {
@@ -82,7 +359,7 @@ country_event = {
 			limit = {
 				has_country_flag = gp_current_dispute
 			}
-			CLN = { country_event = 71970 days = 1}
+			CLN = { country_event = 71970 days = 1 }
 		}
 		any_country = { 
 			limit = {
@@ -90,56 +367,6 @@ country_event = {
 			}
 			country_event = { id = 71971 days = 1 }
 		}
-    }
-
-}
-
-country_event = { # Event to fire starting Cleanup event for CLN
-    id = 71952
-    title = "Attempting to Write 2"
-    #desc = ""
-    picture = "commonwealth"
-	allow_multiple_instances = yes
-    is_triggered_only = yes
-	
-	immediate = {
-		FROM = { set_variable = { which = option_count value = 0 } }
-		FROM = { set_country_flag = arbitration_1 } 
-		any_country = {
-			limit = {
-				has_country_flag = gp_current_dispute
-			}
-			set_variable = { which = country_loc_slot value = 1 }
-		}
-		country_event = 401
-		any_country = { 
-			limit = {
-				has_country_flag = arbitration_initiator	# Spelling 
-			}
-			country_event = { id = 71953 days = 1 }
-		}
-	}
-	
-	option = {
-        name = ""
-    }
-}
-
-country_event = {
-    id = 71953
-    title = "Adjudication Apathy"
-    picture = "collectivisation"
-
-	is_triggered_only = yes
-
-    immediate = {
-		slot_1 = {}
-		arbitration_and_disputes_state_11 = {}
-	} 
-	
-	option = {
-        name = "Damn, that is unfortunate."
-		prestige = -5
     }
 
 }
