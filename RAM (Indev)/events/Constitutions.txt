@@ -1,32 +1,506 @@
-country_event = { # To be trigged by dismantlement
+country_event = { 
     id = 190000
-	major = yes
     title = "The New Constitution Setup"
     #desc = "EVTDESC71002"
-    picture = "constitution"
-    is_triggered_only = yes
-
-    option = {
-        name = ""
-		CLN = { country_event = { id = 90001 days = 1 } }
-    }
-}
-
-country_event = { # To be trigged dismantlement of UK
-    id = 190001
-	major = yes
-    title = "The New Constitution"
-    #desc = "EVTDESC71002"
-    picture = "constitution"
+    #picture = "constitution"
     is_triggered_only = yes
 
     option = {
         name = ""
 		any_country = {
 			limit = {
-				tag = FROM
+				has_country_flag = current_conference 
 			}
-		country_event = 90002 
+			country_event = { id = 90001 days = 1 }
 		}
+    }
+}
+
+country_event = {
+    id = 190001
+	major = yes
+    title = "The New Constitution"
+    #desc = "EVTDESC71002"
+    #picture = "constitution"
+    is_triggered_only = yes
+
+    option = {
+        name = ""
+		set_global_flag = sixth_constitution_convention
+		# Testing only. Easy conference member proxies
+		any_country = { 
+			limit = {
+				is_greater_power = yes
+			}
+			set_country_flag = current_conference 
+		}
+		# Testing only, adapt for grDoD
+		ENG = { set_country_flag = old_arcadian }
+		RUS = { set_country_flag = dutch_league }
+		# This would be set in earlier event chain
+		set_country_flag = current_conference # any country is weird on scope
+		CLN = { set_variable = { which = constitution_stage value = 1 } }
+		CLN = { country_event = 190002 }
+    }
+}
+
+country_event = { 
+    id = 190002
+    title = "Constitution Setup"
+    #desc = "EVTDESC71002"
+    #picture = "constitution"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+	
+	immediate = {
+		# Kicks out respective Leagues. n*n code depth atm, will be changed later.
+		any_country = { 
+			limit = {
+				tag = THIS
+				CLN = { check_variable = { which = old_arcadian_vs_dutch_league value = 1.99 } }
+			}
+			THIS = {
+				any_country = { 
+					limit = {
+						has_country_flag = current_conference
+					}
+					country_event = 190050
+					THIS = {
+						any_country = {
+							has_country_flag = old_arcadian
+						}
+						set_country_flag = cleared_from_conference
+						CLN = { country_event = 190100 }
+					}
+				}
+			}
+		}
+		any_country = { 
+			limit = {
+				tag = THIS
+				CLN = { NOT = {  check_variable = { which = old_arcadian_vs_dutch_league value = -1.99 } } }
+			}
+			THIS = {
+				any_country = { 
+					limit = {
+						has_country_flag = current_conference
+					}
+					country_event = 190051
+					THIS = {
+						any_country = {
+							has_country_flag = dutch_league
+						}
+						set_country_flag = cleared_from_conference
+						CLN = { country_event = 190100 }
+					}
+				}
+			}
+		}
+		
+		# Itterates through topics
+		# copy block to add new topic. Increase varaible checks by 1, aswell as the conclusion setup event
+		any_country = {
+			limit = {
+				has_country_flag = current_conference 
+				CLN = {
+					check_variable = { which =  constitution_stage value = 0.99 }
+					NOT = { check_variable = { which =  constitution_stage value = 1.99 } }
+				}
+			}
+			country_event = { id = 190003 days = 1 }
+		}
+		any_country = {
+			limit = {
+				has_country_flag = current_conference 
+				CLN = {
+					check_variable = { which =  constitution_stage value = 1.99 }
+					NOT = { check_variable = { which = constitution_stage value = 2.99 } }
+				}
+			}
+			country_event = { id = 190004 days = 1 }
+		}
+		# etc etc
+		
+		# Conclusion setup event
+		random_country = {
+			limit = {
+				CLN = { 
+					check_variable = { which = constitution_stage value = 2.99 }
+					NOT = { check_variable = { which = constitution_stage value = 3.99 } }
+				}
+			}
+			CLN = { country_event = 190150 }
+		}
+		
+		# "Loops" the event with a 1 day delay*. Uses 3 ai for redundancy & for off-map CLN support. 	* days = 2 is deliberate. Due to fringe event handler behaviours, specifiying days = 1 will cause same day event fire. 
+		# Update here too when adding new topics
+		THIS = { random_country = { limit = { ai = yes CLN = { NOT = { check_variable = { which = constitution_stage value = 2.99 } } } } country_event = { id = 190101 days = 2 } set_country_flag = used } }
+		THIS = { random_country = { limit = { ai = yes CLN = { NOT = { check_variable = { which = constitution_stage value = 2.99 } } } NOT = { has_country_flag = used } } country_event = { id = 190101 days = 2 } set_country_flag = used } }
+		THIS = { random_country = { limit = { ai = yes CLN = { NOT = { check_variable = { which = constitution_stage value = 2.99 } } } NOT = { has_country_flag = used } } country_event = { id = 190101 days = 2 } } }
+		any_country = { clr_country_flag = used }
+
+	}
+
+    option = {
+        name = ""
+		CLN = { set_variable = { which = constitution_setup_buffer value = 0 } }
+    }
+}
+
+# Generic conference topic events. Copy format as needed
+country_event = {
+    id = 190003
+    title = "Centralization"
+    #desc = "EVTDESC71002"
+    #picture = "constitution"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+    option = {
+        name = "Opt1"
+		# Gross
+		CLN = { change_variable = { which = old_arcadian value = 1 } }
+		CLN = { change_variable = { which = new_arcadian value = 1 } }
+		# Net 
+		CLN = { change_variable = { which = old_arcadian_vs_dutch_league value = 1 } }
+    }    
+	option = {
+        name = "Opt2"
+		# Gross
+		CLN = { change_variable = { which = dutch_league value = 1 } }
+		# Net
+		CLN = { change_variable = { which = old_arcadian_vs_dutch_league value = -1 } }
+    }
+	option = {
+        name = "Opt3"
+		# Gross
+		CLN = { change_variable = { which = burgundian value = 1 } }
+    }
+}
+
+country_event = {
+    id = 190004
+    title = "Centralization 2"
+    #desc = "EVTDESC71002"
+    #picture = "constitution"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+    option = {
+        name = "Opt1"
+		# Gross
+		CLN = { change_variable = { which = old_arcadian value = 1 } }
+		CLN = { change_variable = { which = new_arcadian value = 1 } }
+		# Net 
+		CLN = { change_variable = { which = old_arcadian_vs_dutch_league value = 1 } }
+    }    
+	option = {
+        name = "Opt2"
+		# Gross
+		CLN = { change_variable = { which = dutch_league value = 1 } }
+		# Net
+		CLN = { change_variable = { which = old_arcadian_vs_dutch_league value = -1 } }
+    }
+	option = {
+        name = "Opt3"
+		# Gross
+		CLN = { change_variable = { which = burgundian value = 1 } }
+    }
+}
+
+country_event = {
+    id = 190050
+    title = "Old Arcadians Leave"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = "Oof"
+    }
+}
+
+country_event = {
+    id = 190051
+    title = "Dutch League Leaves"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = "Oof von dutch"
+    }
+}
+
+country_event = {		
+    id = 190100
+    title = "Constitution Cleanup"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	immediate = {
+		any_country = {
+			limit = {
+				has_country_flag = cleared_from_conference
+			}
+			clr_country_flag = current_conference
+			clr_country_flag = cleared_from_conference
+		}
+	}
+
+	option = {
+        name = "Complete"
+    }
+}
+
+country_event = {						# Ai event to fire event to CLN again
+    id = 190101
+    title = "Constitution Bounce Event"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	immediate = {
+		random_country = {
+			limit = {	# Ensure the event is fired once
+				CLN = { NOT = { check_variable = { which = constitution_setup_buffer value = 0.99 } } }
+			}
+			CLN = { change_variable = { which = constitution_setup_buffer value = 1 } }					# First instance locks this section till next tick
+			CLN = { change_variable = { which = constitution_stage value = 1 } }						
+			CLN = { country_event = 190002 }
+		}
+	}
+
+	option = {
+        name = "Complete"
+    }
+}
+
+country_event = {		
+    id = 190102
+    title = "Constitution Cleanup for CLN"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	immediate = {
+		clr_global_flag = constitution_score_evaluated
+		clr_global_flag = sixth_constitution_convention
+		set_variable = { which = new_arcadian value = 0 }
+		set_variable = { which = old_arcadian value = 0 }
+		set_variable = { which = dutch_league value = 0 }
+		set_variable = { which = burgundian value = 0 }
+		set_variable = { which = old_arcadian_vs_dutch_league value = 0 }
+		any_country = {
+			clr_country_flag = old_arcadian
+			clr_country_flag = new_arcadian
+			clr_country_flag = dutch_league
+			clr_country_flag = burgundian
+			clr_country_flag = current_conference
+		}
+	}
+
+	option = {
+        name = "Complete"
+    }
+}
+
+country_event = {	# Evaluate Influence Scores
+
+#
+#	This event fires for CLN. It will loop itself and reduce the influence scores by one each time while there is not one party remaining. When only one party has score remaining we know it had the most influence. As the rate of subtraction is constant,
+#	then if know no party has score there was a tie/no plurality. This triggers a different event type. 
+#
+
+    id = 190150
+    title = "Constitution Setup 2"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	immediate = {
+		# Pluralities
+		# New Arcadian Plurality
+		random_country = {
+			limit = { 
+				CLN = { check_variable = { which = new_arcadian value = 0.99 } }
+				CLN = { NOT = { check_variable = { which = old_arcadian value = 0.99 } } }
+				CLN = { check_variable = { which = dutch_league value = 0.99 } }
+				CLN = { check_variable = { which = burgundian value = 0.99 } }
+			}
+			THIS = {
+				set_global_flag = constitution_score_evaluated		# Blocks loop
+				any_country = { 
+					limit = { 
+						has_country_flag = current_conference
+					}
+					country_event = { id = 190151 days = 1 }
+					set_country_flag = cleared_from_conference
+					CLN = { country_event = 190100 }				# Cleanup
+				}
+			}
+		}
+		# Old Arcadian Plurality
+		random_country = {
+			limit = { 
+				CLN = { NOT = { check_variable = { which = new_arcadian value = 0.99 } } }
+				CLN = { check_variable = { which = old_arcadian value = 0.99 } }
+				CLN = { check_variable = { which = dutch_league value = 0.99 } }
+				CLN = { check_variable = { which = burgundian value = 0.99 } }
+			}
+			THIS = {
+				set_global_flag = constitution_score_evaluated
+				any_country = { 
+					limit = { 
+						has_country_flag = current_conference
+					}
+					country_event = { id = 190152 days = 1 }
+					set_country_flag = cleared_from_conference
+					CLN = { country_event = 190100 }
+				}
+			}
+		}
+		# Dutch League Plurality
+		random_country = {
+			limit = { 
+				CLN = { check_variable = { which = new_arcadian value = 0.99 } }
+				CLN = { check_variable = { which = old_arcadian value = 0.99 } }
+				CLN = { NOT = { check_variable = { which = dutch_league value = 0.99 } } }
+				CLN = { check_variable = { which = burgundian value = 0.99 } }
+			}
+			THIS = {	
+				set_global_flag = constitution_score_evaluated
+				any_country = { 
+					limit = { 
+						has_country_flag = current_conference
+					}
+					country_event = { id = 190153 days = 1 }
+					set_country_flag = cleared_from_conference
+					CLN = { country_event = 190100 }
+				}
+			}
+		}
+		# Burgundian Plurality
+		random_country = {
+			limit = { 
+				CLN = { check_variable = { which = new_arcadian value = 0.99 } }
+				CLN = { check_variable = { which = old_arcadian value = 0.99 } }
+				CLN = { check_variable = { which = dutch_league value = 0.99 } }
+				CLN = { NOT = { check_variable = { which = burgundian value = 0.99 } } }
+			}
+			THIS = {
+				set_global_flag = constitution_score_evaluated
+				any_country = { 
+					limit = { 
+						has_country_flag = current_conference
+					}
+					country_event = { id = 190154 days = 1 }
+					set_country_flag = cleared_from_conference
+					CLN = { country_event = 190100 }
+				}
+			}
+		}
+		# Duplicate this block and update above plurality blocks if new interest group.
+		
+		# No Clear Plurality
+		# If no induvidual influence score fires a event, then >= 2 scores were as equal and both cleared by the previous loop.
+		random_country = {
+			limit = { # Update if new interest group
+				NOT = {	CLN = { check_variable = { which = new_arcadian value = 0.99 } } }
+				NOT = {	CLN = { check_variable = { which = old_arcadian value = 0.99 } } }
+				NOT = {	CLN = { check_variable = { which = dutch_league value = 0.99 } } }
+				NOT = {	CLN = { check_variable = { which = burgundian value = 0.99 } } }
+			}
+			THIS = {
+				set_global_flag = constitution_score_evaluated
+				any_country = { 
+					limit = { 
+						has_country_flag = current_conference
+					}
+					country_event = { id = 190155 days = 1 }
+					set_country_flag = cleared_from_conference
+					CLN = { country_event = 190100 }
+				}
+			}
+		}
+		
+		random_country = {
+			limit = {  # Update if new interest group
+				NOT = { has_global_flag = constitution_score_evaluated }
+				OR = {
+					CLN = { check_variable = { which = new_arcadian value = 0.99 } }
+					CLN = { check_variable = { which = old_arcadian value = 0.99 } } 
+					CLN = { check_variable = { which = dutch_league value = 0.99 } }
+					CLN = { check_variable = { which = burgundian value = 0.99 } }
+				}
+			}
+			THIS = {
+				change_variable = { which = new_arcadian value = -1 }
+				change_variable = { which = old_arcadian value = -1 }
+				change_variable = { which = dutch_league value = -1 }
+				change_variable = { which = burgundian value = -1 }
+				country_event = 190150										# Loop event again
+			}
+		}
+		
+	}
+
+	option = {
+        name = "Complete"
+    }
+}
+
+country_event = {
+    id = 190151
+    title = "The Rooster State"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = ""
+		CLN = { country_event = 190102 }
+    }
+}
+
+country_event = {
+    id = 190152
+    title = "A New Dawn"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = ""
+		CLN = { country_event = 190102 }
+    }
+}
+
+country_event = {
+    id = 190153
+    title = "The Era of Reform"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = ""
+		CLN = { country_event = 190102 }
+    }
+}
+
+country_event = {
+    id = 190154
+    title = "Past Present and Future United"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = ""
+		CLN = { country_event = 190102 }
+    }
+}
+
+country_event = {
+    id = 190155
+    title = "A Constitution of Compromises"
+    is_triggered_only = yes
+	allow_multiple_instances = no
+
+	option = {
+        name = ""
+		CLN = { country_event = 190102 }
     }
 }

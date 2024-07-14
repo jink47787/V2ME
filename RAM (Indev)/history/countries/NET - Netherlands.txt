@@ -41,7 +41,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = exploitation
 
-set_country_flag = protestant_country
+set_country_flag = reformed_country
 set_country_flag = cultuurstelsel
 
 ruling_party = HOL_conservative

@@ -41,9 +41,19 @@ guiTypes = {
 		fullScreen = no
 		orientation = "CENTER"
 		
+		textBoxType = { 
+			name = "headline_politics"
+			position = { x = -30 y = -42 }
+			font = "vic_title"
+			text = "Modifiers"	
+			maxWidth = 200
+			maxHeight = 48	
+			format = right
+		}
+		
 		iconType = {
 			name = "main_bg"
-			spriteType = "GFX_main_bg"
+			spriteType = "GFX_main_bg_politics"
 			position = { x = -70 y = -70 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -60,16 +70,6 @@ guiTypes = {
 			position = { x = 768  y = -42 }
 			font = "vic_title"
 			text = "Organisations"	
-			maxWidth = 200
-			maxHeight = 48	
-			format = right
-		}
-		
-		textBoxType = { 
-			name = "headline_politics"
-			position = { x = -30 y = -42 }
-			font = "vic_title"
-			text = "Modifiers"	
 			maxWidth = 200
 			maxHeight = 48	
 			format = right
@@ -190,8 +190,8 @@ guiTypes = {
 		### COUNTRY MODIFIERS
 		OverlappingElementsBoxType = {
 			name = "country_modifier_overlappingbox"
-			position = { x = -87 y = -35 }
-			size = { x = 850 y = 32 }
+			position = { x = -90 y = -35 }
+			size = { x = 1056 y = 32 }
 			Orientation = "UPPER_LEFT"
 			format = right
 			spacing = 1.0
@@ -202,68 +202,68 @@ guiTypes = {
 		guiButtonType = {
 			name = "reforms_tab"
 			position = { x = 380 y = 13 }
-			quadTextureSprite = "GFX_politics_tab_button"
+			quadTextureSprite = "GFX_politics_tab_button_1"
 		}
 		
-		instantTextBoxType = { 
-			name = "reforms_text"
-			position = { x = 386 y = 20 }
-			font = "vic_22_black"
-			text = "POLITICS_REFORMS"	
-			allwaystransparent = yes
-			maxWidth = 145
-			maxHeight = 20
-			format = centre
-			fixedsize = yes
-		}
+		#instantTextBoxType = { 
+		#	name = "reforms_text"
+		#	position = { x = 386 y = 20 }
+		#	font = "vic_22_black"
+		#	text = "POLITICS_REFORMS"	
+		#	allwaystransparent = yes
+		#	maxWidth = 145
+		#	maxHeight = 20
+		#	format = centre
+		#	fixedsize = yes
+		#}
 		
 		guiButtonType = {
 			name = "movements_tab"
-			position = { x = 534 y = 13 }
-			quadTextureSprite = "GFX_politics_tab_button"
+			position = { x = 418 y = 13 }
+			quadTextureSprite = "GFX_politics_tab_button_2"
 		}
 		
-		instantTextBoxType = { 
-			name = "movements_tab_text"
-			position = { x = 540 y = 20 }
-			font = "vic_22_black"
-			text = "POLITICS_MOVEMENTS_TAB"	
-			allwaystransparent = yes
-			maxWidth = 145
-			maxHeight = 20
-			format = centre
-			fixedsize = yes
-		}
+		#instantTextBoxType = { 
+		#	name = "movements_tab_text"
+		#	position = { x = 540 y = 20 }
+		#	font = "vic_22_black"
+		#	text = "POLITICS_MOVEMENTS_TAB"	
+		#	allwaystransparent = yes
+		#	maxWidth = 145
+		#	maxHeight = 20
+		#	format = centre
+		#	fixedsize = yes
+		#}
 				
 		guiButtonType = {
 			name = "decisions_tab"
-			position = { x = 688 y = 13 }
-			quadTextureSprite = "GFX_politics_tab_button"
+			position = { x = 456 y = 13 }
+			quadTextureSprite = "GFX_politics_tab_button_3"
 		}
 		
-		instantTextBoxType = { 
-			name = "decisions_tab_text"
-			position = { x = 694 y = 20 }
-			font = "vic_22_black"
-			text = "POLITICS_DECISIONS_TAB"	
-			allwaystransparent = yes
-			maxWidth = 145
-			maxHeight = 20
-			format = centre
-			fixedsize = yes
-		}
+		#instantTextBoxType = { 
+		#	name = "decisions_tab_text"
+		#	position = { x = 694 y = 20 }
+		#	font = "vic_22_black"
+		#	text = "POLITICS_DECISIONS_TAB"	
+		#	allwaystransparent = yes
+		#	maxWidth = 145
+		#	maxHeight = 20
+		#	format = centre
+		#	fixedsize = yes
+		#}
 		
 		guiButtonType = {
 			name = "release_nations_tab"
-			position = { x = 842 y = 13 }
-			quadTextureSprite = "GFX_politics_tab_button"
+			position = { x = 494 y = 13 }
+			quadTextureSprite = "GFX_politics_tab_button_4"
 		}
 		
 		instantTextBoxType = { 
 			name = "release_nations_text"
-			position = { x = 848 y = 20 }
+			position = { x = 816 y = 17 }
 			font = "vic_22_black"
-			text = "POLITICS_RELEASE_NATIONS"	
+			text = "State Religion"	#"POLITICS_RELEASE_NATIONS"	
 			allwaystransparent = yes
 			maxWidth = 145
 			maxHeight = 20
@@ -425,19 +425,29 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			
-			instantTextBoxType = {
-				name = "decisions_label"
-				position = { x = 155 y = 44 }
+			instantTextBoxType = { 
+				name = "decisions_title"
+				position = { x = 155 y = 2 }
 				font = "vic_22"
-				text = "POLITICS_DECISIONS"	
+				text = "Decisions"	
 				maxWidth = 300
-				maxHeight = 20
+				maxHeight = 22
 				format = centre			
 			}
+			
+			#instantTextBoxType = {
+			#	name = "decisions_label"
+			#	position = { x = 155 y = 44 }
+			#	font = "vic_22"
+			#	text = "POLITICS_DECISIONS"	
+			#	maxWidth = 300
+			#	maxHeight = 20
+			#	format = centre			
+			#}
 		
 			listboxType = {
 				name = "decision_listbox"
-				position = { x = 24 y = 80 }
+				position = { x = 24 y = 64 }
 				size = { x = 572 y = 504 }
 				Orientation = "UPPER_LEFT"
 				spacing = 0
@@ -459,6 +469,16 @@ guiTypes = {
 				spriteType = "GFX_politics_movement_bg"
 				position = { x = 2 y = 34 }
 				Orientation = "UPPER_LEFT"
+			}
+						
+			instantTextBoxType = { 
+				name = "movements_title"
+				position = { x = 155 y = 3 }
+				font = "vic_22"
+				text = "Movements"	
+				maxWidth = 300
+				maxHeight = 22
+				format = centre			
 			}
 			
 			instantTextBoxType = { 
@@ -561,7 +581,16 @@ guiTypes = {
 			name = "reforms_window"
 			position = { x = 0 y = 0 }
 			size = { x = 1024 y = 768 }
-		
+			
+			instantTextBoxType = { 
+				name = "reforms_title"
+				position = { x = 537 y = 16 }
+				font = "vic_22"
+				text = "Reforms"	
+				maxWidth = 300
+				maxHeight = 22
+				format = centre			
+			}
 			
 			### LABELS RIGHT
 			instantTextBoxType = { 
@@ -1316,6 +1345,16 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			size = { x = 1024 y = 768 }
 			
+			instantTextBoxType = { 
+				name = "reforms_title"
+				position = { x = 537 y = 16 }
+				font = "vic_22"
+				text = "Reforms"	
+				maxWidth = 300
+				maxHeight = 22
+				format = centre			
+			}
+			
 			iconType = {
 				name = "politics_unciv_bg"
 				spriteType = "GFX_politics_unciv_bg"
@@ -2017,6 +2056,16 @@ guiTypes = {
 				spriteType = "GFX_politics_release_bg"
 				position = { x = 2 y = 34 }
 				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = { 
+				name = "release_title"
+				position = { x = 155 y = 1 }
+				font = "vic_22"
+				text = "Release Nations"	
+				maxWidth = 300
+				maxHeight = 22
+				format = centre			
 			}
 				
 			listboxType = {

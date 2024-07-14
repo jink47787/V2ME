@@ -14,7 +14,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_modifier_icons"
 		texturefile = "gfx\\interface\\modifiers.tga"
-		noOfFrames = 32
+		noOfFrames = 60
 		loadType = "INGAME"
 	}
 	
@@ -287,6 +287,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_main_bg"
 		texturefile = "gfx\\interface\\main_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_main_bg_politics"
+		texturefile = "gfx\\interface\\main_bg_politics.dds"
 	}
 	spriteType = {
 		name = "GFX_slider_circle"

@@ -16,6 +16,7 @@ guiTypes = {
 			name = "event_images"
 			spriteType = "GFX_event_no_image"
 			position = { x = 0 y = 0 }
+			moveable = 1
 			Orientation = "UPPER_LEFT"
 		}
 		

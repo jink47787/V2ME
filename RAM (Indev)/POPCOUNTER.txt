@@ -1,0 +1,76 @@
+country_event = {
+    id = 20205
+    title = "Non Destructive pop counting"
+	is_triggered_only = yes
+
+    immediate = {
+		any_land_province = {
+			random_pop = {
+				limit = {
+					type = zmeta
+					NOT = { 
+						total_pops = 5
+						CLN = { check_variable = { which = desired_pops value = 5 } }
+					}
+				}
+				THIS = {
+					any_land_province = {
+						random_pop = {
+							limit = {
+								type = zmeta
+								NOT = {
+									total_pops = 3
+									CLN = { check_variable = { which = desired_pops value = 3 } }
+								}
+							}
+							THIS = {
+								any_land_province = {
+									random_pop = {
+										limit = {
+											type = zmeta
+											NOT = {
+												total_pops = 2
+												CLN = { check_variable = { which = desired_pops value = 2 } }
+											}
+										}
+										# This Means its 1
+									}
+								}
+								any_land_province = {
+									random_pop = {
+										limit = {
+											type = zmeta
+											total_pops = 2
+											CLN = { check_variable = { which = desired_pops value = 2 } }
+										}
+										# This Means its 2
+									}
+								}
+							}
+						}
+					}
+					any_land_province = {
+						random_pop = {
+							limit = {
+								type = zmeta
+								total_pops = 3
+								CLN = { check_variable = { which = desired_pops value = 7 } }
+							}
+						}
+					}
+				}
+			}
+			random_pop = {
+				limit = {
+					type = zmeta
+					total_pops = 5
+					CLN = { check_variable = { which = desired_pops value = 5 } }
+				}
+			}
+		}
+	} 
+
+    option = {
+        name = "Woo"
+    }
+}

@@ -44,7 +44,7 @@ border_policy = open_borders
 centralization = unitary
 colonial_policy = exploitation
 
-set_country_flag = protestant_country
+set_country_flag = anglican_country
 
 #Technologies
 post_napoleonic_thought = 1

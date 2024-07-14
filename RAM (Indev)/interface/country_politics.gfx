@@ -80,6 +80,26 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
+		name = "GFX_politics_tab_button_1"
+		texturefile = "gfx\\interface\\politics_tab_button_1.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_politics_tab_button_2"
+		texturefile = "gfx\\interface\\politics_tab_button_2.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_politics_tab_button_3"
+		texturefile = "gfx\\interface\\politics_tab_button_3.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_politics_tab_button_4"
+		texturefile = "gfx\\interface\\politics_tab_button_4.tga"
+		noOfFrames = 2
+	}
+	spriteType = {
 		name = "GFX_politics_rebel_strip_trans"
 		texturefile = "gfx\\interface\\politics_rebel_strip.dds"
 		noOfFrames = 18

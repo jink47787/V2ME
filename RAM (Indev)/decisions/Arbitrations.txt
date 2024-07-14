@@ -3,7 +3,7 @@ political_decisions = {
     arbitrations_decision = {
         picture = dreams_of_empire
         potential = {
-			#ai = no
+			ai = no
 			any_core = {
 				NOT = {
 					owned_by = THIS
@@ -33,7 +33,10 @@ political_decisions = {
 				NOT = {
 					owned_by = THIS
 					owner = { is_our_vassal = THIS }
-					continent = europe
+				}
+				OR = {
+					NOT = { continent = europe }
+					year = 1885
 				}
 				OR = {
 					AND = {

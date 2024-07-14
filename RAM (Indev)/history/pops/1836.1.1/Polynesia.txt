@@ -530,34 +530,10 @@
 }
 #Marquesas (5000/1250 POPS)
 2551 = {
-    aristocrats = {
-        culture = polynesian
-        religion = animist
-        size = 25
-    }
-
-    clergymen = {
-        culture = polynesian
-        religion = animist
-        size = 25
-    }
-
     artisans = {
         culture = polynesian
-        religion = animist
-        size = 60
-    }
-
-    soldiers = {
-        culture = polynesian
-        religion = animist
-        size = 15
-    }
-
-    farmers = {
-        culture = polynesian
-        religion = animist
-        size = 1125
+        religion = catholic
+        size = 26000
     }
 }
 #Tuamotu Islands (6000/1500 POPS)
@@ -634,34 +610,33 @@
 #uncolonized in 1836 #chilean trade post
 #Easter Island (3000/750 POPS)
 2336 = {
-    aristocrats = {
-        culture = polynesian
-        religion = animist
-        size = 15
-    }
+    #aristocrats = {
+    #    culture = polynesian
+    #    religion = animist
+    #    size = 15
+    #}
 
-    clergymen = {
-        culture = polynesian
-        religion = animist
-        size = 15
-    }
+    #clergymen = {
+    #    culture = polynesian
+    #    religion = animist
+    #    size = 15
+    #}
 
-    artisans = {
-        culture = polynesian
-        religion = animist
-        size = 35
-    }
+    #artisans = {
+    #    culture = polynesian
+    #    religion = animist
+    #    size = 35
+    #}
 
-    soldiers = {
-        culture = polynesian
-        religion = animist
-        size = 10
-    }
+    #soldiers = {
+    #    culture = polynesian
+    #    religion = animist
+    #    size = 10
+    #}
 
-    farmers = {
-        culture = polynesian
-        religion = animist
-        size = 675
-    }
-
+    #farmers = {
+    #    culture = polynesian
+    #    religion = animist
+    #    size = 675
+    #}
 }

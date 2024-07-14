@@ -1,0 +1,187 @@
+#Introdution Events
+
+country_event = { # 
+    id = 10500
+    title = ""
+    desc = "EVTDESC10500"
+    picture = "ram_settings"
+	major = yes
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+    immediate = {
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		ram_settings_chaos_mode = {}
+		slot_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		ram_settings_performance_mode = {}
+		slot_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		ram_settings_dev_mode = {}
+		slot_3 = {}
+	}
+	
+	option = {
+        name = ""
+		ram_settings_chaos_mode_tooltip = {}
+		set_global_flag = A
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			THIS = {
+				random_country = {
+					limit = { NOT = { has_global_flag = chaos } }
+					set_global_flag = need_chaos
+				}
+				random_country = {
+					limit = { has_global_flag = chaos }
+					set_global_flag = no_chaos
+				}
+				random_country = {
+					limit = { has_global_flag = need_chaos }
+					clr_global_flag = need_chaos
+					set_global_flag = chaos
+				}
+				random_country = {
+					limit = { has_global_flag = no_chaos }
+					clr_global_flag = no_chaos
+					clr_global_flag = chaos
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			CLN = { country_event = 10501 }
+		}
+		clr_global_flag = A
+    }
+	option = {
+        name = ""
+		ram_settings_chaos_mode_tooltip = {}
+		set_global_flag = A
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			THIS = {
+				random_country = {
+					limit = { NOT = { has_global_flag = performance } }
+					set_global_flag = need_performance
+				}
+				random_country = {
+					limit = { has_global_flag = performance }
+					set_global_flag = no_performance
+				}
+				random_country = {
+					limit = { has_global_flag = need_performance }
+					clr_global_flag = need_performance
+					set_global_flag = performance
+				}
+				random_country = {
+					limit = { has_global_flag = no_performance }
+					clr_global_flag = no_performance
+					clr_global_flag = performance
+				
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			CLN = { country_event = 10501 }
+		}
+		clr_global_flag = A
+    }
+	option = {
+        name = ""
+		ram_settings_dev_mode_tooltip = {}
+		set_global_flag = A
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			THIS = {
+				random_country = {
+					limit = { NOT = { has_global_flag = debug } }
+					set_global_flag = need_debug
+				}
+				random_country = {
+					limit = { has_global_flag = debug }
+					set_global_flag = no_debug
+				}
+				random_country = {
+					limit = { has_global_flag = need_debug }
+					clr_global_flag = need_debug
+					set_global_flag = debug
+				}
+				random_country = {
+					limit = { has_global_flag = no_debug }
+					clr_global_flag = no_debug
+					clr_global_flag = debug
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			CLN = { country_event = 10501 }
+		}
+		clr_global_flag = A
+    }
+	option = {
+        name = "Exit"
+    }
+}
+
+country_event = { #
+    id = 10501
+    title = "CLN Bounce Event for RAM Settings"
+	allow_multiple_instances = no
+    is_triggered_only = yes
+	
+    immediate = {
+		slot_1 = { add_province_modifier = { name = able_modifier duration = -1 } }
+		random_country = {
+			limit = {
+				has_global_flag = chaos
+			}
+			slot_1 = { add_province_modifier = { name = able_modifier duration = -1 } add_province_modifier = { name = mod_1 duration = -1 } }
+		}
+		slot_2 = { add_province_modifier = { name = able_modifier duration = -1 } }
+		random_country = {
+			limit = {
+				has_global_flag = performance
+			}
+			slot_2 = { add_province_modifier = { name = able_modifier duration = -1 } add_province_modifier = { name = mod_1 duration = -1 } }
+		}
+		slot_3 = { add_province_modifier = { name = able_modifier duration = -1 } }
+		random_country = {
+			limit = {
+				has_global_flag = debug
+			}
+			slot_3 = { add_province_modifier = { name = mod_1 duration = -1 } }
+		}
+		CLN = { country_event = 50 }
+		FROM = {
+			country_event = 10500
+		}
+	}
+
+	option = {
+        name = "Exit"
+    }
+}

@@ -1,0 +1,66 @@
+country_event = { 
+    id = 21000
+    title = "Cyclone Forms"
+    #desc = ""
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		2868 = {
+			add_core = NZL
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Cyclone Movement Event
+    id = 21001
+    title = "Cyclone Moves"
+    #desc = ""
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_sea_province = {
+			add_core = UTI
+		}
+		UTI = {
+			all_core = {
+				limit = { 
+					is_core = NZL
+				}
+				set_global_flag = is_cores	 # it sets this
+				random_empty_neighbor_province = {
+					add_core = NZL
+					set_global_flag = is_cores_2 # but not this, and no cores
+				}
+			}
+		}
+		any_sea_province = {
+			remove_core = UTI
+		}
+	}
+	option = {
+        name = ""
+    }
+}
+
+
+country_event = { # Cyclone Movement Event
+    id = 21002
+    title = "Cyclone Location"
+    #desc = ""
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		slot_1 = {}
+	}
+	
+	option = {
+        name = "Ok"
+    }
+}

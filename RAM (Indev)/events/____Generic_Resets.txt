@@ -93,3 +93,52 @@ country_event = { # Reset Loc
         name = "Change the Name"
     }
 }
+
+
+country_event = { # Reset Loc Long
+    id = 4002
+    title = "Clear Religious Flags"
+    desc = "Resets all Religious Flags"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				has_country_flag = clear_religions
+			}
+			clr_country_flag = catholic_country
+			clr_country_flag = protestant_country
+			clr_country_flag = reformed_country
+			clr_country_flag = anglican_country
+			clr_country_flag = mormon_country
+			clr_country_flag = orthodox_country
+			clr_country_flag = coptic_country
+			clr_country_flag = taiping_country
+			clr_country_flag = syriac_country
+			clr_country_flag = sunni_country
+			clr_country_flag = shiite_country
+			clr_country_flag = ibadi_country
+			clr_country_flag = druze_country
+			clr_country_flag = jewish_country
+			clr_country_flag = zoroastrian_country
+			clr_country_flag = yazidi_country
+			clr_country_flag = mahayana_country
+			clr_country_flag = gelugpa_country
+			clr_country_flag = theravada_country
+			clr_country_flag = hindu_country
+			clr_country_flag = shinto_country
+			clr_country_flag = sikh_country
+			clr_country_flag = jain_country
+			clr_country_flag = confucian_country
+			clr_country_flag = animist_country
+			clr_country_flag = fetishist_country
+			clr_country_flag = tengri_country
+			clr_country_flag = clear_religions
+		}
+	}
+	
+	option = {
+        name = "Religious Flags Cleared"
+    }
+}

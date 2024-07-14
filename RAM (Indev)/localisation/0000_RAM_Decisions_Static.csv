@@ -9,3 +9,5 @@ z_performance_mode_title;Performance Mode;;;;;;;;;;;;;
 z_performance_mode_desc;This option will reduce the complexity in conditions. AI will be dumber & more conservative. The decision is mainly targeting RAM spikes, however will give a tiny increase game speed. Some saftey caps will be applied with will reduce your ingame event options/content. This option is §RNOT§! recommended unless you encounter RAM issues or are running an absolute potato. \n\nThis decision can §RNOT§! be undone.;;;;;;;;;;;;;
 z_dev_mode_title;Development Mode;;;;;;;;;;;;;
 z_dev_mode_desc;This option will provide more information to aid in development. Perforamance will decline. This option is §RNOT§! recommended unless instructed or incase of a very broken save. \n\nThis decision can §RNOT§! be undone.;;;;;;;;;;;;;
+_settings_title;RAM Settings;;;;;;;;;;;;;
+_settings_desc;This decision will open up the RAM settings menu, allowing you to customise your game.;;;;;;;;;;;;;

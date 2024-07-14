@@ -1,50 +1,14 @@
 political_decisions = {
-
-    z_chaos_mode = {
-        picture = chaos
-        potential = {
-			NOT = { has_global_flag = chaos }
-        }
-
-        allow = {
-        }
-
-        effect = {
-			set_global_flag = chaos
-        }
-        ai_will_do = { 
-			factor = 0
-		}
-    }
-	
-    z_performance_mode = {
-        picture = performance
-        potential = {
-			NOT = { has_global_flag = performance }
-        }
-
-        allow = {
-        }
-
-        effect = {
-			set_global_flag = performance
-        }
-        ai_will_do = { 
-			factor = 0
-		}
-    }
-	
-	z_dev_mode = {
+	_settings = {
         picture = dev
         potential = {
-			NOT = { has_global_flag = debug }
         }
 
         allow = {
         }
 
         effect = {
-			set_global_flag = debug
+			CLN = { country_event = 10501 }
         }
         ai_will_do = { 
 			factor = 0

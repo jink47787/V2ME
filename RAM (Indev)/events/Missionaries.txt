@@ -1,0 +1,312 @@
+#Missionaries
+
+country_event = { # Setup
+    id = 999999
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		random_country = {
+			limit = {
+				tag = SMO
+			}
+		}
+		CLN = { country_event = 20200 }
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Setup
+    id = 20200
+    title = "CLN Bounce Event for Missonary Leader Coversion"
+    #desc = ""
+    #picture = "missionaries"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		#	Preload Culture & Quantitiy									POP Spawner Function
+		random_country = {
+			limit = {
+				is_greater_power = yes
+				tag = ENG 	# DEBUG
+			}
+			set_country_flag = proselytiser
+		}
+		any_country = {			# Itterate out for Religions
+			limit = {
+				has_country_flag = proselytiser has_country_flag = anglican_country
+			}
+			3634 = { 
+				random_pop = { 
+					limit = { 		
+						religion = catholic 			# Variable: Religon 
+						total_pop = 499					# Variable: Pop Range
+						NOT = { total_pop = 501 }		# cont.
+					} 
+					move_pop = 3635 
+				}
+			}
+		}
+		any_country = {			# Itterate out for Religions
+			limit = {
+				has_country_flag = proselytiser has_country_flag = anglican_country
+			}
+			3634 = { 
+				random_pop = { 
+					limit = { 		
+						religion = protestant 			# Variable: Religon 
+						total_pop = 499					# Variable: Pop Range
+						NOT = { total_pop = 501 }		# cont.
+					} 
+					move_pop = 3635 
+				}
+			}
+		}
+		any_country = {			# Itterate out for Religions
+			limit = {
+				has_country_flag = proselytiser has_country_flag = anglican_country
+			}
+			3634 = { 
+				random_pop = { 
+					limit = { 		
+						religion = reformed 			# Variable: Religon 
+						total_pop = 499					# Variable: Pop Range
+						NOT = { total_pop = 501 }		# cont.
+					} 
+					move_pop = 3635 
+				}
+			}
+		}
+		any_country = {			# Itterate out for Religions
+			limit = {
+				has_country_flag = proselytiser has_country_flag = anglican_country
+			}
+			3634 = { 
+				random_pop = { 
+					limit = { 		
+						religion = anglican 			# Variable: Religon 
+						total_pop = 499					# Variable: Pop Range
+						NOT = { total_pop = 501 }		# cont.
+					} 
+					move_pop = 3635 
+				}
+			}
+		}
+		UTI = {						
+			primary_culture = polynesian	# Variable: Culture
+			set_variable = { 
+				which = magnitude
+				value = 1						# Variable: Magnitute (Optional)
+			} 
+			country_event = 60 
+		} 
+		2543 = {						# Variable: Destination
+			add_province_modifier = { 
+				name = pop_target 
+				duration = -1 
+			} 
+			UTI = { country_event = 61 }
+		}
+		2543 = {
+			random_pop = { 
+				limit = { 
+					type = zmeta 
+				}
+				pop_type = farmers				# Variable: Pop Type	
+			}	
+		}
+		random_country = {
+			limit = {
+				tag = SMO	# DEBUG
+			}
+			set_country_flag = proselytisee
+			set_country_flag = viewer
+		}
+		any_country = { limit = { has_country_flag = proselytiser } set_variable = { which = country_ADJ_loc_slot value = 1 } } country_event = 601																# Dynamic Loc Proselytiser - Slot 1
+		any_country = { limit = { has_country_flag = proselytisee } capital_scope = { add_province_modifier = { name = slot_2_province duration = -1 } } } country_event = 201									# Dynamic Loc Proselytisee Capital - Slot 3 (Later on I want to make a province mod)
+		any_country = { limit = { has_country_flag = proselytisee } set_variable = { which = country_loc_slot value = 3 } } country_event = 401																	# Dynamic Loc Proselytisee - Slot 2
+		
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = catholic_country } set_global_flag = B_catholic }
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = protestant_country } set_global_flag = B_protestant }
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = reformed_country } set_global_flag = B_reformed }
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = anglican_country } set_global_flag = B_anglican }
+		
+		random_country = {
+			limit = {
+				has_country_flag = proselytisee
+			}
+			country_event = 20201
+		}
+		
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20201
+    title = "Tides of Change"
+    picture = "missionaries"
+
+	is_triggered_only = yes
+
+    immediate = {
+		slot_1 = {}
+		missionaries_loc_1 = {}
+		slot_2 = {}
+		missionaries_loc_2 = {}
+	} 
+
+    option = {
+        name = "We shall embrace this new faith and forge a new path"
+		random_country = {
+			limit = {
+				has_country_flag = proselytiser
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		set_global_flag = A
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			THIS = { set_country_flag = clear_religions } CLN = { country_event = 4002 }
+			any_country = { limit = { has_country_flag = proselytiser has_country_flag = catholic_country } THIS = { set_country_flag = catholic_country } } 		#Itterate for Religions # Dynamic is a pain
+			any_country = { limit = { has_country_flag = proselytiser has_country_flag = protestant_country } THIS = { set_country_flag = protestant_country } }  		
+			any_country = { limit = { has_country_flag = proselytiser has_country_flag = reformed_country } THIS = { set_country_flag = reformed_country } } 
+			any_country = { limit = { has_country_flag = proselytiser has_country_flag = anglican_country } THIS = { set_country_flag = anglican_country } }  			
+		}
+		random_owned = { limit = { owner = { has_global_flag = B_catholic } } 
+			state_religion_catholic = {} 
+			THIS = { any_pop = { limit = { religion = catholic } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_catholic
+		random_owned = { limit = { owner = { has_global_flag = B_protestant } } 
+			state_religion_protestant = {}
+			THIS = { any_pop = { limit = { religion = protestant } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_protestant
+		random_owned = { limit = { owner = { has_global_flag = B_reformed } } 
+			state_religion_reformed = {}
+			THIS = { any_pop = { limit = { religion = reformed } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_reformed
+		random_owned = { limit = { owner = { has_global_flag = B_anglican } } 
+			state_religion_anglican = {}
+			THIS = { any_pop = { limit = { religion = anglican } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_anglican
+		missionaries_tooltip_1 = {}
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			CLN = { country_event = 20202 }
+		}
+		clr_global_flag = A
+		clr_country_flag = viewer
+		ai_chance = { 
+			factor = 0.75
+		}
+    }
+	option = {
+        name = "Show him the door"
+		prestige = -10
+		clr_country_flag = viewer
+		ai_chance = { 
+			factor = 0.25
+		}
+    }
+
+}
+
+country_event = { # Setup
+    id = 20202
+    title = "CLN Bounce Event for Missonary Leader Coversion"
+    #desc = ""
+    #picture = "missionaries"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+	
+		any_country = {
+			limit = {
+				has_country_flag = proselytiser
+			}
+			set_country_flag = viewer
+		}
+		any_country = { limit = { has_country_flag = proselytisee } set_variable = { which = country_loc_slot value = 1 } } CLN = { country_event = 401	}																		# Dynamic Loc Proselytisee - Slot 1
+		any_country = { limit = { has_country_flag = proselytisee } capital_scope = { add_province_modifier = { name = slot_2_province duration = -1 } } } CLN = { country_event = 201 }										# Dynamic Loc Proselytisee Capital - Slot 2 (Later on I want to make a province mod)
+		any_country = { limit = { has_country_flag = proselytiser } set_country_flag = religion_dynamic_loc } slot_3 = { add_province_modifier = { name = universal_modifier duration = -1 } } CLN = { country_event = 51 }		# Dynamic Loc Proselytisee - Slot 3
+		
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = catholic_country } set_global_flag = B_catholic }
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = protestant_country } set_global_flag = B_protestant }
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = reformed_country } set_global_flag = B_reformed }
+		random_country = { limit = { has_country_flag = proselytiser has_country_flag = anglican_country } set_global_flag = B_anglican }
+		
+		any_country = {
+			limit = {
+				has_country_flag = proselytiser
+			}
+			country_event = 20203
+		}
+		
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = {
+    id = 20203
+    title = "Our Missionary Triumphs"
+    picture = "missionaries"
+
+	is_triggered_only = yes
+
+    immediate = {
+		missionaries_loc_3 = {}
+		slot_2 = {}
+		missionaries_loc_4 = {}
+		slot_3 = {}
+		missionaries_loc_5 = {}
+		slot_1 = {}
+		missionaries_loc_6 = {}
+	} 
+
+    option = {
+        name = "Hurrah!"
+		random_country = {
+			limit = {
+				has_country_flag = proselytisee
+			}
+			relation = {
+				who = THIS
+				value = 20
+			}
+		}
+		prestige = 10
+		random_owned = { limit = { owner = { has_global_flag = B_catholic } } 
+			THIS = { any_pop = { limit = { religion = catholic } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_catholic
+		random_owned = { limit = { owner = { has_global_flag = B_protestant } } 
+			THIS = { any_pop = { limit = { religion = protestant } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_protestant
+		random_owned = { limit = { owner = { has_global_flag = B_reformed } } 
+			THIS = { any_pop = { limit = { religion = reformed } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_reformed
+		random_owned = { limit = { owner = { has_global_flag = B_anglican } } 
+			THIS = { any_pop = { limit = { religion = anglican } consciousness = -0.6 militancy = -0.6 } }
+		} clr_global_flag = B_anglican
+    }
+}

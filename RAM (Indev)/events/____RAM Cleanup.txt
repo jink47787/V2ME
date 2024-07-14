@@ -39,7 +39,17 @@ country_event = {
 		name = "Checking..."
 		country_event = 20
 		country_event = 40 # Government Flag Cleanup
+		country_event = 21001 # Weather Event
 		any_land_province = { remove_province_modifier = capital_city_modifier }
+		any_country = {
+			random_pop = {
+				limit = {
+					type = zmeta
+					NOT = { location = { province_id = 3634 } }
+				}
+				pop_type = farmers
+			}
+		}
 		any_country = {
 			limit = {
 				exists = yes
@@ -255,6 +265,41 @@ country_event = {
 			remove_country_modifier = divider_for_org_r
 			remove_country_modifier = divider_for_org_s
 			remove_country_modifier = divider_for_org_t
+			remove_country_modifier = divider_for_org_u
+			remove_country_modifier = divider_for_org_v
+			remove_country_modifier = divider_for_org_w
+			remove_country_modifier = divider_for_org_x
+			remove_country_modifier = divider_for_org_y
+			remove_country_modifier = divider_for_org_z
+			
+			#Remove Religions 
+			remove_country_modifier = catholic_mod
+			remove_country_modifier = protestant_mod
+			remove_country_modifier = reformed_mod
+			remove_country_modifier = anglican_mod
+			remove_country_modifier = mormon_mod
+			remove_country_modifier = orthodox_mod
+			remove_country_modifier = coptic_mod
+			remove_country_modifier = taiping_mod
+			remove_country_modifier = syriac_mod
+			remove_country_modifier = sunni_mod
+			remove_country_modifier = shiite_mod
+			remove_country_modifier = ibadi_mod
+			remove_country_modifier = druze_mod
+			remove_country_modifier = jewish_mod
+			remove_country_modifier = zoroastrian_mod
+			remove_country_modifier = yazidi_mod
+			remove_country_modifier = mahayana_mod
+			remove_country_modifier = gelugpa_mod
+			remove_country_modifier = theravada_mod
+			remove_country_modifier = hindu_mod
+			remove_country_modifier = shinto_mod
+			remove_country_modifier = sikh_mod
+			remove_country_modifier = jain_mod
+			remove_country_modifier = confucian_mod
+			remove_country_modifier = animist_mod
+			remove_country_modifier = fetishist_mod
+			remove_country_modifier = tengri_mod
 		}
 		
 		any_country = {
@@ -8550,7 +8595,6 @@ country_event = {
 				value = 1
 			}
 		}
-		
 		any_country = {
 			limit = {
 				ai = no
@@ -9078,6 +9122,47 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				ai = no
+			}
+			add_country_modifier = { name = divider_for_org_u duration = -1 }
+			add_country_modifier = { name = divider_for_org_v duration = -1 }
+			add_country_modifier = { name = divider_for_org_w duration = -1 }
+			add_country_modifier = { name = divider_for_org_x duration = -1 }
+			add_country_modifier = { name = divider_for_org_y duration = -1 }
+			add_country_modifier = { name = divider_for_org_z duration = -1 }
+		}
+		
+		any_country = { limit = { ai = no has_country_flag = catholic_country } add_country_modifier = { name = catholic_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = protestant_country } add_country_modifier = { name = protestant_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = reformed_country } add_country_modifier = { name = reformed_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = anglican_country } add_country_modifier = { name = anglican_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = mormon_country } add_country_modifier = { name = mormon_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = orthodox_country } add_country_modifier = { name = orthodox_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = coptic_country } add_country_modifier = { name = coptic_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = taiping_country } add_country_modifier = { name = taiping_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = syriac_country } add_country_modifier = { name = syriac_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = sunni_country } add_country_modifier = { name = sunni_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = shiite_country } add_country_modifier = { name = shiite_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = ibadi_country } add_country_modifier = { name = ibadi_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = druze_country } add_country_modifier = { name = druze_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = jewish_country } add_country_modifier = { name = jewish_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = zoroastrian_country } add_country_modifier = { name = zoroastrian_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = yazidi_country } add_country_modifier = { name = yazidi_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = mahayana_country } add_country_modifier = { name = mahayana_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = gelugpa_country } add_country_modifier = { name = gelugpa_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = theravada_country } add_country_modifier = { name = theravada_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = hindu_country } add_country_modifier = { name = hindu_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = shinto_country } add_country_modifier = { name = shinto_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = sikh_country } add_country_modifier = { name = sikh_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = jain_country } add_country_modifier = { name = jain_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = confucian_country } add_country_modifier = { name = confucian_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = animist_country } add_country_modifier = { name = animist_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = fetishist_country } add_country_modifier = { name = fetishist_mod duration = -1 } }
+		any_country = { limit = { ai = no has_country_flag = tengri_country } add_country_modifier = { name = tengri_mod duration = -1 } }
+
+		
+		any_country = {
+			limit = {
 				OR = {
 					has_country_flag = league_of_nations_flag
 					has_country_flag = league_of_nations_founder_flag
@@ -9107,7 +9192,7 @@ country_event = {
 			remove_country_modifier = british_commonwealth_of_nations_head
 			country_event = { id = 71015 days = 1 }
 		}
-
+		
 		any_country = {
 			limit = {
 				ai = no

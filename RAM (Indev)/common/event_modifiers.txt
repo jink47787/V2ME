@@ -182,6 +182,12 @@ divider_for_org_q = { icon = 28 }
 divider_for_org_r = { icon = 28 }
 divider_for_org_s = { icon = 28 }
 divider_for_org_t = { icon = 28 }
+divider_for_org_u = { icon = 28 }
+divider_for_org_v = { icon = 28 }
+divider_for_org_w = { icon = 28 }
+divider_for_org_x = { icon = 28 }
+divider_for_org_y = { icon = 28 }
+divider_for_org_z = { icon = 28 }
 
 # Meta Modifiers used within Dynamic Loc. Never interact with these.
 loc_rename_modifier = { icon = 30 }
@@ -281,6 +287,83 @@ slot_38_province = { icon = 30 }
 slot_39_province = { icon = 30 }
 slot_40_province = { icon = 30 }
 
+# Vars
+mod_0 = { icon = 30 }
+mod_1 = { icon = 30 }
+mod_2 = { icon = 30 }
+mod_3 = { icon = 30 }
+mod_4 = { icon = 30 }
+mod_5 = { icon = 30 }
+mod_6 = { icon = 30 }
+mod_7 = { icon = 30 }
+mod_8 = { icon = 30 }
+mod_9 = { icon = 30 }
+mod_10 = { icon = 30 }
+mod_11 = { icon = 30 }
+mod_12 = { icon = 30 }
+mod_13 = { icon = 30 }
+mod_14 = { icon = 30 }
+mod_15 = { icon = 30 }
+mod_16 = { icon = 30 }
+mod_17 = { icon = 30 }
+mod_18 = { icon = 30 }
+mod_19 = { icon = 30 }
+mod_20 = { icon = 30 }
+mod_21 = { icon = 30 }
+mod_22 = { icon = 30 }
+mod_23 = { icon = 30 }
+mod_24 = { icon = 30 }
+mod_25 = { icon = 30 }
+mod_26 = { icon = 30 }
+mod_27 = { icon = 30 }
+mod_28 = { icon = 30 }
+mod_29 = { icon = 30 }
+mod_30 = { icon = 30 }
+mod_31 = { icon = 30 }
+mod_32 = { icon = 30 }
+mod_33 = { icon = 30 }
+mod_34 = { icon = 30 }
+mod_35 = { icon = 30 }
+mod_36 = { icon = 30 }
+mod_37 = { icon = 30 }
+mod_38 = { icon = 30 }
+mod_39 = { icon = 30 }
+mod_40 = { icon = 30 }
+
+# Ram State Religion Modifiers
+catholic_mod = { icon = 32 }	# Catholic plus n minus 1
+protestant_mod = { icon = 33 }
+reformed_mod = { icon = 50 }
+anglican_mod = { icon = 58 }
+mormon_mod = { icon = 46 }
+orthodox_mod = { icon = 34 }
+coptic_mod = { icon = 35 }
+taiping_mod = { icon = 51 }
+syriac_mod = { icon = 52 }
+sunni_mod = { icon = 36 }
+shiite_mod = { icon = 37 }
+ibadi_mod = { icon = 48 }
+druze_mod = { icon = 49 }
+jewish_mod = { icon = 38 }
+zoroastrian_mod = { icon = 53 }
+yazidi_mod = { icon = 47 }
+mahayana_mod = { icon = 39 }
+gelugpa_mod = { icon = 40 }
+theravada_mod = { icon = 41 }
+hindu_mod = { icon = 42 }
+shinto_mod = { icon = 43 }
+sikh_mod = { icon = 44 }
+jain_mod = { icon = 54 }
+confucian_mod = { icon = 55 }
+animist_mod = { icon = 45 }
+fetishist_mod = { icon = 56 }
+tengri_mod = { icon = 57 }
+
+# Common Dynamic Modifiers
+universal_modifier = { icon = 30 }
+able_modifier = { icon = 30 }
+pop_target = { icon = 30 }
+
 
 # Ram Flavour Modifiers
 dispute_modifier = {
@@ -319,6 +402,11 @@ arbitration_ai_cooldown = {
 
 arbitration_cooldown = {
     icon = 8
+}
+
+
+cyclone = {
+    icon = 33
 }
 
 # GFM Modifiers

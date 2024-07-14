@@ -1400,6 +1400,7 @@ tabbreak_state = {}
 spacebreak_state = {}
 fullstop_state = {}
 
+
 # RAM Key List States
 
 slot_1 = { 2703 }
@@ -1443,6 +1444,12 @@ slot_38 = { 2741 }
 slot_39 = { 2742 }
 slot_40 = { 2743 }
 slots = { 2703 2704 2705 2706 2707 2708 2709 2710 2711 2712 2714 2715 2716 2717 2718 2719 2720 2721 2722 2723 2724 2725 2726 2727 2728 2729 2730 2731 2732 2733 2734 2735 2736 2737 2738 2739 2740 2741 242 2743 }
+
+
+# Common Words 
+
+loc_and = {}
+loc_the_cap = {}
 
 # Fixed States
 
@@ -1516,6 +1523,48 @@ treaty_port_state_1 = {}
 treaty_port_state_2 = {}
 neutrality_state_1 = {}
 commonwealth_games_state_1 = {}
+ram_settings_chaos_mode = {}
+ram_settings_performance_mode = {}
+ram_settings_dev_mode = {}
+ram_settings_chaos_mode_tooltip = {}
+ram_settings_performance_mode_tooltip = {}
+ram_settings_dev_mode_tooltip = {}
+missionaries_loc_1 = {}							# Changed to loc as its less ambiguous
+missionaries_loc_2 = {}
+missionaries_loc_3 = {}							
+missionaries_loc_4 = {}
+missionaries_loc_5 = {}
+missionaries_loc_6 = {}
+missionaries_tooltip_1 = {}
+
+# Meta Effects
+state_religion_catholic = {}							# Changed to loc as its less ambiguous
+state_religion_protestant = {}
+state_religion_reformed = {}
+state_religion_anglican = {}
+state_religion_mormon = {}
+state_religion_orthodox = {}
+state_religion_coptic = {}
+state_religion_taiping = {}
+state_religion_syriac = {}
+state_religion_sunni = {}
+state_religion_shiite = {}
+state_religion_ibadi = {}
+state_religion_druze = {}
+state_religion_jewish = {}
+state_religion_zoroastrian = {}
+state_religion_yazidi = {}
+state_religion_mahayana = {}
+state_religion_gelugpa = {}
+state_religion_theravada = {}
+state_religion_hindu = {}
+state_religion_shinto = {}
+state_religion_sikh = {}
+state_religion_jain = {}
+state_religion_confucian = {}
+state_religion_animist = {}
+state_religion_fetishist = {}
+state_religion_tengri = {}
 
 any_sea_province = {
 
