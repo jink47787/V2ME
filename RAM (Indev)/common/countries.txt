@@ -5,6 +5,7 @@
 # Special countries...
 REB        = "countries/rebels.txt"
 UTI        = "countries/Utility Tag.txt"
+UT2        = "countries/Utility Tag 2.txt"
 CLN        = "countries/Cleanup.txt"
 
 ### NEW NATIONS MOD ###

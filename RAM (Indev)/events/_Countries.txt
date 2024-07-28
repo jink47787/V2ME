@@ -19090,7 +19090,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -37138,7 +37138,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -46162,7 +46162,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -55186,7 +55186,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -73234,7 +73234,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -82258,7 +82258,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -91282,7 +91282,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -118354,7 +118354,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -136402,7 +136402,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -154450,7 +154450,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -172498,7 +172498,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -181522,7 +181522,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -190546,7 +190546,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -199570,7 +199570,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -208594,7 +208594,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -217618,7 +217618,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -226642,7 +226642,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}
@@ -235666,7 +235666,7 @@ country_event = {
 							has_province_modifier = country_rename_modifier
 						}
 						secede_province = THIS
-						state_scope = { change_region_name = "§bUnited Kingdom§!" }
+						state_scope = { change_region_name = "§bThe United Kingdom§!" }
 						secede_province = QQQ
 					}
 				}

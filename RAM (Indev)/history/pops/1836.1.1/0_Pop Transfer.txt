@@ -27,4 +27,31 @@
     zmeta = { culture = noculture religion = animist size = 500 }
 	zmeta = { culture = noculture religion = fetishist size = 500 }
     zmeta = { culture = noculture religion = tengri size = 500 }
+    zmeta = { culture = noculture religion = catholic size = 500 }
+	zmeta = { culture = noculture religion = protestant size = 500 }
+    zmeta = { culture = noculture religion = reformed size = 500 }
+	zmeta = { culture = noculture religion = anglican size = 500 }
+    zmeta = { culture = noculture religion = mormon size = 500 }
+	zmeta = { culture = noculture religion = orthodox size = 500 }
+    zmeta = { culture = noculture religion = coptic size = 500 }
+	zmeta = { culture = noculture religion = taiping size = 500 }
+    zmeta = { culture = noculture religion = syriac size = 500 }
+	zmeta = { culture = noculture religion = sunni size = 500 }
+    zmeta = { culture = noculture religion = shiite size = 500 }
+	zmeta = { culture = noculture religion = ibadi size = 500 }
+    zmeta = { culture = noculture religion = druze size = 500 }
+	zmeta = { culture = noculture religion = jewish size = 500 }
+    zmeta = { culture = noculture religion = zoroastrian size = 500 }
+	zmeta = { culture = noculture religion = yazidi size = 500 }
+    zmeta = { culture = noculture religion = mahayana size = 500 }
+	zmeta = { culture = noculture religion = gelugpa size = 500 }
+    zmeta = { culture = noculture religion = theravada size = 500 }
+	zmeta = { culture = noculture religion = hindu size = 500 }
+    zmeta = { culture = noculture religion = shinto size = 500 }
+	zmeta = { culture = noculture religion = sikh size = 500 }
+    zmeta = { culture = noculture religion = jain size = 500 }
+	zmeta = { culture = noculture religion = confucian size = 500 }
+    zmeta = { culture = noculture religion = animist size = 500 }
+	zmeta = { culture = noculture religion = fetishist size = 500 }
+    zmeta = { culture = noculture religion = tengri size = 500 }
 }

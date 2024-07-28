@@ -1,0 +1,129 @@
+#Missionaries
+
+country_event = { # Setup
+    id = 20300
+    title = "Attempting to Write 2"
+    #desc = ""
+    picture = "commonwealth"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		CLN = { change_variable = { which = slot_itterator_variable value = 0 } }
+		FROM = { set_country_flag = viewer }
+		SMO = { set_country_flag = shun_religon }
+		FIJ = { set_country_flag = shun_religon }
+		any_country = {
+			limit = {
+				civilized = no
+				OR = {
+					capital_scope = { continent = polynesia }
+					capital_scope = { continent = australia_new_zealand }
+					#capital_scope = { continent = oceania }
+				}
+				NOT = { tag = PCF }
+				NOT = { has_country_flag = shun_religon }
+			}
+			set_country_flag = due_for_slotting
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 500 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 400 }
+			clr_country_flag = due_for_slotting
+		}
+		CLN = { set_variable = { which = slot_itterator_variable value = 20 } }
+		any_country = {
+			limit = {
+				civilized = no
+				capital_scope = { continent = polynesia }
+				NOT = { tag = PCF }
+				has_country_flag = shun_religon
+				# has_country_flag = isolation
+			}
+			set_country_flag = due_for_slotting
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 500 }
+			CLN = { change_variable = { which = slot_itterator_variable value = 1 } }
+			CLN = { country_event = 400 }
+			clr_country_flag = due_for_slotting
+		}
+		CLN = { set_variable = { which = slot_itterator_variable value = 0 } }
+		FROM = { 
+			country_event = 20301 
+		}
+	}
+	
+	option = {
+        name = ""
+    }
+}
+
+country_event = { # Setup
+    id = 20301
+    #title = "EVTNAME20301"#"§WMissionary Society Menu§!"
+    #desc = ""
+    picture = "missonaries_society_bg"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		missionaries_menu_loc_1 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_9 = {}
+		slot_10 = {}
+		slot_3 = {}
+		slot_4 = {}
+		slot_1 = {}
+		slot_2 = {}
+		slot_5 = {}
+		slot_6 = {}
+		slot_7 = {}
+		slot_8 = {}
+		slot_15 = {}
+		slot_16 = {}
+		slot_11 = {}
+		slot_12 = {}
+		slot_13 = {}
+		slot_14 = {}
+		slot_19 = {}
+		slot_20 = {}
+		slot_17 = {}
+		slot_18 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		missionaries_menu_loc_2 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		slot_31 = {}
+		slot_32 = {}
+		slot_27 = {}
+		slot_28 = {}
+		slot_23 = {}
+		slot_24 = {}
+		slot_21 = {}
+		slot_22 = {}
+		slot_25 = {}
+		slot_26 = {}
+		slot_39 = {}
+		slot_40 = {}
+		slot_35 = {}
+		slot_36 = {}
+		slot_29 = {}
+		slot_30 = {}
+		slot_33 = {}
+		slot_34 = {}
+		slot_37 = {}
+		slot_38 = {}
+	}
+	
+	option = {
+        name = "Patronise a Mission"
+		clr_country_flag = viewer
+    }
+	
+	option = {
+        name = "Exit"
+		clr_country_flag = viewer
+    }
+}

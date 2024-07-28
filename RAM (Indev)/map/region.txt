@@ -1443,7 +1443,14 @@ slot_37 = { 2740 }
 slot_38 = { 2741 }
 slot_39 = { 2742 }
 slot_40 = { 2743 }
-slots = { 2703 2704 2705 2706 2707 2708 2709 2710 2711 2712 2714 2715 2716 2717 2718 2719 2720 2721 2722 2723 2724 2725 2726 2727 2728 2729 2730 2731 2732 2733 2734 2735 2736 2737 2738 2739 2740 2741 242 2743 }
+
+current_weather_event = { 2744 }
+
+slots = { 2703 2704 2705 2706 2707 2708 2709 2710 2711 2712 2714 2715 2716 2717 2718 2719 2720 2721 2722 2723 2724 2725 2726 2727 2728 2729 2730 2731 2732 2733 2734 2735 2736 2737 2738 2739 2740 2741 242 2743 2744 }
+
+# RAM Special Slots
+
+
 
 
 # Common Words 
@@ -1529,6 +1536,8 @@ ram_settings_dev_mode = {}
 ram_settings_chaos_mode_tooltip = {}
 ram_settings_performance_mode_tooltip = {}
 ram_settings_dev_mode_tooltip = {}
+missionaries_decision_1 = {}
+missionaries_decision_2 = {}
 missionaries_loc_1 = {}							# Changed to loc as its less ambiguous
 missionaries_loc_2 = {}
 missionaries_loc_3 = {}							
@@ -1536,6 +1545,27 @@ missionaries_loc_4 = {}
 missionaries_loc_5 = {}
 missionaries_loc_6 = {}
 missionaries_tooltip_1 = {}
+missionaries_loc_7 = {}
+missionaries_loc_8 = {}
+missionaries_loc_9 = {}
+missionaries_loc_10 = {}
+missionaries_loc_11 = {}
+missionaries_tooltip_2 = {}
+missionaries_loc_12 = {}
+missionaries_loc_13 = {}
+missionaries_loc_14 = {}
+missionaries_loc_15 = {}
+missionaries_loc_16 = {}
+missionaries_tooltip_3 = {}
+missionaries_loc_17 = {}
+missionaries_loc_18 = {}
+missionaries_menu_loc_1 = {}
+missionaries_menu_loc_2 = {}
+tsunami_loc_1 = {}
+tsunami_loc_2 = {}
+tsunami_loc_3 = {}
+tsunami_loc_4 = {}
+tsunami_loc_5 = {}
 
 # Meta Effects
 state_religion_catholic = {}							# Changed to loc as its less ambiguous

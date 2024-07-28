@@ -39,7 +39,8 @@ country_event = {
 		name = "Checking..."
 		country_event = 20
 		country_event = 40 # Government Flag Cleanup
-		country_event = 21001 # Weather Event
+		random_country = { limit = { has_global_flag = tsunami_active } CLN = { country_event = 12345 } } # Tsunami Event
+		random_country = { limit = { has_global_flag = cyclone_active } CLN = { country_event = 12348 } } # Cyclone Event
 		any_land_province = { remove_province_modifier = capital_city_modifier }
 		any_country = {
 			random_pop = {

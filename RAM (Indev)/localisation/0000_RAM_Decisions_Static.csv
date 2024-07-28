@@ -11,3 +11,7 @@ z_dev_mode_title;Development Mode;;;;;;;;;;;;;
 z_dev_mode_desc;This option will provide more information to aid in development. Perforamance will decline. This option is §RNOT§! recommended unless instructed or incase of a very broken save. \n\nThis decision can §RNOT§! be undone.;;;;;;;;;;;;;
 _settings_title;RAM Settings;;;;;;;;;;;;;
 _settings_desc;This decision will open up the RAM settings menu, allowing you to customise your game.;;;;;;;;;;;;;
+missionaries_society_title;Found a Missionary Society;;;;;;;;;;;;;
+missionaries_society_desc;"It is our sacred duty to bring enlightenment to the uncivilized corners of the world. By establishing a missionary society, we can spread our superior faith and values, uplifting benighted peoples and expanding our glorious civilization.".;;;;;;;;;;;;;
+missionaries_menu_title;Open the Missionary Society Menu;;;;;;;;;;;;;
+missionaries_menu_desc;We have an active Missionary Society. This menu provides additional context and options for proselytization.;;;;;;;;;;;;;

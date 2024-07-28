@@ -810,7 +810,48 @@ country_event = {
 					}
 				}
 			}
-			any_land_province = { has_province_modifier = due_for_slotting }
+			any_land_province = { 
+				remove_province_modifier = slot_1_province
+				remove_province_modifier = slot_2_province
+				remove_province_modifier = slot_3_province
+				remove_province_modifier = slot_4_province
+				remove_province_modifier = slot_5_province
+				remove_province_modifier = slot_6_province
+				remove_province_modifier = slot_7_province
+				remove_province_modifier = slot_8_province
+				remove_province_modifier = slot_9_province
+				remove_province_modifier = slot_10_province
+				remove_province_modifier = slot_11_province
+				remove_province_modifier = slot_12_province
+				remove_province_modifier = slot_13_province
+				remove_province_modifier = slot_14_province
+				remove_province_modifier = slot_15_province
+				remove_province_modifier = slot_16_province
+				remove_province_modifier = slot_17_province
+				remove_province_modifier = slot_18_province
+				remove_province_modifier = slot_19_province
+				remove_province_modifier = slot_20_province
+				remove_province_modifier = slot_21_province
+				remove_province_modifier = slot_22_province
+				remove_province_modifier = slot_23_province
+				remove_province_modifier = slot_24_province
+				remove_province_modifier = slot_25_province
+				remove_province_modifier = slot_26_province
+				remove_province_modifier = slot_27_province
+				remove_province_modifier = slot_28_province
+				remove_province_modifier = slot_29_province
+				remove_province_modifier = slot_30_province
+				remove_province_modifier = slot_31_province
+				remove_province_modifier = slot_32_province
+				remove_province_modifier = slot_33_province
+				remove_province_modifier = slot_34_province
+				remove_province_modifier = slot_35_province
+				remove_province_modifier = slot_36_province
+				remove_province_modifier = slot_37_province
+				remove_province_modifier = slot_38_province
+				remove_province_modifier = slot_39_province
+				remove_province_modifier = slot_40_province
+			}
 		}
 	}
 	

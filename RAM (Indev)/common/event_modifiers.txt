@@ -361,6 +361,8 @@ tengri_mod = { icon = 57 }
 
 # Common Dynamic Modifiers
 universal_modifier = { icon = 30 }
+universal_effector_modifier = { icon = 30 }
+sea_scope_modifier = { icon = 30 }
 able_modifier = { icon = 30 }
 pop_target = { icon = 30 }
 
@@ -404,9 +406,20 @@ arbitration_cooldown = {
     icon = 8
 }
 
+possible_cyclone = {
+    icon = 33
+}
+
+recent_cyclone = {
+    icon = 30
+}
 
 cyclone = {
     icon = 33
+}
+
+tsunami = {
+    icon = 61
 }
 
 # GFM Modifiers

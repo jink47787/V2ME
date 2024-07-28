@@ -1,0 +1,77 @@
+political_decisions = {
+
+    missionaries_society = {
+        picture = _missionaries
+        potential = {
+			is_greater_power = yes	
+			OR = {
+				has_country_flag = catholic_country
+				has_country_flag = protestant_country
+				has_country_flag = reformed_country
+				has_country_flag = anglican_country
+			}
+			NOT = { has_country_flag = missionaries_society }
+        }
+
+        allow = {
+			is_greater_power = yes	
+			OR = {
+				has_country_flag = catholic_country
+				has_country_flag = protestant_country
+				has_country_flag = reformed_country
+				has_country_flag = anglican_country
+			}
+			NOT = { has_country_flag = missionaries_society }
+        }
+
+        effect = {
+			missionaries_decision_1 = {}
+			set_global_flag = A
+			random_country = {
+				limit = {
+					has_global_flag = A
+				}
+				THIS = { set_country_flag = missionaries_society }
+			}
+			clr_global_flag = A
+        }
+		ai_will_do = { 
+			factor = 0.5 # 0.5
+			#modifier = {	# Debug
+			#	factor = 0
+			#	tag = CLM
+			#	ai = yes
+			#}
+		}
+    }
+    missionaries_menu = {
+        picture = _missionaries_2
+        potential = {
+			has_country_flag = missionaries_society
+        }
+
+        allow = {
+			has_country_flag = missionaries_society
+        }
+
+        effect = {
+			missionaries_decision_2 = {}
+			set_global_flag = A
+			random_country = {
+				limit = {
+					has_global_flag = A
+				}
+				CLN = { country_event = 20300 }
+			}
+			clr_global_flag = A
+        }
+		ai_will_do = { 
+			factor = 0 # 0.5
+			#modifier = {	# Debug
+			#	factor = 0
+			#	tag = CLM
+			#	ai = yes
+			#}
+		}
+    }
+}
