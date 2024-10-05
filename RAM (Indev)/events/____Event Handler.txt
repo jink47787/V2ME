@@ -10,7 +10,7 @@ country_event = { #
     picture = "collectivisation"
     is_triggered_only = yes
 
-    option = {
+    immediate = {
         name = ""
 		any_country = { change_variable = { which = days_till_cap value = -1 } }
 		any_land_province = {
@@ -32,4 +32,8 @@ country_event = { #
 			owner = { country_event = 20003 }
 		}
     }
+	
+	option = {
+	}
+	
 }

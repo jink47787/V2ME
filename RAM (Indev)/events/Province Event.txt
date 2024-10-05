@@ -1,0 +1,57 @@
+#Introdution Events
+
+country_event = { # Explanation Event
+    id = 998877
+    title = ""
+    #desc = "EVTDESC1000"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		capital_scope = { 
+			add_province_modifier = { name = slot_1_province duration = -1 } 
+		}
+		CLN = { country_event = 201 }
+		capital_scope = { 
+			province_event = { id = 998878 } 
+		}
+	}
+	
+	option = {
+        name = "This isn't my first rodeo"
+    }
+}
+
+province_event = { # Explanation Event
+    id = 998878
+    title = ""
+    #desc = "EVTDESC1000"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+    immediate = {
+		province_menu_desc = {}
+		slot_1 = {}
+	}
+	
+	option = {
+        name = "Begin Constructing Capital"
+    }
+	option = {
+        name = "Provide Local Stimulus"
+    }
+	option = {
+        name = "Grant Autonomy"
+    }
+	option = {
+        name = "Agriculture Reform"
+    }
+	option = {
+        name = "More Details"
+    }
+	option = {
+        name = "Close Menu"
+    }
+}

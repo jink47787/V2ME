@@ -1014,107 +1014,7 @@ guiTypes = {
 		fullScreen = yes
 
 
-		windowType = {
-			name = "messagelog_window"
-			backGround = ""
-			position = { x = -874 y = -156 }	
-			size = { x = 720 y = 100 }	
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = ""
-			verticalBorder = ""
-			fullScreen = no
-			Orientation = "LOWER_RIGHT"
-			
-			iconType = {
-				name = "log_bg"
-				spriteType = "GFX_log_bg"
-				position = { x = 0 y = -3 }
-				Orientation = "UPPER_LEFT"
-			}
 
-			listboxType = {
-				name = "messagelog"
-				position = { x = 0 y = 11 }
-				backGround = ""
-				size = { x = 422 y = 115 }
-				#Orientation = "LOWER_RIGHT"
-				Orientation = "UPPER_LEFT"
-				spacing = 1
-				scrollbartype = "standardlistbox_slider"
-				borderSize = { x = 0 y = 0 }
-			}
-			
-			guiButtonType = {
-				name = "closebutton"
-				position = { x = -293 y = 27 }
-				quadTextureSprite = "GFX_closelog_button"
-				tooltip = ""
-				tooltipText = ""
-				delayedTooltipText = ""
-				buttonText = "  "
-				buttonFont = "Main_14_black"
-
-				Orientation = "LOWER_RIGHT"
-				shortcut = "<"
-			}
-		
-			checkboxType = {
-				name = "messagecat_combat"
-				position = { x = -705 y = 25 }
-				quadTextureSprite = "GFX_messagecat_combat"
-				Orientation = "LOWER_RIGHT"
-			}
-		
-			checkboxType = {
-				name = "messagecat_diplomacy"
-				position = { x = -665 y = 25 }
-				quadTextureSprite = "GFX_messagecat_diplo"
-				Orientation = "LOWER_RIGHT"
-			}
-			
-			checkboxType = {
-				name = "messagecat_units"
-				position = { x = -625 y = 25 }
-				quadTextureSprite = "GFX_messagecat_units"
-				Orientation = "LOWER_RIGHT"
-			}
-			
-			checkboxType = {
-				name = "messagecat_provinces"
-				position = { x = -585 y = 25 }
-				quadTextureSprite = "GFX_messagecat_provinces"
-				Orientation = "LOWER_RIGHT"
-			}
-			
-			checkboxType = {
-				name = "messagecat_events"
-				position = { x = -545 y = 25 }
-				quadTextureSprite = "GFX_messagecat_events"
-				Orientation = "LOWER_RIGHT"
-			}
-			
-			checkboxType = {
-				name = "messagecat_others"
-				position = { x = -505 y = 25 }
-				quadTextureSprite = "GFX_messagecat_other"
-				Orientation = "LOWER_RIGHT"
-			}
-		}
-
-		guiButtonType = {
-				name = "OPENbutton"
-				position = { x = -447 y = -29 }
-				quadTextureSprite = "GFX_openlog_button"
-				tooltip = ""
-				tooltipText = ""
-				delayedTooltipText = ""
-				buttonText = "  "
-				buttonFont = "Main_14_black"
-
-				shortcut = "<"
-				Orientation = "LOWER_RIGHT"
-		}
 	
 
 ##### CHAT WINDOW
@@ -1228,11 +1128,9 @@ guiTypes = {
 	{
 		name = "minimap_bg"
 		spriteType = "GFX_minimap_bg"
-		position = { x = -374 y = -172 }
+		position = { x = -394 y = -192 }
 		Orientation = "LOWER_RIGHT"
 	}
-	
-
 
 		iconType =
 	{
@@ -1304,7 +1202,7 @@ guiTypes = {
 	
 		guiButtonType = {
 			name = "menubar_plans_toggle"
-			position = { x = -33 y = -385 }
+			position = { x = -49 y = -65 }
 			quadTextureSprite = "GFX_bp_toggle_visible"
 			Orientation = "LOWER_RIGHT"
 			clicksound = click
@@ -1313,7 +1211,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "menubar_plans_open"
-			position = { x = -33 y = -354 }
+			position = { x = -49 y = -35 }
 			quadTextureSprite = "GFX_bp_open_manager"
 			Orientation = "LOWER_RIGHT"
 			clicksound = click
@@ -1339,7 +1237,7 @@ guiTypes = {
 			
 		guiButtonType = {
 			name = "button_goto"
-			position = { x = -49 y = -90 }
+			position = { x = -49 y = -95 }
 			quadTextureSprite = "GFX_button_goto"
 			tooltip = ""
 			tooltipText = ""
@@ -1353,14 +1251,14 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "map_zoom_in"
-			position = { x = -45 y = -35 }
+			position = { x = -45 y = -3500 }
 			quadTextureSprite = "GFX_map_zoom_in"
 			Orientation = "LOWER_RIGHT"
 			clicksound = click
 		}
 		guiButtonType = {
 			name = "map_zoom_out"
-			position = { x = -24 y = -35 }
+			position = { x = -24 y = -3500 }
 			quadTextureSprite = "GFX_map_zoom_out"
 			Orientation = "LOWER_RIGHT"
 			clicksound = click
@@ -1558,6 +1456,108 @@ guiTypes = {
 			quadTextureSprite = "GFX_mapmode_naval"
 			Orientation = "LOWER_RIGHT"
 			clicksound = click
+		}
+		
+			windowType = {
+			name = "messagelog_window"
+			backGround = ""
+			position = { x = -810 y = -156 }	
+			size = { x = 720 y = 100 }	
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			verticalBorder = ""
+			fullScreen = no
+			Orientation = "LOWER_RIGHT"
+			
+			iconType = {
+				name = "log_bg"
+				spriteType = "GFX_log_bg"
+				position = { x = 0 y = -3 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			listboxType = {
+				name = "messagelog"
+				position = { x = 0 y = 11 }
+				backGround = ""
+				size = { x = 422 y = 115 }
+				#Orientation = "LOWER_RIGHT"
+				Orientation = "UPPER_LEFT"
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+			}
+			
+			guiButtonType = {
+				name = "closebutton"
+				position = { x = -293 y = 27 }
+				quadTextureSprite = "GFX_closelog_button"
+				tooltip = ""
+				tooltipText = ""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "Main_14_black"
+
+				Orientation = "LOWER_RIGHT"
+				shortcut = "<"
+			}
+		
+			checkboxType = {
+				name = "messagecat_combat"
+				position = { x = -705 y = 25 }
+				quadTextureSprite = "GFX_messagecat_combat"
+				Orientation = "LOWER_RIGHT"
+			}
+		
+			checkboxType = {
+				name = "messagecat_diplomacy"
+				position = { x = -665 y = 25 }
+				quadTextureSprite = "GFX_messagecat_diplo"
+				Orientation = "LOWER_RIGHT"
+			}
+			
+			checkboxType = {
+				name = "messagecat_units"
+				position = { x = -625 y = 25 }
+				quadTextureSprite = "GFX_messagecat_units"
+				Orientation = "LOWER_RIGHT"
+			}
+			
+			checkboxType = {
+				name = "messagecat_provinces"
+				position = { x = -585 y = 25 }
+				quadTextureSprite = "GFX_messagecat_provinces"
+				Orientation = "LOWER_RIGHT"
+			}
+			
+			checkboxType = {
+				name = "messagecat_events"
+				position = { x = -545 y = 25 }
+				quadTextureSprite = "GFX_messagecat_events"
+				Orientation = "LOWER_RIGHT"
+			}
+			
+			checkboxType = {
+				name = "messagecat_others"
+				position = { x = -505 y = 25 }
+				quadTextureSprite = "GFX_messagecat_other"
+				Orientation = "LOWER_RIGHT"
+			}
+		}
+
+		guiButtonType = {
+				name = "OPENbutton"
+				position = { x = -383 y = -29 }
+				quadTextureSprite = "GFX_openlog_button"
+				tooltip = ""
+				tooltipText = ""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "Main_14_black"
+
+				shortcut = "<"
+				Orientation = "LOWER_RIGHT"
 		}
 }
 

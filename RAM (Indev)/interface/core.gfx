@@ -229,6 +229,13 @@ spriteTypes = {
 	}
 	
 	maskedShieldType = {
+		name = "GFX_minishield_small_reb"
+		textureFile1 = "gfx\\interface\\minishield_small_reb.tga"
+		textureFile2 = "gfx\\interface\\minimask_small_reb.tga"
+		effectFile = "gfx\\FX\\maskedflag.fx"
+	}
+	
+	maskedShieldType = {
 		name = "GFX_minishield_war"
 		textureFile1 = "gfx\\interface\\minishield.tga"
 		textureFile2 = "gfx\\interface\\minimask.tga"

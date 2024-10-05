@@ -2,7 +2,7 @@ guiTypes = {
 	windowType = {
 		name = "Event_Province_Window"
 		backGround = "Background"
-		position = { x = -300 y = -300 }	
+		position = { x = -876 y = 160 }	
 		size = { x = 520 y = 410 }
 		moveable = 1
 		dontRender = ""
@@ -52,7 +52,7 @@ guiTypes = {
 			position = { x = 50 y = 108 }
 			textureFile = ""
 			font = "vic_18_black"
-			borderSize = { x = 0 y = 0 }
+			borderSize = { x = 0 y = 10000 }
 			text = "26th of March, 1836"	
 			maxWidth = 280
 			maxHeight = 120
@@ -75,7 +75,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 				name = "Description"
-				position = { x = 30 y = 145 }
+				position = { x = 30 y = 95 }
 				textureFile = ""
 				font = "vic_18_black"
 				borderSize = { x = 0 y = 0 }
@@ -91,14 +91,14 @@ guiTypes = {
 		{
 			name = "event_separator_image"
 			spriteType = "GFX_event_separator"
-			position = { x = 48 y = -18 }
+			position = { x = 128 y = 4013 }
 			Orientation = "UPPER_LEFT"
 		}
 		
 	}
 	guiButtonType = {
 		name = "Event_Province_OptionButton"
-		position = { x = 264 y = 300 }
+		position = { x = 464 y = 300 }
 		quadTextureSprite = "GFX_event_province_button"
 		tooltip = ""
 		tooltipText = ""
@@ -109,12 +109,12 @@ guiTypes = {
 	
 	positionType = {
 		name = "event_province_option_start"
-		position = { x = 28 y = 513 }
+		position = { x = 68 y = 463 }
 	}
 
 	positionType = {
 		name = "event_province_option_offset"
-		position = { x = 0 y = 31 }
+		position = { x = 0 y = 41 }
 	}
 	
 

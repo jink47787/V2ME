@@ -527,6 +527,7 @@ country_event = { # Setup
 		any_sea_province = { limit = { is_core = CLN province_id = 3630 } any_sea_province = { limit = { OR = { province_id = 2779 } NOT = { is_core = UT2 is_core = CLN } } add_province_modifier = { name = sea_scope_modifier duration = -1 } } remove_core = CLN add_core = UT2 any_neighbor_province = { add_province_modifier = { name = tsunami duration = 3 } } }
 		any_sea_province = { limit = { is_core = CLN province_id = 3643 } any_sea_province = { limit = { OR = { province_id = 2988 } NOT = { is_core = UT2 is_core = CLN } } add_province_modifier = { name = sea_scope_modifier duration = -1 } } remove_core = CLN add_core = UT2 any_neighbor_province = { add_province_modifier = { name = tsunami duration = 3 } } }
 		any_sea_province = { limit = { has_province_modifier = sea_scope_modifier } add_core = CLN remove_province_modifier = sea_scope_modifier }
+		any_land_province = { limit = { has_province_modifier = tsunami } add_province_modifier = { name = disaster_recovery duration = 28 } }
 		CLN = { change_variable = { which = tsunami_age value = -1 } }
 		any_country = { 
 			limit = { CLN = { NOT = { check_variable = { which = tsunami_age value = 1 } } } } 
@@ -575,7 +576,7 @@ country_event = { # Setup
 	
 	option = {
         name = "Trigger Cyclone on Nolfork Island"
-		2865 = { add_core = CLN }
+		2508 = { add_province_modifier = { name = cyclone duration = -1 } } # Nolforks Provid?
 		set_global_flag = cyclone_active
 		CLN = { set_variable = { which = cyclone_age value = 50 } }
     }
@@ -604,8 +605,9 @@ country_event = { # Setup
     is_triggered_only = yes
 	
 	immediate = {
-		clr_global_flag = sea_cyclone
-		clr_global_flag = landlocked_cyclone
+		#clr_global_flag = cyclone_neighboring_land_province
+		#clr_global_flag = cyclone_neighboring_sea_province
+		#clr_global_flag = cyclone_available_land_province
 		any_land_province = {
 			limit = {
 				has_province_modifier = cyclone
@@ -1131,17 +1133,16 @@ country_event = { # Setup
 		any_sea_province = { limit = { is_core = CLN province_id = 3643 } any_sea_province = { limit = { OR = { province_id = 2988 } NOT = { is_core = UT2 is_core = CLN } } add_province_modifier = { name = sea_scope_modifier duration = -1 } } remove_core = CLN add_core = UT2 any_neighbor_province = { add_province_modifier = { name = possible_cyclone duration = -1 } } }
 		any_sea_province = { limit = { has_province_modifier = sea_scope_modifier } add_core = CLN remove_province_modifier = sea_scope_modifier }
 		any_land_province = {
-			limit = {
-				has_province_modifier = cyclone
-				is_coastal = no
-			}
-			set_global_flag = landlocked_cyclone
+			limit = { has_province_modifier = cyclone }
+			any_neighbor_province = { limit = { NOT = { terrain = ocean has_province_modifier = recent_cyclone } } add_core = FSA set_global_flag = cyclone_neighboring_land_province }
 		}
-		any_sea_province = {
-			limit = {
-				is_core = CLN
-			}
-			set_global_flag = sea_cyclone
+		any_land_province = {
+			limit = { has_province_modifier = cyclone is_coastal = yes }
+			set_global_flag = cyclone_neighboring_sea_province
+		}
+		any_land_province = {
+			limit = { has_province_modifier = possible_cyclone is_coastal = yes NOT = { has_province_modifier = recent_cyclone } }
+			set_global_flag = cyclone_available_land_province
 		}
 	}
 
@@ -1169,10 +1170,11 @@ country_event = { # Setup
 			}
 			remove_province_modifier = possible_cyclone
 			add_province_modifier = { name = cyclone duration = -1 }
+			add_province_modifier = { name = disaster_recovery duration = 28 }
 		}
 		ai_chance = { 
 			factor = 0.5
-			modifier = { factor = 0 has_global_flag = cyclone_sea }
+			modifier = { factor = 0 NOT = { has_global_flag = cyclone_neighboring_land_province } }
 		}
     }
 	
@@ -1193,8 +1195,7 @@ country_event = { # Setup
 		set_global_flag = cyclone_sea
 		ai_chance = { 
 			factor = 0.5
-			modifier = { factor = 0 has_global_flag = cyclone_sea  }
-			modifier = { factor = 0 has_global_flag = landlocked_cyclone  }
+			modifier = { factor = 0 NOT = { has_global_flag = cyclone_neighboring_sea_province } }
 		}
     }
 	
@@ -1208,6 +1209,8 @@ country_event = { # Setup
                     NOT = { has_province_modifier = recent_cyclone }
                 }
                 add_province_modifier = { name = cyclone duration = -1 }
+				add_province_modifier = { name = disaster_recovery duration = 28 }
+				CLN = { country_event = 12353 }
             }
         }
 		any_land_province = {
@@ -1221,7 +1224,7 @@ country_event = { # Setup
 		set_global_flag = cyclone_land
 		ai_chance = { 
 			factor = 0.5
-			modifier = { factor = 0 NOT = { has_global_flag = cyclone_sea } }
+			modifier = { factor = 0 NOT = { has_global_flag = cyclone_available_land_province } }
 		}
     }
 	
@@ -1962,5 +1965,79 @@ country_event = { # Setup
 	
 	option = {
         name = "Nature's fury knows no bounds..."
+		any_effected_province = {}
+		any_land_province = { limit = { has_province_modifier = tsunami }  any_pop = { reduce_pop = 0.8 } infrastructure  = -1 add_province_modifier = { name = disaster_recovery duration = 27 } }
+    }
+}
+
+country_event = { # Setup
+    id = 12353
+    title = "Cyclone Coast Setup"
+    #desc = ""
+    picture = "tsunami"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				NOT = { has_country_flag = cyclone_impact_happened }
+				any_owned_province = { has_province_modifier = cyclone }
+			}
+            random_owned = {
+                limit = { 
+                    has_province_modifier = cyclone
+					owner = { NOT = { has_country_flag = cyclone_impact_happened } }
+                }
+                owner = { set_country_flag = cyclone_impact_happened }
+				owner = { set_country_flag = viewer }
+				add_province_modifier = { name = slot_1_province duration = -1 } 
+				CLN = { country_event = 201 }
+				owner = { clr_country_flag = viewer }
+				owner = { country_event = 12354 }
+            }
+		}
+	}
+	
+	option = {
+        name = "Nature has rewritten the rules of engagement."
+    }
+}
+
+country_event = { # Setup
+    id = 12354
+    title = "Cyclone Makes Landfall"
+    #desc = ""
+    picture = "cyclone"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		cyclone_loc_1 = {}
+		slot_1 = {}
+		cyclone_loc_2 = {}
+	}
+	
+	option = {
+        name = "Weather the storm"
+		any_effected_province = {}
+		any_land_province = { limit = { has_province_modifier = cyclone } any_pop = { reduce_pop = 0.9 } infrastructure  = -1 }
+    }
+}
+
+country_event = { # Setup
+    id = 999
+    title = "Cyclone Makes Landfall"
+    #desc = ""
+    picture = "cyclone"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		CLN = { country_event = 12353 }
+	}
+	
+	option = {
+        name = "Weather the storm"
     }
 }

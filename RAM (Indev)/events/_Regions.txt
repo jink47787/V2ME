@@ -1307,7 +1307,7 @@ country_event = {
 			slot_1 = { add_province_modifier = { name = regions_loc_sea duration = -1 } }
 			remove_province_modifier = slot_1_region
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1318,7 +1318,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlaskaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1326,10 +1326,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthwest Territoriesß!" }
+			state_scope = { change_region_name = "ßbNorthwest_Territoriesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1340,7 +1340,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbColumbiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1351,7 +1351,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlbertaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1362,7 +1362,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSaskatchewanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1373,7 +1373,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbManitobaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1381,10 +1381,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthern Ontarioß!" }
+			state_scope = { change_region_name = "ßbSouthern_Ontarioß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1392,10 +1392,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Ontarioß!" }
+			state_scope = { change_region_name = "ßbNorthern_Ontarioß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1406,7 +1406,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbQuebecß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1417,7 +1417,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMaritimesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1428,7 +1428,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNewfoundlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1439,7 +1439,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWashingtonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1450,7 +1450,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOregonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1461,7 +1461,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCaliforniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1472,7 +1472,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIdahoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1483,7 +1483,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNevadaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1494,7 +1494,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUtahß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1505,7 +1505,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbArizonaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1513,10 +1513,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNew Mexicoß!" }
+			state_scope = { change_region_name = "ßbNew_Mexicoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1527,7 +1527,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbColoradoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1538,7 +1538,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWyomingß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1549,7 +1549,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMontanaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1557,10 +1557,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Dakotaß!" }
+			state_scope = { change_region_name = "ßbNorth_Dakotaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1568,10 +1568,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Dakotaß!" }
+			state_scope = { change_region_name = "ßbSouth_Dakotaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1582,7 +1582,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNebraskaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1593,7 +1593,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKansasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1604,7 +1604,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTexasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1615,7 +1615,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOklahomaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1626,7 +1626,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLouisianaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1637,7 +1637,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbArkansasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1648,7 +1648,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMissouriß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1659,7 +1659,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIowaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1670,7 +1670,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMinnesotaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1681,7 +1681,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWisconsinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1692,7 +1692,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIllinoisß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1703,7 +1703,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIndianaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1714,7 +1714,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMichiganß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1722,10 +1722,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Virginiaß!" }
+			state_scope = { change_region_name = "ßbWest_Virginiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1736,7 +1736,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKentuckyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1747,7 +1747,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMississippiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1758,7 +1758,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTennesseeß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1769,7 +1769,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlabamaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1780,7 +1780,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFloridaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1791,7 +1791,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGeorgiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1799,10 +1799,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Carolinaß!" }
+			state_scope = { change_region_name = "ßbNorth_Carolinaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1810,10 +1810,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Carolinaß!" }
+			state_scope = { change_region_name = "ßbSouth_Carolinaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1824,7 +1824,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVirginiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1835,7 +1835,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOhioß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1846,7 +1846,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMarylandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1857,7 +1857,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPennsylvaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1865,10 +1865,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNew Jerseyß!" }
+			state_scope = { change_region_name = "ßbNew_Jerseyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1876,10 +1876,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNew Yorkß!" }
+			state_scope = { change_region_name = "ßbNew_Yorkß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1890,7 +1890,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMassachusettsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1898,10 +1898,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNew Englandß!" }
+			state_scope = { change_region_name = "ßbNew_Englandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1912,7 +1912,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUlsterß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1923,7 +1923,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbConnachtß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1934,7 +1934,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMunsterß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1945,7 +1945,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLeinsterß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1956,7 +1956,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHighlandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1967,7 +1967,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLowlandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1978,7 +1978,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWalesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1986,10 +1986,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth West Englandß!" }
+			state_scope = { change_region_name = "ßbNorth_West_Englandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -1997,10 +1997,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth East Englandß!" }
+			state_scope = { change_region_name = "ßbNorth_East_Englandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2011,7 +2011,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMidlandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2019,10 +2019,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Countiesß!" }
+			state_scope = { change_region_name = "ßbEastern_Countiesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2030,10 +2030,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth West Englandß!" }
+			state_scope = { change_region_name = "ßbSouth_West_Englandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2041,10 +2041,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth East Englandß!" }
+			state_scope = { change_region_name = "ßbSouth_East_Englandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2052,10 +2052,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbIceland & Greenlandß!" }
+			state_scope = { change_region_name = "ßbIceland_&_Greenlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2066,7 +2066,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNorrlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2077,7 +2077,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVestlandetß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2088,7 +2088,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMalmoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2099,7 +2099,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNordnorgeß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2110,7 +2110,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbStockholmß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2121,7 +2121,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGoteburgß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2132,7 +2132,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOstlandetß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2140,10 +2140,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Finlandß!" }
+			state_scope = { change_region_name = "ßbNorthern_Finlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2154,7 +2154,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHelsinkiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2165,7 +2165,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTurkuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2176,7 +2176,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbJyllandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2187,7 +2187,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHolsteinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2198,7 +2198,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSchleswigß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2209,7 +2209,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSjaellandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2220,7 +2220,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHollandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2231,7 +2231,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbZeelandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2242,7 +2242,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFrieslandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2253,7 +2253,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFlandersß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2264,7 +2264,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWalloniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2275,7 +2275,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPicardieß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2286,7 +2286,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbChampagneß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2297,7 +2297,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNord-Pas-De-Calais/Artoisß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2308,7 +2308,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLorraineß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2319,7 +2319,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFranche-Comt√©ß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2330,7 +2330,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlsace-Lorraineß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2341,7 +2341,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNormandieß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2352,7 +2352,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBretagneß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2360,10 +2360,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbIle de Franceß!" }
+			state_scope = { change_region_name = "ßbIle_de_Franceß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2374,7 +2374,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBourgogneß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2385,7 +2385,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLoireß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2393,10 +2393,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbRegion Centreß!" }
+			state_scope = { change_region_name = "ßbRegion_Centreß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2407,7 +2407,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPoitouß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2418,7 +2418,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLimousinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2429,7 +2429,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbRhoneß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2437,10 +2437,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLe Midiß!" }
+			state_scope = { change_region_name = "ßbLe_Midiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2451,7 +2451,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAquitaineß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2462,7 +2462,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLanguedocß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2473,7 +2473,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSavoieß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2484,7 +2484,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbProvenceß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2495,7 +2495,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGaliciaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2506,7 +2506,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLe√≥n-Castillaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2517,7 +2517,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbExtremaduraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2525,10 +2525,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCastilla la Nuevaß!" }
+			state_scope = { change_region_name = "ßbCastilla_la_Nuevaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2539,7 +2539,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVasconia-Arag√≥nß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2550,7 +2550,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCataloniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2561,7 +2561,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbValenciaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2572,7 +2572,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAndaluciaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2583,7 +2583,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGranadaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2594,7 +2594,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDouroß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2605,7 +2605,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEstremaduraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2616,7 +2616,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlentejoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2627,7 +2627,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMacaronesiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2635,10 +2635,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLower Elbeß!" }
+			state_scope = { change_region_name = "ßbLower_Elbeß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2649,7 +2649,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHannoverß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2657,10 +2657,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Frieslandß!" }
+			state_scope = { change_region_name = "ßbEast_Frieslandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2671,7 +2671,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMecklenburgß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2682,7 +2682,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPomeraniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2693,7 +2693,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBrandenburgß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2704,7 +2704,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMagdeburgß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2712,10 +2712,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbUpper Silesiaß!" }
+			state_scope = { change_region_name = "ßbUpper_Silesiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2726,7 +2726,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSaxonyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2737,7 +2737,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHessenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2748,7 +2748,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPalatinateß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2759,7 +2759,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbRheinlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2767,10 +2767,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Rheinlandß!" }
+			state_scope = { change_region_name = "ßbEastern_Rheinlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2781,7 +2781,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWestfalenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2792,7 +2792,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBadenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2803,7 +2803,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWurttemburgß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2814,7 +2814,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFranconiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2822,10 +2822,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbUpper Bavariaß!" }
+			state_scope = { change_region_name = "ßbUpper_Bavariaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2833,10 +2833,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSwiss Mittellandß!" }
+			state_scope = { change_region_name = "ßbSwiss_Mittellandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2844,10 +2844,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbRÈgion LÈmaniqueß!" }
+			state_scope = { change_region_name = "ßbRÈgion_LÈmaniqueß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2858,7 +2858,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlpenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2866,10 +2866,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLower Silesiaß!" }
+			state_scope = { change_region_name = "ßbLower_Silesiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2880,7 +2880,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbThuringiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2891,7 +2891,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWestpreu√üenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2902,7 +2902,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOstpreu√üenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2913,7 +2913,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPosenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2924,7 +2924,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTirolß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2935,7 +2935,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbK√§rnten-Steiermarkß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2946,7 +2946,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBurgenlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2957,7 +2957,7 @@ country_event = {
 			state_scope = { change_region_name = "ßb√ñsterreichß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2968,7 +2968,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTransdanubiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2979,7 +2979,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBohemiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -2990,7 +2990,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMoravia/Sudetesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3001,7 +3001,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSlovakiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3012,7 +3012,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTranscarpathiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3020,10 +3020,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCentral Hungaryß!" }
+			state_scope = { change_region_name = "ßbCentral_Hungaryß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3034,7 +3034,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBanatß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3042,10 +3042,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Transylvaniaß!" }
+			state_scope = { change_region_name = "ßbNorthern_Transylvaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3056,7 +3056,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGalicia-Lodomeriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3064,10 +3064,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthern Transylvaniaß!" }
+			state_scope = { change_region_name = "ßbSouthern_Transylvaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3075,10 +3075,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Galiciaß!" }
+			state_scope = { change_region_name = "ßbEast_Galiciaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3086,10 +3086,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Galiciaß!" }
+			state_scope = { change_region_name = "ßbWest_Galiciaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3100,7 +3100,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEmilia-Romagnaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3111,7 +3111,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVenetiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3122,7 +3122,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSloveniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3133,7 +3133,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIstriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3141,10 +3141,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Tirolß!" }
+			state_scope = { change_region_name = "ßbSouth_Tirolß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3155,7 +3155,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCroatiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3166,7 +3166,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSlavoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3177,7 +3177,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDalmatiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3188,7 +3188,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVojvodinaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3199,7 +3199,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPiemonteß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3210,7 +3210,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTuscanyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3221,7 +3221,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLombardiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3232,7 +3232,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLazioß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3243,7 +3243,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPugliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3254,7 +3254,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCampaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3265,7 +3265,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSicilyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3273,10 +3273,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSardinia & Corsciaß!" }
+			state_scope = { change_region_name = "ßbSardinia_&_Corsciaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3287,7 +3287,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWallachiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3298,7 +3298,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMoldaviaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3309,7 +3309,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDobrudjaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3320,7 +3320,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBessarabiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3331,7 +3331,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBosniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3339,10 +3339,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Serbiaß!" }
+			state_scope = { change_region_name = "ßbNorthern_Serbiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3353,7 +3353,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMontenegroß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3361,10 +3361,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthern Serbiaß!" }
+			state_scope = { change_region_name = "ßbSouthern_Serbiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3372,10 +3372,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthern Macedoniaß!" }
+			state_scope = { change_region_name = "ßbSouthern_Macedoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3383,10 +3383,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Macedoniaß!" }
+			state_scope = { change_region_name = "ßbNorthern_Macedoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3394,10 +3394,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Rumeliaß!" }
+			state_scope = { change_region_name = "ßbEastern_Rumeliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3408,7 +3408,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBulgariaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3416,10 +3416,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Macedoniaß!" }
+			state_scope = { change_region_name = "ßbEastern_Macedoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3430,7 +3430,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPeloponneseß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3441,7 +3441,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbThessaliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3449,10 +3449,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbAttica - Central Greeceß!" }
+			state_scope = { change_region_name = "ßbAttica_-_Central_Greeceß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3460,10 +3460,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbAegean Islandsß!" }
+			state_scope = { change_region_name = "ßbAegean_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3474,7 +3474,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlbaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3485,7 +3485,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCyprusß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3496,7 +3496,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbThraceß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3507,7 +3507,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHudavendigarß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3518,7 +3518,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDiyarbakirß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3529,7 +3529,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAydinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3540,7 +3540,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKonyaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3551,7 +3551,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAnkaraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3562,7 +3562,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSivasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3573,7 +3573,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKastamonuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3584,7 +3584,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTrabizondß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3595,7 +3595,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbErzurumß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3606,7 +3606,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKarsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3617,7 +3617,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3628,7 +3628,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEskishehirß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3639,7 +3639,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAdanaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3650,7 +3650,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAleppoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3658,10 +3658,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbDayr al-Zurß!" }
+			state_scope = { change_region_name = "ßbDayr_al-Zurß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3672,7 +3672,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSyriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3683,7 +3683,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAnazzahß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3694,7 +3694,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLebanonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3705,7 +3705,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPalestineß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3716,7 +3716,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMosulß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3727,7 +3727,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBaghdadß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3738,7 +3738,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBasraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3746,10 +3746,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbGeorgia - split into West and Eastß!" }
+			state_scope = { change_region_name = "ßbGeorgia_-_split_into_West_and_Eastß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3757,10 +3757,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Georgiaß!" }
+			state_scope = { change_region_name = "ßbWest_Georgiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3771,7 +3771,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbArmeniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3782,7 +3782,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbShirvanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3793,7 +3793,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbArranß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3804,7 +3804,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbQa'inatß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3812,10 +3812,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Azerbaijanß!" }
+			state_scope = { change_region_name = "ßbWest_Azerbaijanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3826,7 +3826,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMazandaranß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3834,10 +3834,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbIrakajemi - now Northern Irakajamiß!" }
+			state_scope = { change_region_name = "ßbIrakajemi_-_now_Northern_Irakajamiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3845,10 +3845,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Azerbaijanß!" }
+			state_scope = { change_region_name = "ßbEast_Azerbaijanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3859,7 +3859,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKhuzestanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3867,10 +3867,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbIsfahan - now Southern Irakajamiß!" }
+			state_scope = { change_region_name = "ßbIsfahan_-_now_Southern_Irakajamiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3881,7 +3881,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbYazd-Semnanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3889,10 +3889,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLuristan - now Kordestanß!" }
+			state_scope = { change_region_name = "ßbLuristan_-_now_Kordestanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3903,7 +3903,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFarsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3914,7 +3914,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHormozganß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3925,7 +3925,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKermanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3936,7 +3936,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKhorasanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3947,7 +3947,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHedjazß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3958,7 +3958,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAsirß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3969,7 +3969,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHailß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3980,7 +3980,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNajdß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3991,7 +3991,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHassaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -3999,10 +3999,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbAbu Dhabiß!" }
+			state_scope = { change_region_name = "ßbAbu_Dhabiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4013,7 +4013,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOmanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4024,7 +4024,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAdenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4035,7 +4035,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHadramawtß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4046,7 +4046,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSanaaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4057,7 +4057,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKirghiziaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4068,7 +4068,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKhivaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4079,7 +4079,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTurkestanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4090,7 +4090,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFerghanaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4101,7 +4101,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBukharaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4112,7 +4112,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKhatlonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4123,7 +4123,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTranscaspiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4131,10 +4131,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Pashtunistanß!" }
+			state_scope = { change_region_name = "ßbWest_Pashtunistanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4145,7 +4145,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHazaristanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4153,10 +4153,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Pashtunistanß!" }
+			state_scope = { change_region_name = "ßbEast_Pashtunistanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4167,7 +4167,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSistanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4178,7 +4178,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHeratß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4189,7 +4189,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKunduzß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4200,7 +4200,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEstoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4211,7 +4211,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLivoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4222,7 +4222,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCourlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4233,7 +4233,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVitebskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4244,7 +4244,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLithuaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4255,7 +4255,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKareliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4266,7 +4266,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMasoviaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4277,7 +4277,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSuwalkiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4288,7 +4288,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGrodnoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4299,7 +4299,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMinskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4310,7 +4310,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVilnaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4321,7 +4321,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSmolenskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4332,7 +4332,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOrshaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4343,7 +4343,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKievß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4354,7 +4354,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVolynß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4365,7 +4365,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCrimeaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4376,7 +4376,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPodoliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4387,7 +4387,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKherson-Zaporizhiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4398,7 +4398,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbYekaterinoslavß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4409,7 +4409,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTransnistriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4420,7 +4420,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTambovß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4431,7 +4431,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKurskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4442,7 +4442,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbChernigovß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4450,10 +4450,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbDon Host Oblastß!" }
+			state_scope = { change_region_name = "ßbDon_Host_Oblastß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4464,7 +4464,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbArkhangelskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4475,7 +4475,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGalichß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4486,7 +4486,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIngriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4497,7 +4497,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTverß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4508,7 +4508,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVladimirß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4519,7 +4519,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNovgorodß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4530,7 +4530,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPskovß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4541,7 +4541,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMoscowß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4552,7 +4552,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKharkovß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4563,7 +4563,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNizhgorodß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4574,7 +4574,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPermß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4585,7 +4585,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTartariaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4596,7 +4596,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTobolskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4607,7 +4607,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCircassiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4618,7 +4618,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDaghestanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4629,7 +4629,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSamaraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4640,7 +4640,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOrenburgß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4651,7 +4651,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAstrakhanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4659,10 +4659,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbOb - Yamaliaß!" }
+			state_scope = { change_region_name = "ßbOb_-_Yamaliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4670,10 +4670,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbUpper Yeniseysk - Krasnoyarskß!" }
+			state_scope = { change_region_name = "ßbUpper_Yeniseysk_-_Krasnoyarskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4684,7 +4684,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbYakutskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4695,7 +4695,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKamchatkaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4706,7 +4706,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIrkutskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4717,7 +4717,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTrans-Baikalß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4725,10 +4725,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbGuanwai - Outer Manchuriaß!" }
+			state_scope = { change_region_name = "ßbGuanwai_-_Outer_Manchuriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4739,7 +4739,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSakhalinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4750,7 +4750,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUralskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4761,7 +4761,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTomskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4769,10 +4769,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSemireche - Zhetysuß!" }
+			state_scope = { change_region_name = "ßbSemireche_-_Zhetysuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4783,7 +4783,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAkmolinskß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4794,7 +4794,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUralß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4805,7 +4805,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKomi-Zyryanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4813,10 +4813,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Caucasusß!" }
+			state_scope = { change_region_name = "ßbNorthern_Caucasusß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4827,7 +4827,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBaluchistanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4838,7 +4838,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKashmirß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4849,7 +4849,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPunjabß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4860,7 +4860,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSindhß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4868,10 +4868,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest United Provincesß!" }
+			state_scope = { change_region_name = "ßbWest_United_Provincesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4879,10 +4879,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast United Provincesß!" }
+			state_scope = { change_region_name = "ßbEast_United_Provincesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4893,7 +4893,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNepalß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4904,7 +4904,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBiharß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4912,10 +4912,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Bengalß!" }
+			state_scope = { change_region_name = "ßbWest_Bengalß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4923,10 +4923,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Bengalß!" }
+			state_scope = { change_region_name = "ßbEast_Bengalß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4937,7 +4937,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAssamß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4945,10 +4945,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbShan States - Yadanabon - Mandalyß!" }
+			state_scope = { change_region_name = "ßbShan_States_-_Yadanabon_-_Mandalyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4956,10 +4956,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCentral Indiaß!" }
+			state_scope = { change_region_name = "ßbCentral_Indiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4970,7 +4970,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNagpurß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4981,7 +4981,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbRajputanaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -4992,7 +4992,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHyderabadß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5003,7 +5003,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGujaratß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5014,7 +5014,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBombayß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5022,10 +5022,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbPortuguese Indiaß!" }
+			state_scope = { change_region_name = "ßbPortuguese_Indiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5033,10 +5033,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbFrench Indiaß!" }
+			state_scope = { change_region_name = "ßbFrench_Indiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5047,7 +5047,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMadrasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5058,7 +5058,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCircarsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5069,7 +5069,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMysoreß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5080,7 +5080,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTravancoreß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5091,7 +5091,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCeylonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5102,7 +5102,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHimalayaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5113,7 +5113,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPeguß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5124,7 +5124,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOrissaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5135,7 +5135,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKachinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5146,7 +5146,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTenasserimß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5154,10 +5154,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbIndian Ocean Territoryß!" }
+			state_scope = { change_region_name = "ßbIndian_Ocean_Territoryß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5168,7 +5168,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPattaniß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5179,7 +5179,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbShanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5190,7 +5190,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIsanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5201,7 +5201,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLaosß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5212,7 +5212,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCambodiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5223,7 +5223,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTonkinß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5234,7 +5234,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAnnamß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5245,7 +5245,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCochinchinaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5253,10 +5253,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthern Malayaß!" }
+			state_scope = { change_region_name = "ßbSouthern_Malayaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5264,10 +5264,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Malayaß!" }
+			state_scope = { change_region_name = "ßbNorthern_Malayaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5278,7 +5278,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAyutthayaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5286,10 +5286,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Borneoß!" }
+			state_scope = { change_region_name = "ßbSouth_Borneoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5300,7 +5300,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSarawakß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5311,7 +5311,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSumatraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5322,7 +5322,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSiakß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5333,7 +5333,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAcehß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5341,10 +5341,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWestern Javaß!" }
+			state_scope = { change_region_name = "ßbWestern_Javaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5352,10 +5352,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Javaß!" }
+			state_scope = { change_region_name = "ßbEastern_Javaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5363,10 +5363,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Borneoß!" }
+			state_scope = { change_region_name = "ßbEast_Borneoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5374,10 +5374,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Borneoß!" }
+			state_scope = { change_region_name = "ßbWest_Borneoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5385,10 +5385,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSunda Islandsß!" }
+			state_scope = { change_region_name = "ßbSunda_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5399,7 +5399,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTimorß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5410,7 +5410,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMoluccasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5421,7 +5421,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCelebesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5429,10 +5429,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWestern New Guineaß!" }
+			state_scope = { change_region_name = "ßbWestern_New_Guineaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5443,7 +5443,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLuzonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5454,7 +5454,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVisayasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5465,7 +5465,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMindanaoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5476,7 +5476,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUrgaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5487,7 +5487,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUliastaiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5495,10 +5495,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Anhweiß!" }
+			state_scope = { change_region_name = "ßbSouth_Anhweiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5509,7 +5509,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKashgarß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5520,7 +5520,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFengtienß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5531,7 +5531,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFukienß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5542,7 +5542,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFormosaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5553,7 +5553,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKansuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5561,10 +5561,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Cantonß!" }
+			state_scope = { change_region_name = "ßbEast_Cantonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5572,10 +5572,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Cantonß!" }
+			state_scope = { change_region_name = "ßbWest_Cantonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5586,7 +5586,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbYunnanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5594,10 +5594,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Szechwanß!" }
+			state_scope = { change_region_name = "ßbWest_Szechwanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5605,10 +5605,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbInner Mongoliaß!" }
+			state_scope = { change_region_name = "ßbInner_Mongoliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5616,10 +5616,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Honanß!" }
+			state_scope = { change_region_name = "ßbWest_Honanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5630,7 +5630,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKweichowß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5638,10 +5638,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Hupehß!" }
+			state_scope = { change_region_name = "ßbEast_Hupehß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5649,10 +5649,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Hunanß!" }
+			state_scope = { change_region_name = "ßbNorth_Hunanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5660,10 +5660,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Hunanß!" }
+			state_scope = { change_region_name = "ßbSouth_Hunanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5671,10 +5671,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Honanß!" }
+			state_scope = { change_region_name = "ßbEast_Honanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5682,10 +5682,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Kiangsuß!" }
+			state_scope = { change_region_name = "ßbSouth_Kiangsuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5693,10 +5693,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Kiangsuß!" }
+			state_scope = { change_region_name = "ßbNorth_Kiangsuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5704,10 +5704,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Kiangsiß!" }
+			state_scope = { change_region_name = "ßbNorth_Kiangsiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5715,10 +5715,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Kiangsiß!" }
+			state_scope = { change_region_name = "ßbSouth_Kiangsiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5729,7 +5729,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHeilungkiangß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5740,7 +5740,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTsinghaiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5751,7 +5751,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbShensiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5759,10 +5759,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Shantungß!" }
+			state_scope = { change_region_name = "ßbWest_Shantungß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5770,10 +5770,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Shantungß!" }
+			state_scope = { change_region_name = "ßbEast_Shantungß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5784,7 +5784,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbShansiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5792,10 +5792,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Hupehß!" }
+			state_scope = { change_region_name = "ßbWest_Hupehß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5803,10 +5803,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Szechwanß!" }
+			state_scope = { change_region_name = "ßbEast_Szechwanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5814,10 +5814,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Anhweiß!" }
+			state_scope = { change_region_name = "ßbNorth_Anhweiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5828,7 +5828,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUrumtsiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5839,7 +5839,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKwangsiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5847,10 +5847,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Chekiangß!" }
+			state_scope = { change_region_name = "ßbNorth_Chekiangß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5858,10 +5858,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Chekiangß!" }
+			state_scope = { change_region_name = "ßbSouth_Chekiangß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5872,7 +5872,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBaodingß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5883,7 +5883,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPekingß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5894,7 +5894,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPyongyangß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5905,7 +5905,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSeoulß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5916,7 +5916,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHamhungß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5927,7 +5927,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKyushuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5935,10 +5935,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEzo - Hokkaidoß!" }
+			state_scope = { change_region_name = "ßbEzo_-_Hokkaidoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5949,7 +5949,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbChugokuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5960,7 +5960,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKantoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5968,10 +5968,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbBonin Islandsß!" }
+			state_scope = { change_region_name = "ßbBonin_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5982,7 +5982,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKansaiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -5993,7 +5993,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPusanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6004,7 +6004,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbShikokuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6015,7 +6015,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTohokuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6026,7 +6026,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbChubuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6037,7 +6037,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAgadirß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6048,7 +6048,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMoroccoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6059,7 +6059,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFezß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6067,10 +6067,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbal Rifß!" }
+			state_scope = { change_region_name = "ßbal_Rifß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6081,7 +6081,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTazaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6089,10 +6089,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWestern Saharaß!" }
+			state_scope = { change_region_name = "ßbWestern_Saharaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6103,7 +6103,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlgiersß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6114,7 +6114,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOranß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6125,7 +6125,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbConstantineß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6133,10 +6133,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Central Saharaß!" }
+			state_scope = { change_region_name = "ßbNorth_Central_Saharaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6147,7 +6147,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSaharaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6158,7 +6158,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTunisiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6169,7 +6169,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTripolitaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6180,7 +6180,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCyrenaicaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6191,7 +6191,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCairoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6202,7 +6202,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAlexandriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6213,7 +6213,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSinaiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6221,10 +6221,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEgyptian Desertß!" }
+			state_scope = { change_region_name = "ßbEgyptian_Desertß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6232,10 +6232,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbMiddle Egyptß!" }
+			state_scope = { change_region_name = "ßbMiddle_Egyptß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6243,10 +6243,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbUpper Egyptß!" }
+			state_scope = { change_region_name = "ßbUpper_Egyptß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6254,10 +6254,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbOuter Hausalandß!" }
+			state_scope = { change_region_name = "ßbOuter_Hausalandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6268,7 +6268,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNigerß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6279,7 +6279,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbChadß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6290,7 +6290,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWaddaiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6301,7 +6301,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSudanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6312,7 +6312,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDongolaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6320,10 +6320,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Sudanß!" }
+			state_scope = { change_region_name = "ßbNorth_Sudanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6334,7 +6334,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKordofanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6345,7 +6345,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDarfurß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6356,7 +6356,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSuddß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6367,7 +6367,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBegemderß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6378,7 +6378,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTigrayß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6389,7 +6389,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbShewaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6400,7 +6400,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKaffaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6411,7 +6411,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGojjamß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6422,7 +6422,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbOgadenß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6433,7 +6433,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHararß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6444,7 +6444,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEritreaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6452,10 +6452,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Somalilandß!" }
+			state_scope = { change_region_name = "ßbSouth_Somalilandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6466,7 +6466,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPuntlandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6474,10 +6474,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Somalilandß!" }
+			state_scope = { change_region_name = "ßbNorth_Somalilandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6488,7 +6488,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKenyaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6496,10 +6496,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbRift Valleyß!" }
+			state_scope = { change_region_name = "ßbRift_Valleyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6510,7 +6510,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbZanzibarß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6521,7 +6521,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLindiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6532,7 +6532,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNTanganyikaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6543,7 +6543,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSTanganyikaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6554,7 +6554,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMauritaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6562,10 +6562,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbInner Mauritaniaß!" }
+			state_scope = { change_region_name = "ßbInner_Mauritaniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6576,7 +6576,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSenegalß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6587,7 +6587,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbWolofß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6598,7 +6598,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGambiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6606,10 +6606,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Maliß!" }
+			state_scope = { change_region_name = "ßbEastern_Maliß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6620,7 +6620,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKaartaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6628,10 +6628,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWestern Maliß!" }
+			state_scope = { change_region_name = "ßbWestern_Maliß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6642,7 +6642,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTimbuktuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6650,10 +6650,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbUpper Guineaß!" }
+			state_scope = { change_region_name = "ßbUpper_Guineaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6661,10 +6661,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLower Guineaß!" }
+			state_scope = { change_region_name = "ßbLower_Guineaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6672,10 +6672,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSierra Leoneß!" }
+			state_scope = { change_region_name = "ßbSierra_Leoneß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6683,10 +6683,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLower Guinea - Now Guinea-Bissauß!" }
+			state_scope = { change_region_name = "ßbLower_Guinea_-_Now_Guinea-Bissauß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6697,7 +6697,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLiberiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6705,10 +6705,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbIvory Coastß!" }
+			state_scope = { change_region_name = "ßbIvory_Coastß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6716,10 +6716,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWindward Coastß!" }
+			state_scope = { change_region_name = "ßbWindward_Coastß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6730,7 +6730,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHouetß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6741,7 +6741,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGhanaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6749,10 +6749,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbGold Coastß!" }
+			state_scope = { change_region_name = "ßbGold_Coastß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6763,7 +6763,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTogoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6774,7 +6774,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbDahomeyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6782,10 +6782,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbYoruba Statesß!" }
+			state_scope = { change_region_name = "ßbYoruba_Statesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6796,7 +6796,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHausalandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6807,7 +6807,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBeninß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6818,7 +6818,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBiafraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6829,7 +6829,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKanoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6840,7 +6840,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBornuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6851,7 +6851,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTukariß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6862,7 +6862,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAbujaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6870,10 +6870,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEquatorial Guineaß!" }
+			state_scope = { change_region_name = "ßbEquatorial_Guineaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6884,7 +6884,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCameroonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6895,7 +6895,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAdamawaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6906,7 +6906,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAdachadß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6914,10 +6914,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCoastal Cameroonß!" }
+			state_scope = { change_region_name = "ßbCoastal_Cameroonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6928,7 +6928,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKivuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6939,7 +6939,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGabonß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6950,7 +6950,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCongoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6961,7 +6961,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBas-Congoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6972,7 +6972,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKasaiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6983,7 +6983,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKatangaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -6994,7 +6994,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLubaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7005,7 +7005,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEquateurß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7013,10 +7013,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCongo Orientaleß!" }
+			state_scope = { change_region_name = "ßbCongo_Orientaleß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7027,7 +7027,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUbangi-Shariß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7038,7 +7038,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbZambiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7049,7 +7049,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBarotselandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7060,7 +7060,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbKazembeß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7071,7 +7071,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUgandaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7082,7 +7082,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbRuanda-Urundiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7093,7 +7093,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbZambeziaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7101,10 +7101,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthwestern Angolaß!" }
+			state_scope = { change_region_name = "ßbSouthwestern_Angolaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7115,7 +7115,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAngolaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7123,10 +7123,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSoutheastern Angolaß!" }
+			state_scope = { change_region_name = "ßbSoutheastern_Angolaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7134,10 +7134,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Angolaß!" }
+			state_scope = { change_region_name = "ßbNorth_Angolaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7145,10 +7145,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEast Angolaß!" }
+			state_scope = { change_region_name = "ßbEast_Angolaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7156,32 +7156,32 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLouren√ßo Marques - Gazaß!" }
-			secede_province = QQQ 
+			state_scope = { change_region_name = "ßbLouren√ßo Marques - Gazaß!"_}
+			secede_province_=_QQQ_
 		}
-		any_sea_province = {
-			limit = {
-				AND = {
-					has_province_modifier = regions_loc_sea
-					POR_2054  = { has_province_modifier = regions_loc_land }
+		slots_=_{
+			limit_=_{
+				AND_=_{
+					has_province_modifier_=_regions_loc_sea
+					POR_2054__=_{_has_province_modifier_=_regions_loc_land_}
 				}
 			}
-			secede_province = THIS 
-			state_scope = { change_region_name = "ßbTete - Now Sofalaß!" }
-			secede_province = QQQ 
+			secede_province_=_THIS_
+			state_scope_=_{_change_region_name_=_"ßbTete - Now Sofalaß!"_}
+			secede_province_=_QQQ_
 		}
-		any_sea_province = {
-			limit = {
-				AND = {
-					has_province_modifier = regions_loc_sea
-					POR_2060  = { has_province_modifier = regions_loc_land }
+		slots_=_{
+			limit_=_{
+				AND_=_{
+					has_province_modifier_=_regions_loc_sea
+					POR_2060__=_{_has_province_modifier_=_regions_loc_land_}
 				}
 			}
-			secede_province = THIS 
-			state_scope = { change_region_name = "ßbMo√ßambiqueß!" }
+			secede_province_=_THIS_
+			state_scope_=_{_change_region_name_=_"ßbMo√ßambiqueß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7192,7 +7192,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNyasalandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7203,7 +7203,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMashonalandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7211,10 +7211,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbMatabeleland - Rozwi until matabele moves there.ß!" }
+			state_scope = { change_region_name = "ßbMatabeleland_-_Rozwi_until_matabele_moves_there.ß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7225,7 +7225,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBechuanalandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7236,7 +7236,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHererolandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7247,7 +7247,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNamaqualandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7255,10 +7255,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCape Colonyß!" }
+			state_scope = { change_region_name = "ßbCape_Colonyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7266,10 +7266,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Capeß!" }
+			state_scope = { change_region_name = "ßbNorthern_Capeß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7277,10 +7277,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEastern Capeß!" }
+			state_scope = { change_region_name = "ßbEastern_Capeß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7288,10 +7288,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbVrystaat - called originally Basutolandß!" }
+			state_scope = { change_region_name = "ßbVrystaat_-_called_originally_Basutolandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7299,10 +7299,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbTransvaal - called originally Tky-Gariepß!" }
+			state_scope = { change_region_name = "ßbTransvaal_-_called_originally_Tky-Gariepß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7310,10 +7310,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbZululand - Natalß!" }
+			state_scope = { change_region_name = "ßbZululand_-_Natalß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7321,10 +7321,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Madagascarß!" }
+			state_scope = { change_region_name = "ßbSouth_Madagascarß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7332,10 +7332,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Madagascarß!" }
+			state_scope = { change_region_name = "ßbNorth_Madagascarß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7346,7 +7346,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSonoraß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7354,10 +7354,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbChihuahua - Durangoß!" }
+			state_scope = { change_region_name = "ßbChihuahua_-_Durangoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7368,7 +7368,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCohauilaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7376,10 +7376,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbZacatecas - SLPß!" }
+			state_scope = { change_region_name = "ßbZacatecas_-_SLPß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7390,7 +7390,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVeracruzß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7401,7 +7401,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMexicoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7412,7 +7412,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbJaliscoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7423,7 +7423,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGuerreroß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7434,7 +7434,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbYucatanß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7442,10 +7442,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbChiapas & Tabascoß!" }
+			state_scope = { change_region_name = "ßbChiapas_&_Tabascoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7456,7 +7456,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGuatemalaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7464,10 +7464,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbEl Salvadorß!" }
+			state_scope = { change_region_name = "ßbEl_Salvadorß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7478,7 +7478,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPanamaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7489,7 +7489,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNicaraguaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7497,10 +7497,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCosta Ricaß!" }
+			state_scope = { change_region_name = "ßbCosta_Ricaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7511,7 +7511,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHondurasß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7522,7 +7522,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCubaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7533,7 +7533,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbHaitiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7541,10 +7541,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbDominican Republicß!" }
+			state_scope = { change_region_name = "ßbDominican_Republicß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7552,10 +7552,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCaribbean Islandsß!" }
+			state_scope = { change_region_name = "ßbCaribbean_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7563,10 +7563,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWest Indiesß!" }
+			state_scope = { change_region_name = "ßbWest_Indiesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7574,10 +7574,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLesser Antillesß!" }
+			state_scope = { change_region_name = "ßbLesser_Antillesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7588,7 +7588,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGuyanaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7599,7 +7599,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbZuliaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7610,7 +7610,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBolivarß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7621,7 +7621,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMirandaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7632,7 +7632,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCaucaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7643,7 +7643,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGuaviareß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7654,7 +7654,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCundinamarcaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7665,7 +7665,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAntioquiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7676,7 +7676,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbEcuadorß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7687,7 +7687,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPastazaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7698,7 +7698,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCajamarcaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7709,7 +7709,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbIcaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7720,7 +7720,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbLimaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7731,7 +7731,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbArequipaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7742,7 +7742,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUcayaliß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7753,7 +7753,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAtacamaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7764,7 +7764,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAntofagastaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7772,10 +7772,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSanta Cruzß!" }
+			state_scope = { change_region_name = "ßbSanta_Cruzß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7783,10 +7783,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLa Pazß!" }
+			state_scope = { change_region_name = "ßbLa_Pazß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7794,10 +7794,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbBajo Parguayß!" }
+			state_scope = { change_region_name = "ßbBajo_Parguayß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7805,10 +7805,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbAlto Paraguayß!" }
+			state_scope = { change_region_name = "ßbAlto_Paraguayß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7816,10 +7816,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbS„o Paulo & Paran·ß!" }
+			state_scope = { change_region_name = "ßbS„o_Paulo_&_Paran·ß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7827,10 +7827,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbRio Grande do Sul & Santa Catharinaß!" }
+			state_scope = { change_region_name = "ßbRio_Grande_do_Sul_&_Santa_Catharinaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7838,10 +7838,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbGr„o - Par·ß!" }
+			state_scope = { change_region_name = "ßbGr„o_-_Par·ß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7852,7 +7852,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMaranh„oß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7860,10 +7860,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbMato Grossoß!" }
+			state_scope = { change_region_name = "ßbMato_Grossoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7874,7 +7874,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbGoi·sß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7885,7 +7885,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbNordesteß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7893,10 +7893,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbMinas Geraisß!" }
+			state_scope = { change_region_name = "ßbMinas_Geraisß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7907,7 +7907,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbBahiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7915,10 +7915,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbRio de Janeiroß!" }
+			state_scope = { change_region_name = "ßbRio_de_Janeiroß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7929,7 +7929,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbAcreß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7937,10 +7937,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Atlantic Islandsß!" }
+			state_scope = { change_region_name = "ßbSouth_Atlantic_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7948,10 +7948,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbZona Australß!" }
+			state_scope = { change_region_name = "ßbZona_Australß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7959,10 +7959,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbLos Riosß!" }
+			state_scope = { change_region_name = "ßbLos_Riosß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7973,7 +7973,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbSantiagoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7981,10 +7981,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbBuenos Airesß!" }
+			state_scope = { change_region_name = "ßbBuenos_Airesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -7995,7 +7995,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbMesopotamiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8006,7 +8006,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbJujuyß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8017,7 +8017,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbCatamarcaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8028,7 +8028,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbChacoß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8036,10 +8036,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCuyo & La Pampaß!" }
+			state_scope = { change_region_name = "ßbCuyo_&_La_Pampaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8047,10 +8047,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCordoba de Argentinaß!" }
+			state_scope = { change_region_name = "ßbCordoba_de_Argentinaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8061,7 +8061,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbUruguayß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8072,7 +8072,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbPatagoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8080,10 +8080,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNew South Walesß!" }
+			state_scope = { change_region_name = "ßbNew_South_Walesß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8094,7 +8094,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbVictoriaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8105,7 +8105,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbQueenslandß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8113,10 +8113,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Australiaß!" }
+			state_scope = { change_region_name = "ßbSouth_Australiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8124,10 +8124,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbWestern Australiaß!" }
+			state_scope = { change_region_name = "ßbWestern_Australiaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8135,10 +8135,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern Territoryß!" }
+			state_scope = { change_region_name = "ßbNorthern_Territoryß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8146,10 +8146,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorth Island - Aotearoaß!" }
+			state_scope = { change_region_name = "ßbNorth_Island_-_Aotearoaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8157,10 +8157,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouth Island -  Te Waipounamuß!" }
+			state_scope = { change_region_name = "ßbSouth_Island_-__Te_Waipounamuß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8168,10 +8168,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbCaroline Islandsß!" }
+			state_scope = { change_region_name = "ßbCaroline_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8179,10 +8179,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbHawaiian Islandsß!" }
+			state_scope = { change_region_name = "ßbHawaiian_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8193,7 +8193,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbFijiß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8201,10 +8201,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbMariana Islandsß!" }
+			state_scope = { change_region_name = "ßbMariana_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8212,10 +8212,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSouthern New Guineaß!" }
+			state_scope = { change_region_name = "ßbSouthern_New_Guineaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8223,10 +8223,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNorthern New Guineaß!" }
+			state_scope = { change_region_name = "ßbNorthern_New_Guineaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8234,10 +8234,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSolomon Islandsß!" }
+			state_scope = { change_region_name = "ßbSolomon_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8245,10 +8245,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbNew Caledoniaß!" }
+			state_scope = { change_region_name = "ßbNew_Caledoniaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8259,7 +8259,7 @@ country_event = {
 			state_scope = { change_region_name = "ßbTongaß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8267,10 +8267,10 @@ country_event = {
 				}
 			}
 			secede_province = THIS 
-			state_scope = { change_region_name = "ßbSamoa Islandsß!" }
+			state_scope = { change_region_name = "ßbSamoa_Islandsß!" }
 			secede_province = QQQ 
 		}
-		any_sea_province = {
+		slots = {
 			limit = {
 				AND = {
 					has_province_modifier = regions_loc_sea
@@ -8284,7 +8284,7 @@ country_event = {
 		any_land_province = {
 			remove_province_modifier = regions_loc_land
 		}
-		any_sea_province = {
+		slots = {
 			remove_province_modifier = regions_loc_sea
 		}
 		any_country = {

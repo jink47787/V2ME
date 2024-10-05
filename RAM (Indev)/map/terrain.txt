@@ -12,6 +12,7 @@ categories = {
         movement_cost = 1.0
         defence = 2
         color = { 140 150 130 }
+		min_build_university = 0
         #farm_rgo_size = -0.5
         farm_rgo_eff = 0.25
         #mine_rgo_size = -0.5
@@ -29,6 +30,7 @@ categories = {
         min_build_naval_base = 4
         min_build_railroad = 4
         min_build_fort = 1
+		min_build_university = 0
         attrition = 2
 		immigrant_attract = -0.99
     }
@@ -36,6 +38,7 @@ categories = {
     plains = {
         movement_cost = 1.0
         color = { 241 221 184 }
+		min_build_university = 0
         farm_rgo_size = 0.0
         farm_rgo_eff = 0.0
         mine_rgo_size = 0.0
@@ -51,6 +54,7 @@ categories = {
         mine_rgo_size = 0.0
         mine_rgo_eff = 0.0
         min_build_railroad = 2
+		min_build_university = 0
         supply_limit = 4
         immigrant_attract = -0.1
     }
@@ -64,6 +68,7 @@ categories = {
         mine_rgo_eff = 0.0
         supply_limit = 4
         min_build_railroad = 1
+		min_build_university = 0
         immigrant_attract = -0.2
     }
 
@@ -78,6 +83,7 @@ categories = {
         supply_limit = 6
         combat_width = -0.20
         min_build_railroad = 2
+		min_build_university = 0
     }
 
     floodplain_farmland = {
@@ -89,6 +95,7 @@ categories = {
         #mine_rgo_size = -0.25
         #mine_rgo_eff = -0.025
         min_build_railroad = 1
+		min_build_university = 0
         supply_limit = 10
     }
 
@@ -308,7 +315,7 @@ categories = {
 
     desert = {
         movement_cost = 1.5
-        color = { 218 195 0 }
+        color = { 241 210 151 }
 
         #farm_rgo_size = -0.8
         #farm_rgo_eff = -0.5
@@ -16789,10 +16796,10 @@ text_55 = { type = coastal_desert color = { 55 } priority = 55 }
 
 
 #UNUSED for now...
-text_56 = { type = mountain color = { 56 } priority = 56 }
-text_57 = { type = mountain color = { 57 } priority = 57 }
-text_58 = { type = mountain color = { 58 } priority = 58 }
-text_59 = { type = mountain color = { 59 } priority = 59 }
+text_56 = { type = desert color = { 56 } priority = 56 }
+text_57 = { type = desert color = { 57 } priority = 57 }
+text_58 = { type = desert color = { 58 } priority = 58 }
+text_59 = { type = desert color = { 59 } priority = 59 }
 text_60 = { type = mountain color = { 60 } priority = 60 }
 text_61 = { type = mountain color = { 61 } priority = 61 }
 text_62 = { type = mountain color = { 62 } priority = 62 }

@@ -8,7 +8,7 @@ country_event = { # Explanation Event
 	allow_multiple_instances = yes
     is_triggered_only = yes
 	
-	immediate = {
+	option = {
 		any_country = {
 			#Government Groups
 			clr_country_flag = proletarian_dictatorship
@@ -219,8 +219,4 @@ country_event = { # Explanation Event
 			set_country_flag = monarchy
 		}
 	}
-	
-	option = {
-        name = "Government Logic"
-    }
 }

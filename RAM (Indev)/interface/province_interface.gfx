@@ -1,6 +1,16 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_button_standard_ram"
+		texturefile = "gfx\\interface\\button_standard_ram.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_button_standard_144_ram"
+		texturefile = "gfx\\interface\\button_standard_144_ram.tga"
+	}
+
+	spriteType = {
 		name = "GFX_crisis_temperature_bar_frame"
 		texturefile = "gfx\\interface\\crisis_temperature_bar_frame.tga"
 	}
@@ -74,6 +84,11 @@ spriteTypes = {
 		noOfFrames = 38
 	}
 	spriteType = {
+		name = "GFX_province_natfocus_strip_wide"
+		textureFile = "gfx\\interface\\province_natfocus_strip_wide.dds"
+		noOfFrames = 38
+	}
+	spriteType = {
 		name = "GFX_province_natfocus_strip_small"
 		textureFile = "gfx\\interface\\province_natfocus_strip_small.dds"
 		noOfFrames = 38
@@ -124,6 +139,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_provinceview_bg"
 		texturefile = "gfx\\interface\\province_bg.dds"
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_provinceview_hidden"
+		texturefile = "gfx\\interface\\province_hidden_element.tga"
 		norefcount = yes
 	}
 	spriteType = {
@@ -272,7 +292,7 @@ spriteTypes = {
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx\\interface\\investrail_progress2.tga"
 		textureFile2 = "gfx\\interface\\investrail_progress1.tga"
-		size = { x = 66 y = 6 }
+		size = { x = 90 y = 23 }
 		effectFile = "gfx\\FX\\progress.fx"
 	}
 	

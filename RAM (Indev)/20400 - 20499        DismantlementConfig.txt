@@ -1,0 +1,66 @@
+#Introdution Events
+
+# The following event defines what countries are treated as colonial 
+# this is ignored if the countries are already civilised
+# countries will civilise on release
+
+country_event = { # Colonial Countries	# Semi-Dynamic - Adding tags will exclude them from regular dismantlement but not add them to colonial dismantlement
+    id = 20450
+    title = "Dismantlement Colonial Tags"
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				OR = {
+					tag = EGY
+					tag = MOR
+				}
+			}
+			set_country_flag = dismantlement_colonial_core_tag
+		}
+	}
+	
+	option = {
+        name = "Colonial Flags set"
+    }
+}
+
+country_event = { # Colonial Countries	# Dynamic - You can add your own dismantlement formables	# Max of 8 formables per tag
+    id = 20451
+    title = "Dismantlement Formables Tags"
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {				# Intermarium
+			limit = {
+				OR = {
+					tag = UKR
+					tag = CRI
+					tag = POL
+					tag = RUT
+					tag = BYE
+				}
+				has_country_flag = dismantlement_targeting_short_buffer
+			}
+			PLR = { set_country_flag = dismantlement_formable
+		}
+		any_country = {				# South Germany
+			limit = {
+				OR = {
+					tag = WUR
+					tag = BAD
+					tag = SGM
+					tag = ALS
+					tag = BAV
+				}
+				has_country_flag = dismantlement_targeting_short_buffer
+			}
+			SGF = { set_country_flag = dismantlement_formable
+		}
+	}
+	
+	option = {
+        name = "Colonial Flags set"
+    }
+}

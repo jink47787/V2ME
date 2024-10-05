@@ -28,6 +28,11 @@ country_event = { #
 		tabbreak_state = {}
 		ram_settings_dev_mode = {}
 		slot_3 = {}
+		linebreak_state = {}
+		linebreak_state = {}
+		tabbreak_state = {}
+		ram_settings_dis_dev_mode = {}
+		slot_4 = {}
 	}
 	
 	option = {
@@ -143,6 +148,43 @@ country_event = { #
 		clr_global_flag = A
     }
 	option = {
+        name = ""
+		ram_settings_dis_dev_mode_tooltip = {}
+		set_global_flag = A
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			THIS = {
+				random_country = {
+					limit = { NOT = { has_global_flag = dismantlement_debug } }
+					set_global_flag = need_dismantlement_debug
+				}
+				random_country = {
+					limit = { has_global_flag = dismantlement_debug }
+					set_global_flag = no_dismantlement_debug
+				}
+				random_country = {
+					limit = { has_global_flag = need_dismantlement_debug }
+					clr_global_flag = need_dismantlement_debug
+					set_global_flag = dismantlement_debug
+				}
+				random_country = {
+					limit = { has_global_flag = no_dismantlement_debug }
+					clr_global_flag = no_dismantlement_debug
+					clr_global_flag = dismantlement_debug
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				has_global_flag = A
+			}
+			CLN = { country_event = 10501 }
+		}
+		clr_global_flag = A
+    }
+	option = {
         name = "Exit"
     }
 }
@@ -174,6 +216,13 @@ country_event = { #
 				has_global_flag = debug
 			}
 			slot_3 = { add_province_modifier = { name = mod_1 duration = -1 } }
+		}
+		slot_4 = { add_province_modifier = { name = able_modifier duration = -1 } }
+		random_country = {
+			limit = {
+				has_global_flag = dismantlement_debug
+			}
+			slot_4 = { add_province_modifier = { name = mod_1 duration = -1 } }
 		}
 		CLN = { country_event = 50 }
 		FROM = {

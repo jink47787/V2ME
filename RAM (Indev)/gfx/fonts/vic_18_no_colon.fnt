@@ -1,6 +1,6 @@
 info face="Adobe Garamond Pro" size=18 bold=1 italic=0 charset="ANSI" stretchH=100 smooth=1 aa=4 padding=0,0,0,0 spacing=2,2
 common lineHeight=18 base=13 scaleW=256 scaleH=256 pages=1
-char id=32   x=170   y=83    width=1     height=0     xoffset=0     yoffset=18    xadvance=4     page=0  
+char id=32   x=170   y=83    width=0     height=0     xoffset=0     yoffset=18    xadvance=0     page=0  
 char id=33   x=243   y=51    width=2     height=10    xoffset=0     yoffset=3     xadvance=3     page=0  
 char id=34   x=33    y=87    width=4     height=4     xoffset=1     yoffset=3     xadvance=6     page=0  
 char id=35   x=43    y=67    width=8     height=9     xoffset=0     yoffset=4     xadvance=7     page=0  
@@ -62,7 +62,7 @@ char id=91   x=178   y=0     width=3     height=13    xoffset=1     yoffset=3   
 char id=92   x=197   y=54    width=4     height=10    xoffset=0     yoffset=3     xadvance=4     page=0  
 char id=93   x=183   y=0     width=3     height=13    xoffset=0     yoffset=3     xadvance=5     page=0  
 char id=94   x=63    y=78    width=7     height=6     xoffset=0     yoffset=4     xadvance=7     page=0  
-char id=95   x=160   y=85    width=8     height=1     xoffset=0     yoffset=14    xadvance=7     page=0  
+char id=95   x=170   y=83    width=1     height=0     xoffset=0     yoffset=18    xadvance=4     page=0  
 char id=96   x=54    y=86    width=3     height=4     xoffset=0     yoffset=3     xadvance=5     page=0  
 char id=97   x=120   y=77    width=6     height=6     xoffset=0     yoffset=7     xadvance=6     page=0  
 char id=98   x=149   y=29    width=7     height=11    xoffset=0     yoffset=2     xadvance=7     page=0  

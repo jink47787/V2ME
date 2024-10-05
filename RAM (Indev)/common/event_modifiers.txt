@@ -407,7 +407,7 @@ arbitration_cooldown = {
 }
 
 possible_cyclone = {
-    icon = 33
+    icon = 30
 }
 
 recent_cyclone = {
@@ -420,6 +420,20 @@ cyclone = {
 
 tsunami = {
     icon = 61
+}
+
+naval_disruption = {
+	naval_organisation = 0.9
+    icon = 8
+}
+
+disaster_recovery = {
+    icon = 16
+	immigrant_attract = -1
+	life_rating = -0.3
+	local_RGO_output = -0.5
+	local_ship_build = 1
+	population_growth = -0.4
 }
 
 # GFM Modifiers

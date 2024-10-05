@@ -90,8 +90,8 @@ money_hoarder_7 = {
 
 healthcare_poorly_funded_a = {
     trigger = {
-		exists = yes
         health_care = trinket_health_care
+		exists = yes
         OR = {
             AND = {
                 ai = yes
@@ -109,8 +109,8 @@ healthcare_poorly_funded_a = {
 
 healthcare_poorly_funded_b = {
     trigger = {
+		health_care = low_health_care
 		exists = yes
-        health_care = low_health_care
         OR = {
             AND = {
                 ai = yes
@@ -128,8 +128,8 @@ healthcare_poorly_funded_b = {
 
 healthcare_poorly_funded_c = {
     trigger = {
+		health_care = acceptable_health_care
 		exists = yes
-        health_care = acceptable_health_care
         OR = {
             AND = {
                 ai = yes
@@ -147,8 +147,8 @@ healthcare_poorly_funded_c = {
 
 healthcare_poorly_funded_d = {
     trigger = {
+		health_care = good_health_care
 		exists = yes
-        health_care = good_health_care
         OR = {
             AND = {
                 ai = yes
@@ -196,8 +196,8 @@ good_schools_fully_funded = {
 
 education_fully_funded = {
     trigger = {
+		school_reforms = good_schools
         exists = yes
-        school_reforms = good_schools
         OR = {
             AND = {
                 ai = yes
@@ -214,11 +214,11 @@ education_fully_funded = {
 }
 neglected_education = {
     trigger = {
+		ai = no
+        total_pops = 1000000
         exists = yes
         civilized = yes
-        ai = no
         number_of_states = 2
-        total_pops = 1000000
         OR = {
             AND = {
                 literacy = 0.75
@@ -263,8 +263,8 @@ islamic_law_triggered = {
 
 the_british_raj = {
     trigger = {
+		ai = no
         exists = yes
-        ai = no
         OR = {
 			has_country_flag = fascist_dictatorship
             has_country_flag = democracy
@@ -337,8 +337,8 @@ the_british_raj_ai = {
 
 greater_germany = {
     trigger = {
+		ai = no
         exists = yes
-        ai = no
         549 = {
             owned_by = THIS
         }
@@ -409,8 +409,8 @@ dutch_east_india = {
 
 vassal_nation = {
     trigger = {
+		is_vassal = yes
         exists = yes
-        is_vassal = yes
         is_substate = no
     }
     icon = 10
@@ -419,8 +419,8 @@ vassal_nation = {
 
 substate_nation = {
     trigger = {
+		is_substate = yes
         exists = yes
-        is_substate = yes
         civilized = yes
         ai = yes
     }
@@ -437,10 +437,10 @@ substate_nation = {
 
 substate_nation_player = {
     trigger = {
+		ai = no
         exists = yes
         is_substate = yes
         civilized = yes
-        ai = no
     }
 
     prestige = -0.25
@@ -453,19 +453,19 @@ substate_nation_player = {
 
 chinese_substate = {
     trigger = {
+		is_culture_group = east_asian
+		exists = yes
         OR = {
             substate_of = QNG
             vassal_of = QNG
         }
         civilized = no
-        exists = yes
         QNG = {
             OR = {
                 has_country_flag = absolute_monarchy
                 has_country_flag = absolute_empire
             }
         }
-        is_culture_group = east_asian
     }
     icon = 10
     research_points_modifier = -0.2
@@ -474,8 +474,8 @@ chinese_substate = {
 
 own_kiel_canal = {
     trigger = {
+		owns = 369
         exists = yes
-        owns = 369
         civilized = yes
         is_canal_enabled = 1
     }
@@ -485,8 +485,8 @@ own_kiel_canal = {
 
 own_suez_canal = {
     trigger = {
+		owns = 1755
         exists = yes
-        owns = 1755
         civilized = yes
         is_canal_enabled = 2
     }
@@ -498,8 +498,8 @@ own_suez_canal = {
 
 own_panama_canal = {
     trigger = {
+		owns = 1723
         exists = yes
-        owns = 1723
         civilized = yes
         is_canal_enabled = 3
     }
@@ -703,9 +703,9 @@ admin_spen = {
 
 hormuz_strait = {
 	trigger = {
+		owns = 1071
 		exists = yes
 		year = 1880
-		owns = 1071
 		owns = 2664
 	}
 
@@ -716,8 +716,8 @@ hormuz_strait = {
 
 malacca_strait = {
 	trigger = {
-		exists = yes
 		owns = 1384
+		exists = yes
 		owns = 1385
 		owns = 1386
 		owns = 1387
@@ -927,8 +927,8 @@ line_of_advantage = {
 
 help_ai_secondary_power = {
     trigger = {
+		is_secondary_power = yes
         exists = yes
-        is_secondary_power = yes
         ai = yes
         war = yes
         NOT = { money = 350000 }

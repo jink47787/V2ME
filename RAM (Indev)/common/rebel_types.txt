@@ -77,12 +77,7 @@ reactionary_rebels = {
 
         modifier = {
             war_exhaustion = 40
-            factor = 0.95
-        }
-
-        modifier = {
-            war_exhaustion = 60
-            factor = 0.95
+            factor = 0.90
         }
 
         modifier = {
@@ -143,15 +138,11 @@ reactionary_rebels = {
             NOT = { pop_majority_ideology = reactionary }
         }
         modifier = {
-            factor = 1.0105
+            factor = 1.011
             NOT = { consciousness = 1 }
         }
         modifier = {
-            factor = 1.0105
-            NOT = { consciousness = 2 }
-        }
-        modifier = {
-            factor = 1.0105
+            factor = 1.011
             NOT = { consciousness = 3 }
         }
         modifier = {
@@ -248,15 +239,11 @@ reactionary_rebels = {
             NOT = { is_capital = yes }
         }
         modifier = {
-            factor = 1.5
+            factor = 1.75
             average_militancy = 4
         }
         modifier = {
-            factor = 1.5
-            average_militancy = 6
-        }
-        modifier = {
-            factor = 1.5
+            factor = 1.75
             average_militancy = 8
         }
         modifier = {
@@ -266,9 +253,9 @@ reactionary_rebels = {
     }
 
      # Province Scope
-     siege_won_trigger = {
+    siege_won_trigger = {
         NOT = { has_province_modifier = war_torn }
-     }
+    }
 
     siege_won_effect = {
         add_province_modifier = {

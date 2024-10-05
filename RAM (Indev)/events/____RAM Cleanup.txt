@@ -41,6 +41,7 @@ country_event = {
 		country_event = 40 # Government Flag Cleanup
 		random_country = { limit = { has_global_flag = tsunami_active } CLN = { country_event = 12345 } } # Tsunami Event
 		random_country = { limit = { has_global_flag = cyclone_active } CLN = { country_event = 12348 } } # Cyclone Event
+		random_country = { limit = { has_global_flag = dismantlement_active  } CLN = { country_event = 20403 } } # Dismantlement Handler Event
 		any_land_province = { remove_province_modifier = capital_city_modifier }
 		any_country = {
 			random_pop = {
@@ -64,78 +65,17 @@ country_event = {
 			}
 			CLN = { country_event = 20140 }
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					SWI = {
-						has_country_modifier = neutrality_modifier
-						ai = no
-						OR = {
-							any_greater_power = { military_access = SWI }
-							any_neighbor_country = { NOT = { vassal_of = SWI } military_access = SWI }
-							sphere_owner = { military_access = SWI }
-							AND = {
-								num_of_allies = 1
-								NOT = { NCT = { alliance_with = SWI } }
-							}
-							AND = {
-								num_of_allies = 2
-								NCT = { exists = yes alliance_with = SWI }
-							}
-							war = yes
-						}
-					}
-				}
-			}
-			owner = {
-				any_country = {
-					limit = {
-						exists = yes
-						NOT = { vassal_of = SWI }
-						OR = {
-							military_access = SWI
-							alliance_with = SWI
-						}
-					}
-					relation = { who = SWI value = -125 }
-				}
-				any_country = {
-					limit = {
-						exists = yes
-						alliance_with = SWI
-						NOT = { vassal_of = SWI }
-					}
-					leave_alliance = SWI
-				}
-				any_country = {
-					limit = {
-						exists = yes
-						war_with = SWI
-					}
-					end_war = SWI
-				}
-				any_country = {
-					limit = {
-						exists = yes
-						military_access = SWI
-						NOT = { vassal_of = SWI }
-					}
-					end_military_access = SWI
-				}
-			}
-		}
-		
-		# Universal
+		# rework has_country_modifier = neutrality_modifier
+
+		# Universal	# Can this be killed?
 		any_country = {
             limit = {
-				exists = yes
                 civilized = yes
-				has_country_modifier = western_presence
             }
             remove_country_modifier = western_presence
         }
 
-		#abolishing serfdom
+		#abolishing serfdom	# idk
 		any_country = {
             limit = {
 				exists = yes
@@ -165,29 +105,11 @@ country_event = {
             }
         }
 
-		#updating missing flags
+		#pay owed steamers	# idk 2
 		any_country = {
 			limit = {
-				exists = yes
-				NOT = {
-					has_country_flag = existing_country
-				}
-			}
-			set_country_flag = existing_country
-		}
-		any_country = {
-			limit = {
-				exists = no
-				has_country_flag = existing_country
-			}
-			clr_country_flag = existing_country
-		}
-
-		#pay owed steamers
-		any_country = {
-			limit = {
-				exists = yes
 				check_variable = { which = owed_ammunition value = 5 }
+				exists = yes
 				ammunition = 5
 			}
 			ammunition = -5
@@ -195,8 +117,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				exists = yes
 				check_variable = { which = owed_small_arms value = 5 }
+				exists = yes
 				small_arms = 5
 			}
 			small_arms = -5
@@ -204,8 +126,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				exists = yes
 				check_variable = { which = owed_steamers value = 5 }
+				exists = yes
 				steamer_convoy = 5
 			}
 			steamer_convoy = -5
@@ -213,8 +135,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				exists = yes
 				check_variable = { which = owed_artillery value = 5 }
+				exists = yes
 				artillery = 5
 			}
 			artillery = -5
@@ -222,8 +144,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				exists = yes
 				check_variable = { which = owed_canned_food value = 5 }
+				exists = yes
 				canned_food = 5
 			}
 			canned_food = -5
@@ -231,8 +153,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
-				exists = yes
 				check_variable = { which = owed_cash_money value = 1 }
+				exists = yes
 				money = 10000
 			}
 			money = -10000

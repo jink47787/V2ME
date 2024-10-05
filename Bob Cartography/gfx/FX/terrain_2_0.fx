@@ -362,90 +362,77 @@ struct TILE_STRUCT
     float4 vTerrainIndexColor : COLOR0;
 };
 
-
-float4 GenerateTiles( TILE_STRUCT v, int debugStep )
+float4 GenerateTiles( TILE_STRUCT v )
 {
-    float4 IndexColor = tex2D( QuadIndexTexture, v.vTerrainIndexColor.xy );
-    float4 ColorColor = tex2D( ColorTexture, v.vTexCoord1 );
+	float4 IndexColor = tex2D( QuadIndexTexture, v.vTerrainIndexColor.xy ); //Coordinates for for quad texture of index colors
+	float4 ColorColor = tex2D( ColorTexture, v.vTexCoord1 ); //Coordinates for colormap
 
-    float2 noisecoord = v.vTexCoord0+0.5;
-    float3 noisy = tex2D(NoiseTexture, noisecoord ).rgb;
+	float2 noisecoord = v.vTexCoord0+0.5;
+	float3 noisy = tex2D(NoiseTexture, noisecoord ).rgb;
 
-    IndexColor *= 256.0;
+	IndexColor *= 256.0; //size of colorbyte
 
-    float4 IndexCoordX = fmod(IndexColor, NUM_TERRAINS_FACTOR);
-    IndexCoordX = trunc(IndexCoordX);
-    float4 vIndexCoordX = IndexCoordX / NUM_TERRAINS_FACTOR;
-    
-    float4 IndexCoordY = IndexColor / NUM_TERRAINS_FACTOR;
-    IndexCoordY = trunc(IndexCoordY);
-    float4 vIndexCoordY = IndexCoordY * NUM_TILES_Y;
-    
-    if (debugStep == 1) return float4(vIndexCoordX.xyz, 1); // Visualize X coordinates
-    if (debugStep == 2) return float4(vIndexCoordY.xyz, 1); // Visualize Y coordinates
+	float4 IndexCoordX = fmod(IndexColor, NUM_TERRAINS_FACTOR); //x coord in tiles sheet
+	IndexCoordX = trunc(IndexCoordX);
+	float4 vIndexCoordX = IndexCoordX / NUM_TERRAINS_FACTOR;
+	
+	float4 IndexCoordY = IndexColor / NUM_TERRAINS_FACTOR; //y coord in tiles sheet
+	IndexCoordY = trunc(IndexCoordY);
+	float4 vIndexCoordY = IndexCoordY * NUM_TILES_Y;
+	
+	float2 TexCoord = v.vColorTexCoord + 0.5;
+	TexCoord = frac( TexCoord ); // 0 => 1 range.. only thing we need is the decimal part.
+	TexCoord.x = 1.0 - TexCoord.x;
+	
+	float2 PixelTexCoord = v.vTexCoord0;
+	PixelTexCoord = frac( PixelTexCoord ); // 0 => 1 range.. only thing we need is the decimal part.
+	
+	TexCoord.x *= NUM_TILES_X;
+	TexCoord.y *= (NUM_TILES_Y - 0.001);
+	
+	TexCoord.x = clamp( TexCoord.x, 0.001, X_CLAMP );
+	TexCoord.y = clamp( TexCoord.y, 0.001, Y_CLAMP );
+	
+	float2 uvThis;
+	uvThis.x = vIndexCoordX.x;
+	uvThis.y = vIndexCoordY.x;
 
-    float2 TexCoord = v.vColorTexCoord + 0.5;
-    TexCoord = frac( TexCoord );
-    //TexCoord.x = 1.0 - TexCoord.x;
-    
-    float2 PixelTexCoord = v.vTexCoord0;
-    PixelTexCoord = frac( PixelTexCoord );
-	//TexCoord.y = 1.0 - TexCoord.y;
-    
-    TexCoord.x *= NUM_TILES_X;
-    TexCoord.y *= (NUM_TILES_Y - 0.001);
-    
-    TexCoord.x = clamp( TexCoord.x, 0.001, X_CLAMP );
-    TexCoord.y = clamp( TexCoord.y, 0.001, Y_CLAMP );
-    
-    if (debugStep == 3) return float4(TexCoord, 0, 1); // Visualize texture coordinates
+	float4 LeftTerrain = tex2D( TextureSheet, TexCoord + uvThis );
+	
+	uvThis.x = vIndexCoordX.y;
+	uvThis.y = vIndexCoordY.y;
+	
+	float4 UpLeftTerrain = tex2D( TextureSheet, TexCoord + uvThis );
+	
+	uvThis.x = vIndexCoordX.z;
+	uvThis.y = vIndexCoordY.z;
 
-    float2 uvThis;
-    uvThis.x = vIndexCoordX.x;
-    uvThis.y = vIndexCoordY.x;
+	float4 Terrain = tex2D( TextureSheet, TexCoord + uvThis ); //->left
+	
+	//return Terrain;	
+	uvThis.x = vIndexCoordX.w;
+	uvThis.y = vIndexCoordY.w;
+	
+	float4 UpTerrain = tex2D( TextureSheet, TexCoord + uvThis ); //->upleft
+	
+	
+	
+//	noisy.x = tex2D(NoiseTexture, noisecoord / 12 ).r;
+//	noisy.y = tex2D(NoiseTexture, noisecoord / 2 + 1.5 ).r;
+//	noisy.z = tex2D(NoiseTexture, noisecoord / 6 + 2.0 ).r;
+			  		
+	//noisy -= 0.5;
+	//noisy *= 0.8;
+	
+	float4 x1 = lerp( LeftTerrain, Terrain, saturate( PixelTexCoord.x + noisy.x)  );
+	float4 x2 = lerp( UpLeftTerrain, UpTerrain, saturate( PixelTexCoord.x + noisy.y) );
+	float4 y1 = lerp( x1,x2, saturate( PixelTexCoord.y + noisy.z)  );
 
-    float4 LeftTerrain = tex2D( TextureSheet, TexCoord + uvThis );
-    
-    uvThis.x = vIndexCoordX.y;
-    uvThis.y = vIndexCoordY.y;
-    
-    float4 UpLeftTerrain = tex2D( TextureSheet, TexCoord + uvThis );
-    
-    uvThis.x = vIndexCoordX.z;
-    uvThis.y = vIndexCoordY.z;
 
-    float4 Terrain = tex2D( TextureSheet, TexCoord + uvThis );
-    
-    uvThis.x = vIndexCoordX.w;
-    uvThis.y = vIndexCoordY.w;
-    
-    float4 UpTerrain = tex2D( TextureSheet, TexCoord + uvThis );
-    
-    if (debugStep == 4) return LeftTerrain;
-    if (debugStep == 5) return UpLeftTerrain;
-    if (debugStep == 6) return Terrain;
-    if (debugStep == 7) return UpTerrain;
-
-    noisy.x = tex2D(NoiseTexture, noisecoord / 12 ).r;
-    noisy.y = tex2D(NoiseTexture, noisecoord / 2 + 1.5 ).r;
-    noisy.z = tex2D(NoiseTexture, noisecoord / 6 + 2.0 ).r;
-                  
-    noisy -= 0.5;
-    noisy *= 0.8;
-    
-    if (debugStep == 8) return float4(noisy, 1); // Visualize noise
-
-    float4 x1 = lerp( LeftTerrain, Terrain, saturate( PixelTexCoord.x + noisy.x)  );
-    float4 x2 = lerp( UpLeftTerrain, UpTerrain, saturate( PixelTexCoord.x + noisy.y) );
-    float4 y1 = lerp( x1,x2, saturate( PixelTexCoord.y + noisy.z)  );
-
-    if (debugStep == 9) return x1;
-    if (debugStep == 10) return x2;
-    if (debugStep == 11) return y1;
-
-    if (debugStep == 12) return y1; // Final result
-
-    return y1;
+	// Comment out this line for no colormap
+	y1 = ((y1*2.0f + ColorColor))/3.0f;
+				
+	return y1;
 }
 
 const float vXStretch = 32; //higher gives textures more stretch change both values Note Performance
@@ -608,7 +595,7 @@ float4 PixelShader_Map2_0_General( VS_MAP_OUTPUT v ) : COLOR
 	float3 ParchmentColor = float3(0.95, 0.93, 0.85);
 	float3 FOWColor = float3(0.25, 0.25, 0.25);
     
-    float4 TerrainColor = GenerateTiles( s, 12 );
+    float4 TerrainColor = GenerateTiles( s );
 	float Grey = dot(TerrainColor.rgb, GREYIFY);  // Universal Grey
 	
 	float2 vProvinceUV = v.vProvinceId + 0.5f;
@@ -624,7 +611,7 @@ float4 PixelShader_Map2_0_General( VS_MAP_OUTPUT v ) : COLOR
 	float4 GreyTerrain = float4(Grey, Grey, Grey, 1.0);
 	GreyTerrain.rgb = lerp(GreyTerrain.rgb, float3( 1.0, 1.0, 1.0 ), 0.6);
 	float4 MetaColor = lerp(GreyTerrain, ProvinceColor, 0.4);
-	MetaColor.rgb *= COLOR_LIGHTNESS;
+	MetaColor.rgb *= 1.45;
 	
 	
 	// Uncolonised Non FOW Effects
@@ -666,7 +653,7 @@ float4 PixelShader_Map2_0_General( VS_MAP_OUTPUT v ) : COLOR
 	FinalColor = lerp(FinalColor, UncolonisedFOWTerrainColor, UncolonisedFOWColorMatch);
     //float4 FinalColor = lerp(MetaColor, TerrainColor, ColorMatch);
 	
-	// FinalColor.rgb *= COLOR_LIGHTNESS;
+	//FinalColor.rgb *= COLOR_LIGHTNESS;
     
     return FinalColor;
 }
@@ -679,7 +666,7 @@ float4 PixelShader_Map2_0_General_Low(VS_MAP_OUTPUT v) : COLOR
     s.vTerrainIndexColor = v.vTerrainIndexColor;
     s.vTexCoord0 = v.vTexCoord0.xy;
     
-    float4 TerrainColor = GenerateTiles(s, 12);
+    float4 TerrainColor = GenerateTiles(s);
     
     float2 vProvinceUV = v.vProvinceId + 0.5f;
     vProvinceUV /= PROVINCE_LOOKUP_SIZE;
@@ -708,10 +695,10 @@ float4 PixelShader_Map2_0_General_Low(VS_MAP_OUTPUT v) : COLOR
     // Province Effects
 	float Grey = dot(TerrainColor.rgb, GREYIFY);
 	float4 GreyTerrain = lerp(float4(Grey, Grey, Grey, 1.0), TerrainColor, ColorMatch);
-	GreyTerrain.rgb = lerp(GreyTerrain.rgb, float3( 1.0, 1.0, 1.0 ), 0.7);
+	GreyTerrain.rgb = lerp(GreyTerrain.rgb, float3( 1.0, 1.0, 1.0 ), 0.85);
 	float4 MetaColor = lerp(GreyTerrain, ProvinceColor, 0.4);
-	MetaColor.rgb *= COLOR_LIGHTNESS;
-	TerrainColor.rgb = lerp(TerrainColor.rgb, parchmentColor, 0.5);
+	MetaColor.rgb *= 1.4;	// Color Lightness
+	TerrainColor.rgb = lerp(TerrainColor.rgb, parchmentColor, 0.3);
     float4 FinalColor = lerp(MetaColor, TerrainColor, ColorMatch);
 	
     return FinalColor;
@@ -730,9 +717,9 @@ float4 PixelShader_Map2_0( VS_MAP_OUTPUT v ) : COLOR
 	float2 vProvinceUV = v.vProvinceId + 0.5f;
     vProvinceUV /= PROVINCE_LOOKUP_SIZE;
 
-    float4 TestOutColor = GenerateTiles( s, 12 );
+    float4 TestOutColor = GenerateTiles( s);
 	TestOutColor.rgb *= LIGHTNESS;
-	float4 OutColor = GenerateTiles( s, 12 );
+	float4 OutColor = GenerateTiles( s);
 	OutColor.rgb *= LIGHTNESS;
 	
   
@@ -820,37 +807,36 @@ float4 PixelShader_Beach_General( VS_OUTPUT_BEACH v ) : COLOR
 	
 	float3 ParchmentColor = float3(0.95, 0.93, 0.85);
 	float3 FOWColor = float3(0.25, 0.25, 0.25);
-	float3 FOBlackColor = float3(0.0, 0.0, 0.0);
 
-	float4 TerrainColor = GenerateTiles( s, 12 );
+	float4 TerrainColor = GenerateTiles( s );
 	float Grey = dot(TerrainColor.rgb, GREYIFY);  // Universal Grey
 
 	// Country Effects
-	float4 ReducedBaseColor = tex2D(GeneralTexture, borderoffset) - 0.7;
-    float4 ReducedOccupierColor = tex2D(GeneralTexture2, borderoffset) - 0.7;
+	float4 ReducedBaseColor = tex2D(GeneralTexture, borderoffset);
+    float4 ReducedOccupierColor = tex2D(GeneralTexture2, borderoffset);
     float vColor = tex2D(StripesTexture, v.vTerrainIndexColor).a;
-    float4 ProvinceColor = lerp(ReducedBaseColor, ReducedOccupierColor, vColor);
+    float4 ProvinceColor = lerp(ReducedBaseColor, ReducedOccupierColor, vColor) - 0.7;
 	
-	float4 GreyTerrain = float4(Grey, Grey, Grey, 1.0);
-	GreyTerrain.rgb = lerp(GreyTerrain.rgb, float3( 1.0, 1.0, 1.0 ), 0.6);
-	float4 MetaColor = lerp(GreyTerrain, ProvinceColor, 0.4);
-	MetaColor.rgb *= 1.8;
-	
-	
-	// Uncolonised Non FOW Effects
+		// Uncolonised Non FOW Effects
   	float4 BaseColor = tex2D( GeneralTexture, borderoffset );
 	float4 OccupierColor = tex2D( GeneralTexture2, borderoffset );
 	float tvColor = tex2D( StripesTexture, v.vTerrainIndexColor ).a;
     float4 tProvinceColor = lerp(BaseColor, OccupierColor, tvColor);
+	
+	float4 GreyTerrain = float4(Grey, Grey, Grey, 1.0);
+	GreyTerrain.rgb = lerp(GreyTerrain.rgb, float3( 1.0, 1.0, 1.0 ), 0.6);
+	float4 MetaColor = lerp(GreyTerrain, ProvinceColor, 0.4);
+	MetaColor.rgb *= 1.45;
+	
 	
 	float3 UncolonisedRGB = float3(1.0, 1.0, 1.0); // Uncolonised
 	float UncolonisedColorTolerance = 0.02; // Adjust this value to control the strictness of the color match
 	float3 UncolonisedColorDifference = abs(tProvinceColor.rgb - UncolonisedRGB);
 	float UncolonisedColorMatch = step(max(UncolonisedColorDifference.r, max(UncolonisedColorDifference.g, UncolonisedColorDifference.b)), UncolonisedColorTolerance);
 	
+	//Uncolonised Effects
 	float4 UncolonisedTerrainColor = TerrainColor;
 	UncolonisedTerrainColor.rgb = lerp(TerrainColor.rgb, ParchmentColor, 0.6);
-	//UncolonisedTerrainColor.rgb = lerp(TerrainColor.rgb, FOWColor, 0.6);
 	
 	
 	//Uncolonised FOW Effects
@@ -864,7 +850,6 @@ float4 PixelShader_Beach_General( VS_OUTPUT_BEACH v ) : COLOR
 	
 	float UncolonisedFOWColorMatch1 = step(max(UncolonisedFOWColorDifference1.r, max(UncolonisedFOWColorDifference1.g, UncolonisedFOWColorDifference1.b)), UncolonisedFOWColorTolerance);
 	float UncolonisedFOWColorMatch2 = step(max(UncolonisedFOWColorDifference2.r, max(UncolonisedFOWColorDifference2.g, UncolonisedFOWColorDifference2.b)), UncolonisedFOWColorTolerance);
-	
 	float UncolonisedFOWColorMatch = max(UncolonisedFOWColorMatch1, UncolonisedFOWColorMatch2);
 	
 	float4 UncolonisedFOWTerrainColor = TerrainColor;
@@ -873,30 +858,12 @@ float4 PixelShader_Beach_General( VS_OUTPUT_BEACH v ) : COLOR
    
 	
 	// Tie it together
-	// MetaColor.rgb *= COLOR_LIGHTNESS;
 	float4 FinalColor = lerp(MetaColor, UncolonisedTerrainColor, UncolonisedColorMatch);
 	FinalColor = lerp(FinalColor, UncolonisedFOWTerrainColor, UncolonisedFOWColorMatch);
-    //float4 FinalColor = lerp(MetaColor, TerrainColor, ColorMatch);
+	FinalColor.a = 1;
 	
-	/////////////////
-	
-	//float Grey = dot( y1.rgb, GREYIFY ); 
- 	//y1.rgb = Grey * White;
-
-	
-	//float4 Color1 = tex2D( GeneralTexture, borderoffset );
-	//float4 Color2 = tex2D( GeneralTexture2, borderoffset );
-
-	//float vColor = tex2D( StripesTexture, v.vTerrainIndexColor ).a;
-	//float4 Color = lerp( Color1, Color2, vColor ); //  - 0.7
-
-	//Color.rgb = lerp(y1.rgb, Color.rgb, 0.3);
-	//Color.rgb *= COLOR_LIGHTNESS;
-	//Color.a = 1;
-
 	return FinalColor;
 }
-
 
 float4 PixelShader_Beach_General_Low( VS_OUTPUT_BEACH v ) : COLOR
 {
@@ -1084,7 +1051,7 @@ float4 PixelShader_Beach( VS_OUTPUT_BEACH v ) : COLOR
     s.vTerrainIndexColor = v.vTerrainIndexColor;
     s.vTexCoord0 = v.vTexCoordBase;
 
-    float4 OutColor = GenerateTiles( s, 12 );
+    float4 OutColor = GenerateTiles( s );
 	
 	OutColor.rgb *= LIGHTNESS;
     //return OutColor;

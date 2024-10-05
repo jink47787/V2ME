@@ -241,8 +241,8 @@ float4 PixelShader_Water_2_0( VS_OUTPUT_WATER IN ) : COLOR
         DebugColor = float4(0, 0, 1, 1); // Blue for water
     }
 
-    // Visualize the color distance
-    // DebugColor.rgb = float3(ColorDistance, ColorDistance, ColorDistance);
+    //Visualize the color distance
+    //DebugColor.rgb = float3(ColorDistance, ColorDistance, ColorDistance);
 
     // Use the debug color instead of the normal water color
     return DebugColor;
@@ -481,7 +481,7 @@ float4 PixelShader_Far(VS_OUTPUT_WATER_FAR IN) : COLOR
 
     float coastalFactor = 0; // 0
     int sampleCount = 0;
-    int sampleRadius = 12; // Reduced sampling radius from 12
+    int sampleRadius = 8; // Reduced sampling radius from 12
 
     for (int x = -sampleRadius; x <= sampleRadius; x++) {
         for (int y = -sampleRadius; y <= sampleRadius; y++) {
@@ -518,8 +518,6 @@ float4 PixelShader_Far(VS_OUTPUT_WATER_FAR IN) : COLOR
 
     return float4(finalColor, 1.0);
 }
-
-
 
 technique WaterShaderFar
 {

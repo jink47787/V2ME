@@ -2,7 +2,7 @@
 
 country_event = { # Setup
     id = 20300
-    title = "Attempting to Write 2"
+    title = "Missionary Menu Setup"
     #desc = ""
     picture = "commonwealth"
 	allow_multiple_instances = yes

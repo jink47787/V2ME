@@ -1,0 +1,45 @@
+Where is the cyclone?
+
+Checks:
+
+	cyclone_neighboring_land_province
+	cyclone_neighboring_sea_province
+	cyclone_available_land_province
+	
+	
+Logic
+
+	clr_global_flag = cyclone_neighboring_land_province
+	clr_global_flag = cyclone_neighboring_sea_province
+	clr_global_flag = cyclone_available_land_province
+
+	sea province logic happens
+
+	any_land_province = {
+		limit = { has_province_modifier = cyclone }
+		random_neighbor_province = { 
+			limit = { NOT = { terrain = ocean } } 
+			set_global_flag = cyclone_neighboring_land_province 
+		}
+	}
+	
+	any_land_province = {
+		limit = { has_province_modifier = cyclone is_coastal = yes }
+		set_global_flag = cyclone_neighboring_sea_province
+	}
+	
+	any_land_province = {
+		limit = { has_province_modifier = possible_cyclone is_coastal = yes }
+		set_global_flag = cyclone_available_land_province
+	}
+	
+	
+Outcomes
+
+	Travels On Land
+		0 = { NOT = { has_global_flag = cyclone_neighboring_land_province } }
+	Travels Into the Ocean
+		0 = { NOT = { cyclone_neighboring_sea_province } }
+	Travels Onto Land
+		0 = { NOT = { cyclone_available_land_province } }
+	Pauses

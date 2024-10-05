@@ -803,6 +803,15 @@ guiTypes = {
 				maxHeight = 20	
 			}
 			
+			instantTextBoxType = { 
+				name = "country_tech_2"
+				position = { x = 122 y = 87 }
+				font = "Arial12_black"
+				text = "slot_1"	
+				maxWidth = 250
+				maxHeight = 20	
+			}
+			
 			### RANKINGS
 				instantTextBoxType = {
 					name = "selected_score_label"

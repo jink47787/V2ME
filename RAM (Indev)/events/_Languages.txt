@@ -1,5 +1,5 @@
 country_event = { # Renaming Loop National
-    id = 600
+    id = 800
     title = "Renaming Loop National"
     #desc = ""
     picture = "commonwealth"

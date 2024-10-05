@@ -12,11 +12,14 @@ float3	LightPosition;
 float3	CameraPosition;
 float	Time;
 float	vAlpha;
-
+float MaxSearchDistance = 25.0;
+float DarkeningDistance = 2.0;
 
 
 #define FOW_SIZE_X 1024;
 #define FOW_SIZE_Y 512;
+#define MAX_SEARCH_DISTANCE 25.0
+#define DARKENING_DISTANCE 15.0
 const float WATER_RATION = 0.5;
 const float MAIN_TILING_FACTOR = 0.25;
 const float FADE_DISTANCE = 100;
@@ -215,60 +218,34 @@ VS_OUTPUT_WATER VertexShader_Water_2_0(const VS_INPUT_WATER IN )
 
 float4 PixelShader_Water_2_0( VS_OUTPUT_WATER IN ) : COLOR
 {
-	float2 noiseCoord = IN.texCoord0.xy;//z;
-	// Slight flow downwards
-	
-	noiseCoord.x += 0.02 * Time;
-	noiseCoord.y += 0.05 * Time;
-	float3 noisy = tex2D(BaseTexture, noiseCoord.xy );
-	
-	// Some noise for watery effect
-	
-	noiseCoord.x = IN.texCoord0.y * 2;
-	noiseCoord.y = IN.texCoord0.x + 0.1 * Time + noisy.x;
-	
-	// Create a normal from three noise components
-	float3 normal;
-	normal.x = tex2D(BaseTexture, noiseCoord.xy ).x;
-	normal.y = tex2D(BaseTexture, noiseCoord.xy  + offY).y;
-	normal.z = tex2D(BaseTexture, noiseCoord.xy  + offZ).x;
-	normal = normalize(normal * 2 - 1);
-	
-	// Simply offset the texture coord for cheap refraction effect
-	
-	float2 coord = IN.halfAngleDirection.xy / IN.halfAngleDirection.z;
-	
-	float4 refr = tex2D(TheBackgroundTexture, coord + 0.02 * normal.xy);
-		
-	float4 normalTexture = tex2D( NormalMap, IN.texCoord0 );
-	normalTexture = normalTexture * 2 - 1;
-			
-	float3 lightReflection = reflect(-IN.lightDirection.xyz, normalTexture);
-	lightReflection = normalize( lightReflection );
-	
-	float diff = dot( normalTexture.xyz, -lightReflection.xyz );
-	
-	float3 localView = normalize( IN.eyeDirection.xyz );		
-	float spec = max(0.0, dot(lightReflection, localView) );
-	spec = pow(spec, 2 );
-	
-	float4 color = float4( 0.2, 0.2, 0.2, 1 )* diff + spec *1.05f;;
-		
-	float4 WorldColorColor = tex2D( WorldColor, IN.WorldTexture );
-	return WorldColorColor;
-	
-	float4 OutColor;
-	OutColor.r = WorldColorColor.r < .5 ? (2 * WorldColorColor.r * color.r) : (1 - 2 * (1 - WorldColorColor.r) * (1 - color.r));
-	OutColor.g = WorldColorColor.r < .5 ? (2 * WorldColorColor.g * color.g) : (1 - 2 * (1 - WorldColorColor.g) * (1 - color.g));
-	OutColor.b = WorldColorColor.b < .5 ? (2 * WorldColorColor.b * color.b) : (1 - 2 * (1 - WorldColorColor.b) * (1 - color.b));
-	OutColor.a = color.a * WorldColorColor.a;
-	
-	//OutColor = ( ( (color - noisy.y) * (1 - refr) )  + refr );
-	
-	OutColor.a = 0.8;//vAlpha;
-	
-	return OutColor;
-	 //  return ( ( (color - noisy) * (1 - refr) )  + refr ) * WorldColorColor;
+    // Sample the world color
+    float4 WorldColorColor = tex2D(WorldColor, IN.WorldTexture);
+
+    // Define land color
+    float3 LandColor = float3(107.0/255.0, 123.0/255.0, 140.0/255.0);
+
+    // Calculate color difference
+    float3 ColorDiff = abs(WorldColorColor.rgb - LandColor);
+    float ColorDistance = dot(ColorDiff, float3(1, 1, 1));
+
+    // Debug visualization
+    float4 DebugColor;
+
+    // If color is close to land color, show as red; otherwise, show as blue
+    if (ColorDistance < 0.3) // Adjust this threshold as needed
+    {
+        DebugColor = float4(1, 0, 0, 1); // Red for land
+    }
+    else
+    {
+        DebugColor = float4(0, 0, 1, 1); // Blue for water
+    }
+
+    //Visualize the color distance
+    //DebugColor.rgb = float3(ColorDistance, ColorDistance, ColorDistance);
+
+    // Use the debug color instead of the normal water color
+    return DebugColor;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -488,18 +465,58 @@ VS_OUTPUT_WATER_FAR VertexShader_Far(const VS_INPUT_WATER_FAR IN )
 	return OUT;
 }
 
-float4 PixelShader_Far( VS_OUTPUT_WATER_FAR IN ) : COLOR
+float4 PixelShader_Far(VS_OUTPUT_WATER_FAR IN) : COLOR
 {
-	float4 color = float4( tex2D( WorldColor, IN.vUV ).rgb, 1.0f );
-	float4 overlay = tex2D( Overlay, IN.vWorldPos );
+    float2 texSize = float2(ColorMapTextureWidth, ColorMapTextureHeight);
+    float2 texelSize = 1.0 / texSize;
+
+    float3 parchmentColor = float3(0.95, 0.93, 0.85); // 0.95, 0.93, 0.85
+    float3 deepWaterColor = float3(0, 0, 0);  // This is actualy coastal water 232.0 / 255.0, 224.0 / 255.0, 184.0 / 255.0,  232.0 / 255.0, 224.0 / 255.0, 184.0 / 255.0
+
+    float4 baseColor = tex2D(WorldColor, IN.vUV);
+
+    float3 landColor = float3(107.0 / 255.0, 123.0 / 255.0, 140.0 / 255.0);
+    float3 colorDiff = abs(baseColor.rgb - landColor);
+    bool isLand = length(colorDiff) < 0.1;
+
+    float coastalFactor = 0; // 0
+    int sampleCount = 0;
+    int sampleRadius = 8; // Reduced sampling radius from 12
+
+    for (int x = -sampleRadius; x <= sampleRadius; x++) {
+        for (int y = -sampleRadius; y <= sampleRadius; y++) {
+            float2 offset = float2(texelSize.x * x, texelSize.y * y);
+            float2 clampedUV = clamp(IN.vUV + offset, 0.0, 1.0);	// UV represents cutoff 
+            float3 sampleColor = tex2D(WorldColor, clampedUV).rgb;
+            colorDiff = abs(sampleColor - landColor);
+            if (length(colorDiff) < 0.1) {
+                coastalFactor += 1.0;
+            }
+            sampleCount++;
+        }
+    }
+
+    coastalFactor = saturate(coastalFactor / sampleCount);
+
+    float distanceFactor = saturate(length(IN.vWorldPos.xy) / 16000.0); // 16000
+    coastalFactor = lerp(coastalFactor, 0.0, distanceFactor);
 	
-	float4 OutColor;
-	OutColor.r = overlay.r < .5 ? (2 * overlay.r * color.r) : (1 - 2 * (1 - overlay.r) * (1 - color.r));
-	OutColor.g = overlay.r < .5 ? (2 * overlay.g * color.g) : (1 - 2 * (1 - overlay.g) * (1 - color.g));
-	OutColor.b = overlay.b < .5 ? (2 * overlay.b * color.b) : (1 - 2 * (1 - overlay.b) * (1 - color.b));
-	OutColor.a = color.a * overlay.a;
-	
-	return OutColor;
+    float grayBaseColor = dot(baseColor.rgb, float3(0.299, 0.587, 0.114));
+
+    // Apply contrast adjustment
+    grayBaseColor = saturate(((grayBaseColor - 0.5) * 1.5) + 0.5);  // contrast 1.5
+
+    // Interpolate between low and high colors based on the adjusted grayscale value
+    float3 newWaterColor = lerp(baseColor.rgb, parchmentColor, grayBaseColor);
+
+    //float3 newWaterColor = lerp(baseColor.rgb, parchmentColor, 0.5);
+    float3 waterColor = lerp(newWaterColor.rgb, deepWaterColor, coastalFactor);
+
+    float3 finalColor = isLand ? deepWaterColor : waterColor;
+
+    //finalColor *= 1.05;
+
+    return float4(finalColor, 1.0);
 }
 
 technique WaterShaderFar
@@ -509,7 +526,7 @@ technique WaterShaderFar
 		ALPHATESTENABLE = False;
 		ALPHABLENDENABLE = False;
 
-		VertexShader = compile vs_2_0 VertexShader_Far();
-		PixelShader = compile ps_2_0 PixelShader_Far();
+		VertexShader = compile vs_3_0 VertexShader_Far();
+		PixelShader = compile ps_3_0 PixelShader_Far();
 	}
 }

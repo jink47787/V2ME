@@ -1,0 +1,69 @@
+political_decisions = {
+
+    isolationism = {
+        picture = _isolationism
+        potential = {
+			civilized = no
+			NOT = { has_country_modifier = uncivilized_isolationism }
+        }
+
+        allow = {
+			civilized = no
+        }
+
+        effect = {
+			missionaries_decision_1 = {}
+			add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+			set_global_flag = A
+			random_country = {
+				limit = {
+					has_global_flag = A
+				}
+				THIS = { set_country_flag = missionaries_society }
+			}
+			clr_global_flag = A
+        }
+		ai_will_do = { 
+			factor = 0.5 # 0.5
+			#modifier = {	# Debug
+			#	factor = 0
+			#	tag = CLM
+			#	ai = yes
+			#}
+		}
+    }
+	
+    un_isolationism = {
+        picture = _isolationism
+        potential = {
+			civilized = no
+			NOT = { has_country_modifier = uncivilized_isolationism }
+        }
+
+        allow = {
+			civilized = no
+        }
+
+        effect = {
+			missionaries_decision_1 = {}
+			add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+			set_global_flag = A
+			random_country = {
+				limit = {
+					has_global_flag = A
+				}
+				THIS = { set_country_flag = missionaries_society }
+			}
+			clr_global_flag = A
+        }
+		ai_will_do = { 
+			factor = 0.5 # 0.5
+			#modifier = {	# Debug
+			#	factor = 0
+			#	tag = CLM
+			#	ai = yes
+			#}
+		}
+    }
+	
+}

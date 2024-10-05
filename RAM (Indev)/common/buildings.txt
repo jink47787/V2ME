@@ -724,6 +724,34 @@ railroad = {
     spawn_railway_track = yes
 }
 
+#university = {
+#		# Audax Validator "." Ignore_NEXT
+#		type = university
+#		# Audax Validator "." Ignore_NEXT
+#		cost = 0
+#		#goods_cost =
+#		#{
+#		#	#steel = 30
+#		#	#lumber = 90
+#		#	#cement = 90
+#		#	#paper = 20
+#		#	#dye = 10
+#		#	#glass = 10
+#		#}
+#
+#		time = -1
+#		visibility = yes
+#		onmap = no
+#		max_level = 6
+#		province = yes
+#		# Audax Validator "." Ignore_NEXT
+#		#one_per_state = yes
+#		#pop_build_factory = yes
+#
+#		#research_points_modifier = 0.001 
+#		#education_efficiency_modifier = 0.01
+#	}
+
 charcoal_factory = {
     type = factory
     on_completion = factory

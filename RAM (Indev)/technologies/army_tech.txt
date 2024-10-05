@@ -6,6 +6,8 @@ post_napoleonic_thought = {
     unciv_military = yes
 
     activate_building = fort
+	activate_building = university
+	max_university = 6
     army_base = {
         default_organisation = 5
         supply_consumption = 0.10

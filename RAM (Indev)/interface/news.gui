@@ -3,7 +3,7 @@ guiTypes = {
 	# Newspaper icon ( to open/close list of newspapers )
 	windowType = {
 		name = "news_icon"
-		position = { x = 426 y = 80 }
+		position = { x = 166 y = 100 }
 		size = { x = 39 y = 37 }
 
 		guiButtonType = {
@@ -15,7 +15,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "label"
-			position = { x = 24 y = 39 }
+			position = { x = 18 y = 24 }
 			format = centre
 			font = "vic_18"
 			allwaystransparent = yes

@@ -596,7 +596,7 @@ country_event = { # Setup
 			set_country_flag = viewer
 		}
 		any_country = { limit = { has_country_flag = proselytisee } set_variable = { which = country_loc_slot value = 1 } } CLN = { country_event = 401	}																		# Dynamic Loc Proselytisee - Slot 1
-		any_country = { limit = { has_country_flag = proselytiser } set_country_flag = dynamic_loc slot_2 = { add_province_modifier = { name = universal_modifier duration = -1 } } } CLN = { country_event = 600 }				# Dynamic Loc Proselytiser Language - Slot 2
+		any_country = { limit = { has_country_flag = proselytiser } set_country_flag = dynamic_loc slot_2 = { add_province_modifier = { name = universal_modifier duration = -1 } } } CLN = { country_event = 800 }				# Dynamic Loc Proselytiser Language - Slot 2
 		
 		random_country = { limit = { has_country_flag = proselytiser has_country_flag = catholic_country } set_global_flag = B_catholic }
 		random_country = { limit = { has_country_flag = proselytiser has_country_flag = protestant_country } set_global_flag = B_protestant }
