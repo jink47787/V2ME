@@ -12,6 +12,7 @@ country_event = { #
 
     immediate = {
         name = ""
+		# Capital Stuff
 		any_country = { change_variable = { which = days_till_cap value = -1 } }
 		any_land_province = {
 			limit = { 
@@ -31,6 +32,9 @@ country_event = { #
 			}
 			owner = { country_event = 20003 }
 		}
+
+		# etc etc
+
     }
 	
 	option = {

@@ -224,7 +224,7 @@ spriteTypes = {
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx\\interface\\expand_progress1.tga"
 		textureFile2 = "gfx\\interface\\expand_progress2.tga"
-		size = { x = 112 y = 16 }
+		size = { x = 120 y = 24 }
 		effectFile = "gfx\\FX\\progress.fx"
 	}
 	
@@ -292,7 +292,7 @@ spriteTypes = {
 		colortwo = { 1.0 0.0 0.0 }
 		textureFile1 = "gfx\\interface\\investrail_progress2.tga"
 		textureFile2 = "gfx\\interface\\investrail_progress1.tga"
-		size = { x = 90 y = 23 }
+		size = { x = 57 y = 23 }
 		effectFile = "gfx\\FX\\progress.fx"
 	}
 	

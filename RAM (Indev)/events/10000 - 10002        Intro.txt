@@ -1,5 +1,27 @@
 #Introdution Events
 
+country_event = { # Setup
+    id = 1
+    title = "Global Setup"
+    desc = "If you see this something has gone very wrong"
+    #picture = "RAM_intro"
+	allow_multiple_instances = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+			limit = {
+				ai = no
+			}
+			country_event = 10000
+		}	
+	}
+	
+	option = {
+        name = "Government Logic"
+    }
+}
+
 country_event = { # Explanation Event
     id = 10000
     title = ""

@@ -917,6 +917,8 @@ guiTypes = {
 			buttonFont = "vic_18_black"
 			buttonText = "Test"
 			clicksound = click
+			tooltipText = "test"
+			delayedTooltipText = "test2"
 		}
 		
 	}

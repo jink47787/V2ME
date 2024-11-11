@@ -1133,7 +1133,7 @@ guiTypes = {
 
 		instantTextBoxType = { 
 			name = "DateText"
-			position = { x = 250 y = 107 }
+			position = { x = 244 y = 107 }
 			font = "vic_22_black"
 			maxWidth = 160
 			maxHeight = 32	

@@ -1,7 +1,6 @@
 country_event = {  
     id = 700
     title = "Renaming Loop Seas"
-    picture = "commonwealth"
     allow_multiple_instances = yes
     is_triggered_only = yes
 

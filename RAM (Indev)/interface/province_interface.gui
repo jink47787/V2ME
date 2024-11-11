@@ -931,7 +931,7 @@ guiTypes = {
 			### progressbar when investing in railroad.
 			windowType = {
 				name = "infra_progress_win"
-				position = { x = 280 y = 119 }
+				position = { x = 318 y = 120 }
 				size = { x = 380 y = 230 }
 				moveable = 0	
 				
@@ -1813,26 +1813,27 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name = "underconstruction_icon"
-			spriteType = "GFX_province_expanding"
-			position = { x = 206 y = -14 }
-			Orientation = "UPPER_LEFT"
-		}
-		
-		iconType = {
 			name = "building_progress"
 			spriteType = "GFX_building_progress"
-			position = { x = 265 y = -14 }
+			position = { x = 258 y = -14 }
+			Orientation = "UPPER_LEFT"
 		}		
 		
 		instantTextBoxType = { 
 			name = "expand_text"
-			position = { x = 263 y = -14 }	# 5
+			position = { x = 264 y = -10 }	# 5
 			font = "vic_18"
 			text = "PROVINCEVIEW_EXPANDING"	
 			maxWidth = 100
 			maxHeight = 16	
 			format = centre
+		}
+		
+		iconType = {
+			name = "underconstruction_icon"
+			spriteType = "GFX_province_expanding"
+			position = { x = 335 y = -15 }
+			Orientation = "UPPER_LEFT"
 		}
 		
 		#iconType = {

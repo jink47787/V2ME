@@ -1384,7 +1384,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFaroe Islands§!" }
+					state_scope = { change_region_name = "§bFaroe_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -1681,7 +1681,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNewcastle On Tyne§!" }
+					state_scope = { change_region_name = "§bNewcastle_On_Tyne§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -1846,7 +1846,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Albans§!" }
+					state_scope = { change_region_name = "§bSt_Albans§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -1945,7 +1945,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIsle of Man§!" }
+					state_scope = { change_region_name = "§bIsle_of_Man§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -2429,7 +2429,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAland Islands§!" }
+					state_scope = { change_region_name = "§bAland_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3188,7 +3188,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bChannel Islands§!" }
+					state_scope = { change_region_name = "§bChannel_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3210,7 +3210,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Brieuc§!" }
+					state_scope = { change_region_name = "§bSt_Brieuc§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3375,7 +3375,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLe Mans§!" }
+					state_scope = { change_region_name = "§bLe_Mans§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3386,7 +3386,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Roche§!" }
+					state_scope = { change_region_name = "§bLa_Roche§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3441,7 +3441,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Rochelle§!" }
+					state_scope = { change_region_name = "§bLa_Rochelle§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3551,7 +3551,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Etienne§!" }
+					state_scope = { change_region_name = "§bSt_Etienne§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3628,7 +3628,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMont de Marsan§!" }
+					state_scope = { change_region_name = "§bMont_de_Marsan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3793,7 +3793,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Coruna§!" }
+					state_scope = { change_region_name = "§bLa_Coruna§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -3980,7 +3980,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCiudad Real§!" }
+					state_scope = { change_region_name = "§bCiudad_Real§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -4101,7 +4101,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBalearic Islands§!" }
+					state_scope = { change_region_name = "§bBalearic_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -4288,7 +4288,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVila Real§!" }
+					state_scope = { change_region_name = "§bVila_Real§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -5377,7 +5377,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSankt Polten§!" }
+					state_scope = { change_region_name = "§bSankt_Polten§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -5443,7 +5443,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bHradec Kralove§!" }
+					state_scope = { change_region_name = "§bHradec_Kralove§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -5553,7 +5553,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBanska Bystrica§!" }
+					state_scope = { change_region_name = "§bBanska_Bystrica§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -5861,7 +5861,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTirgu Jiu§!" }
+					state_scope = { change_region_name = "§bTirgu_Jiu§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -6125,7 +6125,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDeutsch Krone§!" }
+					state_scope = { change_region_name = "§bDeutsch_Krone§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -6235,7 +6235,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovy Sacz§!" }
+					state_scope = { change_region_name = "§bNovy_Sacz§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -6840,7 +6840,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bReggio di Calabria§!" }
+					state_scope = { change_region_name = "§bReggio_di_Calabria§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -7126,7 +7126,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBanja Luka§!" }
+					state_scope = { change_region_name = "§bBanja_Luka§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -7841,7 +7841,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKrivoy Rog§!" }
+					state_scope = { change_region_name = "§bKrivoy_Rog§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8028,7 +8028,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Petersburg§!" }
+					state_scope = { change_region_name = "§bSt_Petersburg§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8160,7 +8160,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVelikiye Luki§!" }
+					state_scope = { change_region_name = "§bVelikiye_Luki§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8303,7 +8303,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTargu Mures§!" }
+					state_scope = { change_region_name = "§bTargu_Mures§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8314,7 +8314,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovi Sad§!" }
+					state_scope = { change_region_name = "§bNovi_Sad§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8413,7 +8413,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bStara Ladoga§!" }
+					state_scope = { change_region_name = "§bStara_Ladoga§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8820,7 +8820,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bStara Zagora§!" }
+					state_scope = { change_region_name = "§bStara_Zagora§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -8963,7 +8963,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovi Pazar§!" }
+					state_scope = { change_region_name = "§bNovi_Pazar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -9183,7 +9183,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bUst Sysolsk§!" }
+					state_scope = { change_region_name = "§bUst_Sysolsk§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -9260,7 +9260,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNaryn Mar§!" }
+					state_scope = { change_region_name = "§bNaryn_Mar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -9370,7 +9370,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNizhni Novgorod§!" }
+					state_scope = { change_region_name = "§bNizhni_Novgorod§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -9546,7 +9546,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovo Uzensk§!" }
+					state_scope = { change_region_name = "§bNovo_Uzensk§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -9887,7 +9887,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Marino§!" }
+					state_scope = { change_region_name = "§bSan_Marino§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -9986,7 +9986,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMurska Sobota§!" }
+					state_scope = { change_region_name = "§bMurska_Sobota§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -10525,7 +10525,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bStara Zagora§!" }
+					state_scope = { change_region_name = "§bStara_Zagora§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -10745,7 +10745,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bJan Mayan§!" }
+					state_scope = { change_region_name = "§bJan_Mayan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -10822,7 +10822,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBaia Mare§!" }
+					state_scope = { change_region_name = "§bBaia_Mare§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -11053,7 +11053,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIsles of Scilly§!" }
+					state_scope = { change_region_name = "§bIsles_of_Scilly§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -11086,7 +11086,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovaya Zemlya§!" }
+					state_scope = { change_region_name = "§bNovaya_Zemlya§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -11207,7 +11207,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIsle of Wight§!" }
+					state_scope = { change_region_name = "§bIsle_of_Wight§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -11798,7 +11798,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKomandorskie Islands§!" }
+					state_scope = { change_region_name = "§bKomandorskie_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -11831,7 +11831,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDehra Dun§!" }
+					state_scope = { change_region_name = "§bDehra_Dun§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -12821,7 +12821,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBayan Tumen§!" }
+					state_scope = { change_region_name = "§bBayan_Tumen§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -12975,7 +12975,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Arthur§!" }
+					state_scope = { change_region_name = "§bPort_Arthur§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -13140,7 +13140,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bHong Kong§!" }
+					state_scope = { change_region_name = "§bHong_Kong§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -13525,7 +13525,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGuihua Tumed§!" }
+					state_scope = { change_region_name = "§bGuihua_Tumed§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -13536,7 +13536,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bJirim Chuulgan§!" }
+					state_scope = { change_region_name = "§bJirim_Chuulgan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -13547,7 +13547,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bUlaan Chab Chuulghan§!" }
+					state_scope = { change_region_name = "§bUlaan_Chab_Chuulghan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -13558,7 +13558,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bYeke Juu Chuulghan§!" }
+					state_scope = { change_region_name = "§bYeke_Juu_Chuulghan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15120,7 +15120,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDiego Garcia§!" }
+					state_scope = { change_region_name = "§bDiego_Garcia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15153,7 +15153,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCocos Islands§!" }
+					state_scope = { change_region_name = "§bCocos_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15208,7 +15208,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovyj Urengoj§!" }
+					state_scope = { change_region_name = "§bNovyj_Urengoj§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15604,7 +15604,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNovyj Kajak§!" }
+					state_scope = { change_region_name = "§bNovyj_Kajak§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15879,7 +15879,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bOld Tianjin§!" }
+					state_scope = { change_region_name = "§bOld_Tianjin§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15901,7 +15901,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort William§!" }
+					state_scope = { change_region_name = "§bFort_William§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15923,7 +15923,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bOld Shanghai§!" }
+					state_scope = { change_region_name = "§bOld_Shanghai§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -15934,7 +15934,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAksai Chin§!" }
+					state_scope = { change_region_name = "§bAksai_Chin§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16118,7 +16118,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNicobar Islands§!" }
+					state_scope = { change_region_name = "§bNicobar_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16129,7 +16129,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAndaman Islands§!" }
+					state_scope = { change_region_name = "§bAndaman_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16349,7 +16349,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNakhon Sawan§!" }
+					state_scope = { change_region_name = "§bNakhon_Sawan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16404,7 +16404,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNakhon Ratchasima§!" }
+					state_scope = { change_region_name = "§bNakhon_Ratchasima§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16415,7 +16415,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bUdon Thani§!" }
+					state_scope = { change_region_name = "§bUdon_Thani§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16437,7 +16437,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bChiang Mai§!" }
+					state_scope = { change_region_name = "§bChiang_Mai§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16602,7 +16602,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSam Nuea§!" }
+					state_scope = { change_region_name = "§bSam_Nuea§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16635,7 +16635,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCao Bang§!" }
+					state_scope = { change_region_name = "§bCao_Bang§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16646,7 +16646,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSon La§!" }
+					state_scope = { change_region_name = "§bSon_La§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16657,7 +16657,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLang Son§!" }
+					state_scope = { change_region_name = "§bLang_Son§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16668,7 +16668,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bThanh Hoa§!" }
+					state_scope = { change_region_name = "§bThanh_Hoa§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16745,7 +16745,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSouth China Islands§!" }
+					state_scope = { change_region_name = "§bSouth_China_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16756,7 +16756,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bParacel Islands§!" }
+					state_scope = { change_region_name = "§bParacel_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16819,7 +16819,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNakhon Si Thammanet§!" }
+					state_scope = { change_region_name = "§bNakhon_Si_Thammanet§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16841,7 +16841,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bJohor Bahru§!" }
+					state_scope = { change_region_name = "§bJohor_Bahru§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16863,7 +16863,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKuala Lumpur§!" }
+					state_scope = { change_region_name = "§bKuala_Lumpur§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16885,7 +16885,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAlor Setar§!" }
+					state_scope = { change_region_name = "§bAlor_Setar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16907,7 +16907,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKota Bahru§!" }
+					state_scope = { change_region_name = "§bKota_Bahru§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -16940,7 +16940,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRoss River§!" }
+					state_scope = { change_region_name = "§bRoss_River§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -17028,7 +17028,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBanda Aceh§!" }
+					state_scope = { change_region_name = "§bBanda_Aceh§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -17116,7 +17116,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPematang Sintar§!" }
+					state_scope = { change_region_name = "§bPematang_Sintar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -17347,7 +17347,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKota Waringin§!" }
+					state_scope = { change_region_name = "§bKota_Waringin§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -17424,7 +17424,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKutai Timur§!" }
+					state_scope = { change_region_name = "§bKutai_Timur§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18246,7 +18246,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIn Salah§!" }
+					state_scope = { change_region_name = "§bIn_Salah§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18279,7 +18279,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIn Guezzam§!" }
+					state_scope = { change_region_name = "§bIn_Guezzam§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18290,7 +18290,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTin Zawatene§!" }
+					state_scope = { change_region_name = "§bTin_Zawatene§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18598,7 +18598,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSidi Barrani§!" }
+					state_scope = { change_region_name = "§bSidi_Barrani§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18675,7 +18675,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBani Suwayf§!" }
+					state_scope = { change_region_name = "§bBani_Suwayf§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18763,7 +18763,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMarsa Alam§!" }
+					state_scope = { change_region_name = "§bMarsa_Alam§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18774,7 +18774,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRas Gharib§!" }
+					state_scope = { change_region_name = "§bRas_Gharib§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -18818,7 +18818,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bWad Madani§!" }
+					state_scope = { change_region_name = "§bWad_Madani§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19038,7 +19038,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMatan as Sarah§!" }
+					state_scope = { change_region_name = "§bMatan_as_Sarah§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19082,7 +19082,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCanary Islands§!" }
+					state_scope = { change_region_name = "§bCanary_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19170,7 +19170,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAlgerian Desert§!" }
+					state_scope = { change_region_name = "§bAlgerian_Desert§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19233,7 +19233,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAm Timan§!" }
+					state_scope = { change_region_name = "§bAm_Timan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19299,7 +19299,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSao Tome§!" }
+					state_scope = { change_region_name = "§bSao_Tome§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19310,7 +19310,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFernando Po§!" }
+					state_scope = { change_region_name = "§bFernando_Po§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -19868,7 +19868,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBir Murghayn§!" }
+					state_scope = { change_region_name = "§bBir_Murghayn§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -20286,7 +20286,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCape Verde§!" }
+					state_scope = { change_region_name = "§bCape_Verde§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -20462,7 +20462,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGrand Lahou§!" }
+					state_scope = { change_region_name = "§bGrand_Lahou§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -20484,7 +20484,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGrand Bassam§!" }
+					state_scope = { change_region_name = "§bGrand_Bassam§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -20594,7 +20594,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFada Ngourma§!" }
+					state_scope = { change_region_name = "§bFada_Ngourma§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -20605,7 +20605,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBobo Dioulasso§!" }
+					state_scope = { change_region_name = "§bBobo_Dioulasso§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -20638,7 +20638,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCape Coast§!" }
+					state_scope = { change_region_name = "§bCape_Coast§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -21287,7 +21287,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Helena§!" }
+					state_scope = { change_region_name = "§bSaint_Helena§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -21309,7 +21309,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTristan da Cunha§!" }
+					state_scope = { change_region_name = "§bTristan_da_Cunha§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -21342,7 +21342,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMalian Desert§!" }
+					state_scope = { change_region_name = "§bMalian_Desert§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -21460,7 +21460,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDebre Markos§!" }
+					state_scope = { change_region_name = "§bDebre_Markos§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -21559,7 +21559,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDire Dawa§!" }
+					state_scope = { change_region_name = "§bDire_Dawa§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -21812,7 +21812,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDar Es Salaam§!" }
+					state_scope = { change_region_name = "§bDar_Es_Salaam§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22439,7 +22439,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNosy Be§!" }
+					state_scope = { change_region_name = "§bNosy_Be§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22582,7 +22582,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDebre Tabor§!" }
+					state_scope = { change_region_name = "§bDebre_Tabor§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22755,7 +22755,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAngra Pequena§!" }
+					state_scope = { change_region_name = "§bAngra_Pequena§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22788,7 +22788,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bWalvis Bay§!" }
+					state_scope = { change_region_name = "§bWalvis_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22799,7 +22799,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCape Town§!" }
+					state_scope = { change_region_name = "§bCape_Town§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22843,7 +22843,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMossel Bay§!" }
+					state_scope = { change_region_name = "§bMossel_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22898,7 +22898,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Elizabeth§!" }
+					state_scope = { change_region_name = "§bPort_Elizabeth§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22909,7 +22909,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGraaf Reinet§!" }
+					state_scope = { change_region_name = "§bGraaf_Reinet§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -22986,7 +22986,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bThaba Bosiu§!" }
+					state_scope = { change_region_name = "§bThaba_Bosiu§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23107,7 +23107,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDe Aar§!" }
+					state_scope = { change_region_name = "§bDe_Aar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23184,7 +23184,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPrince Edward Islands§!" }
+					state_scope = { change_region_name = "§bPrince_Edward_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23258,7 +23258,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDutch Harbor§!" }
+					state_scope = { change_region_name = "§bDutch_Harbor§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23302,7 +23302,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Simpson§!" }
+					state_scope = { change_region_name = "§bFort_Simpson§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23313,7 +23313,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEcho Bay§!" }
+					state_scope = { change_region_name = "§bEcho_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23335,7 +23335,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVancouver Island§!" }
+					state_scope = { change_region_name = "§bVancouver_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23346,7 +23346,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPrince Rupert§!" }
+					state_scope = { change_region_name = "§bPrince_Rupert§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23379,7 +23379,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Saint John§!" }
+					state_scope = { change_region_name = "§bFort_Saint_John§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23390,7 +23390,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPrince George§!" }
+					state_scope = { change_region_name = "§bPrince_George§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23434,7 +23434,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAthabaska Landing§!" }
+					state_scope = { change_region_name = "§bAthabaska_Landing§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23489,7 +23489,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort MacLeod§!" }
+					state_scope = { change_region_name = "§bFort_MacLeod§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23522,7 +23522,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPrince Albert§!" }
+					state_scope = { change_region_name = "§bPrince_Albert§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23555,7 +23555,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMaple Creek§!" }
+					state_scope = { change_region_name = "§bMaple_Creek§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23588,7 +23588,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIndian Lakes§!" }
+					state_scope = { change_region_name = "§bIndian_Lakes§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23599,7 +23599,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNorway House§!" }
+					state_scope = { change_region_name = "§bNorway_House§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23654,7 +23654,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEcho Bay§!" }
+					state_scope = { change_region_name = "§bEcho_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23665,7 +23665,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBaffin Island§!" }
+					state_scope = { change_region_name = "§bBaffin_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23687,7 +23687,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Severn§!" }
+					state_scope = { change_region_name = "§bFort_Severn§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23698,7 +23698,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Albany§!" }
+					state_scope = { change_region_name = "§bFort_Albany§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23720,7 +23720,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bThunder Bay§!" }
+					state_scope = { change_region_name = "§bThunder_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23731,7 +23731,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSault Ste Marie§!" }
+					state_scope = { change_region_name = "§bSault_Ste_Marie§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23830,7 +23830,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCharles Fort§!" }
+					state_scope = { change_region_name = "§bCharles_Fort§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23874,7 +23874,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTrois Rivieres§!" }
+					state_scope = { change_region_name = "§bTrois_Rivieres§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23885,7 +23885,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bQuebec City§!" }
+					state_scope = { change_region_name = "§bQuebec_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23940,7 +23940,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPrince Edward Island§!" }
+					state_scope = { change_region_name = "§bPrince_Edward_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23973,7 +23973,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCape Breton Island§!" }
+					state_scope = { change_region_name = "§bCape_Breton_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -23984,7 +23984,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Johns§!" }
+					state_scope = { change_region_name = "§bSaint_Johns§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24017,7 +24017,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Pierre & Miquelon§!" }
+					state_scope = { change_region_name = "§bSt_Pierre_&_Miquelon§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24050,7 +24050,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bWalla Walla§!" }
+					state_scope = { change_region_name = "§bWalla_Walla§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24072,7 +24072,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBaker City§!" }
+					state_scope = { change_region_name = "§bBaker_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24083,7 +24083,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKlamath Falls§!" }
+					state_scope = { change_region_name = "§bKlamath_Falls§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24094,7 +24094,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Francisco§!" }
+					state_scope = { change_region_name = "§bSan_Francisco§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24149,7 +24149,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLos Angeles§!" }
+					state_scope = { change_region_name = "§bLos_Angeles§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24160,7 +24160,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Diego§!" }
+					state_scope = { change_region_name = "§bSan_Diego§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24182,7 +24182,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCoeur D'Alene§!" }
+					state_scope = { change_region_name = "§bCoeur_D'Alene§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24204,7 +24204,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCarson City§!" }
+					state_scope = { change_region_name = "§bCarson_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24226,7 +24226,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLas Vegas§!" }
+					state_scope = { change_region_name = "§bLas_Vegas§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24237,7 +24237,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSalt Lake City§!" }
+					state_scope = { change_region_name = "§bSalt_Lake_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24303,7 +24303,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Fe§!" }
+					state_scope = { change_region_name = "§bSanta_Fe§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24325,7 +24325,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLas Cruces§!" }
+					state_scope = { change_region_name = "§bLas_Cruces§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24347,7 +24347,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGrand Junction§!" }
+					state_scope = { change_region_name = "§bGrand_Junction§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24435,7 +24435,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGreat Falls§!" }
+					state_scope = { change_region_name = "§bGreat_Falls§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24490,7 +24490,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSioux Falls§!" }
+					state_scope = { change_region_name = "§bSioux_Falls§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24512,7 +24512,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRapid City§!" }
+					state_scope = { change_region_name = "§bRapid_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24545,7 +24545,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNorth Platte§!" }
+					state_scope = { change_region_name = "§bNorth_Platte§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24589,7 +24589,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bOklahoma City§!" }
+					state_scope = { change_region_name = "§bOklahoma_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24666,7 +24666,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEl Paso§!" }
+					state_scope = { change_region_name = "§bEl_Paso§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24677,7 +24677,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Antonio§!" }
+					state_scope = { change_region_name = "§bSan_Antonio§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24699,7 +24699,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Orleans§!" }
+					state_scope = { change_region_name = "§bNew_Orleans§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24710,7 +24710,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBaton Rouge§!" }
+					state_scope = { change_region_name = "§bBaton_Rouge§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24721,7 +24721,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLake Charles§!" }
+					state_scope = { change_region_name = "§bLake_Charles§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24743,7 +24743,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLittle Rock§!" }
+					state_scope = { change_region_name = "§bLittle_Rock§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24754,7 +24754,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bHot Springs§!" }
+					state_scope = { change_region_name = "§bHot_Springs§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24776,7 +24776,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Louis§!" }
+					state_scope = { change_region_name = "§bSt_Louis§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24809,7 +24809,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bJefferson City§!" }
+					state_scope = { change_region_name = "§bJefferson_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24820,7 +24820,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKansas City§!" }
+					state_scope = { change_region_name = "§bKansas_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24831,7 +24831,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDes Moines§!" }
+					state_scope = { change_region_name = "§bDes_Moines§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24853,7 +24853,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCedar Rapids§!" }
+					state_scope = { change_region_name = "§bCedar_Rapids§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24864,7 +24864,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSioux City§!" }
+					state_scope = { change_region_name = "§bSioux_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24886,7 +24886,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGranite Falls§!" }
+					state_scope = { change_region_name = "§bGranite_Falls§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24930,7 +24930,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEau Claire§!" }
+					state_scope = { change_region_name = "§bEau_Claire§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -24941,7 +24941,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGreen Bay§!" }
+					state_scope = { change_region_name = "§bGreen_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25051,7 +25051,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSouth Bend§!" }
+					state_scope = { change_region_name = "§bSouth_Bend§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25062,7 +25062,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Wayne§!" }
+					state_scope = { change_region_name = "§bFort_Wayne§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25084,7 +25084,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGrand Rapids§!" }
+					state_scope = { change_region_name = "§bGrand_Rapids§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25106,7 +25106,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTraverse City§!" }
+					state_scope = { change_region_name = "§bTraverse_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25216,7 +25216,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBowling Green§!" }
+					state_scope = { change_region_name = "§bBowling_Green§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25359,7 +25359,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSt Augustine§!" }
+					state_scope = { change_region_name = "§bSt_Augustine§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25711,7 +25711,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAtlantic City§!" }
+					state_scope = { change_region_name = "§bAtlantic_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25722,7 +25722,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew York§!" }
+					state_scope = { change_region_name = "§bNew_York§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25733,7 +25733,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLong Island§!" }
+					state_scope = { change_region_name = "§bLong_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25854,7 +25854,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Bedford§!" }
+					state_scope = { change_region_name = "§bNew_Bedford§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -25942,7 +25942,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPanama Canal§!" }
+					state_scope = { change_region_name = "§bPanama_Canal§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26019,7 +26019,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPaso del Norte§!" }
+					state_scope = { change_region_name = "§bPaso_del_Norte§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26096,7 +26096,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCiudad Victoria§!" }
+					state_scope = { change_region_name = "§bCiudad_Victoria§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26140,7 +26140,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Maria del Oro§!" }
+					state_scope = { change_region_name = "§bSanta_Maria_del_Oro§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26195,7 +26195,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Luis Potosi§!" }
+					state_scope = { change_region_name = "§bSan_Luis_Potosi§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26294,7 +26294,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Vallarta§!" }
+					state_scope = { change_region_name = "§bPuerto_Vallarta§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26327,7 +26327,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLos Alaniles§!" }
+					state_scope = { change_region_name = "§bLos_Alaniles§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26338,7 +26338,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMexico City§!" }
+					state_scope = { change_region_name = "§bMexico_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26514,7 +26514,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Barrios§!" }
+					state_scope = { change_region_name = "§bPuerto_Barrios§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26547,7 +26547,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Salvador§!" }
+					state_scope = { change_region_name = "§bSan_Salvador§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26558,7 +26558,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Miguel§!" }
+					state_scope = { change_region_name = "§bSan_Miguel§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26580,7 +26580,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Pedro Sula§!" }
+					state_scope = { change_region_name = "§bSan_Pedro_Sula§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26591,7 +26591,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Ceiba§!" }
+					state_scope = { change_region_name = "§bLa_Ceiba§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26602,7 +26602,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Lempira§!" }
+					state_scope = { change_region_name = "§bPuerto_Lempira§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26657,7 +26657,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Jose§!" }
+					state_scope = { change_region_name = "§bSan_Jose§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26690,7 +26690,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPanama City§!" }
+					state_scope = { change_region_name = "§bPanama_City§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26767,7 +26767,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSantiago de Cuba§!" }
+					state_scope = { change_region_name = "§bSantiago_de_Cuba§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26778,7 +26778,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Au Prince§!" }
+					state_scope = { change_region_name = "§bPort_Au_Prince§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26789,7 +26789,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanto Domingo§!" }
+					state_scope = { change_region_name = "§bSanto_Domingo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26800,7 +26800,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCap Haitien§!" }
+					state_scope = { change_region_name = "§bCap_Haitien§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26811,7 +26811,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Vega§!" }
+					state_scope = { change_region_name = "§bLa_Vega§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26833,7 +26833,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCayman Islands§!" }
+					state_scope = { change_region_name = "§bCayman_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26855,7 +26855,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTurks And Caicos§!" }
+					state_scope = { change_region_name = "§bTurks_And_Caicos§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26866,7 +26866,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Rico§!" }
+					state_scope = { change_region_name = "§bPuerto_Rico§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26877,7 +26877,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Thomas§!" }
+					state_scope = { change_region_name = "§bSaint_Thomas§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26921,7 +26921,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Kitts§!" }
+					state_scope = { change_region_name = "§bSaint_Kitts§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26965,7 +26965,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Lucia§!" }
+					state_scope = { change_region_name = "§bSaint_Lucia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -26998,7 +26998,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Martin§!" }
+					state_scope = { change_region_name = "§bSaint_Martin§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27031,7 +27031,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSaint Vincent§!" }
+					state_scope = { change_region_name = "§bSaint_Vincent§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27075,7 +27075,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort George§!" }
+					state_scope = { change_region_name = "§bFort_George§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27108,7 +27108,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Resolution§!" }
+					state_scope = { change_region_name = "§bFort_Resolution§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27119,7 +27119,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Vermilion§!" }
+					state_scope = { change_region_name = "§bFort_Vermilion§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27130,7 +27130,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Liard§!" }
+					state_scope = { change_region_name = "§bFort_Liard§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27141,7 +27141,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Yukon§!" }
+					state_scope = { change_region_name = "§bFort_Yukon§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27163,7 +27163,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Hope Simpson§!" }
+					state_scope = { change_region_name = "§bPort_Hope_Simpson§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27174,7 +27174,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Harrison§!" }
+					state_scope = { change_region_name = "§bPort_Harrison§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27185,7 +27185,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFort Chimo§!" }
+					state_scope = { change_region_name = "§bFort_Chimo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27207,7 +27207,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBeatton River§!" }
+					state_scope = { change_region_name = "§bBeatton_River§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27262,7 +27262,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bJan Mayen§!" }
+					state_scope = { change_region_name = "§bJan_Mayen§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27339,7 +27339,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBlue Ridge§!" }
+					state_scope = { change_region_name = "§bBlue_Ridge§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27449,7 +27449,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNavassa Island§!" }
+					state_scope = { change_region_name = "§bNavassa_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27471,7 +27471,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Clara§!" }
+					state_scope = { change_region_name = "§bSanta_Clara§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27493,7 +27493,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Barbara§!" }
+					state_scope = { change_region_name = "§bSanta_Barbara§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27504,7 +27504,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSouthern Mojave§!" }
+					state_scope = { change_region_name = "§bSouthern_Mojave§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27570,7 +27570,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Pe?asco§!" }
+					state_scope = { change_region_name = "§bPuerto_Pe?asco§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27592,7 +27592,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bShanty Town§!" }
+					state_scope = { change_region_name = "§bShanty_Town§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27625,7 +27625,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bWarm Springs§!" }
+					state_scope = { change_region_name = "§bWarm_Springs§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27669,7 +27669,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNorth Cascades§!" }
+					state_scope = { change_region_name = "§bNorth_Cascades§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27713,7 +27713,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKolguyev Island§!" }
+					state_scope = { change_region_name = "§bKolguyev_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27724,7 +27724,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Carlos§!" }
+					state_scope = { change_region_name = "§bSan_Carlos§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27757,7 +27757,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBocas del Toro§!" }
+					state_scope = { change_region_name = "§bBocas_del_Toro§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27768,7 +27768,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bChannel Islands§!" }
+					state_scope = { change_region_name = "§bChannel_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27790,7 +27790,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLas Cruces§!" }
+					state_scope = { change_region_name = "§bLas_Cruces§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27812,7 +27812,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Juans§!" }
+					state_scope = { change_region_name = "§bSan_Juans§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27834,7 +27834,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Townsend§!" }
+					state_scope = { change_region_name = "§bPort_Townsend§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27845,7 +27845,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBristol Bay§!" }
+					state_scope = { change_region_name = "§bBristol_Bay§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27856,7 +27856,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNorth West River§!" }
+					state_scope = { change_region_name = "§bNorth_West_River§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27867,7 +27867,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Andres y Providencia§!" }
+					state_scope = { change_region_name = "§bSan_Andres_y_Providencia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27900,7 +27900,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEl Campo§!" }
+					state_scope = { change_region_name = "§bEl_Campo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -27922,7 +27922,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bIsla de Pinos§!" }
+					state_scope = { change_region_name = "§bIsla_de_Pinos§!" }
 					secede_province = QQQ 
 				}
 			}
@@ -27996,7 +27996,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFalkland Islands§!" }
+					state_scope = { change_region_name = "§bFalkland_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28007,7 +28007,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSouth Georgia§!" }
+					state_scope = { change_region_name = "§bSouth_Georgia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28194,7 +28194,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCartagena de Indias§!" }
+					state_scope = { change_region_name = "§bCartagena_de_Indias§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28260,7 +28260,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Jose del Gauaviare§!" }
+					state_scope = { change_region_name = "§bSan_Jose_del_Gauaviare§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28293,7 +28293,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEl Encanto§!" }
+					state_scope = { change_region_name = "§bEl_Encanto§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28348,7 +28348,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Felipe§!" }
+					state_scope = { change_region_name = "§bSan_Felipe§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28447,7 +28447,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEl Jobal§!" }
+					state_scope = { change_region_name = "§bEl_Jobal§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28458,7 +28458,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Fernado de Atabapo§!" }
+					state_scope = { change_region_name = "§bSan_Fernado_de_Atabapo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28590,7 +28590,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuca Urco§!" }
+					state_scope = { change_region_name = "§bPuca_Urco§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28722,7 +28722,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Maldonado§!" }
+					state_scope = { change_region_name = "§bPuerto_Maldonado§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28821,7 +28821,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Paz§!" }
+					state_scope = { change_region_name = "§bLa_Paz§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28887,7 +28887,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Cruz§!" }
+					state_scope = { change_region_name = "§bSanta_Cruz§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28898,7 +28898,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Ignacio§!" }
+					state_scope = { change_region_name = "§bSan_Ignacio§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28920,7 +28920,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Ana§!" }
+					state_scope = { change_region_name = "§bSanta_Ana§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28964,7 +28964,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Serena§!" }
+					state_scope = { change_region_name = "§bLa_Serena§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -28997,7 +28997,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVina del Mar§!" }
+					state_scope = { change_region_name = "§bVina_del_Mar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29074,7 +29074,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Aisen§!" }
+					state_scope = { change_region_name = "§bPuerto_Aisen§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29085,7 +29085,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPunta Arenas§!" }
+					state_scope = { change_region_name = "§bPunta_Arenas§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29107,7 +29107,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFortin Falcon§!" }
+					state_scope = { change_region_name = "§bFortin_Falcon§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29118,7 +29118,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Gaurani§!" }
+					state_scope = { change_region_name = "§bPuerto_Gaurani§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29162,7 +29162,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Pedro§!" }
+					state_scope = { change_region_name = "§bSan_Pedro§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29228,7 +29228,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBuenos Aires§!" }
+					state_scope = { change_region_name = "§bBuenos_Aires§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29261,7 +29261,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Plata§!" }
+					state_scope = { change_region_name = "§bLa_Plata§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29272,7 +29272,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMar del Plata§!" }
+					state_scope = { change_region_name = "§bMar_del_Plata§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29283,7 +29283,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTrenque Lanquen§!" }
+					state_scope = { change_region_name = "§bTrenque_Lanquen§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29294,7 +29294,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBahia Blanca§!" }
+					state_scope = { change_region_name = "§bBahia_Blanca§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29327,7 +29327,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCuruzu Cuatia§!" }
+					state_scope = { change_region_name = "§bCuruzu_Cuatia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29338,7 +29338,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanto Tomas§!" }
+					state_scope = { change_region_name = "§bSanto_Tomas§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29371,7 +29371,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Espiritu§!" }
+					state_scope = { change_region_name = "§bSanta_Espiritu§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29415,7 +29415,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVilla Angela§!" }
+					state_scope = { change_region_name = "§bVilla_Angela§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29536,7 +29536,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSantiago del Estero§!" }
+					state_scope = { change_region_name = "§bSantiago_del_Estero§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29569,7 +29569,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bCordoba de Argentina§!" }
+					state_scope = { change_region_name = "§bCordoba_de_Argentina§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29580,7 +29580,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVilla Nueva§!" }
+					state_scope = { change_region_name = "§bVilla_Nueva§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29591,7 +29591,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRio Cuarto§!" }
+					state_scope = { change_region_name = "§bRio_Cuarto§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29613,7 +29613,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Luis§!" }
+					state_scope = { change_region_name = "§bSan_Luis§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29635,7 +29635,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLa Rioja§!" }
+					state_scope = { change_region_name = "§bLa_Rioja§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29646,7 +29646,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Rita§!" }
+					state_scope = { change_region_name = "§bSanta_Rita§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29657,7 +29657,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Juan§!" }
+					state_scope = { change_region_name = "§bSan_Juan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29690,7 +29690,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSan Rafael§!" }
+					state_scope = { change_region_name = "§bSan_Rafael§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29778,7 +29778,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPuerto Deseado§!" }
+					state_scope = { change_region_name = "§bPuerto_Deseado§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29789,7 +29789,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRio Galleagos§!" }
+					state_scope = { change_region_name = "§bRio_Galleagos§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29800,7 +29800,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRio Grande§!" }
+					state_scope = { change_region_name = "§bRio_Grande§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29954,7 +29954,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVila Bela§!" }
+					state_scope = { change_region_name = "§bVila_Bela§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -29998,7 +29998,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVila Boa§!" }
+					state_scope = { change_region_name = "§bVila_Boa§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30031,7 +30031,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSao Luis§!" }
+					state_scope = { change_region_name = "§bSao_Luis§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30163,7 +30163,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSalvador de Bahia§!" }
+					state_scope = { change_region_name = "§bSalvador_de_Bahia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30185,7 +30185,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVila do Barra§!" }
+					state_scope = { change_region_name = "§bVila_do_Barra§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30196,7 +30196,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPorto Seguro§!" }
+					state_scope = { change_region_name = "§bPorto_Seguro§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30207,7 +30207,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bVitoria da Conquista§!" }
+					state_scope = { change_region_name = "§bVitoria_da_Conquista§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30218,7 +30218,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bOuro Preto§!" }
+					state_scope = { change_region_name = "§bOuro_Preto§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30240,7 +30240,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTeofilo Otoni§!" }
+					state_scope = { change_region_name = "§bTeofilo_Otoni§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30251,7 +30251,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPatos de Minas§!" }
+					state_scope = { change_region_name = "§bPatos_de_Minas§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30273,7 +30273,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSao Joao del Rey§!" }
+					state_scope = { change_region_name = "§bSao_Joao_del_Rey§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30284,7 +30284,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bRio de Janeiro§!" }
+					state_scope = { change_region_name = "§bRio_de_Janeiro§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30317,7 +30317,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSao Paulo§!" }
+					state_scope = { change_region_name = "§bSao_Paulo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30438,7 +30438,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSao Miguel§!" }
+					state_scope = { change_region_name = "§bSao_Miguel§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30449,7 +30449,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPorto Alegre§!" }
+					state_scope = { change_region_name = "§bPorto_Alegre§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30471,7 +30471,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPasso Fundo§!" }
+					state_scope = { change_region_name = "§bPasso_Fundo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30482,7 +30482,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Maria§!" }
+					state_scope = { change_region_name = "§bSanta_Maria§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30504,7 +30504,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bForte Sao Joaquim§!" }
+					state_scope = { change_region_name = "§bForte_Sao_Joaquim§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30526,7 +30526,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bForte do Principe§!" }
+					state_scope = { change_region_name = "§bForte_do_Principe§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30581,7 +30581,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEaster Island§!" }
+					state_scope = { change_region_name = "§bEaster_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30614,7 +30614,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBoca do Acre§!" }
+					state_scope = { change_region_name = "§bBoca_do_Acre§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30724,7 +30724,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBelo Horizonte§!" }
+					state_scope = { change_region_name = "§bBelo_Horizonte§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30757,7 +30757,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMontes Claros§!" }
+					state_scope = { change_region_name = "§bMontes_Claros§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30768,7 +30768,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFernando de Noronha§!" }
+					state_scope = { change_region_name = "§bFernando_de_Noronha§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30790,7 +30790,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGeneral Roca§!" }
+					state_scope = { change_region_name = "§bGeneral_Roca§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30834,7 +30834,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Vitoria§!" }
+					state_scope = { change_region_name = "§bSanta_Vitoria§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30856,7 +30856,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bFuerte Olimpo§!" }
+					state_scope = { change_region_name = "§bFuerte_Olimpo§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30867,7 +30867,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPozo Colorado§!" }
+					state_scope = { change_region_name = "§bPozo_Colorado§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30900,7 +30900,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bJoub Jannine§!" }
+					state_scope = { change_region_name = "§bJoub_Jannine§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30911,7 +30911,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Vitoria§!" }
+					state_scope = { change_region_name = "§bSanta_Vitoria§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30922,7 +30922,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTrindade e Martim Vaz§!" }
+					state_scope = { change_region_name = "§bTrindade_e_Martim_Vaz§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -30996,7 +30996,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSuez Canal§!" }
+					state_scope = { change_region_name = "§bSuez_Canal§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -31007,7 +31007,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAl Arish§!" }
+					state_scope = { change_region_name = "§bAl_Arish§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -31018,7 +31018,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSharm al-Shaykh§!" }
+					state_scope = { change_region_name = "§bSharm_al-Shaykh§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -31766,7 +31766,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAbu Dhabi§!" }
+					state_scope = { change_region_name = "§bAbu_Dhabi§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -32074,7 +32074,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bDayr al-Zour§!" }
+					state_scope = { change_region_name = "§bDayr_al-Zour§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -32580,7 +32580,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBandar Abbas§!" }
+					state_scope = { change_region_name = "§bBandar_Abbas§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -32723,7 +32723,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAlma Ata§!" }
+					state_scope = { change_region_name = "§bAlma_Ata§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -32954,7 +32954,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bKizil Arvat§!" }
+					state_scope = { change_region_name = "§bKizil_Arvat§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33152,7 +33152,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bLine Islands§!" }
+					state_scope = { change_region_name = "§bLine_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33163,7 +33163,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMedicine Hat§!" }
+					state_scope = { change_region_name = "§bMedicine_Hat§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33229,7 +33229,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAl Salman§!" }
+					state_scope = { change_region_name = "§bAl_Salman§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33581,7 +33581,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAyteke Bi§!" }
+					state_scope = { change_region_name = "§bAyteke_Bi§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33691,7 +33691,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAnar Dara§!" }
+					state_scope = { change_region_name = "§bAnar_Dara§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33757,7 +33757,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAl Salman§!" }
+					state_scope = { change_region_name = "§bAl_Salman§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -33977,7 +33977,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBalkhan Turkmenistan§!" }
+					state_scope = { change_region_name = "§bBalkhan_Turkmenistan§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34098,7 +34098,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMazar-e Sharif§!" }
+					state_scope = { change_region_name = "§bMazar-e_Sharif§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34109,7 +34109,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bQaleh-ye Panjeh§!" }
+					state_scope = { change_region_name = "§bQaleh-ye_Panjeh§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34120,7 +34120,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bQaleh-ye Wamar§!" }
+					state_scope = { change_region_name = "§bQaleh-ye_Wamar§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34153,7 +34153,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bQala-i Khumb§!" }
+					state_scope = { change_region_name = "§bQala-i_Khumb§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34230,7 +34230,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSar-e Pol§!" }
+					state_scope = { change_region_name = "§bSar-e_Pol§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34370,7 +34370,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Plymouth§!" }
+					state_scope = { change_region_name = "§bNew_Plymouth§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34524,7 +34524,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bTennant Creek§!" }
+					state_scope = { change_region_name = "§bTennant_Creek§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34535,7 +34535,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bAlice Springs§!" }
+					state_scope = { change_region_name = "§bAlice_Springs§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34568,7 +34568,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Macquarie§!" }
+					state_scope = { change_region_name = "§bPort_Macquarie§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34601,7 +34601,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bWagga Wagga§!" }
+					state_scope = { change_region_name = "§bWagga_Wagga§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34623,7 +34623,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bBroken Hill§!" }
+					state_scope = { change_region_name = "§bBroken_Hill§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34689,7 +34689,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSwan Hill§!" }
+					state_scope = { change_region_name = "§bSwan_Hill§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34722,7 +34722,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSandy Desert§!" }
+					state_scope = { change_region_name = "§bSandy_Desert§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34755,7 +34755,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGibson's Desert§!" }
+					state_scope = { change_region_name = "§bGibson's_Desert§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34865,7 +34865,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Lincolon§!" }
+					state_scope = { change_region_name = "§bPort_Lincolon§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34887,7 +34887,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Augusta§!" }
+					state_scope = { change_region_name = "§bPort_Augusta§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34953,7 +34953,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bChristmas Island§!" }
+					state_scope = { change_region_name = "§bChristmas_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34964,7 +34964,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNorfolk Island§!" }
+					state_scope = { change_region_name = "§bNorfolk_Island§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -34975,7 +34975,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bChatham Islands§!" }
+					state_scope = { change_region_name = "§bChatham_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35027,7 +35027,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Caledonia§!" }
+					state_scope = { change_region_name = "§bNew_Caledonia§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35038,7 +35038,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Ireland§!" }
+					state_scope = { change_region_name = "§bNew_Ireland§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35159,7 +35159,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMarshall Islands§!" }
+					state_scope = { change_region_name = "§bMarshall_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35214,7 +35214,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bGilbert Islands§!" }
+					state_scope = { change_region_name = "§bGilbert_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35225,7 +35225,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPort Moresby§!" }
+					state_scope = { change_region_name = "§bPort_Moresby§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35269,7 +35269,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSolomon Islands§!" }
+					state_scope = { change_region_name = "§bSolomon_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35280,7 +35280,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Hebrides§!" }
+					state_scope = { change_region_name = "§bNew_Hebrides§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35291,7 +35291,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bSanta Cruz Islands§!" }
+					state_scope = { change_region_name = "§bSanta_Cruz_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35302,7 +35302,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bNew Britain§!" }
+					state_scope = { change_region_name = "§bNew_Britain§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35335,7 +35335,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bEllice Islands§!" }
+					state_scope = { change_region_name = "§bEllice_Islands§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35346,7 +35346,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bWallis And Futuna§!" }
+					state_scope = { change_region_name = "§bWallis_And_Futuna§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35368,7 +35368,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bPago Pago§!" }
+					state_scope = { change_region_name = "§bPago_Pago§!" }
 					secede_province = QQQ 
 				}
 				slots = {
@@ -35456,7 +35456,7 @@ country_event = {
 						}
 					}
 					secede_province = THIS
-					state_scope = { change_region_name = "§bMidway Island§!" }
+					state_scope = { change_region_name = "§bMidway_Island§!" }
 					secede_province = QQQ 
 				}
 			}

@@ -1279,7 +1279,7 @@ MODIFIER_ADDED;* $WHERE$ gets '即$WHAT$劬' until 即$DATE$劬\n[EFFECTS]:\n$EFFECT
 ALL_POPS_IN;All pops [in 即$LOC$劬]:\n;;;;;;;;;;;;;
 ALL_POPS_IN_THAT;All pops [in 即$LOC$劬] where\n the following [CONDITIONS] apply:;;;;;;;;;;;;;
 ALL_COUNTRIES_THAT_EFF;All countries where\n the following [CONDITIONS] apply:;;;;;;;;;;;;;
-AND_TRIGGER_STARTS;All of the below;;;;;;;;;;;;;
+AND_TRIGGER_STARTS; ;;;;;;;;;;;;;
 OR_TRIGGER_STARTS;One of the following must be true;;;;;;;;;;;;;
 OR_TRIG_SHORT;Either...;;;;;;;;;;;;;
 IS_CIVILIZED;# Is westernized.;;;;;;;;;;;;;
